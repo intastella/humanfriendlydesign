@@ -75,7 +75,7 @@ gulp.task('postcss', function () {
 });
 
 gulp.task('css-min', function () {
-  return gulp.src(['./css/*.css', '!./docs/css/*.min.css'])
+  return gulp.src(['./css/*.css', '!./css/*.min.css'])
     .pipe(postcss(cssMinPlugins))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./css'));
