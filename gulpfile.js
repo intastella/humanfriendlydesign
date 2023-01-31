@@ -4,12 +4,6 @@ const gulp = require('gulp');
 const config = require('./config.json');
 const pkg = require('./package.json');
 
-//General
-const del = require('del');
-const rename = require('gulp-rename');
-const debug = require('gulp-debug');
-const replace = require('gulp-replace');
-
 //HTML
 const pug = require('gulp-pug');
 
@@ -26,8 +20,7 @@ const cssnano = require('cssnano');
 const imagemin = require('gulp-imagemin');
 
 //FTP
-const util = require("gulp-util");
-const ftp = require("vinyl-ftp");
+const sftp = require('gulp-sftp');
 const readlineSync = require('readline-sync');
 
 const pugOptions = {
@@ -105,25 +98,22 @@ gulp.task('assets-imagemin', function () {
     .pipe(gulp.dest('./img'));
 });
 
-gulp.task('ftp-deploy', function () {
+gulp.task('publish', function () {
   var password = readlineSync.question('PASSWORD: ', { hideEchoBack: true });
-
-  var conn = ftp.create({
-    host: config.ftp_host,
-    user: config.ftp_username,
-    password: password,
-    parallel: 10,
-    log: util.log
-  });
 
   var files = [
     './img/**',
     './css/**',
-    './index.html'
+    './*/**.html'
   ];
 
-  return gulp.src(files, { base: '.', buffer: false })
-    .pipe(conn.dest('/' + config.ftp_file_dir));
+  return gulp.src('css/*')
+    .pipe(sftp({
+      host: config.ftp_host,
+      user: config.ftp_username,
+      pass: password,
+      remotePath: config.ftp_file_dir
+  }));
 });
 
 gulp.task('html',
@@ -143,12 +133,6 @@ gulp.task('css',
 gulp.task('assets',
   series(
     parallel('assets-imagemin', 'assets-copy-compressed')
-  )
-);
-
-gulp.task('publish',
-  series(
-    'ftp-deploy'
   )
 );
 
