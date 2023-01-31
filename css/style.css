@@ -1,0 +1,86 @@
+html,
+body {
+  background-color: #F8F4EF;
+  font-family: "Sofia Sans Semi Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: black;
+  height: 100%;
+  margin: 0;
+}
+
+body.page-home {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+.tmpl-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.page-home .tmpl-main {
+  justify-content: center;
+  align-content: center;
+}
+
+.tmpl-footer {
+  text-align: center;
+}
+
+.tmpl-footer__copy {
+  font-size: 0.8125rem;
+}
+
+.home-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-intro__logo {
+  margin-bottom: 8px;
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/logo-mark.svg");
+  background-position: center center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 600px) {
+  .home-intro__logo {
+    margin-bottom: 16px;
+    width: 112px;
+    height: 112px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

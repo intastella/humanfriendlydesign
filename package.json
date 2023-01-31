@@ -1,0 +1,28 @@
+{
+  "name": "humanfriendlydesign",
+  "version": "2.0.0",
+  "dependencies": {
+    "breakpoint-sass": "^3.0.0",
+    "connect": "^3.7.0",
+    "cssnano": "^5.1.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "normalize.css": "^8.0.1",
+    "postcss-focus": "^2.0.0",
+    "postcss-reporter": "^7.0.5",
+    "sass": "^1.57.1",
+    "serve-static": "^1.15.0"
+  },
+  "scripts": {
+    "web-server": "npm start"
+  }
+}

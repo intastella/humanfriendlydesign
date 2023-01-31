@@ -1,0 +1,46 @@
+block vars
+
+if title === 'Home'
+  -var assetPath = "img/"
+  -var linkPath = "docs/"
+  -var indexPath = ""
+  -var page_title = "Human Friendly Design"
+
+else
+  -var assetPath = "../img/"
+  -var indexPath = "../"
+  -var page_title = title + "| Human Friendly Design"
+
+-var debug = false
+
+if debug == true
+  -var asset_min = ""
+else
+  -var asset_min = ".min"
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title=page_title
+    meta(name='description' content='Design work by Don Osborne')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='apple-mobile-web-app-title' content='HFD')
+    link(rel='icon' href='img/favicon.ico' sizes='any')
+    link(rel='icon' href='img/icon.svg' type='image/svg+xml')
+    link(rel='apple-touch-icon' href='img/apple-touch.png')
+    link(rel='stylesheet' href='css/style'+ asset_min +'.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,300;0,500;1,300;1,500&display=swap' rel='stylesheet')
+
+  body.page-home
+    //- a.tmpl-skip-to-main(href="#tmpl-content") Skip to main content
+    //- nav.tmpl-nav(role='navigation')
+  
+    main.tmpl-main(role='main')
+      block content
+
+    footer.tmpl-footer
+      p.tmpl-footer__copy
+        | &copy; Don Osborne 2023
