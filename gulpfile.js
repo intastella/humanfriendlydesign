@@ -25,6 +25,11 @@ const cssnano = require('cssnano');
 //Assets
 const imagemin = require('gulp-imagemin');
 
+//FTP
+const util = require("gulp-util");
+const ftp = require("vinyl-ftp");
+const readlineSync = require('readline-sync');
+
 const pugOptions = {
   pretty: true,
   verbose: config.debug,
@@ -100,6 +105,27 @@ gulp.task('assets-imagemin', function () {
     .pipe(gulp.dest('./img'));
 });
 
+gulp.task('ftp-deploy', function () {
+  var password = readlineSync.question('PASSWORD: ', { hideEchoBack: true });
+
+  var conn = ftp.create({
+    host: config.ftp_host,
+    user: config.ftp_username,
+    password: password,
+    parallel: 10,
+    log: util.log
+  });
+
+  var files = [
+    './img/**',
+    './css/**',
+    './index.html'
+  ];
+
+  return gulp.src(files, { base: '.', buffer: false })
+    .pipe(conn.dest('/' + config.ftp_file_dir));
+});
+
 gulp.task('html',
   series(
     'html-pug'
@@ -117,6 +143,12 @@ gulp.task('css',
 gulp.task('assets',
   series(
     parallel('assets-imagemin', 'assets-copy-compressed')
+  )
+);
+
+gulp.task('publish',
+  series(
+    'ftp-deploy'
   )
 );
 

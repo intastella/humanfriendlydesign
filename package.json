@@ -16,11 +16,14 @@
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-util": "^3.0.8",
     "normalize.css": "^8.0.1",
     "postcss-focus": "^2.0.0",
     "postcss-reporter": "^7.0.5",
+    "readline-sync": "^1.4.10",
     "sass": "^1.57.1",
-    "serve-static": "^1.15.0"
+    "serve-static": "^1.15.0",
+    "vinyl-ftp": "^0.6.1"
   },
   "scripts": {
     "web-server": "npm start"
