@@ -1,0 +1,70 @@
+.loading {
+  width: $pct-full;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $white;
+  padding: $spacer2;
+  box-shadow: $shadow-large;
+  border-radius: $border-radius-16;
+
+  @include breakpoint($screen-small) {
+    width: auto;
+    padding: $spacer4;
+  }
+}
+
+.loading__inner {
+  margin-bottom: $spacer2;
+  padding: $spacer8 $spacer4;
+  width: $pct-full;
+  background-color: $grey1;
+  border-radius: $border-radius-16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoint($screen-small) {
+    padding: $spacer8;
+  }
+}
+
+.loading__logo {
+  margin-bottom: 16px;
+  width: 56px;
+  height: 56px;
+  background-image: url("#{$image-path}logo-mark.svg");
+  background-position: center center;
+  background-size: cover;
+
+  @include breakpoint($screen-small) {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.loading__message {
+  margin-bottom: $spacer;
+  font-size: $type-13;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-14;
+  }
+}
+
+.loading__progress {
+  width: $pct-full;
+  max-width: 320px;
+  height: $spacer;
+  background-color: $grey1;
+  border-radius: $border-radius-round;
+}
+
+.loading__progress-fill {
+  width: $pct-one-half;
+  height: $pct-full;
+  background-color: $black;
+  border-radius: $border-radius-round;
+}
