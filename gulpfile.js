@@ -4,6 +4,9 @@ const gulp = require('gulp');
 const config = require('./config.json');
 const pkg = require('./package.json');
 
+//General
+const rename = require('gulp-rename');
+
 //HTML
 const pug = require('gulp-pug');
 
