@@ -1,0 +1,141 @@
+.tmpl-inner {
+  display: flex;
+  flex-direction: column;
+  width: $pct-full;
+  height: $pct-full;
+  background-color: $white;
+  box-shadow: $shadow-large;
+  border-radius: $border-radius-16;
+
+  @include breakpoint($screen-small) {
+    flex-direction: row;
+  }
+}
+
+.tmpl-nav {
+  width: $pct-full;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 $spacer;
+  box-shadow: $shadow-large;
+  order: 1;
+
+  @include breakpoint($screen-small) {
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 72px;
+    padding: 72px 0 0;
+    height: $pct-full;
+    order: 0;
+    box-shadow: none;
+    border-right: 1px solid $color-border-light;
+  }
+}
+
+.tmpl-nav__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: $spacer-half 0;
+  font-size: $type-12;
+  text-decoration: none;
+  color: $color-text-secondary;
+  font-weight: $font-regular;
+
+  @include breakpoint($screen-small) {
+    flex-grow: 0;
+    height: 64px;
+    margin-bottom: $spacer2;
+  }
+
+  &:hover {
+    color: $color-text-primary;
+  }
+
+  &--active {
+    padding-bottom: $spacer;
+    color: $color-text-primary;
+    font-weight: $font-medium;
+
+    @include breakpoint($screen-small) {
+      padding-bottom: $spacer-half;
+    }
+  }
+}
+
+.tmpl-nav__link-icon {
+  fill: currentColor;
+}
+
+.tmpl-nav__link-active-dot {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  margin-left: -2.5px;
+  width: 5px;
+  height: 5px;
+  background-color: $black;
+  border-radius: $border-radius-round;
+
+  @include breakpoint($screen-small) {
+    top: 50%;
+    left: auto;
+    right: 5px;
+    bottom: auto;
+    margin-top: -2.5px;
+  }
+
+  .tmpl-nav__link--active & {
+    display: block;
+  }
+}
+
+.tmpl-main {
+  padding: 0;
+  flex-grow: 1;
+  order: 0;
+
+  @include breakpoint($screen-small) {
+    order: 1;
+  }
+}
+
+.tmpl-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: $pct-full;
+  padding: $spacer;
+}
+
+.tmpl-header__address {
+  padding: $spacer-half $spacer2;
+  background-color: $grey2;
+  border-radius: $border-radius-round;
+  font-size: $type-10;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-12;
+  }
+}
+
+.tmpl-content {
+  margin: $spacer3 auto;
+  padding: 0 $spacer2;
+  width: $pct-full;
+  max-width: 720px;
+
+  @include breakpoint($screen-small) {
+    margin: $spacer3 auto;
+    padding: 0 $spacer4;
+  }
+}
+
+.tmpl-page-heading {
+  margin-bottom: $spacer2;
+}
