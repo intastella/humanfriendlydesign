@@ -1,3 +1,10 @@
+.tmpl-main-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
 .loading {
   width: $pct-full;
   display: flex;

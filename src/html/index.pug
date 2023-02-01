@@ -4,6 +4,11 @@ block vars
   - var title = "Home"
 
 block content
-  h1 Good morning!
+  h1.tmpl-page-heading.home-heading Good morning!
   p
-    | I’m Don Osborne, a highly experienced and award winning UX design leader with over 15 years of experience creating intuitive, user-centered designs that drive business success. I’ve managed designers from around the world and strive to bring out the best in my team members. If you think I would be a good fit for your project, get in touch. Thanks!
+    | I’m Don Osborne, a highly experienced and award winning UX design leader with over 15 years of experience creating intuitive, user-centered designs that drive business success. 
+    | I’ve managed designers from around the world and strive to bring out the best in my team members. 
+    | If you think I would be a good fit for your project, 
+    a(href="contact.html")
+      | get in touch
+    | . Thanks!

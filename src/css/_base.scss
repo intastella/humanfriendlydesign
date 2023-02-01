@@ -16,7 +16,11 @@ body {
 }
 
 body {
-  padding: $spacer2;
+  padding: $spacer;
+
+  @include breakpoint($screen-small) {
+    padding: $spacer2;
+  }
 }
 
 a {
@@ -32,27 +36,17 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-}
-
-h1 {
-  font-size: $type-style-headline-xlarge;
+  font-size: $font-size-default;
 
   @include breakpoint($screen-small) {
-    font-size: $type-style-headline-2xl;
+    font-size: $type-18;
   }
 }
 
-.tmpl-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
+h1 {
+  font-size: $type-32;
 
-.tmpl-footer {
-  text-align: center;
-}
-
-.tmpl-footer__copy {
-  font-size: 0.8125rem;
+  @include breakpoint($screen-small) {
+    font-size: $type-48;
+  }
 }

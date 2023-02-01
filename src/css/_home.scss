@@ -1,0 +1,8 @@
+.home-heading {
+  margin-bottom: $spacer;
+  font-size: $type-32;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-64;
+  }
+}
