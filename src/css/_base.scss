@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: $color-page-bg;
+  font-family: $font-family-default;
+  font-size: $font-size-default;
+  font-weight: $font-weight-default;
+  line-height: $font-line-height-default;
+  color: $color-text-primary;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  padding: $spacer2;
+}
+
+a {
+  color: $color-text-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-heading;
+  line-height: $font-line-height-heading;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: $type-style-headline-xlarge;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-style-headline-2xl;
+  }
+}
+
+.tmpl-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.tmpl-footer {
+  text-align: center;
+}
+
+.tmpl-footer__copy {
+  font-size: 0.8125rem;
+}

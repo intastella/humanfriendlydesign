@@ -1,0 +1,172 @@
+@use "sass:math";
+
+// =============================================
+//                    CONFIG
+// =============================================
+$spacer: 8px !default;
+$spacer-quarter: $spacer * 0.25 !default;
+$spacer-half: $spacer * 0.5 !default;
+$spacer-plus: $spacer * 1.5 !default;
+$spacer2: $spacer * 2 !default;
+$spacer3: $spacer * 3 !default;
+$spacer4: $spacer * 4 !default;
+$spacer5: $spacer * 5 !default;
+$spacer6: $spacer * 6 !default;
+$spacer7: $spacer * 7 !default;
+$spacer8: $spacer * 8 !default;
+$spacer9: $spacer * 9 !default;
+$spacer10: $spacer * 10 !default;
+
+$image-path: '../img/' !default;
+$font-path: '../fonts/' !default;
+
+// =============================================
+//                DEFAULT COLORS
+// =============================================
+
+$white: #fff !default;
+$grey1: #f7f7f7 !default;
+$grey2: #f2f2f2 !default;
+$grey3: #e5e5e5 !default;
+$grey4: #dddddd !default;
+$grey5: #cccccc !default;
+$grey6: #8c8c8c !default;
+$grey7: #666666 !default;
+$grey8: #4d4d4d !default;
+$grey9: #333333 !default;
+$grey10: #262626 !default;
+$black: #000 !default;
+
+$color-page-bg: $white !default;
+$color-text-primary: $black !default;
+$color-text-secondary: $grey7 !default;
+
+// =============================================
+//                    FONTS
+// =============================================
+
+$font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
+$font-size-default: 1rem !default;
+$font-line-height-default: 1.4 !default;
+$font-line-height-heading: 1.2 !default;
+
+$font-black: 900 !default;
+$font-bold: bold !default;
+$font-medium: 600 !default;
+$font-regular: normal !default;
+$font-light: 300 !default;
+
+$font-weight-default: $font-regular !default;
+$font-weight-heading: $font-medium !default;
+$font-weight-bold: $font-bold !default;
+
+// =============================================
+//      BREAKPOINTS (COMPASS-BREAKPOINT)
+// =============================================
+
+// Viewport widths
+$screen-xsmall: 375px !default;
+$screen-small: 600px !default;
+$screen-medium: 768px !default;
+$screen-large: 1024px !default;
+$screen-xlarge: 1280px !default;
+$screen-xxlarge: 1440px !default;
+$screen-xxxlarge: 1600px !default;
+$screen-xxxxlarge: 1920px !default;
+$screen-xxxxxlarge: 2560px !default;
+
+// =============================================
+//                  PERCENTAGES
+// =============================================
+
+$pct-full: 100%;
+$pct-one-half: 50%;
+$pct-one-quarter: 25%;
+$pct-three-quarter: 75%;
+$pct-two-third: 66.6666%;
+$pct-one-third: 33.3333%;
+$pct-one-fifth: 20%;
+$pct-four-fifth: 80%;
+
+// =============================================
+//                  TYPE SIZES
+// =============================================
+
+$type-88: 5.5rem !default;   //88px
+$type-72: 4.5rem !default;   //72px
+$type-64: 4rem !default;     //64px
+$type-60: 3.7r5em !default;  //60px
+$type-52: 3.25rem !default;  //52px
+$type-48: 3rem !default;     //48px
+$type-44: 2.75rem !default;  //44px
+$type-36: 2.25rem !default;  //36px
+$type-32: 2rem !default;     //32px
+$type-30: 1.875rem !default; //30px
+$type-26: 1.625rem !default; //26px
+$type-24: 1.5rem !default;   //24px
+$type-22: 1.375rem !default; //22px
+$type-20: 1.25rem !default;  //20px
+$type-18: 1.125rem !default; //18px
+$type-17: 1.0625rem !default;//17px
+$type-16: 1rem !default;     //16px
+$type-15: 0.9375rem !default;//15px
+$type-14: 0.875rem !default; //14px
+$type-13: 0.8125rem !default;//13px
+$type-12: 0.75rem !default;  //12px
+$type-11: 0.6875rem !default;//11px
+$type-10: 0.625rem !default; //10px
+
+$type-style-number-xlarge: $type-52 !default;
+$type-style-number-large: $type-48 !default;
+$type-style-number-medium: $type-32 !default;
+$type-style-number-small: $type-24 !default;
+$type-style-headline-6xl: $type-88 !default;
+$type-style-headline-5xl: $type-72 !default;
+$type-style-headline-4xl: $type-64 !default;
+$type-style-headline-3xl: $type-48 !default;
+$type-style-headline-2xl: $type-36 !default;
+$type-style-headline-xlarge: $type-24 !default;
+$type-style-headline-large: $type-20 !default;
+$type-style-headline-medium: $type-17 !default;
+$type-style-headline-small: $type-15 !default;
+$type-style-headline-xsmall: $type-13 !default;
+$type-style-body-large: $type-17 !default;
+$type-style-body-medium: $type-15 !default;
+$type-style-body-small: $type-13 !default;
+$type-style-body-xsmall: $type-12 !default;
+$type-style-footnote: $type-11 !default;
+$type-style-group-label: $type-12 !default;
+
+// =============================================
+//                  BORDERS
+// =============================================
+
+$color-border-light: $grey3 !default;
+$color-border-dark: $grey5 !default;
+$border: 1px !default;
+$border-2: $border * 2 !default;
+$border-4: $border * 4 !default;
+$border-8: $border * 8 !default;
+
+$border-radius: 1px !default;
+$border-radius-0: 0 !default;
+$border-radius-2: $border-radius * 2 !default;
+$border-radius-4: $border-radius * 4 !default;
+$border-radius-8: $border-radius * 8 !default;
+$border-radius-16: $border-radius * 16 !default;
+$border-radius-round: 9999rem !default;
+
+// =============================================
+//                    ICONS
+// =============================================
+
+$icon-16: 1rem;
+$icon-18: 1.125rem;
+$icon-20: 1.25rem;
+$icon-22: 1.375rem;
+$icon-24: 1.5rem;
+$icon-28: 1.75rem;
+$icon-32: 2rem;
+$icon-40: 2.5rem;
+$icon-48: 3rem;
+$icon-64: 4rem;

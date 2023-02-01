@@ -308,6 +308,10 @@ template {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   background-color: #F8F4EF;
@@ -315,22 +319,22 @@ body {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.4;
-  color: black;
-  height: 100%;
-  margin: 0;
-}
-
-body.page-home {
+  color: #000;
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+body {
+  padding: 16px;
 }
 
 a {
-  color: black;
+  color: #000;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
@@ -341,23 +345,19 @@ p {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
-
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
+
 .tmpl-main {
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.page-home .tmpl-main {
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .tmpl-footer {
@@ -368,29 +368,79 @@ h1 {
   font-size: 0.8125rem;
 }
 
-.home-intro {
+.loading {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #fff;
+  padding: 16px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+@media (min-width: 600px) {
+  .loading {
+    width: auto;
+    padding: 32px;
+  }
 }
 
-.home-intro__logo {
-  margin-bottom: 8px;
-  width: 80px;
-  height: 80px;
+.loading__inner {
+  margin-bottom: 16px;
+  padding: 64px 32px;
+  width: 100%;
+  background-color: #f7f7f7;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .loading__inner {
+    padding: 64px;
+  }
+}
+
+.loading__logo {
+  margin-bottom: 16px;
+  width: 56px;
+  height: 56px;
   background-image: url("../img/logo-mark.svg");
   background-position: center center;
   background-size: cover;
 }
-
-@media screen and (min-width: 600px) {
-  .home-intro__logo {
-    margin-bottom: 16px;
-    width: 112px;
-    height: 112px;
+@media (min-width: 600px) {
+  .loading__logo {
+    width: 72px;
+    height: 72px;
   }
+}
+
+.loading__message {
+  margin-bottom: 8px;
+  font-size: 0.8125rem;
+}
+@media (min-width: 600px) {
+  .loading__message {
+    font-size: 0.875rem;
+  }
+}
+
+.loading__progress {
+  width: 100%;
+  max-width: 320px;
+  height: 8px;
+  background-color: #f7f7f7;
+  border-radius: 9999rem;
+}
+
+.loading__progress-fill {
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 9999rem;
 }
 
 /*# sourceMappingURL=style.css.map */
