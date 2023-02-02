@@ -568,6 +568,15 @@ h1 {
   }
 }
 
+.loading__header {
+  font-size: 1.5rem;
+}
+@media (min-width: 600px) {
+  .loading__header {
+    font-size: 2rem;
+  }
+}
+
 .loading__message {
   margin-bottom: 8px;
   font-size: 0.8125rem;
@@ -591,6 +600,22 @@ h1 {
   height: 100%;
   background-color: #000;
   border-radius: 9999rem;
+}
+
+.extensions-list {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 8px;
+}
+@media (min-width: 600px) {
+  .extensions-list {
+    padding: 16px;
+  }
+}
+
+.extension {
+  margin-right: 8px;
 }
 
 .home-heading {
