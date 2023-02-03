@@ -1,0 +1,221 @@
+// =============================================
+//             MARGIN & PADDING
+// =============================================
+
+@mixin zero { 
+  margin: 0; 
+  padding: 0; 
+}
+
+// =============================================
+//                  MARGINS
+// =============================================
+
+@mixin center { 
+  margin-right: auto; 
+  margin-left: auto; 
+}
+
+@mixin mar($multiple: 1, $importance: null) { 
+  @if $multiple == 0 {
+    margin: 0 $importance; 
+  } @else {
+    margin: $spacer * $multiple $importance; 
+  }
+}
+
+@mixin mar-top($multiple: 1, $importance: null) { 
+  @if $multiple == 0 {
+    margin-top: 0 $importance; 
+  } @else {
+    margin-top: $spacer * $multiple $importance; 
+  }
+}
+
+@mixin mar-right($multiple: 1, $importance: null) { 
+  @if $multiple == 0 {
+    margin-right: 0 $importance; 
+  } @else {
+    margin-right: $spacer * $multiple $importance; 
+  }
+}
+
+@mixin mar-bottom($multiple: 1, $importance: null) { 
+  @if $multiple == 0 {
+    margin-bottom: 0 $importance; 
+  } @else {
+    margin-bottom: $spacer * $multiple $importance; 
+  }
+}
+
+@mixin mar-left($multiple: 1, $importance: null) { 
+  @if $multiple == 0 {
+    margin-left: 0 $importance; 
+  } @else {
+    margin-left: $spacer * $multiple $importance; 
+  }
+}
+
+@mixin mar-quarter($importance: null) { 
+  @include mar(0.25, $importance); 
+}
+
+@mixin mar-half($importance: null) { 
+  @include mar(0.5, $importance); 
+}
+
+@mixin mar-1plus($importance: null) { 
+  @include mar(1.5, $importance); 
+}
+
+@mixin mar-top-quarter($importance: null) { 
+  @include mar-top(0.25, $importance); 
+}
+
+@mixin mar-top-half($importance: null) { 
+  @include mar-top(0.5, $importance); 
+}
+
+@mixin mar-top-1plus($importance: null) { 
+  @include mar-top(1.5, $importance); 
+}
+
+@mixin mar-bottom-quarter($importance: null) { 
+  @include mar-bottom(0.25, $importance); 
+}
+
+@mixin mar-bottom-half($importance: null) { 
+  @include mar-bottom(0.5, $importance); 
+}
+
+@mixin mar-bottom-1plus($importance: null) { 
+  @include mar-bottom(1.5, $importance); 
+}
+
+@mixin mar-left-quarter($importance: null) { 
+  @include mar-left(0.25, $importance); 
+}
+
+@mixin mar-left-half($importance: null) { 
+  @include mar-left(0.5, $importance); 
+}
+
+@mixin mar-left-1plus($importance: null) { 
+  @include mar-left(1.5, $importance); 
+}
+
+@mixin mar-right-quarter($importance: null) { 
+  @include mar-right(0.25, $importance); 
+}
+
+@mixin mar-right-half($importance: null) { 
+  @include mar-right(0.5, $importance); 
+}
+
+@mixin mar-right-1plus($importance: null) { 
+  @include mar-right(1.5, $importance); 
+}
+
+// =============================================
+//                  PADDING
+// =============================================
+
+@mixin pad($multiple: 1, $importance: null) { 
+  @if $multiple == 0 {
+    padding: 0 $importance; 
+  } @else {
+    padding: $spacer * $multiple $importance; 
+  }
+}
+
+@mixin pad-top($multiple: 1, $importance: null) { 
+  @if $multiple == 0 {
+    padding-top: 0 $importance; 
+  } @else {
+    padding-top: $spacer * $multiple $importance; 
+  }
+}
+
+@mixin pad-right($multiple: 1, $importance: null) { 
+  @if $multiple == 0 {
+    padding-right: 0 $importance; 
+  } @else {
+    padding-right: $spacer * $multiple $importance; 
+  }
+}
+
+@mixin pad-bottom($multiple: 1, $importance: null) { 
+  @if $multiple == 0 {
+    padding-bottom: 0 $importance; 
+  } @else {
+    padding-bottom: $spacer * $multiple $importance; 
+  }
+}
+
+@mixin pad-left($multiple: 1, $importance: null) { 
+  @if $multiple == 0 {
+    padding-left: 0 $importance; 
+  } @else {
+    padding-left: $spacer * $multiple $importance; 
+  }
+}
+
+@mixin pad-top-quarter($importance: null) { 
+  @include pad-top(0.25, $importance); 
+}
+
+@mixin pad-top-half($importance: null) { 
+  @include pad-top(0.5, $importance); 
+}
+
+@mixin pad-top-1plus($importance: null) { 
+  @include pad-top(1.5, $importance); 
+}
+
+@mixin pad-bottom-quarter($importance: null) { 
+  @include pad-bottom(0.25, $importance); 
+}
+
+@mixin pad-bottom-half($importance: null) { 
+  @include pad-bottom(0.5, $importance); 
+}
+
+@mixin pad-bottom-1plus($importance: null) { 
+  @include pad-bottom(1.5, $importance); 
+}
+
+@mixin pad-left-quarter($importance: null) { 
+  @include pad-left(0.25, $importance); 
+}
+
+@mixin pad-left-half($importance: null) { 
+  @include pad-left(0.5, $importance); 
+}
+
+@mixin pad-left-1plus($importance: null) { 
+  @include pad-left(1.5, $importance); 
+}
+
+@mixin pad-right-quarter($importance: null) { 
+  @include pad-right(0.25, $importance); 
+}
+
+@mixin pad-right-half($importance: null) { 
+  @include pad-right(0.5, $importance); 
+}
+
+@mixin pad-right-1plus($importance: null) { 
+  @include pad-right(1.5, $importance); 
+}
+
+@mixin pad-quarter($importance: null) { 
+  @include pad(0.25, $importance); 
+}
+
+@mixin pad-half($importance: null) { 
+  @include pad(0.5, $importance); 
+}
+
+@mixin pad-1plus($importance: null) { 
+  @include pad(1.5, $importance); 
+}

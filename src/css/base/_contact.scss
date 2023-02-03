@@ -1,10 +1,9 @@
 .contact-list {
-  margin: 0;
-  padding: 0;
+  @include zero;
+  @include overflow-hidden;
   list-style: none;
   border: 1px solid $color-border-light;
   border-radius: $border-radius-8;
-  overflow: hidden;
 }
 
 .contact-list__item {
@@ -17,8 +16,8 @@
 }
 
 .contact-list__link {
-  display: flex;
-  align-items: center;
+  @include flex;
+  @include flex-cross-center;
   padding: $spacer-plus $spacer-plus $spacer-plus $spacer2;
   text-decoration: none;
 
@@ -28,13 +27,13 @@
 }
 
 .contact-list__link-icon {
+  @include mar-right(1);
   fill: currentColor;
   stroke: currentColor;
-  margin-right: $spacer;
 }
 
 .contact-list__link-info {
-  flex-grow: 1;
+  @include flex-grow;
 }
 
 .contact-list__link-heading {
@@ -43,8 +42,8 @@
 }
 
 .contact-list__link-description {
-  flex-grow: 1;
-  margin: 0;
+  @include flex-grow;
+  @include mar(0);
   font-size: $type-12;
   font-weight: $font-regular;
   color: $color-text-secondary;

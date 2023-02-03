@@ -1,9 +1,12 @@
 @import 'breakpoint-sass/stylesheets/_breakpoint.scss'; //available in node_modules
 @import 'normalize.css/normalize'; //available in node_modules
-@import '_settings';
-@import '_theme';
-@import '_base';
-@import '_tmpl';
-@import '_loading';
-@import '_home';
-@import '_contact';
+@import 'settings/_settings';
+@import 'settings/_theme';
+@import 'core/_layout';
+@import 'core/_spacing';
+@import 'base/_base';
+@import 'base/_tmpl';
+@import 'base/_loading';
+@import 'base/_home';
+@import 'base/_contact';
+@import 'overrides/_spacing';

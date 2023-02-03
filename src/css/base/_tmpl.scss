@@ -1,6 +1,23 @@
+.tmpl-skip-to-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: $spacer2;
+  background-color: $black;
+  color: $white;
+  transform: translateX(-100%);
+  transition: transform 0.25s ease-in-out;
+  z-index: 99999;
+  
+  &:focus {
+    transform: translateX(0);
+    outline: none;
+  }
+}
+
 .tmpl-inner {
-  display: flex;
-  flex-direction: column;
+  @include flex;
+  @include flex-vertical;
   width: $pct-full;
   height: $pct-full;
   background-color: $white;
@@ -8,24 +25,24 @@
   border-radius: $border-radius-16;
 
   @include breakpoint($screen-small) {
-    flex-direction: row;
+    @include flex-horizontal;
   }
 }
 
 .tmpl-nav {
+  @include flex;
+  @include flex-horizontal;
   width: $pct-full;
   height: 64px;
-  display: flex;
-  flex-direction: row;
-  padding: 0 $spacer;
+  padding: $spacer-half;
   box-shadow: $shadow-large;
   order: 1;
 
   @include breakpoint($screen-small) {
-    flex-direction: column;
-    flex: 0 0 auto;
+    @include flex-vertical;
+    @include flex-fixed;
     width: 72px;
-    padding: 72px 0 0;
+    padding: 72px $spacer-half $spacer-half;
     height: $pct-full;
     order: 0;
     box-shadow: none;
@@ -34,35 +51,43 @@
 }
 
 .tmpl-nav__link {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
+  @include relative;
+  @include flex;
+  @include flex-grow;
+  @include flex-vertical;
+  @include flex-center-center;
+  @include mar-left(0.5);
   padding: $spacer-half 0;
   font-size: $type-12;
   text-decoration: none;
   color: $color-text-secondary;
   font-weight: $font-regular;
+  border-radius: $border-radius-8;
 
   @include breakpoint($screen-small) {
-    flex-grow: 0;
+    @include flex-fixed;
+    @include mar-bottom(2);
+    @include mar-left(0);
+    @include pad(0);
     height: 64px;
-    margin-bottom: $spacer2;
+  }
+
+  &:first-of-type {
+    @include mar-left(0);
   }
 
   &:hover {
+    background-color: $grey1;
     color: $color-text-primary;
   }
 
   &--active {
-    padding-bottom: $spacer;
+    @include pad-bottom(1);
     color: $color-text-primary;
     font-weight: $font-medium;
 
     @include breakpoint($screen-small) {
-      padding-bottom: $spacer-half;
+      @include pad-bottom(0);
     }
   }
 }
@@ -72,8 +97,8 @@
 }
 
 .tmpl-nav__link-active-dot {
-  display: none;
-  position: absolute;
+  @include hidden;
+  @include absolute;
   left: 50%;
   bottom: 4px;
   margin-left: -2.5px;
@@ -96,7 +121,7 @@
 }
 
 .tmpl-main {
-  padding: 0;
+  @include pad(0);
   flex-grow: 1;
   order: 0;
 
@@ -106,11 +131,11 @@
 }
 
 .tmpl-header {
-  display: flex;
-  flex-direction: row;
+  @include pad(1);
+  @include flex;
+  @include flex-horizontal;
   justify-content: space-between;
   width: $pct-full;
-  padding: $spacer;
 }
 
 .tmpl-header__address {
@@ -137,5 +162,48 @@
 }
 
 .tmpl-page-heading {
-  margin-bottom: $spacer2;
+  @include mar-bottom(2);
+}
+
+.tmpl-page-subsection {
+  @include mar-top(4);
+}
+
+.tmpl-heading-link {
+  @include flex;
+  @include flex-cross-center;
+  @include mar-bottom(1);
+}
+
+.tmpl-heading-link__heading {
+  font-size: $type-18;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-24;
+  }
+}
+
+.tmpl-heading-link__arrow {
+  @include mar-left(1);
+  @include overflow-hidden;
+  @include pad(0.5);
+  background-color: $grey1;
+  width: 25px;
+  height: 25px;
+  border-radius: $border-radius-round;
+
+  .tmpl-heading-link:hover & {
+    background-color: $grey2;
+  }
+}
+
+.tmpl-heading-link__arrow-icon {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+.tmpl-thumbnail {
+  @include block;
+  @include overflow-hidden;
 }
