@@ -2,22 +2,26 @@
   box-sizing: border-box;
 }
 
-img {
-  width: 100%;
+img, 
+picture {
+  @include width-full;
   height: auto;
+  line-height: 0;
+}
+
+picture {
+  @include block;
 }
 
 html,
 body {
+  @include height-full;
   background-color: $color-page-bg;
   font-family: $font-family-default;
   font-size: $font-size-default;
   font-weight: $font-weight-default;
   line-height: $font-line-height-default;
   color: $color-text-primary;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 body {

@@ -20,8 +20,41 @@ block content
         svg.tmpl-heading-link__arrow-icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
           path(fill-rule="evenodd", clip-rule="evenodd", d="M13.0697 5.06977C13.3626 4.77687 13.8374 4.77687 14.1303 5.06977L20.5303 11.4698C20.8232 11.7627 20.8232 12.2375 20.5303 12.5304L14.1303 18.9304C13.8374 19.2233 13.3626 19.2233 13.0697 18.9304C12.7768 18.6375 12.7768 18.1627 13.0697 17.8698L18.1893 12.7501H4C3.58579 12.7501 3.25 12.4143 3.25 12.0001C3.25 11.5859 3.58579 11.2501 4 11.2501H18.1893L13.0697 6.13043C12.7768 5.83753 12.7768 5.36266 13.0697 5.06977Z")
 
-    a.tmpl-thumbnail(href="work/go2bank-app.html")
-      picture
-        source(media="(min-width: 600px)", srcset="img/Thumbnails/GO2bank_App_Desktop.png, img/Thumbnails/GO2bank_App_Desktop@2x.png 2x")
-        source(srcset="img/Thumbnails/GO2bank_App_Mobile.png, img/Thumbnails/GO2bank_App_Mobile@2x.png 2x")
-        img(src="img/Thumbnails/GO2bank_App_Desktop.png" alt="GO2bank Mobile App Screens")
+    .tmpl-thumbnail-row
+      a.tmpl-thumbnail-column(href="work/go2bank-app.html")
+        picture.tmpl-thumbnail
+          source(media="(min-width: 600px)", srcset="img/Thumbnails/GO2bank_App_Desktop.png, img/Thumbnails/GO2bank_App_Desktop@2x.png 2x")
+          source(srcset="img/Thumbnails/GO2bank_App_Mobile.png, img/Thumbnails/GO2bank_App_Mobile@2x.png 2x")
+          img(src="img/Thumbnails/GO2bank_App_Desktop.png" alt="GO2bank Mobile App Screens")
+
+    .tmpl-thumbnail-row
+      a.tmpl-thumbnail-column(href="work/eureka-design-system/")
+        picture.tmpl-thumbnail
+          source(media="(min-width: 600px)", srcset="img/Thumbnails/EDS_Desktop.png, img/Thumbnails/EDS_Desktop@2x.png 2x")
+          source(srcset="img/Thumbnails/EDS_Mobile.png, img/Thumbnails/EDS_Mobile@2x.png 2x")
+          img(src="img/Thumbnails/EDS_Desktop.png" alt="Eureka Design System Screens")
+        .tmpl-thumbnail-title Eureka Design System
+        .tmpl-thumbnail-tags
+          span.tmpl-thumbnail-tag #UX
+          span.tmpl-thumbnail-tag #Design System  
+          span.tmpl-thumbnail-tag #Research
+
+      a.tmpl-thumbnail-column(href="work/aem-templates/")
+        picture.tmpl-thumbnail
+          source(media="(min-width: 600px)", srcset="img/Thumbnails/AEM_Templates_Desktop.png, img/Thumbnails/AEM_Templates_Desktop@2x.png 2x")
+          source(srcset="img/Thumbnails/AEM_Templates_Mobile.png, img/Thumbnails/AEM_Templates_Mobile@2x.png 2x")
+          img(src="img/Thumbnails/AEM_Templates_Desktop.png" alt="AEM Template Screens")
+        .tmpl-thumbnail-title AEM Templates
+        .tmpl-thumbnail-tags
+          span.tmpl-thumbnail-tag #UX
+          span.tmpl-thumbnail-tag #Design System
+          span.tmpl-thumbnail-tag #Marketing
+
+      a.tmpl-thumbnail-column(href="work/twilio-chat-widget/")
+        picture.tmpl-thumbnail
+          source(media="(min-width: 600px)", srcset="img/Thumbnails/Twilio_Desktop.png, img/Thumbnails/Twilio_Desktop@2x.png 2x")
+          source(srcset="img/Thumbnails/Twilio_Mobile.png, img/Thumbnails/Twilio_Mobile@2x.png 2x")
+          img(src="img/Thumbnails/Twilio_Desktop.png" alt="Twilio Chat Widget Screens")
+        .tmpl-thumbnail-title Twilio Chat Widget
+        .tmpl-thumbnail-tags
+          span.tmpl-thumbnail-tag #UX

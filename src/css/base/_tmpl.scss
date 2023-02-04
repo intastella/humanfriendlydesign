@@ -1,5 +1,6 @@
 .tmpl-skip-to-main {
-  position: fixed;
+  @include hidden;
+  @include fixed;
   top: 0;
   left: 0;
   padding: $spacer2;
@@ -11,15 +12,15 @@
   
   &:focus {
     transform: translateX(0);
-    outline: none;
   }
 }
 
 .tmpl-inner {
   @include flex;
   @include flex-vertical;
-  width: $pct-full;
-  height: $pct-full;
+  @include width-full;
+  @include height-full;
+  @include overflow-hidden;
   background-color: $white;
   box-shadow: $shadow-large;
   border-radius: $border-radius-16;
@@ -32,18 +33,22 @@
 .tmpl-nav {
   @include flex;
   @include flex-horizontal;
-  width: $pct-full;
+  @include width-full;
+  @include overflow-hidden;
+  @include flex-fixed;
   height: 64px;
   padding: $spacer-half;
   box-shadow: $shadow-large;
+  border-radius: 0 0 $border-radius-16 $border-radius-16;
   order: 1;
 
   @include breakpoint($screen-small) {
     @include flex-vertical;
     @include flex-fixed;
+    @include height-full;
+    @include border-radius(0);
     width: 72px;
     padding: 72px $spacer-half $spacer-half;
-    height: $pct-full;
     order: 0;
     box-shadow: none;
     border-right: 1px solid $color-border-light;
@@ -57,11 +62,10 @@
   @include flex-vertical;
   @include flex-center-center;
   @include mar-left(0.5);
+  @include footnote;
   padding: $spacer-half 0;
-  font-size: $type-12;
   text-decoration: none;
   color: $color-text-secondary;
-  font-weight: $font-regular;
   border-radius: $border-radius-8;
 
   @include breakpoint($screen-small) {
@@ -121,8 +125,10 @@
 }
 
 .tmpl-main {
+  @include relative;
   @include pad(0);
-  flex-grow: 1;
+  @include flex-fluid;
+  @include overflow-hidden;
   order: 0;
 
   @include breakpoint($screen-small) {
@@ -131,11 +137,13 @@
 }
 
 .tmpl-header {
+  @include absolute;
   @include pad(1);
   @include flex;
   @include flex-horizontal;
+  @include width-full;
   justify-content: space-between;
-  width: $pct-full;
+  background-color: rgba($color: #FFFFFF, $alpha: 0.75);
 }
 
 .tmpl-header__address {
@@ -150,14 +158,19 @@
 }
 
 .tmpl-content {
-  margin: $spacer3 auto;
-  padding: 0 $spacer2;
-  width: $pct-full;
-  max-width: 720px;
+  @include width-full;
+  @include height-full;
+  overflow-y: scroll;
+}
 
+.tmpl-content__inner {
+  @include center;
+  @include width-full;
+  max-width: 720px;
+  padding: $spacer6 $spacer2 $spacer4 $spacer2;
+  
   @include breakpoint($screen-small) {
-    margin: $spacer3 auto;
-    padding: 0 $spacer4;
+    padding: $spacer8 0 $spacer3 0;
   }
 }
 
@@ -176,11 +189,7 @@
 }
 
 .tmpl-heading-link__heading {
-  font-size: $type-18;
-
-  @include breakpoint($screen-small) {
-    font-size: $type-24;
-  }
+  @include head-med;
 }
 
 .tmpl-heading-link__arrow {
@@ -203,7 +212,62 @@
   fill: currentColor;
 }
 
+.tmpl-thumbnail-row {
+  @include flex;
+  @include flex-vertical;
+  @include mar-top(4);
+
+  &:first-of-type {
+    @include mar-top(0);
+  }
+
+  @include breakpoint($screen-small) {
+    @include flex-horizontal;
+  }
+}
+
+.tmpl-thumbnail-column {
+  @include flex-fixed;
+  @include mar-top(4);
+
+  &:first-of-type {
+    @include mar-top(0);
+  }
+
+  @include breakpoint($screen-small) {
+    @include flex-fluid;
+    @include mar-left(4);
+    @include mar-top(0);
+
+    &:first-of-type {
+      @include mar-left(0);
+    }
+  }
+}
+
 .tmpl-thumbnail {
+  @include border;
+  @include border-radius($border-radius-16);
   @include block;
-  @include overflow-hidden;
+
+  .tmpl-thumbnail-column:hover & {
+    @include border(1px, $color-border-dark);
+  }
+}
+
+.tmpl-thumbnail-title {
+  @include mar-top(1);
+  @include head-xsmall;
+}
+
+.tmpl-thumbnail-tags {
+  @include footnote;
+}
+
+.tmpl-thumbnail-tag {
+  @include mar-left(1);
+
+  &:first-of-type {
+    @include mar-left(0);
+  }
 }
