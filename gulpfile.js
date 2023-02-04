@@ -142,6 +142,7 @@ gulp.task('assets',
 gulp.task('watch', function () {
   gulp.watch(['./src/html/**/*.pug'], gulp.series('html'));
   gulp.watch('./src/css/**/*.scss', gulp.series('css'));
+  gulp.watch('./src/img/**/*', gulp.series('assets'));
 });
 
 gulp.task('default',
