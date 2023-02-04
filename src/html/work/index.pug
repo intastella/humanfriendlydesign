@@ -1,0 +1,58 @@
+extends ../_page-template
+
+block vars
+  - var title = "Work"
+
+block content
+  h1.tmpl-page-heading #{title}
+
+  .tmpl-project-row
+    a.tmpl-project(href="/work/go2bank-mobile-app/")
+      picture.tmpl-project__thumbnail
+        source(media="(min-width: 600px)", srcset="/img/Thumbnails/GO2bank_App_Large.png, /img/Thumbnails/GO2bank_App_Large@2x.png 2x")
+        source(media="(min-width: 430px)", srcset="/img/Thumbnails/GO2bank_App_Medium.png, /img/Thumbnails/GO2bank_App_Medium@2x.png 2x")
+        source(srcset="/img/Thumbnails/GO2bank_App_Small.png, /img/Thumbnails/GO2bank_App_Small@2x.png 2x")
+        img(src="/img/Thumbnails/GO2bank_App_Large.png" alt="GO2bank Small App Screens")
+      .tmpl-project__title GO2bank Mobile App
+      .tmpl-project__tags
+        span.tmpl-project__tag-item-item #UX
+        span.tmpl-project__tag-item #Design System  
+        span.tmpl-project__tag-item #IA
+  
+  .tmpl-project-row
+    a.tmpl-project(href="/work/eureka-design-system/")
+      picture.tmpl-project__thumbnail
+        source(media="(min-width: 600px)", srcset="/img/Thumbnails/EDS_Large.png, /img/Thumbnails/EDS_Large@2x.png 2x")
+        source(media="(min-width: 430px)", srcset="/img/Thumbnails/EDS_Medium.png, /img/Thumbnails/EDS_Medium@2x.png 2x")
+        source(srcset="/img/Thumbnails/EDS_Small.png, /img/Thumbnails/EDS_Small@2x.png 2x")
+        img(src="/img/Thumbnails/EDS_Large.png" alt="Eureka Design System Screens")
+      .tmpl-project__title Eureka Design System
+      .tmpl-project__tags
+        span.tmpl-project__tag-item-item #UX
+        span.tmpl-project__tag-item #Design System  
+        span.tmpl-project__tag-item #Research
+
+  .tmpl-project-row
+    a.tmpl-project(href="/work/aem-templates/")
+      picture.tmpl-project__thumbnail
+        source(media="(min-width: 600px)", srcset="/img/Thumbnails/AEM_Templates_Large.png, /img/Thumbnails/AEM_Templates_Large@2x.png 2x")
+        source(media="(min-width: 430px)", srcset="/img/Thumbnails/AEM_Templates_Medium.png, /img/Thumbnails/AEM_Templates_Medium@2x.png 2x")
+        source(srcset="/img/Thumbnails/AEM_Templates_Small.png, /img/Thumbnails/AEM_Templates_Small@2x.png 2x")
+        img(src="/img/Thumbnails/AEM_Templates_Large.png" alt="AEM Template Screens")
+      .tmpl-project__title AEM Templates
+      .tmpl-project__tags
+        span.tmpl-project__tag-item #UX
+        span.tmpl-project__tag-item #Design System
+        span.tmpl-project__tag-item #Marketing
+
+  .tmpl-project-row
+    a.tmpl-project(href="/work/twilio-chat-widget/")
+      picture.tmpl-project__thumbnail
+        source(media="(min-width: 600px)", srcset="/img/Thumbnails/Twilio_Large.png, /img/Thumbnails/Twilio_Large@2x.png 2x")
+        source(media="(min-width: 430px)", srcset="/img/Thumbnails/Twilio_Medium.png, /img/Thumbnails/Twilio_Medium@2x.png 2x")
+        source(srcset="/img/Thumbnails/Twilio_Small.png, /img/Thumbnails/Twilio_Small@2x.png 2x")
+        img(src="/img/Thumbnails/Twilio_Large.png" alt="Twilio Chat Widget Screens")
+      .tmpl-project__title Twilio Chat Widget
+      .tmpl-project__tags
+        span.tmpl-project__tag-item #UX
+  
