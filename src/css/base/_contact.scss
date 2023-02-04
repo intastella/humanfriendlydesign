@@ -44,8 +44,7 @@
 .contact-list__link-description {
   @include flex-grow;
   @include mar(0);
-  font-size: $type-12;
-  font-weight: $font-regular;
+  @include footnote;
   color: $color-text-secondary;
 }
 

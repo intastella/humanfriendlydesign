@@ -1,0 +1,75 @@
+@mixin border($size: null, $color: null) {
+  $use-size: $border;
+  @if $size != null {
+    $use-size: $size;
+  }
+
+  $use-color: $color-border-light;
+  @if $color != null {
+    $use-color: $color;
+  }
+  border: $use-size solid $use-color;
+}
+
+@mixin border-top($size: null, $color: null) {
+  $use-size: $border;
+  @if $size != null {
+    $use-size: $size;
+  }
+
+  $use-color: $color-border-light;
+  @if $color != null {
+    $use-color: $color;
+  }
+  border-top: $use-size solid $use-color;
+}
+
+@mixin border-right($size: null, $color: null) {
+  $use-size: $border;
+  @if $size != null {
+    $use-size: $size;
+  }
+
+  $use-color: $color-border-light;
+  @if $color != null {
+    $use-color: $color;
+  }
+  border-right: $use-size solid $use-color;
+}
+
+@mixin border-bottom($size: null, $color: null) {
+  $use-size: $border;
+  @if $size != null {
+    $use-size: $size;
+  }
+
+  $use-color: $color-border-light;
+  @if $color != null {
+    $use-color: $color;
+  }
+  border-bottom: $use-size solid $use-color;
+}
+
+@mixin border-left($size: null, $color: null) {
+  $use-size: $border;
+  @if $size != null {
+    $use-size: $size;
+  }
+
+  $use-color: $color-border-light;
+  @if $color != null {
+    $use-color: $color;
+  }
+  border-left: $use-size solid $use-color;
+}
+
+@mixin border-none {
+  border: 0;
+}
+
+@mixin border-radius($size) {
+  @if $size != 0 {
+    @include overflow-hidden;
+  }
+  border-radius: $size;
+}

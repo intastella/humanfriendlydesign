@@ -8,3 +8,45 @@ $color-page-bg: #F8F4EF;
 $shadow-large: 0px 2px 20px rgba(0, 0, 0, 0.1);
 $shadow-medium: 0px 2px 10px rgba(0, 0, 0, 0.15);
 $shadow-small: 0px 1px 5px rgba(0, 0, 0, 0.15);
+
+@mixin head-med {
+  font-size: $type-18;
+  font-weight: $font-bold;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-24;
+  }
+}
+
+@mixin head-small {
+  font-size: $type-16;
+  font-weight: $font-bold;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-18;
+  }
+}
+
+@mixin head-xsmall {
+  font-size: $type-14;
+  font-weight: $font-medium;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-16;
+  }
+}
+
+@mixin head-xxsmall {
+  font-size: $type-12;
+  font-weight: $font-medium;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-14;
+  }
+}
+
+@mixin footnote {
+  font-size: $type-12;
+  font-weight: $font-regular;
+  color: $color-text-secondary;
+}
