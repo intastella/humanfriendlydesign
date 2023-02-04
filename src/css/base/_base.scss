@@ -40,17 +40,14 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-weight: $font-weight-heading;
   line-height: $font-line-height-heading;
-  margin-top: 0;
-  margin-bottom: 0;
+  @include mar-top(0);
+  @include mar-bottom(0);
 }
 
 p {
-  margin-top: 0;
-  font-size: $font-size-default;
-
-  @include breakpoint($screen-small) {
-    font-size: $type-18;
-  }
+  @include mar-top(0);
+  @include mar-bottom(0);
+  @include body-med;
 
   a {
     text-decoration: underline;
@@ -58,9 +55,25 @@ p {
 }
 
 h1 {
-  font-size: $type-32;
+  @include head-xlarge;
+}
 
-  @include breakpoint($screen-small) {
-    font-size: $type-48;
-  }
+h2 {
+  @include head-large;
+}
+
+h3 {
+  @include head-med;
+}
+
+h4 {
+  @include head-small;
+}
+
+h5 {
+  @include head-xsmall;
+}
+
+h6 {
+  @include head-xxsmall;
 }

@@ -9,52 +9,60 @@ block content
     | I’m Don Osborne, a highly experienced and award winning UX design leader with over 15 years of experience creating intuitive, user-centered designs that drive business success. 
     | I’ve managed designers from around the world and strive to bring out the best in my team members. 
     | If you think I would be a good fit for your project, 
-    a(href="contact.html")
+    a(href="/contact/")
       | get in touch
     | . Thanks!
 
   .tmpl-page-subsection
-    a(href="work.html").tmpl-heading-link
+    a(href="/work/").tmpl-heading-link
       h2.tmpl-heading-link__heading Recent work
-      .tmpl-heading-link__arrow
-        svg.tmpl-heading-link__arrow-icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+      .tmpl-link__arrow
+        svg.tmpl-link__arrow-icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
           path(fill-rule="evenodd", clip-rule="evenodd", d="M13.0697 5.06977C13.3626 4.77687 13.8374 4.77687 14.1303 5.06977L20.5303 11.4698C20.8232 11.7627 20.8232 12.2375 20.5303 12.5304L14.1303 18.9304C13.8374 19.2233 13.3626 19.2233 13.0697 18.9304C12.7768 18.6375 12.7768 18.1627 13.0697 17.8698L18.1893 12.7501H4C3.58579 12.7501 3.25 12.4143 3.25 12.0001C3.25 11.5859 3.58579 11.2501 4 11.2501H18.1893L13.0697 6.13043C12.7768 5.83753 12.7768 5.36266 13.0697 5.06977Z")
 
-    .tmpl-thumbnail-row
-      a.tmpl-thumbnail-column(href="work/go2bank-app.html")
-        picture.tmpl-thumbnail
-          source(media="(min-width: 600px)", srcset="img/Thumbnails/GO2bank_App_Desktop.png, img/Thumbnails/GO2bank_App_Desktop@2x.png 2x")
-          source(srcset="img/Thumbnails/GO2bank_App_Mobile.png, img/Thumbnails/GO2bank_App_Mobile@2x.png 2x")
-          img(src="img/Thumbnails/GO2bank_App_Desktop.png" alt="GO2bank Mobile App Screens")
+    .tmpl-project-row
+      a.tmpl-project(href="/work/go2bank-mobile-app/")
+        picture.tmpl-project__thumbnail
+          source(media="(min-width: 600px)", srcset="/img/Thumbnails/GO2bank_App_Large.png, /img/Thumbnails/GO2bank_App_Large@2x.png 2x")
+          source(media="(min-width: 430px)", srcset="/img/Thumbnails/GO2bank_App_Medium.png, /img/Thumbnails/GO2bank_App_Medium@2x.png 2x")
+          source(srcset="/img/Thumbnails/GO2bank_App_Small.png, /img/Thumbnails/GO2bank_App_Small@2x.png 2x")
+          img(src="/img/Thumbnails/GO2bank_App_Large.png" alt="GO2bank Small App Screens")
+        .tmpl-project-floating-label Featured Project: GO2bank Mobile App
+          .tmpl-link__arrow
+            svg.tmpl-link__arrow-icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+              path(fill-rule="evenodd", clip-rule="evenodd", d="M13.0697 5.06977C13.3626 4.77687 13.8374 4.77687 14.1303 5.06977L20.5303 11.4698C20.8232 11.7627 20.8232 12.2375 20.5303 12.5304L14.1303 18.9304C13.8374 19.2233 13.3626 19.2233 13.0697 18.9304C12.7768 18.6375 12.7768 18.1627 13.0697 17.8698L18.1893 12.7501H4C3.58579 12.7501 3.25 12.4143 3.25 12.0001C3.25 11.5859 3.58579 11.2501 4 11.2501H18.1893L13.0697 6.13043C12.7768 5.83753 12.7768 5.36266 13.0697 5.06977Z")
 
-    .tmpl-thumbnail-row
-      a.tmpl-thumbnail-column(href="work/eureka-design-system/")
-        picture.tmpl-thumbnail
-          source(media="(min-width: 600px)", srcset="img/Thumbnails/EDS_Desktop.png, img/Thumbnails/EDS_Desktop@2x.png 2x")
-          source(srcset="img/Thumbnails/EDS_Mobile.png, img/Thumbnails/EDS_Mobile@2x.png 2x")
-          img(src="img/Thumbnails/EDS_Desktop.png" alt="Eureka Design System Screens")
-        .tmpl-thumbnail-title Eureka Design System
-        .tmpl-thumbnail-tags
-          span.tmpl-thumbnail-tag #UX
-          span.tmpl-thumbnail-tag #Design System  
-          span.tmpl-thumbnail-tag #Research
+    .tmpl-project-row
+      a.tmpl-project(href="/work/eureka-design-system/")
+        picture.tmpl-project__thumbnail
+          source(media="(min-width: 600px)", srcset="/img/Thumbnails/EDS_Large.png, /img/Thumbnails/EDS_Large@2x.png 2x")
+          source(media="(min-width: 430px)", srcset="/img/Thumbnails/EDS_Medium.png, /img/Thumbnails/EDS_Medium@2x.png 2x")
+          source(srcset="/img/Thumbnails/EDS_Small.png, /img/Thumbnails/EDS_Small@2x.png 2x")
+          img(src="/img/Thumbnails/EDS_Large.png" alt="Eureka Design System Screens")
+        .tmpl-project__title Eureka Design System
+        .tmpl-project__tags
+          span.tmpl-project__tag-item-item #UX
+          span.tmpl-project__tag-item #Design System  
+          span.tmpl-project__tag-item #Research
 
-      a.tmpl-thumbnail-column(href="work/aem-templates/")
-        picture.tmpl-thumbnail
-          source(media="(min-width: 600px)", srcset="img/Thumbnails/AEM_Templates_Desktop.png, img/Thumbnails/AEM_Templates_Desktop@2x.png 2x")
-          source(srcset="img/Thumbnails/AEM_Templates_Mobile.png, img/Thumbnails/AEM_Templates_Mobile@2x.png 2x")
-          img(src="img/Thumbnails/AEM_Templates_Desktop.png" alt="AEM Template Screens")
-        .tmpl-thumbnail-title AEM Templates
-        .tmpl-thumbnail-tags
-          span.tmpl-thumbnail-tag #UX
-          span.tmpl-thumbnail-tag #Design System
-          span.tmpl-thumbnail-tag #Marketing
+      a.tmpl-project(href="/work/aem-templates/")
+        picture.tmpl-project__thumbnail
+          source(media="(min-width: 600px)", srcset="/img/Thumbnails/AEM_Templates_Large.png, /img/Thumbnails/AEM_Templates_Large@2x.png 2x")
+          source(media="(min-width: 430px)", srcset="/img/Thumbnails/AEM_Templates_Medium.png, /img/Thumbnails/AEM_Templates_Medium@2x.png 2x")
+          source(srcset="/img/Thumbnails/AEM_Templates_Small.png, /img/Thumbnails/AEM_Templates_Small@2x.png 2x")
+          img(src="/img/Thumbnails/AEM_Templates_Large.png" alt="AEM Template Screens")
+        .tmpl-project__title AEM Templates
+        .tmpl-project__tags
+          span.tmpl-project__tag-item #UX
+          span.tmpl-project__tag-item #Design System
+          span.tmpl-project__tag-item #Marketing
 
-      a.tmpl-thumbnail-column(href="work/twilio-chat-widget/")
-        picture.tmpl-thumbnail
-          source(media="(min-width: 600px)", srcset="img/Thumbnails/Twilio_Desktop.png, img/Thumbnails/Twilio_Desktop@2x.png 2x")
-          source(srcset="img/Thumbnails/Twilio_Mobile.png, img/Thumbnails/Twilio_Mobile@2x.png 2x")
-          img(src="img/Thumbnails/Twilio_Desktop.png" alt="Twilio Chat Widget Screens")
-        .tmpl-thumbnail-title Twilio Chat Widget
-        .tmpl-thumbnail-tags
-          span.tmpl-thumbnail-tag #UX
+      a.tmpl-project(href="/work/twilio-chat-widget/")
+        picture.tmpl-project__thumbnail
+          source(media="(min-width: 600px)", srcset="/img/Thumbnails/Twilio_Large.png, /img/Thumbnails/Twilio_Large@2x.png 2x")
+          source(media="(min-width: 430px)", srcset="/img/Thumbnails/Twilio_Medium.png, /img/Thumbnails/Twilio_Medium@2x.png 2x")
+          source(srcset="/img/Thumbnails/Twilio_Small.png, /img/Thumbnails/Twilio_Small@2x.png 2x")
+          img(src="/img/Thumbnails/Twilio_Large.png" alt="Twilio Chat Widget Screens")
+        .tmpl-project__title Twilio Chat Widget
+        .tmpl-project__tags
+          span.tmpl-project__tag-item #UX

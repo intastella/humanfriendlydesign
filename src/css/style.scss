@@ -2,6 +2,7 @@
 @import 'normalize.css/normalize'; //available in node_modules
 @import 'settings/_settings';
 @import 'settings/_theme';
+@import 'core/_typography';
 @import 'core/_layout';
 @import 'core/_spacing';
 @import 'core/_borders';
@@ -9,5 +10,6 @@
 @import 'base/_tmpl';
 @import 'base/_loading';
 @import 'base/_home';
+@import 'base/_work';
 @import 'base/_contact';
 @import 'overrides/_spacing';

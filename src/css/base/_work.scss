@@ -1,0 +1,40 @@
+.work-tags {
+  @include mar-top(1);
+  @include footnote;
+}
+
+.work-links {
+  @include mar-top(1);
+  @include footnote;
+
+  a {
+    text-decoration: underline;;
+  }
+}
+
+.work-samples {
+  @include mar-top(2);
+  @include grid;
+  grid-template-columns: auto;
+  grid-gap: $spacer2;
+
+  @include breakpoint($screen-small) {
+    @include mar-top(4);
+    grid-gap: $spacer4;
+  }
+
+  img {
+    @include border-radius($spacer-plus);
+    @include border;
+  }
+}
+
+.work-samples--mobile {
+  grid-template-columns: auto auto;
+  grid-column-gap: $spacer2;
+
+  @include breakpoint($screen-small) {
+    grid-template-columns: auto auto auto;
+    grid-column-gap: $spacer4;
+  }
+}

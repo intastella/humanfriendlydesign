@@ -1,0 +1,81 @@
+@mixin head-2xl {
+  font-size: $type-48;
+  font-weight: $font-bold;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-64;
+  }
+}
+
+@mixin head-xlarge {
+  font-size: $type-32;
+  font-weight: $font-bold;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-48;
+  }
+}
+
+@mixin head-large {
+  font-size: $type-24;
+  font-weight: $font-bold;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-32;
+  }
+}
+
+
+@mixin head-med {
+  font-size: $type-18;
+  font-weight: $font-bold;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-24;
+  }
+}
+
+@mixin head-small {
+  font-size: $type-16;
+  font-weight: $font-bold;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-18;
+  }
+}
+
+@mixin head-xsmall {
+  font-size: $type-14;
+  font-weight: $font-medium;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-16;
+  }
+}
+
+@mixin head-xxsmall {
+  font-size: $type-12;
+  font-weight: $font-medium;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-14;
+  }
+}
+
+@mixin body-med {
+  font-size: $type-16;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-18;
+  }
+}
+
+@mixin footnote {
+  font-size: $type-12;
+  font-weight: $font-regular;
+  color: $color-text-secondary;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-13;
+  }
+}

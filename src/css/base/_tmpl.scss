@@ -67,6 +67,7 @@
   text-decoration: none;
   color: $color-text-secondary;
   border-radius: $border-radius-8;
+  transition: all $short-transition;
 
   @include breakpoint($screen-small) {
     @include flex-fixed;
@@ -166,11 +167,11 @@
 .tmpl-content__inner {
   @include center;
   @include width-full;
-  max-width: 720px;
+  max-width: 784px; // 720px + 32px left and right padding;
   padding: $spacer6 $spacer2 $spacer4 $spacer2;
   
   @include breakpoint($screen-small) {
-    padding: $spacer8 0 $spacer3 0;
+    padding: $spacer8 $spacer4 $spacer4 $spacer4;
   }
 }
 
@@ -192,7 +193,7 @@
   @include head-med;
 }
 
-.tmpl-heading-link__arrow {
+.tmpl-link__arrow {
   @include mar-left(1);
   @include overflow-hidden;
   @include pad(0.5);
@@ -200,19 +201,27 @@
   width: 25px;
   height: 25px;
   border-radius: $border-radius-round;
+  transition: background-color $short-transition;
 
-  .tmpl-heading-link:hover & {
+  .tmpl-heading-link:hover &,
+  .tmpl-project:hover & {
     background-color: $grey2;
   }
 }
 
-.tmpl-heading-link__arrow-icon {
+.tmpl-link__arrow-icon {
   width: 17px;
   height: 17px;
-  fill: currentColor;
+  fill: $grey6;
+  transition: fill $short-transition;
+
+  .tmpl-heading-link:hover &,
+  .tmpl-project:hover & {
+    fill: $black;
+  }
 }
 
-.tmpl-thumbnail-row {
+.tmpl-project-row {
   @include flex;
   @include flex-vertical;
   @include mar-top(4);
@@ -226,9 +235,10 @@
   }
 }
 
-.tmpl-thumbnail-column {
+.tmpl-project {
   @include flex-fixed;
   @include mar-top(4);
+  @include relative;
 
   &:first-of-type {
     @include mar-top(0);
@@ -245,26 +255,46 @@
   }
 }
 
-.tmpl-thumbnail {
+.tmpl-project__thumbnail {
   @include border;
   @include border-radius($border-radius-16);
   @include block;
+  transition: border $short-transition;
 
-  .tmpl-thumbnail-column:hover & {
-    @include border(1px, $color-border-dark);
+  .tmpl-project:hover & {
+    @include border(1px, $grey6);
   }
 }
 
-.tmpl-thumbnail-title {
+.tmpl-project-floating-label {
+  @include absolute;
+  @include flex;
+  @include flex-horizontal;
+  @include flex-cross-center;
+  @include border-radius($border-radius-round);
+  @include footnote;
+  bottom: $spacer;
+  left: $spacer;
+  background-color: $white;
+  padding: $spacer $spacer $spacer $spacer2;
+  box-shadow: $shadow-large; 
+
+  @include breakpoint($screen-small) {
+    bottom: $spacer2;
+    left: $spacer2;
+  }
+}
+
+.tmpl-project__title {
   @include mar-top(1);
   @include head-xsmall;
 }
 
-.tmpl-thumbnail-tags {
+.tmpl-project__tags {
   @include footnote;
 }
 
-.tmpl-thumbnail-tag {
+.tmpl-project__tag-item {
   @include mar-left(1);
 
   &:first-of-type {

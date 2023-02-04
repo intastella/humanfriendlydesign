@@ -20,26 +20,25 @@
 
 @mixin inline { 
   display: inline;
-  // visibility: visible;
 }
 @mixin inline-block { 
   display: inline-block;
-  // visibility: visible;
 }
 
 @mixin block { 
   display: block; 
-  // visibility: visible;
 }
 
 @mixin flex {
   display: flex;
-  // visibility: visible;
+}
+
+@mixin grid {
+  display: grid;
 }
 
 @mixin hidden { 
   display: none; 
-  // visibility: hidden; // Used to hide from screen readers
 }
 
 // =============================================
