@@ -17,10 +17,12 @@
   @include grid;
   grid-template-columns: auto;
   grid-gap: $spacer2;
+  grid-column-gap: $spacer2;
 
   @include breakpoint($screen-small) {
     @include mar-top(4);
     grid-gap: $spacer4;
+    grid-column-gap: $spacer4;
   }
 
   img {
@@ -29,12 +31,18 @@
   }
 }
 
-.work-samples--mobile {
+.work-samples--2M-3D {
   grid-template-columns: auto auto;
-  grid-column-gap: $spacer2;
 
   @include breakpoint($screen-small) {
     grid-template-columns: auto auto auto;
-    grid-column-gap: $spacer4;
+  }
+}
+
+.work-samples--1M-2D {
+  grid-template-columns: auto;
+
+  @include breakpoint($screen-small) {
+    grid-template-columns: auto auto;
   }
 }

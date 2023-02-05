@@ -41,6 +41,7 @@
   box-shadow: $shadow-large;
   border-radius: 0 0 $border-radius-16 $border-radius-16;
   order: 1;
+  z-index: 1;
 
   @include breakpoint($screen-small) {
     @include flex-vertical;
@@ -144,7 +145,8 @@
   @include flex-horizontal;
   @include width-full;
   justify-content: space-between;
-  background-color: rgba($color: #FFFFFF, $alpha: 0.75);
+  background-color: rgba($color: #FFFFFF, $alpha: 0.95);
+  z-index: 9;
 }
 
 .tmpl-header__address {
@@ -175,6 +177,10 @@
   }
 }
 
+.tmpl-page-heading-wrapper {
+  @include relative;
+}
+
 .tmpl-page-heading {
   @include mar-bottom(2);
 }
@@ -193,30 +199,47 @@
   @include head-med;
 }
 
-.tmpl-link__arrow {
+.tmpl-link-arrow {
   @include mar-left(1);
   @include overflow-hidden;
   @include pad(0.5);
+  line-height: 0;
   background-color: $grey1;
-  width: 25px;
-  height: 25px;
   border-radius: $border-radius-round;
   transition: background-color $short-transition;
 
-  .tmpl-heading-link:hover &,
-  .tmpl-project:hover & {
+  a:hover &,
+  &:hover {
     background-color: $grey2;
+  }
+
+  &--back {
+    @include absolute;
+    @include mar-left(0);
+    @include hidden;
+    top: 50%;
+    left: -45px;
+    margin-top: -18.5px;
+
+    @include breakpoint(946px) {
+      @include block;
+    }
   }
 }
 
-.tmpl-link__arrow-icon {
+.tmpl-link-arrow__icon {
   width: 17px;
   height: 17px;
   fill: $grey6;
   transition: fill $short-transition;
 
-  .tmpl-heading-link:hover &,
-  .tmpl-project:hover & {
+  .tmpl-link-arrow--large & {
+    width: 29px;
+    height: 29px;
+  }
+
+  a:hover &,
+  &:hover {
     fill: $black;
   }
 }
