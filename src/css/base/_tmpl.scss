@@ -303,6 +303,7 @@
   @include flex-cross-center;
   @include border-radius($border-radius-round);
   @include footnote;
+  color: $black;
   bottom: $spacer;
   left: $spacer;
   background-color: $white;

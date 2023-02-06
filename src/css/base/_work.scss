@@ -1,14 +1,14 @@
 .work-tags {
-  @include mar-top(1);
+  // @include mar-top(1);
   @include footnote;
 }
 
 .work-links {
-  @include mar-top(1);
+  @include mar-top(0.5);
   @include footnote;
 
   a {
-    text-decoration: underline;;
+    text-decoration: underline;
   }
 }
 

@@ -749,6 +749,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   font-size: 0.75rem;
   font-weight: normal;
   color: #666666;
+  color: #000;
   bottom: 8px;
   left: 8px;
   background-color: #fff;
@@ -914,7 +915,6 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 
 .work-tags {
-  margin-top: 8px;
   font-size: 0.75rem;
   font-weight: normal;
   color: #666666;
@@ -926,7 +926,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 
 .work-links {
-  margin-top: 8px;
+  margin-top: 4px;
   font-size: 0.75rem;
   font-weight: normal;
   color: #666666;
@@ -1016,6 +1016,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 
 .contact-list__link-heading {
+  margin-bottom: 0;
   font-size: 1rem;
   font-weight: 500;
 }
@@ -1038,19 +1039,19 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   fill: #8c8c8c;
 }
 
-.about-heading {
+.about-hero {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.about-heading__avatar {
+.about-hero__avatar {
   margin-right: 16px;
   width: 80px;
   height: 80px;
 }
 @media (min-width: 600px) {
-  .about-heading__avatar {
+  .about-hero__avatar {
     width: 88px;
     height: 88px;
   }
@@ -1093,13 +1094,13 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 
 .about-role-item__heading {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   margin-bottom: 0;
 }
 @media (min-width: 600px) {
   .about-role-item__heading {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -1137,13 +1138,13 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   padding: 12px;
   overflow: hidden;
   border-radius: 8px;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   transition: border 0.15s ease-in-out;
 }
 @media (min-width: 600px) {
   .about-resume__link {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 .about-resume__link:hover, .about-resume__link:focus {

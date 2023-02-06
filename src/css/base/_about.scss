@@ -1,10 +1,10 @@
-.about-heading {
+.about-hero {
   @include flex;
   @include flex-horizontal;
   @include flex-cross-center;
 }
 
-.about-heading__avatar {
+.about-hero__avatar {
   @include mar-right(2);
   width: 80px;
   height: 80px;
@@ -51,7 +51,7 @@
 }
 
 .about-role-item__heading {
-  @include head-xsmall;
+  @include head-xxsmall;
   @include mar-bottom(0);
 }
 
@@ -74,7 +74,7 @@
   @include border;
   @include pad(1.5);
   @include border-radius($border-radius-8);
-  @include head-xsmall;
+  @include head-xxsmall;
   transition: border $short-transition;
 
   &:hover {

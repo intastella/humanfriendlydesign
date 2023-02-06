@@ -37,6 +37,7 @@
 }
 
 .contact-list__link-heading {
+  @include mar-bottom(0);
   font-size: $type-16;
   font-weight: $font-medium;
 }
