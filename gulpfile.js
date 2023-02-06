@@ -82,6 +82,11 @@ gulp.task('assets-copy-compressed', function () {
     .pipe(gulp.dest('./img'));
 });
 
+gulp.task('assets-copy-downloads', function () {
+  return gulp.src('./src/downloads/**/*')
+    .pipe(gulp.dest('./downloads'));
+});
+
 gulp.task('assets-imagemin', function () {
   return gulp.src('./src/img/**/*.{png,jpg,gif,svg}')
     .pipe(imagemin([
@@ -135,7 +140,7 @@ gulp.task('css',
 
 gulp.task('assets',
   series(
-    parallel('assets-imagemin', 'assets-copy-compressed')
+    parallel('assets-imagemin', 'assets-copy-compressed', 'assets-copy-downloads')
   )
 );
 

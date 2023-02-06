@@ -15,6 +15,12 @@
   }
 }
 
+.icon {
+  fill: $black;
+  width: 24px;
+  height: 24px;
+}
+
 .tmpl-inner {
   @include flex;
   @include flex-vertical;
@@ -197,6 +203,7 @@
 
 .tmpl-heading-link__heading {
   @include head-med;
+  @include mar-bottom(0);
 }
 
 .tmpl-link-arrow {
@@ -285,7 +292,7 @@
   transition: border $short-transition;
 
   .tmpl-project:hover & {
-    @include border(1px, $grey6);
+    border: 1px solid $color-border-dark;
   }
 }
 

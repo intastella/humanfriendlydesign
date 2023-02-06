@@ -352,12 +352,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.2;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 8px;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   font-size: 1rem;
 }
 @media (min-width: 600px) {
@@ -443,6 +443,12 @@ h6 {
 }
 .tmpl-skip-to-main:focus {
   transform: translateX(0);
+}
+
+.icon {
+  fill: #000;
+  width: 24px;
+  height: 24px;
 }
 
 .tmpl-inner {
@@ -641,6 +647,7 @@ h6 {
 .tmpl-heading-link__heading {
   font-size: 1.125rem;
   font-weight: bold;
+  margin-bottom: 0;
 }
 @media (min-width: 600px) {
   .tmpl-heading-link__heading {
@@ -1029,6 +1036,122 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 
 .contact-list__link-arrow {
   fill: #8c8c8c;
+}
+
+.about-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.about-heading__avatar {
+  margin-right: 16px;
+  width: 80px;
+  height: 80px;
+}
+@media (min-width: 600px) {
+  .about-heading__avatar {
+    width: 88px;
+    height: 88px;
+  }
+}
+
+.about-roles {
+  display: grid;
+  grid-gap: 16px;
+  grid-column-gap: 16px;
+  grid-template-columns: auto;
+}
+@media (min-width: 600px) {
+  .about-roles {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+.about-role-item {
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: border 0.15s ease-in-out;
+}
+.about-role-item:hover, .about-role-item:focus {
+  border: 1px solid #8c8c8c;
+}
+
+.about-role-item__image {
+  flex: 0 0 auto;
+  margin-right: 8px;
+  width: 48px;
+  height: 48px;
+}
+
+.about-role-item__details {
+  flex: 1 1 auto;
+}
+
+.about-role-item__heading {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+@media (min-width: 600px) {
+  .about-role-item__heading {
+    font-size: 1rem;
+  }
+}
+
+.about-role-item__industry {
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: #666666;
+}
+@media (min-width: 600px) {
+  .about-role-item__industry {
+    font-size: 0.8125rem;
+  }
+}
+
+.about-role-item__role {
+  font-size: 0.625rem;
+  font-weight: normal;
+  color: #666666;
+}
+@media (min-width: 600px) {
+  .about-role-item__role {
+    font-size: 0.6875rem;
+  }
+}
+
+.about-resume {
+  display: flex;
+}
+
+.about-resume__link {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  border: 1px solid #e5e5e5;
+  padding: 12px;
+  overflow: hidden;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: border 0.15s ease-in-out;
+}
+@media (min-width: 600px) {
+  .about-resume__link {
+    font-size: 1rem;
+  }
+}
+.about-resume__link:hover, .about-resume__link:focus {
+  border: 1px solid #8c8c8c;
+}
+
+.about-resume__link-icon {
+  margin-right: 8px;
 }
 
 .center {

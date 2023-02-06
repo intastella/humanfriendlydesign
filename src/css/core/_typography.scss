@@ -79,3 +79,13 @@
     font-size: $type-13;
   }
 }
+
+@mixin footnote-small {
+  font-size: $type-10;
+  font-weight: $font-regular;
+  color: $color-text-secondary;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-11;
+  }
+}

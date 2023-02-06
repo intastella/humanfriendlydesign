@@ -41,12 +41,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $font-weight-heading;
   line-height: $font-line-height-heading;
   @include mar-top(0);
-  @include mar-bottom(0);
+  @include mar-bottom(1);
 }
 
 p {
   @include mar-top(0);
-  @include mar-bottom(0);
+  @include mar-bottom(1);
   @include body-med;
 
   a {
