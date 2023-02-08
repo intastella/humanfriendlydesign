@@ -959,6 +959,9 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   border-radius: 12px;
   border: 1px solid #e5e5e5;
 }
+.work-samples--mar-top-0 {
+  margin-top: 0;
+}
 
 .work-samples--2M-3D {
   grid-template-columns: auto auto;

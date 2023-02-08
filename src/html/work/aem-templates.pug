@@ -2,7 +2,7 @@ extends ../_page-template
 
 block vars
   - var title = "Work"
-  - var work_title = "AEM Templates"
+  - var work_title = "AEM Template Library"
 
 block content
   .tmpl-page-heading-wrapper
@@ -10,31 +10,41 @@ block content
     a(href="/work/").tmpl-link-arrow.tmpl-link-arrow--large.tmpl-link-arrow--back
       svg.tmpl-link-arrow__icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
         path(fill-rule="evenodd", clip-rule="evenodd", d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z")
-  p
-    | Lorem ipsum dolor sit amet consectetur. Tortor sit gravida ornare at. In ornare nunc ultricies non pellentesque. Mauris habitant vestibulum nisl sed in fermentum. Id nisl tincidunt integer id sagittis ultrices metus. Sit enim eu nunc in cras fermentum venenatis. Sed aliquet est amet mattis in enim quisque mi et. Sit egestas lacus enim id. Dictum in vitae semper faucibus. Proin nulla commodo vitae dolor eu pharetra tortor sem nibh. Interdum amet ultricies odio nunc sed hendrerit donec sed a.
+  
   .work-tags
     span.tmpl-project__tag-item-item #UX
-    span.tmpl-project__tag-item #Design System  
+    span.tmpl-project__tag-item #Design System
     span.tmpl-project__tag-item #Marketing
 
-  .work-samples
-    img(src="/img/Work/AEM-Templates-Docs.png")
-    img(src="/img/Work/AEM-Templates-Example-Pages.png")
-    img(src="/img/Work/AEM-Templates-2-Col-Image-Left-and-Right.png")
-    img(src="/img/Work/AEM-Templates-Hero.png")
-    
-  .work-samples.work-samples--1M-2D
-    img(src="/img/Work/AEM-Templates-GO2bank.png")
-    img(src="/img/Work/AEM-Templates-Moneypak.png")
-    img(src="/img/Work/AEM-Templates-GDN.png")
-    img(src="/img/Work/AEM-Templates-Greendot.png")
+  .tmpl-page-subsection
+    h2 Challenge
+    p
+      | Designing, building and maintaining the range of marketing websites that Green Dot owns has always been a challenge. The previous solutions involved either design and engineering launching and maintaining these sites, or an outside service translating designs into a CMS as needed. Neither option was very efficient however, being too time consuming, inflexible, slow to market or all of the above.
 
-  .work-samples
-    img(src="/img/Work/AEM-Templates-Navigation.png")
-    img(src="/img/Work/AEM-Templates-Header.png")
-    img(src="/img/Work/AEM-Templates-Footer.png")
-    img(src="/img/Work/AEM-Templates-1-Col-Image-Above.png")
-    img(src="/img/Work/AEM-Templates-1-Col-Text.png")
-    img(src="/img/Work/AEM-Templates-Scroll-Help.png")
+    .work-samples.work-samples--1M-2D
+      img(src="/img/Work/AEM-Templates-GO2bank.png")
+  
+  .tmpl-page-subsection
+    h2 Process
+    p
+      | We identified that a hybrid approach to building these websites was a way to be more agile. We would create design templates that could be translated into Adobe Experience Manager (AEM) by our contracted partner, allowing us to componetize blocks of web pages for re-use across many websites.
+
+    .work-samples
+      img(src="/img/Work/AEM-Templates-Docs.png")
+      img(src="/img/Work/AEM-Templates-2-Col-Image-Left-and-Right.png")
+      img(src="/img/Work/AEM-Templates-Hero.png")
+      img(src="/img/Work/AEM-Templates-Header.png")
+      img(src="/img/Work/AEM-Templates-Navigation.png")
+      img(src="/img/Work/AEM-Templates-Example-Pages.png")
     
+  .tmpl-page-subsection
+    h2 Solution
+    p
+      | The result was a design system consisting of typography, colors, components and most importantly, micro templates in the form of "blocks", that marketing designers would use to design the websites, while our partner would templatize them in AEM. Customizations were defined in the design system and duplicated in AEM as well. Images, text, colors, spacing, and more could be configured in Figma, and the same done in AEM, resulting in a build once, configure in many different ways workflow. This allowed us to launch new versions go2bank.com, greendot.com, moneypak.com and greendotnetwork.com, all within 8 months.
+
+    .work-samples.work-samples--1M-2D
+      img(src="/img/Work/AEM-Templates-GO2bank.png")
+      img(src="/img/Work/AEM-Templates-Greendot.png")
+      img(src="/img/Work/AEM-Templates-Moneypak.png")
+      img(src="/img/Work/AEM-Templates-GDN.png")
   
