@@ -150,9 +150,15 @@
   @include flex;
   @include flex-horizontal;
   @include width-full;
+  @include overflow-hidden;
+  border-radius: $border-radius-16 $border-radius-16 0 0;
   justify-content: space-between;
   background-color: rgba($color: #FFFFFF, $alpha: 0.95);
   z-index: 9;
+
+  @include breakpoint($screen-small) {
+    border-radius: 0 $border-radius-16 0 0;
+  }
 }
 
 .tmpl-header__address {

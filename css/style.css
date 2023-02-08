@@ -590,9 +590,16 @@ h6 {
   display: flex;
   flex-direction: row;
   width: 100%;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 9;
+}
+@media (min-width: 600px) {
+  .tmpl-header {
+    border-radius: 0 16px 0 0;
+  }
 }
 
 .tmpl-header__address {
