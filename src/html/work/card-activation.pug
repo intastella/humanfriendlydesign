@@ -1,0 +1,53 @@
+extends ../_page-template
+
+block vars
+  - var title = "Work"
+  - var work_title = "GO2bank Card Activation"
+
+block content
+  .tmpl-page-heading-wrapper
+    h1.tmpl-page-heading #{work_title}
+    a(href="/work/").tmpl-link-arrow.tmpl-link-arrow--large.tmpl-link-arrow--back
+      svg.tmpl-link-arrow__icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+        path(fill-rule="evenodd", clip-rule="evenodd", d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z")
+
+  .work-tags
+    span.tmpl-project__tag-item-item #UX
+
+  .tmpl-page-subsection
+    h2 Challenge
+    p
+      | Card activation is a vitally important function of any bank account. This very actively used flow was built in parallel with the GO2bank branding and design system work, but never kept in sync with the evolving design work and engineering platform upgrades. Design, Product and Engineering identified that it needed an overhaul to make it more modern, flexible and themable for white label brands.
+
+  .tmpl-page-subsection
+    h2 Process
+    p
+      | Design and Engineering determined that a page layout similar to one in use on another in flight partner project could serve as the basis for an updated card activation flow. Extensive work had already been done to understand, document and build a "split screen" layout that provided ample marketing space paired with a limited width area ideal for line length and form inputs, optimized for readbility.
+
+    .work-samples
+      img(src="/img/Work/Card-Activation-Flow.png")
+
+  .tmpl-page-subsection
+    h2 Solution
+    p
+      | Designed to handle the main use case of online card activation, the page also had to serve as a tributary page to other activation flows, where online accounts had not been created yet or a card may have been purchased in a store. 
+
+    .work-samples.work-samples--2M-3D
+      img(src="/img/Work/Card-Activation-Mobile-Activation-Filled.png")
+      img(src="/img/Work/Card-Activation-Mobile-Activation-CVV.png")
+      img(src="/img/Work/Card-Activation-Mobile-Verify-Identity-with-SSN-Filled.png")
+      img(src="/img/Work/Card-Activation-Mobile-Set-PIN-Filled.png")
+      img(src="/img/Work/Card-Activation-Mobile-Card-Activation-Success.png")
+      img(src="/img/Work/Card-Activation-Mobile-QR-Code-Landing.png")
+
+    .work-samples
+      img(src="/img/Work/Card-Activation-Desktop-Activation-Filled.png")
+      img(src="/img/Work/Card-Activation-Desktop-Verify-Identity-with-SSN-Filled.png")
+      img(src="/img/Work/Card-Activation-Desktop-Set-PIN-Filled.png")
+      img(src="/img/Work/Card-Activation-Desktop-Card-Activation-Success.png")
+      img(src="/img/Work/Card-Activation-Desktop-QR-Code-Landing.png")
+  
+
+  
+    
+    
