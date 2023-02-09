@@ -1057,6 +1057,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 
 .about-hero__avatar {
   margin-right: 16px;
+  border-radius: 9999rem;
   width: 80px;
   height: 80px;
 }

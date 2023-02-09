@@ -148,13 +148,13 @@ $border-2: $border * 2 !default;
 $border-4: $border * 4 !default;
 $border-8: $border * 8 !default;
 
-$border-radius: 1px !default;
-$border-radius-0: 0 !default;
-$border-radius-2: $border-radius * 2 !default;
-$border-radius-4: $border-radius * 4 !default;
-$border-radius-8: $border-radius * 8 !default;
-$border-radius-16: $border-radius * 16 !default;
-$border-radius-round: 9999rem !default;
+$br: 1px !default;
+$br-0: 0 !default;
+$br-2: $br * 2 !default;
+$br-4: $br * 4 !default;
+$br-8: $br * 8 !default;
+$br-16: $br * 16 !default;
+$br-round: 9999rem !default;
 
 // =============================================
 //                    ICONS

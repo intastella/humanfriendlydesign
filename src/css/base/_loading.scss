@@ -15,7 +15,7 @@
   background-color: $white;
   padding: $spacer2;
   box-shadow: $shadow-large;
-  border-radius: $border-radius-16;
+  border-radius: $br-16;
 
   @include breakpoint($screen-small) {
     width: auto;
@@ -28,7 +28,7 @@
   padding: $spacer8 $spacer4;
   width: $pct-full;
   background-color: $grey1;
-  border-radius: $border-radius-16;
+  border-radius: $br-16;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,14 +74,14 @@
   max-width: 320px;
   height: $spacer;
   background-color: $grey1;
-  border-radius: $border-radius-round;
+  border-radius: $br-round;
 }
 
 .loading__progress-fill {
   width: $pct-one-half;
   height: $pct-full;
   background-color: $black;
-  border-radius: $border-radius-round;
+  border-radius: $br-round;
 }
 
 .extensions-list {
