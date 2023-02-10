@@ -2,7 +2,7 @@
   font-size: $type-48;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-large) {
     font-size: $type-64;
   }
 }
@@ -11,7 +11,7 @@
   font-size: $type-32;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-large) {
     font-size: $type-48;
   }
 }
@@ -20,7 +20,7 @@
   font-size: $type-24;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-large) {
     font-size: $type-32;
   }
 }
@@ -30,7 +30,7 @@
   font-size: $type-18;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-large) {
     font-size: $type-24;
   }
 }
@@ -39,7 +39,7 @@
   font-size: $type-16;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-large) {
     font-size: $type-18;
   }
 }
@@ -48,7 +48,7 @@
   font-size: $type-14;
   font-weight: $font-medium;
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-large) {
     font-size: $type-16;
   }
 }
@@ -57,7 +57,7 @@
   font-size: $type-12;
   font-weight: $font-medium;
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-large) {
     font-size: $type-14;
   }
 }
@@ -65,7 +65,7 @@
 @mixin body-med {
   font-size: $type-16;
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-large) {
     font-size: $type-18;
   }
 }
@@ -75,7 +75,7 @@
   font-weight: $font-regular;
   color: $color-text-secondary;
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-large) {
     font-size: $type-13;
   }
 }
@@ -85,7 +85,7 @@
   font-weight: $font-regular;
   color: $color-text-secondary;
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-large) {
     font-size: $type-11;
   }
 }
