@@ -27,7 +27,17 @@ body {
 body {
   padding: $spacer;
 
-  @include breakpoint($screen-small) {
+  @supports #{'\(-webkit-touch-callout: none)'} {
+    @media (orientation: landscape) {
+      padding: $spacer env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    }
+
+    @media (orientation: portrait) {
+      padding: $spacer;
+    }
+  }
+
+  @include breakpoint($screen-large) {
     padding: $spacer2;
   }
 }

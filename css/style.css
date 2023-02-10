@@ -337,7 +337,19 @@ body {
 body {
   padding: 8px;
 }
-@media (min-width: 600px) {
+@supports (-webkit-touch-callout: none) {
+  @media (orientation: landscape) {
+    body {
+      padding: 8px env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    }
+  }
+  @media (orientation: portrait) {
+    body {
+      padding: 8px;
+    }
+  }
+}
+@media (min-width: 1024px) {
   body {
     padding: 16px;
   }
@@ -360,7 +372,7 @@ p {
   margin-bottom: 8px;
   font-size: 1rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   p {
     font-size: 1.125rem;
   }
@@ -373,7 +385,7 @@ h1 {
   font-size: 2rem;
   font-weight: bold;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   h1 {
     font-size: 3rem;
   }
@@ -383,7 +395,7 @@ h2 {
   font-size: 1.5rem;
   font-weight: bold;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   h2 {
     font-size: 2rem;
   }
@@ -393,7 +405,7 @@ h3 {
   font-size: 1.125rem;
   font-weight: bold;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   h3 {
     font-size: 1.5rem;
   }
@@ -403,7 +415,7 @@ h4 {
   font-size: 1rem;
   font-weight: bold;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   h4 {
     font-size: 1.125rem;
   }
@@ -413,7 +425,7 @@ h5 {
   font-size: 0.875rem;
   font-weight: 500;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   h5 {
     font-size: 1rem;
   }
@@ -423,7 +435,7 @@ h6 {
   font-size: 0.75rem;
   font-weight: 500;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   h6 {
     font-size: 0.875rem;
   }
@@ -512,7 +524,7 @@ h6 {
   border-radius: 8px;
   transition: all 0.15s ease-in-out;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .tmpl-nav__link {
     font-size: 0.8125rem;
   }
@@ -657,7 +669,7 @@ h6 {
   font-weight: bold;
   margin-bottom: 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .tmpl-heading-link__heading {
     font-size: 1.5rem;
   }
@@ -764,7 +776,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   padding: 8px 8px 8px 16px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .tmpl-project-floating-label {
     font-size: 0.8125rem;
   }
@@ -781,7 +793,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   font-size: 0.875rem;
   font-weight: 500;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .tmpl-project__title {
     font-size: 1rem;
   }
@@ -792,7 +804,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   font-weight: normal;
   color: #666666;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .tmpl-project__tags {
     font-size: 0.8125rem;
   }
@@ -918,6 +930,11 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 @media (min-width: 600px) {
   .home-heading {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .home-heading {
     font-size: 4rem;
   }
 }
@@ -927,7 +944,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   font-weight: normal;
   color: #666666;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .work-tags {
     font-size: 0.8125rem;
   }
@@ -939,7 +956,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   font-weight: normal;
   color: #666666;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .work-links {
     font-size: 0.8125rem;
   }
@@ -1040,7 +1057,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   color: #666666;
   color: #666666;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .contact-list__link-description {
     font-size: 0.8125rem;
   }
@@ -1110,7 +1127,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   font-weight: 500;
   margin-bottom: 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .about-role-item__heading {
     font-size: 0.875rem;
   }
@@ -1121,7 +1138,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   font-weight: normal;
   color: #666666;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .about-role-item__industry {
     font-size: 0.8125rem;
   }
@@ -1132,7 +1149,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   font-weight: normal;
   color: #666666;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .about-role-item__role {
     font-size: 0.6875rem;
   }
@@ -1154,7 +1171,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   font-weight: 500;
   transition: border 0.15s ease-in-out;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .about-resume__link {
     font-size: 0.875rem;
   }
