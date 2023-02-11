@@ -75,6 +75,10 @@ $screen-xxxlarge: 1600px !default;
 $screen-xxxxlarge: 1920px !default;
 $screen-xxxxxlarge: 2560px !default;
 
+// Orientation
+$screen-portrait: (orientation portrait);
+$screen-landscape: (orientation landscape);
+
 // =============================================
 //                  PERCENTAGES
 // =============================================

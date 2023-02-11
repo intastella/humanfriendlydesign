@@ -28,11 +28,11 @@ body {
   padding: $spacer;
 
   @supports #{'\(-webkit-touch-callout: none)'} {
-    @media (orientation: landscape) {
+    @include breakpoint($screen-landscape) {
       padding: $spacer env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     }
 
-    @media (orientation: portrait) {
+    @include breakpoint($screen-portrait) {
       padding: $spacer;
     }
   }
