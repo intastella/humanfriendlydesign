@@ -19,6 +19,11 @@ const focus = require('postcss-focus');
 const reporter = require("postcss-reporter");
 const cssnano = require('cssnano');
 
+//JS
+const eslint = require('gulp-eslint');
+const webpackStream = require('webpack-stream');
+const webpack = require('webpack');
+
 //Assets
 const imagemin = require('gulp-imagemin');
 
@@ -75,6 +80,17 @@ gulp.task('css-min', function () {
     .pipe(postcss(cssMinPlugins))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./css'));
+});
+
+gulp.task('js-lint', function () {
+  return gulp.src('./src/js/hfd.js')
+    .pipe(eslint())
+    .pipe(eslint.format());
+});
+
+gulp.task('js-compile', function () {
+  return webpackStream({ config: require('./webpack.config.js') }, webpack)
+    .pipe(gulp.dest('./js'));
 });
 
 gulp.task('assets-copy-compressed', function () {
@@ -135,6 +151,13 @@ gulp.task('css',
     'sass',
     'postcss',
     'css-min'
+  )
+);
+
+gulp.task('js',
+  series(
+    'js-lint',
+    'js-compile'
   )
 );
 
