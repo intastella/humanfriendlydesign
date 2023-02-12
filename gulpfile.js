@@ -2,7 +2,7 @@ const { series, parallel } = require('gulp');
 
 const gulp = require('gulp');
 const config = require('./config.json');
-const pkg = require('./package.json');
+// const pkg = require('./package.json');
 
 //General
 const rename = require('gulp-rename');
@@ -26,10 +26,6 @@ const webpack = require('webpack');
 
 //Assets
 const imagemin = require('gulp-imagemin');
-
-//FTP
-const sftp = require('gulp-sftp');
-const readlineSync = require('readline-sync');
 
 const pugOptions = {
   pretty: true,
@@ -122,24 +118,6 @@ gulp.task('assets-imagemin', function () {
     .pipe(gulp.dest('./img'));
 });
 
-gulp.task('publish', function () {
-  var password = readlineSync.question('PASSWORD: ', { hideEchoBack: true });
-
-  var files = [
-    './img/**',
-    './css/**',
-    './*/**.html'
-  ];
-
-  return gulp.src('css/*')
-    .pipe(sftp({
-      host: config.ftp_host,
-      user: config.ftp_username,
-      pass: password,
-      remotePath: config.ftp_file_dir
-  }));
-});
-
 gulp.task('html',
   series(
     'html-pug'
@@ -170,11 +148,12 @@ gulp.task('assets',
 gulp.task('watch', function () {
   gulp.watch(['./src/html/**/*.pug'], gulp.series('html'));
   gulp.watch('./src/css/**/*.scss', gulp.series('css'));
+  gulp.watch('./src/js/**/*.js', gulp.series('js'));
   gulp.watch('./src/img/**/*', gulp.series('assets'));
 });
 
 gulp.task('default',
   series(
-    parallel('html', 'css')
+    parallel('html', 'css', 'js', 'assets')
   )
 );
