@@ -3,8 +3,14 @@
   @include footnote;
 }
 
+.work-tag__item {
+  @include border-radius($br-4);
+  padding: $spacer-half $spacer;
+  background-color: $grey-1;
+}
+
 .work-links {
-  @include mar-top(0.5);
+  @include mar-top(1.5);
   @include footnote;
 
   a {
