@@ -5,6 +5,7 @@
 
 .work-tag__item {
   @include border-radius($br-4);
+  color: $color-text-primary;
   padding: $spacer-half $spacer;
   background-color: $grey-1;
 }
