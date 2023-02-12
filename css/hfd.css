@@ -1245,13 +1245,14 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   margin-top: 0;
 }
 
-.work-sample-image {
+.work-sample-link {
   overflow: hidden;
   border-radius: 16px;
   border: 1px solid #e5e5e5;
+  line-height: 0;
   transition: border 0.15s ease-in-out;
 }
-.work-sample-image:hover, .work-sample-image:focus {
+.work-sample-link:hover, .work-sample-link:focus {
   border: 1px solid #8c8c8c;
 }
 

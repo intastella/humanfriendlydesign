@@ -30,9 +30,10 @@
   }
 }
 
-.work-sample-image {
+.work-sample-link {
   @include border-radius($br-16);
   @include border;
+  line-height: 0;
   transition: border $transition-short;
 
   &:hover {

@@ -883,7 +883,7 @@ eval("var global = __webpack_require__(/*! ../internals/global */ \"./node_modul
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var chocolat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chocolat */ \"./node_modules/chocolat/dist/js/chocolat.esm.js\");\n\n\ndocument.addEventListener(\"DOMContentLoaded\", function() { \n  (0,chocolat__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(document.querySelectorAll('.work-sample-image'), {\n    imageSize: 'scale-down'\n  }) \n})\n\n//# sourceURL=webpack://hfd/./src/js/hfd.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var chocolat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chocolat */ \"./node_modules/chocolat/dist/js/chocolat.esm.js\");\n\n\ndocument.addEventListener(\"DOMContentLoaded\", function() { \n  (0,chocolat__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(document.querySelectorAll('.work-sample-link'), {\n    imageSize: 'scale-down'\n  }) \n})\n\n//# sourceURL=webpack://hfd/./src/js/hfd.js?");
 
 /***/ })
 
