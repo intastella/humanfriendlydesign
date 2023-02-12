@@ -47,7 +47,11 @@ const postCSSPlugins = [
 ];
 
 const cssMinPlugins = [
-  cssnano(),
+  cssnano({ 
+    preset: ['default', {
+      colormin: false,
+    }]
+  }),
   reporter({ clearMessages: true })
 ];
 
