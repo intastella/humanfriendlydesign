@@ -29,6 +29,7 @@
   @include border-radius($br-16);
   background-color: var(--color-page-inner-bg);
   box-shadow: $shadow-large;
+  transition: all $transition-short;
 
   @include breakpoint($screen-small) {
     @include flex-horizontal;
@@ -158,12 +159,14 @@
   @include pad(1);
   @include flex;
   @include flex-horizontal;
+  @include flex-cross-center;
   @include width-full;
   @include overflow-hidden;
   border-radius: $br-16 $br-16 0 0;
   justify-content: space-between;
   background-color: var(--color-page-inner-bg);
   z-index: 9;
+  transition: all $transition-short;
 
   @include breakpoint($screen-small) {
     border-radius: 0 $br-16 0 0;
@@ -183,6 +186,44 @@
 
   &:hover {
     background-color: var(--color-surface-dark);
+  }
+}
+
+.tmpl-header__theme-switch {
+  @include pad(0.5);
+  color: var(--color-text-secondary);
+  line-height: 0;
+
+  &:hover {
+    color: var(--color-text-primary);
+  }
+}
+
+.tmpl-header__theme-switch-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  stroke: currentColor;
+
+  @include breakpoint($screen-small) {
+    width: 18px;
+    height: 18px;
+  }
+
+  &--dark {
+    @include hidden;
+
+    .theme-dark & {
+      @include block;
+    }
+  }
+
+  &--light {
+    @include block;
+
+    .theme-dark & {
+      @include hidden;
+    }
   }
 }
 
@@ -322,10 +363,10 @@
   @include flex-cross-center;
   @include border-radius($br-round);
   @include footnote;
-  color: $black;
+  color: var(--color-text-primary);
   bottom: $spacer;
   left: $spacer;
-  background-color: $white;
+  background-color: var(--color-page-inner-bg);
   padding: $spacer $spacer $spacer $spacer-2;
   box-shadow: $shadow-large; 
 

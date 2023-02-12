@@ -32,6 +32,11 @@ picture {
   @include width-full;
   height: auto;
   line-height: 0;
+
+  .theme-dark & {
+    filter: brightness(0.85) contrast(1.1);
+    transition: filter $transition-short;
+  }
 }
 
 picture {
@@ -47,6 +52,7 @@ body {
   font-weight: $font-weight-default;
   line-height: $font-line-height-default;
   color: var(--color-text-primary);
+  transition: all $transition-short;
 }
 
 body {
