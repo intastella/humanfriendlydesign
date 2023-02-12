@@ -25,6 +25,28 @@ function initColorTheme(prefersDarkScheme) {
   }
 }
 
+function setWelcomeMessage() {
+  const welcomeMessageElement = document.querySelector(".js-welcome-message");
+
+  if (welcomeMessageElement !== null) {
+    const currentDate = new Date();
+    const currentTime = currentDate.getHours();
+    var welcomeMessage;
+
+    if (currentTime >= 0 && currentTime <= 11) {
+      welcomeMessage = "Good morning!";
+    }
+    if (currentTime >= 12 && currentTime <= 17) {
+      welcomeMessage = "Good afternoon!";
+    }
+    if (currentTime >= 18 && currentTime <= 23) {
+      welcomeMessage = "Good evening!";
+    }
+
+    welcomeMessageElement.textContent=welcomeMessage;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() { 
   Chocolat(document.querySelectorAll('.work-sample-link'), {
     imageSize: 'scale-down'
@@ -40,4 +62,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   initColorTheme(prefersDarkScheme);
+  setWelcomeMessage();
 })
