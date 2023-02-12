@@ -1,3 +1,7 @@
-import VanillaLightbox from 'vanilla-lightbox';
+import Chocolat from 'chocolat';
 
-const vanillaLightbox = new VanillaLightbox;
+document.addEventListener("DOMContentLoaded", function() { 
+  Chocolat(document.querySelectorAll('.work-sample-image'), {
+    imageSize: 'scale-down'
+  }) 
+})
