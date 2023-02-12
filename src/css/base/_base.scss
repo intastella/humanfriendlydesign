@@ -1,3 +1,28 @@
+:root {
+  --color-page-bg: #{$color-page-bg};
+  --color-page-inner-bg: #{$color-page-inner-bg};
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-link: #{$color-link};
+  --color-border-light: #{$color-border-light};
+  --color-border-dark: #{$color-border-dark};
+  --color-surface-light: #{$color-surface-light};
+  --color-surface-dark: #{$color-surface-dark};
+}
+
+.theme-dark {
+  --color-page-bg: #{$color-page-bg-theme-dark};
+  --color-page-inner-bg: #{$color-page-inner-bg-theme-dark};
+  --color-text-primary: #{$color-text-primary-theme-dark};
+  --color-text-secondary: #{$color-text-secondary-theme-dark};
+  --color-link: #{$color-link-theme-dark};
+  --color-border-light: #{$color-border-light-theme-dark};
+  --color-border-dark: #{$color-border-dark-theme-dark};
+  --color-surface-light: #{$color-surface-light-theme-dark};
+  --color-surface-dark: #{$color-surface-dark-theme-dark};
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -16,12 +41,12 @@ picture {
 html,
 body {
   @include height-full;
-  background-color: $color-page-bg;
+  background-color: var(--color-page-bg);
   font-family: $font-family-default;
   font-size: $font-size-default;
   font-weight: $font-weight-default;
   line-height: $font-line-height-default;
-  color: $color-text-primary;
+  color: var(--color-text-primary);
 }
 
 body {
@@ -43,7 +68,7 @@ body {
 }
 
 a {
-  color: $color-text-primary;
+  color: var(--color-link);
   text-decoration: none;
 }
 

@@ -28,7 +28,7 @@
   margin-bottom: $spacer-2;
   padding: $spacer-8 $spacer-4;
   width: $pct-full;
-  background-color: $grey-1;
+  background-color: var(--color-surface-light);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,7 +74,7 @@
   width: $pct-full;
   max-width: 320px;
   height: $spacer;
-  background-color: $grey-1;
+  background-color: var(--color-surface-light);
 }
 
 .loading__progress-fill {

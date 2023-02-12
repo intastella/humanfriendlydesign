@@ -27,11 +27,16 @@
   @include width-full;
   @include height-full;
   @include border-radius($br-16);
-  background-color: $white;
+  background-color: var(--color-page-inner-bg);
   box-shadow: $shadow-large;
 
   @include breakpoint($screen-small) {
     @include flex-horizontal;
+  }
+
+  .theme-dark & {
+    border: 1px solid var(--color-border-light);
+    box-shadow: none;
   }
 }
 
@@ -58,7 +63,7 @@
     padding: 72px $spacer-half $spacer-half;
     order: 0;
     box-shadow: none;
-    border-right: 1px solid $color-border-light;
+    border-right: 1px solid var(--color-border-light);
   }
 }
 
@@ -73,7 +78,7 @@
   @include border-radius($br-8);
   padding: $spacer-half 0;
   text-decoration: none;
-  color: $color-text-secondary;
+  color: var(--color-text-secondary);
   transition: all $transition-short;
 
   @include breakpoint($screen-small) {
@@ -89,13 +94,13 @@
   }
 
   &:hover {
-    background-color: $grey-1;
-    color: $color-text-primary;
+    background-color: var(--color-surface-light);
+    color: var(--color-text-primary);
   }
 
   &--active {
     @include pad-bottom(1);
-    color: $color-text-primary;
+    color: var(--color-text-primary);
     font-weight: $font-medium;
 
     @include breakpoint($screen-small) {
@@ -121,7 +126,7 @@
   margin-left: -2.5px;
   width: 5px;
   height: 5px;
-  background-color: $black;
+  background-color: var(--color-text-primary);
 
   @include breakpoint($screen-small) {
     top: 50%;
@@ -157,7 +162,7 @@
   @include overflow-hidden;
   border-radius: $br-16 $br-16 0 0;
   justify-content: space-between;
-  background-color: rgba($color: #FFFFFF, $alpha: 0.95);
+  background-color: var(--color-page-inner-bg);
   z-index: 9;
 
   @include breakpoint($screen-small) {
@@ -168,11 +173,16 @@
 .tmpl-header__address {
   @include border-radius($br-round);
   padding: $spacer-half $spacer-2;
-  background-color: $grey-2;
+  background-color: var(--color-surface-light);
   font-size: $type-10;
+  transition: background-color $transition-short;
 
   @include breakpoint($screen-small) {
     font-size: $type-12;
+  }
+
+  &:hover {
+    background-color: var(--color-surface-dark);
   }
 }
 
@@ -221,12 +231,12 @@
   @include pad(0.5);
   @include border-radius($br-round);
   line-height: 0;
-  background-color: $grey-1;
+  background-color: var(--color-surface-light);
   transition: background-color $transition-short;
 
   a:hover &,
   &:hover {
-    background-color: $grey-2;
+    background-color: var(--color-surface-dark);
   }
 
   &--back {
@@ -246,7 +256,7 @@
 .tmpl-link-arrow__icon {
   width: 17px;
   height: 17px;
-  fill: $grey-6;
+  fill: var(--color-text-secondary);
   transition: fill $transition-short;
 
   .tmpl-link-arrow--large & {
@@ -256,7 +266,7 @@
 
   a:hover &,
   &:hover {
-    fill: $black;
+    fill: var(--color-text-primary);
   }
 }
 
@@ -301,7 +311,7 @@
   transition: border $transition-short;
 
   .tmpl-project:hover & {
-    border: 1px solid $color-border-dark;
+    border: 1px solid var(--color-border-dark);
   }
 }
 

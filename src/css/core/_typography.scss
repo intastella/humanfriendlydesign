@@ -73,7 +73,7 @@
 @mixin footnote {
   font-size: $type-12;
   font-weight: $font-regular;
-  color: $color-text-secondary;
+  color: var(--color-text-secondary);
 
   @include breakpoint($screen-large) {
     font-size: $type-13;
@@ -83,7 +83,7 @@
 @mixin footnote-small {
   font-size: $type-10;
   font-weight: $font-regular;
-  color: $color-text-secondary;
+  color: var(--color-text-secondary);
 
   @include breakpoint($screen-large) {
     font-size: $type-11;

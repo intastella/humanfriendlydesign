@@ -36,7 +36,7 @@
   transition: border $transition-short;
 
   &:hover {
-    border: 1px solid $color-border-dark;
+    border: 1px solid var(--color-border-dark);
   }
 }
 
@@ -79,7 +79,7 @@
   transition: border $transition-short;
 
   &:hover {
-    border: 1px solid $color-border-dark;
+    border: 1px solid var(--color-border-dark);
   }
 }
 

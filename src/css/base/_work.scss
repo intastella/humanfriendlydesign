@@ -5,9 +5,9 @@
 
 .work-tag__item {
   @include border-radius($br-4);
-  color: $color-text-primary;
+  color: var(--color-text-primary);
   padding: $spacer-half $spacer;
-  background-color: $grey-1;
+  background-color: var(--color-surface-light);
 }
 
 .work-links {
@@ -44,7 +44,7 @@
   transition: border $transition-short;
 
   &:hover {
-    border: 1px solid $color-border-dark;
+    border: 1px solid var(--color-border-dark);
   }
 }
 

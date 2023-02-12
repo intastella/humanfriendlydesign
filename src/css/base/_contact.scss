@@ -2,11 +2,11 @@
   @include zero;
   @include border-radius($br-8);
   list-style: none;
-  border: 1px solid $color-border-light;
+  border: 1px solid var(--color-border-light);
 }
 
 .contact-list__item {
-  border-top: 1px solid $color-border-light;
+  border-top: 1px solid var(--color-border-light);
   text-decoration: none;
 
   &:first-of-type {
@@ -21,7 +21,7 @@
   text-decoration: none;
 
   &:hover {
-    background-color: $grey-1;
+    background-color: var(--color-surface-light);
   } 
 }
 
@@ -45,7 +45,7 @@
   @include flex-grow;
   @include mar(0);
   @include footnote;
-  color: $color-text-secondary;
+  color: var(--color-text-secondary);
 }
 
 .contact-list__link-arrow {

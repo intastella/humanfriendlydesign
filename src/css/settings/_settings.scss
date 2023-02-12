@@ -40,6 +40,8 @@ $black: #000 !default;
 $color-page-bg: $white !default;
 $color-text-primary: $black !default;
 $color-text-secondary: $grey-7 !default;
+$color-border-light: $grey-3 !default;
+$color-border-dark: $grey-5 !default;
 
 // =============================================
 //                    FONTS
@@ -124,8 +126,6 @@ $type-10: 0.625rem !default; //10px
 //                  BORDERS
 // =============================================
 
-$color-border-light: $grey-3 !default;
-$color-border-dark: $grey-5 !default;
 $border: 1px !default;
 $border-2: $border * 2 !default;
 $border-4: $border * 4 !default;
