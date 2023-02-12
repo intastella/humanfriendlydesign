@@ -26,10 +26,9 @@
   @include flex-vertical;
   @include width-full;
   @include height-full;
-  @include overflow-hidden;
+  @include border-radius($br-16);
   background-color: $white;
   box-shadow: $shadow-large;
-  border-radius: $br-16;
 
   @include breakpoint($screen-small) {
     @include flex-horizontal;
@@ -71,10 +70,10 @@
   @include flex-center-center;
   @include mar-left(0.5);
   @include footnote;
+  @include border-radius($br-8);
   padding: $spacer-half 0;
   text-decoration: none;
   color: $color-text-secondary;
-  border-radius: $br-8;
   transition: all $transition-short;
 
   @include breakpoint($screen-small) {
@@ -105,6 +104,10 @@
   }
 }
 
+.tmpl-nav__link-hidden {
+  @include hidden;
+}
+
 .tmpl-nav__link-icon {
   fill: currentColor;
 }
@@ -112,13 +115,13 @@
 .tmpl-nav__link-active-dot {
   @include hidden;
   @include absolute;
+  @include border-radius($br-round);
   left: 50%;
   bottom: 4px;
   margin-left: -2.5px;
   width: 5px;
   height: 5px;
   background-color: $black;
-  border-radius: $br-round;
 
   @include breakpoint($screen-small) {
     top: 50%;
@@ -163,9 +166,9 @@
 }
 
 .tmpl-header__address {
+  @include border-radius($br-round);
   padding: $spacer-half $spacer-2;
   background-color: $grey-2;
-  border-radius: $br-round;
   font-size: $type-10;
 
   @include breakpoint($screen-small) {
@@ -215,11 +218,10 @@
 
 .tmpl-link-arrow {
   @include mar-left(1);
-  @include overflow-hidden;
   @include pad(0.5);
+  @include border-radius($br-round);
   line-height: 0;
   background-color: $grey-1;
-  border-radius: $br-round;
   transition: background-color $transition-short;
 
   a:hover &,

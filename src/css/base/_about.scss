@@ -6,7 +6,7 @@
 
 .about-hero__avatar {
   @include mar-right(2);
-  border-radius: $br-round;
+  @include border-radius($br-round);
   width: 80px;
   height: 80px;
 

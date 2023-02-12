@@ -1,9 +1,8 @@
 .contact-list {
   @include zero;
-  @include overflow-hidden;
+  @include border-radius($br-8);
   list-style: none;
   border: 1px solid $color-border-light;
-  border-radius: $br-8;
 }
 
 .contact-list__item {

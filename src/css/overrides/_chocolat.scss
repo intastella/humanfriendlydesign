@@ -4,7 +4,6 @@
   }
   
   .chocolat-image-wrapper {
-    @include overflow-hidden;
     @include border-radius($br-16);
   }
   
