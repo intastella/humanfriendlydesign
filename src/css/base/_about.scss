@@ -33,7 +33,7 @@
   @include pad(1.5);
   @include border;
   @include border-radius($br-8);
-  transition: border $short-transition;
+  transition: border $transition-short;
 
   &:hover {
     border: 1px solid $color-border-dark;
@@ -76,7 +76,7 @@
   @include pad(1.5);
   @include border-radius($br-8);
   @include head-xxsmall;
-  transition: border $short-transition;
+  transition: border $transition-short;
 
   &:hover {
     border: 1px solid $color-border-dark;

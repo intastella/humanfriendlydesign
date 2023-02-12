@@ -179,14 +179,12 @@ $icon-64: 4rem;
 //                TRANSITIONS
 // =============================================
 
-$xshort-duration: 0.1s;
-$short-duration: 0.15s;
-$medium-duration: 0.25s;
-$long-duration: 0.5s;
-$xlong-duration: 0.75s;
-$xxlong-duration: 1s;
-$default-duration: $medium-duration;
-$default-timing-curves: ease-in-out;
-$default-transition: $default-duration $default-timing-curves;
-$short-transition: $short-duration $default-timing-curves;
-$xshort-transition: $short-duration $default-timing-curves;
+$duration-xshort: 0.1s;
+$duration-short: 0.15s;
+$duration-medium: 0.25s;
+$duration-long: 0.5s;
+$duration-default: $duration-medium;
+$timing-curves-default: ease-in-out;
+
+$transition-default: $duration-default $timing-curves-default;
+$transition-short: $duration-short $timing-curves-default;

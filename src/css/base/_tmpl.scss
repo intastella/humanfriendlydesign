@@ -75,7 +75,7 @@
   text-decoration: none;
   color: $color-text-secondary;
   border-radius: $br-8;
-  transition: all $short-transition;
+  transition: all $transition-short;
 
   @include breakpoint($screen-small) {
     @include flex-fixed;
@@ -220,7 +220,7 @@
   line-height: 0;
   background-color: $grey1;
   border-radius: $br-round;
-  transition: background-color $short-transition;
+  transition: background-color $transition-short;
 
   a:hover &,
   &:hover {
@@ -245,7 +245,7 @@
   width: 17px;
   height: 17px;
   fill: $grey6;
-  transition: fill $short-transition;
+  transition: fill $transition-short;
 
   .tmpl-link-arrow--large & {
     width: 29px;
@@ -296,7 +296,7 @@
   @include border;
   @include border-radius($br-16);
   @include block;
-  transition: border $short-transition;
+  transition: border $transition-short;
 
   .tmpl-project:hover & {
     border: 1px solid $color-border-dark;

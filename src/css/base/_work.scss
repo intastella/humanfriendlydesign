@@ -33,7 +33,7 @@
 .work-sample-image {
   @include border-radius($br-16);
   @include border;
-  transition: border $short-transition;
+  transition: border $transition-short;
 
   &:hover {
     border: 1px solid $color-border-dark;
