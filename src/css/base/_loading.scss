@@ -13,28 +13,28 @@
   align-items: center;
   text-align: center;
   background-color: $white;
-  padding: $spacer2;
+  padding: $spacer-2;
   box-shadow: $shadow-large;
   border-radius: $br-16;
 
   @include breakpoint($screen-small) {
     width: auto;
-    padding: $spacer4;
+    padding: $spacer-4;
   }
 }
 
 .loading__inner {
-  margin-bottom: $spacer2;
-  padding: $spacer8 $spacer4;
+  margin-bottom: $spacer-2;
+  padding: $spacer-8 $spacer-4;
   width: $pct-full;
-  background-color: $grey1;
+  background-color: $grey-1;
   border-radius: $br-16;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include breakpoint($screen-small) {
-    padding: $spacer8;
+    padding: $spacer-8;
   }
 }
 
@@ -73,7 +73,7 @@
   width: $pct-full;
   max-width: 320px;
   height: $spacer;
-  background-color: $grey1;
+  background-color: $grey-1;
   border-radius: $br-round;
 }
 
@@ -91,7 +91,7 @@
   padding: $spacer;
 
   @include breakpoint($screen-small) {
-    padding: $spacer2;
+    padding: $spacer-2;
   }
 }
 

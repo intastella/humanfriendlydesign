@@ -16,13 +16,13 @@
   @include mar-top(2);
   @include grid;
   grid-template-columns: auto;
-  grid-gap: $spacer2;
-  grid-column-gap: $spacer2;
+  grid-gap: $spacer-2;
+  grid-column-gap: $spacer-2;
 
   @include breakpoint($screen-small) {
     @include mar-top(4);
-    grid-gap: $spacer4;
-    grid-column-gap: $spacer4;
+    grid-gap: $spacer-4;
+    grid-column-gap: $spacer-4;
   }
 
   &--mar-top-0 {

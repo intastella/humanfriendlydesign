@@ -7,15 +7,15 @@ $spacer: 8px !default;
 $spacer-quarter: $spacer * 0.25 !default;
 $spacer-half: $spacer * 0.5 !default;
 $spacer-plus: $spacer * 1.5 !default;
-$spacer2: $spacer * 2 !default;
-$spacer3: $spacer * 3 !default;
-$spacer4: $spacer * 4 !default;
-$spacer5: $spacer * 5 !default;
-$spacer6: $spacer * 6 !default;
-$spacer7: $spacer * 7 !default;
-$spacer8: $spacer * 8 !default;
-$spacer9: $spacer * 9 !default;
-$spacer10: $spacer * 10 !default;
+$spacer-2: $spacer * 2 !default;
+$spacer-3: $spacer * 3 !default;
+$spacer-4: $spacer * 4 !default;
+$spacer-5: $spacer * 5 !default;
+$spacer-6: $spacer * 6 !default;
+$spacer-7: $spacer * 7 !default;
+$spacer-8: $spacer * 8 !default;
+$spacer-9: $spacer * 9 !default;
+$spacer-10: $spacer * 10 !default;
 
 $image-path: '../img/' !default;
 $font-path: '../fonts/' !default;
@@ -25,21 +25,21 @@ $font-path: '../fonts/' !default;
 // =============================================
 
 $white: #fff !default;
-$grey1: #f7f7f7 !default;
-$grey2: #f2f2f2 !default;
-$grey3: #e5e5e5 !default;
-$grey4: #dddddd !default;
-$grey5: #cccccc !default;
-$grey6: #8c8c8c !default;
-$grey7: #666666 !default;
-$grey8: #4d4d4d !default;
-$grey9: #333333 !default;
-$grey10: #262626 !default;
+$grey-1: #f7f7f7 !default;
+$grey-2: #f2f2f2 !default;
+$grey-3: #e5e5e5 !default;
+$grey-4: #dddddd !default;
+$grey-5: #cccccc !default;
+$grey-6: #8c8c8c !default;
+$grey-7: #666666 !default;
+$grey-8: #4d4d4d !default;
+$grey-9: #333333 !default;
+$grey-10: #262626 !default;
 $black: #000 !default;
 
 $color-page-bg: $white !default;
 $color-text-primary: $black !default;
-$color-text-secondary: $grey7 !default;
+$color-text-secondary: $grey-7 !default;
 
 // =============================================
 //                    FONTS
@@ -145,8 +145,8 @@ $type-style-group-label: $type-12 !default;
 //                  BORDERS
 // =============================================
 
-$color-border-light: $grey3 !default;
-$color-border-dark: $grey5 !default;
+$color-border-light: $grey-3 !default;
+$color-border-dark: $grey-5 !default;
 $border: 1px !default;
 $border-2: $border * 2 !default;
 $border-4: $border * 4 !default;

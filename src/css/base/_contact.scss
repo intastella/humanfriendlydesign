@@ -18,11 +18,11 @@
 .contact-list__link {
   @include flex;
   @include flex-cross-center;
-  padding: $spacer-plus $spacer-plus $spacer-plus $spacer2;
+  padding: $spacer-plus $spacer-plus $spacer-plus $spacer-2;
   text-decoration: none;
 
   &:hover {
-    background-color: $grey1;
+    background-color: $grey-1;
   } 
 }
 
@@ -50,5 +50,5 @@
 }
 
 .contact-list__link-arrow {
-  fill: $grey6;
+  fill: $grey-6;
 }

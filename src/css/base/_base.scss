@@ -38,7 +38,7 @@ body {
   }
 
   @include breakpoint($screen-large) {
-    padding: $spacer2;
+    padding: $spacer-2;
   }
 }
 

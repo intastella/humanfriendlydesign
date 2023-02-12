@@ -18,8 +18,8 @@
 
 .about-roles {
   @include grid;
-  grid-gap: $spacer2;
-  grid-column-gap: $spacer2;
+  grid-gap: $spacer-2;
+  grid-column-gap: $spacer-2;
   grid-template-columns: auto;
 
   @include breakpoint($screen-small) {

@@ -3,7 +3,7 @@
   @include fixed;
   top: 0;
   left: 0;
-  padding: $spacer2;
+  padding: $spacer-2;
   background-color: $black;
   color: $white;
   transform: translateX(-100%);
@@ -90,7 +90,7 @@
   }
 
   &:hover {
-    background-color: $grey1;
+    background-color: $grey-1;
     color: $color-text-primary;
   }
 
@@ -163,8 +163,8 @@
 }
 
 .tmpl-header__address {
-  padding: $spacer-half $spacer2;
-  background-color: $grey2;
+  padding: $spacer-half $spacer-2;
+  background-color: $grey-2;
   border-radius: $br-round;
   font-size: $type-10;
 
@@ -183,10 +183,10 @@
   @include center;
   @include width-full;
   max-width: 784px; // 720px + 32px left and right padding;
-  padding: $spacer6 $spacer2 $spacer4 $spacer2;
+  padding: $spacer-6 $spacer-2 $spacer-4 $spacer-2;
   
   @include breakpoint($screen-small) {
-    padding: $spacer8 $spacer4 $spacer4 $spacer4;
+    padding: $spacer-8 $spacer-4 $spacer-4 $spacer-4;
   }
 }
 
@@ -218,13 +218,13 @@
   @include overflow-hidden;
   @include pad(0.5);
   line-height: 0;
-  background-color: $grey1;
+  background-color: $grey-1;
   border-radius: $br-round;
   transition: background-color $transition-short;
 
   a:hover &,
   &:hover {
-    background-color: $grey2;
+    background-color: $grey-2;
   }
 
   &--back {
@@ -244,7 +244,7 @@
 .tmpl-link-arrow__icon {
   width: 17px;
   height: 17px;
-  fill: $grey6;
+  fill: $grey-6;
   transition: fill $transition-short;
 
   .tmpl-link-arrow--large & {
@@ -314,12 +314,12 @@
   bottom: $spacer;
   left: $spacer;
   background-color: $white;
-  padding: $spacer $spacer $spacer $spacer2;
+  padding: $spacer $spacer $spacer $spacer-2;
   box-shadow: $shadow-large; 
 
   @include breakpoint($screen-small) {
-    bottom: $spacer2;
-    left: $spacer2;
+    bottom: $spacer-2;
+    left: $spacer-2;
   }
 }
 
