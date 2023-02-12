@@ -1241,13 +1241,18 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
     grid-column-gap: 32px;
   }
 }
-.work-samples img {
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid #e5e5e5;
-}
 .work-samples--mar-top-0 {
   margin-top: 0;
+}
+
+.work-sample-image {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #e5e5e5;
+  transition: border 0.15s ease-in-out;
+}
+.work-sample-image:hover, .work-sample-image:focus {
+  border: 1px solid #8c8c8c;
 }
 
 .work-samples--2M-3D {
@@ -2015,6 +2020,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   background-color: #000;
 }
 .chocolat-wrapper .chocolat-image-wrapper {
+  overflow: hidden;
   overflow: hidden;
   border-radius: 16px;
 }

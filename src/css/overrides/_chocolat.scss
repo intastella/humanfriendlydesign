@@ -5,7 +5,7 @@
   
   .chocolat-image-wrapper {
     @include overflow-hidden;
-    border-radius: $br-16;
+    @include border-radius($br-16);
   }
   
   .chocolat-close {

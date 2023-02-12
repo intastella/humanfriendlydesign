@@ -25,13 +25,18 @@
     grid-column-gap: $spacer4;
   }
 
-  img {
-    @include border-radius($spacer-plus);
-    @include border;
-  }
-
   &--mar-top-0 {
     @include mar-top(0);
+  }
+}
+
+.work-sample-image {
+  @include border-radius($br-16);
+  @include border;
+  transition: border $short-transition;
+
+  &:hover {
+    border: 1px solid $color-border-dark;
   }
 }
 
