@@ -1,0 +1,63 @@
+extends ../_tmpl
+
+block vars
+  - var title = "Work"
+  - var work_title = "Tag Management"
+
+block content
+  .tmpl-page-heading-wrapper
+    h1.tmpl-page-heading #{work_title}
+    a(href="/work/").tmpl-link-arrow.tmpl-link-arrow--large.tmpl-link-arrow--back
+      svg.tmpl-link-arrow__icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+        path(fill-rule="evenodd", clip-rule="evenodd", d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z")
+  
+  .work-tags
+    | Tags: 
+    span.tmpl-project__tag-item.work-tag__item #UX
+    span.tmpl-project__tag-item.work-tag__item #Wireframes
+
+  .tmpl-page-subsection
+    h2 Challenge
+    p
+      | Managing network vulnerabilities across many hundred or thousands of machines is a complex job. With that kind of scale, it becomes important to be able to organize them into groups relevant to your organization, so that you can find, monitor and remediate security issues.
+
+    .work-samples
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Create-Tag-Dynamic-Options-002.png")
+        img(src="/img/Work/Tenable-Tagging-Create-Tag-Dynamic-Options-002.png")
+  
+  .tmpl-page-subsection
+    h2 Process
+    p
+      | Product and design identified that tagging was one solution to this, through customer feedback and interviews. The goal would be to allow customers to quickly search for machines by tag, see relevant associated machines with that tag, and manage those tags globally across their network. Additionally, we identified the need to tag machines automatically through search filters, reducing the need to manually apply tags. This came from customer feedback, where some customers were adding machines to their network faster than they would be able to keep up with manual tagging. We called this dynamic tagging and tags would be applied automatically when they were discovered by the tagging service.
+
+    .work-samples
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Wireframe-001.png")
+        img(src="/img/Work/Tenable-Tagging-Wireframe-001.png")
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Wireframe-002.png")
+        img(src="/img/Work/Tenable-Tagging-Wireframe-002.png")
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Wireframe-003.png")
+        img(src="/img/Work/Tenable-Tagging-Wireframe-003.png")
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Wireframe-004.png")
+        img(src="/img/Work/Tenable-Tagging-Wireframe-004.png")
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Wireframe-005.png")
+        img(src="/img/Work/Tenable-Tagging-Wireframe-005.png")
+    
+  .tmpl-page-subsection
+    h2 Solution
+    p
+      | We began by wireframing out the create, apply, edit, remove, delete operations of the tagging system. Tag management would have its own dedicated screen inside of the vulnerability manager product and tags would be visible on every machine in preview and detail screens. Dynamic tags would be an optional feature, but enabled in the same screen as the add and edit screens, switch it on, choose your search criteria and let the system apply the tags for you. We also saw an opportunity to create dynamic tags from the search screen as well. Since the search UI was powering the filtering of machines, let customers run a search, then create dynamic tags out of that search to be applied moving forward.
+
+    .work-samples
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Create-Tag-001.png")
+        img(src="/img/Work/Tenable-Tagging-Create-Tag-001.png")
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Edit-Tag-Value-Dynamic-Options-Excluded-003.png")
+        img(src="/img/Work/Tenable-Tagging-Edit-Tag-Value-Dynamic-Options-Excluded-003.png")
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Assets-Add-Tags-Value-New-004.png")
+        img(src="/img/Work/Tenable-Tagging-Assets-Add-Tags-Value-New-004.png")
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Assets-Remove-Tags-005.png")
+        img(src="/img/Work/Tenable-Tagging-Assets-Remove-Tags-005.png")
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Assets-Search-Value-Selected-006.png")
+        img(src="/img/Work/Tenable-Tagging-Assets-Search-Value-Selected-006.png")
+      a.work-sample-link(href="/img/Work/Tenable-Tagging-Assets-Detail-Tag-Options-007.png")
+        img(src="/img/Work/Tenable-Tagging-Assets-Detail-Tag-Options-007.png")
+  
