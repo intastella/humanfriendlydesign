@@ -216,6 +216,17 @@
     height: 18px;
   }
 
+  &--auto {
+    .theme-dark & {
+      @include hidden;
+    }
+
+    .theme-light & {
+      @include hidden;
+    }
+  }
+
+
   &--dark {
     @include hidden;
 

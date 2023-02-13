@@ -965,6 +965,12 @@ h6 {
     height: 18px;
   }
 }
+.theme-dark .tmpl-header__theme-switch-icon--auto {
+  display: none;
+}
+.theme-light .tmpl-header__theme-switch-icon--auto {
+  display: none;
+}
 .tmpl-header__theme-switch-icon--dark {
   display: none;
 }
