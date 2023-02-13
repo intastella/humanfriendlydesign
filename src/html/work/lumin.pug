@@ -1,0 +1,70 @@
+extends ../_tmpl
+
+block vars
+  - var title = "Work"
+  - var work_title = "Lumin Cyber Exposure"
+
+block content
+  .tmpl-page-heading-wrapper
+    h1.tmpl-page-heading #{work_title}
+    a(href="/work/").tmpl-link-arrow.tmpl-link-arrow--large.tmpl-link-arrow--back
+      svg.tmpl-link-arrow__icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+        path(fill-rule="evenodd", clip-rule="evenodd", d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z")
+  
+  .work-tags
+    | Tags: 
+    span.tmpl-project__tag-item.work-tag__item #UX
+    span.tmpl-project__tag-item.work-tag__item #Visualizations
+    span.tmpl-project__tag-item.work-tag__item #Wireframes
+
+  .tmpl-page-subsection
+    h2 Challenge
+    p
+      | Tenable was in a unique position of providing an extreme amount of data about cyber security vulnerabilities within a customer's network, but much of it was hidden behind esoteric tables and filters. As such, our current vulnerability management product was only suited to a highly technical and engaged customer. Product and design set out to provide a ten thousand foot view of your cyber exposure, visualizing it so that our customers could hone in on the areas that needed the most investment of time and resources.
+
+    .work-samples
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-001.png")
+        img(src="/img/Work/Tenable-Lumin-001.png")
+  
+  .tmpl-page-subsection
+    h2 Process
+    p
+      | We identified additional personas that should be served by this new visualization product. Network security managers and CISOs (Chief Information Security Officer) were a particular target for this product, though the engineers remediating vulnerabilities would be able to utilize it as well to target their time. A wireframe document was put together to provide a vision for how this visualization would generally look, work and improve on the tedious task of identifying and remediating network vulnerabilities.
+
+    .work-samples
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-002.png")
+        img(src="/img/Work/Tenable-Lumin-Wireframe-002.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-004.png")
+        img(src="/img/Work/Tenable-Lumin-Wireframe-004.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-005.png")
+        img(src="/img/Work/Tenable-Lumin-Wireframe-005.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-006.png")
+        img(src="/img/Work/Tenable-Lumin-Wireframe-006.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-007.png")
+        img(src="/img/Work/Tenable-Lumin-Wireframe-007.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-008.png")
+        img(src="/img/Work/Tenable-Lumin-Wireframe-008.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-009.png")
+        img(src="/img/Work/Tenable-Lumin-Wireframe-009.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-011.png")
+        img(src="/img/Work/Tenable-Lumin-Wireframe-011.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-014.png")
+        img(src="/img/Work/Tenable-Lumin-014.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-015.png")
+        img(src="/img/Work/Tenable-Lumin-015.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-016.png")
+        img(src="/img/Work/Tenable-Lumin-016.png")
+    
+  .tmpl-page-subsection
+    h2 Solution
+    p
+      | After many months of collaborating with product on wireframes our vision was complete, but after review with engineering, data science and leadership, it was determined that we should start smaller. While the fully navigable asset map we evnvisioned was our goal, engineering and data science would have months/years of work to be able to enable this. We scaled down the effort into a series of dashboards that could visualize the data we were able to generate from the new advanced data we were generating. The result was is a layer of information on top of the customer's existing vulnerability data, showing them how they are doing over time in remediating vulnerabilities and allowing them to focus on the highest priority issues.
+
+    .work-samples
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-012.png")
+        img(src="/img/Work/Tenable-Lumin-012.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-006-Ind-Avg-<7-Hover.png")
+        img(src="/img/Work/Tenable-Lumin-006-Ind-Avg-<7-Hover.png")
+      a.work-sample-link(href="/img/Work/Tenable-Lumin-013.png")
+        img(src="/img/Work/Tenable-Lumin-013.png")
+  
