@@ -789,6 +789,7 @@ h6 {
   order: 1;
   z-index: 1;
   overflow-y: scroll;
+  transition: all 0.15s ease-in-out;
 }
 @media (min-width: 600px) {
   .tmpl-nav {
@@ -939,11 +940,17 @@ h6 {
 
 .tmpl-header__theme-switch {
   padding: 4px;
+  overflow: hidden;
+  border-radius: 4px;
   color: var(--color-text-secondary);
   line-height: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 .tmpl-header__theme-switch:hover, .tmpl-header__theme-switch:focus {
   color: var(--color-text-primary);
+  background-color: var(--color-surface-dark);
 }
 
 .tmpl-header__theme-switch-icon {

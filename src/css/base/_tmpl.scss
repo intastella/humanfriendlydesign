@@ -54,6 +54,7 @@
   order: 1;
   z-index: 1;
   overflow-y: scroll;
+  transition: all $transition-short;
 
   @include breakpoint($screen-small) {
     @include flex-vertical;
@@ -191,11 +192,16 @@
 
 .tmpl-header__theme-switch {
   @include pad(0.5);
+  @include border-radius($br-4);
   color: var(--color-text-secondary);
   line-height: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
   &:hover {
     color: var(--color-text-primary);
+    background-color: var(--color-surface-dark);
   }
 }
 
