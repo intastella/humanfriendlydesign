@@ -217,13 +217,7 @@
   }
 
   &--auto {
-    .theme-dark & {
-      @include hidden;
-    }
-
-    .theme-light & {
-      @include hidden;
-    }
+    @include hidden;
   }
 
 
