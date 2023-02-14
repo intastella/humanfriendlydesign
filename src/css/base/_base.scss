@@ -30,7 +30,7 @@
 img, 
 picture {
   @include width-full;
-  height: auto;
+  @include height-auto;
   line-height: 0;
 
   .theme-dark & {

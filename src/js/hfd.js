@@ -1,5 +1,11 @@
 import Chocolat from 'chocolat';
 
+function initChocolat() {
+  Chocolat(document.querySelectorAll('.work-sample-link'), {
+    imageSize: 'scale-down'
+  }) 
+}
+
 function toggleColorTheme() {
   if (document.documentElement.classList.contains("theme-dark")) {
     document.documentElement.classList.remove("theme-dark");
@@ -12,8 +18,17 @@ function toggleColorTheme() {
   }
 }
 
-function initColorTheme(prefersDarkScheme) {
+function initColorThemeSwitch() {
+  const buttonColorThemeSwitch = document.querySelector(".js-theme-switch");
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
   const savedTheme = localStorage.getItem("colorTheme");
+
+  if (buttonColorThemeSwitch !== null) {
+    buttonColorThemeSwitch.addEventListener("click", function () {
+      toggleColorTheme();
+    });
+  }
+
   if (savedTheme == null) {
     if (prefersDarkScheme.matches) {
       document.documentElement.classList.add("theme-dark");
@@ -27,12 +42,11 @@ function initColorTheme(prefersDarkScheme) {
 
 function setWelcomeMessage() {
   const welcomeMessageElement = document.querySelector(".js-welcome-message");
+  const currentDate = new Date();
+  const currentTime = currentDate.getHours();
+  var welcomeMessage;
 
   if (welcomeMessageElement !== null) {
-    const currentDate = new Date();
-    const currentTime = currentDate.getHours();
-    var welcomeMessage;
-
     if (currentTime >= 0 && currentTime <= 11) {
       welcomeMessage = "Good morning!";
     }
@@ -47,20 +61,54 @@ function setWelcomeMessage() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() { 
-  Chocolat(document.querySelectorAll('.work-sample-link'), {
-    imageSize: 'scale-down'
-  }) 
+function animateLoadingScreen() {
+  const loadingProgressBar = document.querySelector(".js-loading-progress-fill");
+  const extensionOne = document.querySelector(".js-extension-1");
+  const extensionTwo = document.querySelector(".js-extension-2");
+  const extensionThree = document.querySelector(".js-extension-3");
+  const extensionFour = document.querySelector(".js-extension-4");
+  // const loadingDuration = 10000;
 
-  const buttonColorThemeSwitch = document.querySelector(".js-theme-switch");
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-  if (buttonColorThemeSwitch !== null) {
-    buttonColorThemeSwitch.addEventListener("click", function () {
-      toggleColorTheme();
-    });
+  function step1() {
+    loadingProgressBar.style.width = "10%";
   }
 
-  initColorTheme(prefersDarkScheme);
+  function step2() {
+    loadingProgressBar.style.width = "20%";
+    extensionOne.style.display = "inline-block";
+  }
+
+  function step3() {
+    loadingProgressBar.style.width = "60%";
+    extensionTwo.style.display = "inline-block";
+  }
+
+  function step4() {
+    loadingProgressBar.style.width = "75%";
+    extensionThree.style.display = "inline-block";
+  }
+
+  function step5() {
+    loadingProgressBar.style.width = "85%";
+    extensionFour.style.display = "inline-block";
+  }
+
+  function step6() {
+    loadingProgressBar.style.width = "100%";
+    console.log('goto home page');
+  }
+
+  setTimeout(step1, 1);
+  setTimeout(step2, 500);
+  setTimeout(step3, 1000);
+  setTimeout(step4, 2500);
+  setTimeout(step5, 3000);
+  setTimeout(step6, 3075);
+}
+
+document.addEventListener("DOMContentLoaded", function() { 
+  initColorThemeSwitch();
   setWelcomeMessage();
+  initChocolat();
+  animateLoadingScreen();
 })

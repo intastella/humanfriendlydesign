@@ -1175,26 +1175,26 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  height: 100%;
 }
 
 .loading {
+  display: flex;
   overflow: hidden;
   border-radius: 16px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 16px;
   text-align: center;
   background-color: #fff;
-  padding: 16px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 600px) {
   .loading {
-    width: auto;
     padding: 32px;
+    width: auto;
   }
 }
 
@@ -1202,11 +1202,11 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   overflow: hidden;
   border-radius: 16px;
   margin-bottom: 16px;
-  padding: 64px 32px;
   width: 100%;
-  background-color: var(--color-surface-light);
   display: flex;
   flex-direction: column;
+  padding: 64px 32px;
+  background-color: var(--color-surface-light);
   align-items: center;
 }
 @media (min-width: 600px) {
@@ -1232,8 +1232,9 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 
 .loading__header {
   font-size: 1.5rem;
+  font-weight: bold;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .loading__header {
     font-size: 2rem;
   }
@@ -1241,9 +1242,10 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 
 .loading__message {
   margin-bottom: 8px;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .loading__message {
     font-size: 0.875rem;
   }
@@ -1261,16 +1263,18 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 .loading__progress-fill {
   overflow: hidden;
   border-radius: 9999rem;
-  width: 50%;
   height: 100%;
+  width: 0%;
   background-color: #000;
+  transition: width 0.15s ease-in-out;
 }
 
 .extensions-list {
   position: absolute;
+  padding: 8px;
   bottom: 0;
   left: 0;
-  padding: 8px;
+  line-height: 0;
 }
 @media (min-width: 600px) {
   .extensions-list {
@@ -1280,6 +1284,11 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 
 .extension {
   margin-right: 8px;
+  display: none;
+}
+.extension--vertical {
+  position: relative;
+  top: 4px;
 }
 
 .home-heading {

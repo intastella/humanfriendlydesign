@@ -225,6 +225,10 @@
   height: $pct-full; 
 }
 
+@mixin height-auto { 
+  height: auto; 
+}
+
 @mixin square($size) {
   width: $size;
   height: $size;
