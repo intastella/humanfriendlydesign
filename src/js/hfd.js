@@ -62,12 +62,16 @@ function setWelcomeMessage() {
 }
 
 function animateLoadingScreen() {
+  const animationSeen = localStorage.getItem("animationLoaded");
   const loadingProgressBar = document.querySelector(".js-loading-progress-fill");
   const extensionOne = document.querySelector(".js-extension-1");
   const extensionTwo = document.querySelector(".js-extension-2");
   const extensionThree = document.querySelector(".js-extension-3");
   const extensionFour = document.querySelector(".js-extension-4");
-  // const loadingDuration = 10000;
+
+  function gotoHome() {
+    alert('Go to home');
+  }
 
   function step1() {
     loadingProgressBar.style.width = "10%";
@@ -84,26 +88,36 @@ function animateLoadingScreen() {
   }
 
   function step4() {
-    loadingProgressBar.style.width = "75%";
+    loadingProgressBar.style.width = "80%";
     extensionThree.style.display = "inline-block";
   }
 
   function step5() {
-    loadingProgressBar.style.width = "85%";
+    loadingProgressBar.style.width = "100%";
     extensionFour.style.display = "inline-block";
   }
 
   function step6() {
-    loadingProgressBar.style.width = "100%";
-    console.log('goto home page');
+    localStorage.setItem("animationLoaded", true);
+    gotoHome();
   }
 
-  setTimeout(step1, 1);
-  setTimeout(step2, 500);
-  setTimeout(step3, 1000);
-  setTimeout(step4, 2500);
-  setTimeout(step5, 3000);
-  setTimeout(step6, 3075);
+  if (animationSeen !== null) {
+    setTimeout(step2, 50);
+    setTimeout(step3, 100);
+    setTimeout(step4, 150);
+    setTimeout(step5, 200);
+    setTimeout(step6, 350);
+  } 
+
+  else {
+    setTimeout(step1, 1);
+    setTimeout(step2, 500);
+    setTimeout(step3, 1000);
+    setTimeout(step4, 2500);
+    setTimeout(step5, 3000);
+    setTimeout(step6, 3150);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function() { 
