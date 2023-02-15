@@ -83,7 +83,7 @@ gulp.task('css-min', function () {
 });
 
 gulp.task('js-lint', function () {
-  return gulp.src('./src/js/hfd.js')
+  return gulp.src('./src/js/*.js')
     .pipe(eslint())
     .pipe(eslint.format());
 });

@@ -2,7 +2,7 @@ module.exports = [
   {
     mode: 'development',
     entry: {
-      global: './src/js/hfd.js',
+      global: './src/js/global.js',
       loading: './src/js/loading.js',
       home: './src/js/home.js',
       work: './src/js/work.js'
@@ -15,7 +15,7 @@ module.exports = [
   {
     mode: 'production',
     entry: {
-      global: './src/js/hfd.js',
+      global: './src/js/global.js',
       loading: './src/js/loading.js',
       home: './src/js/home.js',
       work: './src/js/work.js'
