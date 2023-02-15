@@ -1,21 +1,27 @@
 module.exports = [
   {
     mode: 'development',
-    entry: './src/js/hfd.js',
+    entry: {
+      global: './src/js/hfd.js',
+      loading: './src/js/loading.js',
+      home: './src/js/home.js',
+      work: './src/js/work.js'
+    },
     output: {
-      filename: 'hfd.js',
-      library: 'hfd',
-      libraryTarget: 'var',
+      filename: '[name].js',
       path: __dirname + './js'
     }
   },
   {
     mode: 'production',
-    entry: './src/js/hfd.js',
+    entry: {
+      global: './src/js/hfd.js',
+      loading: './src/js/loading.js',
+      home: './src/js/home.js',
+      work: './src/js/work.js'
+    },
     output: {
-      filename: 'hfd.min.js',
-      library: 'hfd',
-      libraryTarget: 'var',
+      filename: '[name].min.js',
       path: __dirname + './js'
     }
   }
