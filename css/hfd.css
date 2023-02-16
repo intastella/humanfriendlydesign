@@ -734,6 +734,12 @@ h6 {
   }
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #000;
+}
+
 .tmpl-skip-to-main {
   display: none;
   position: fixed;
@@ -748,12 +754,6 @@ h6 {
 }
 .tmpl-skip-to-main:focus {
   transform: translateX(0);
-}
-
-.icon {
-  fill: #000;
-  width: 24px;
-  height: 24px;
 }
 
 .tmpl-inner {
@@ -866,12 +866,12 @@ h6 {
   display: none;
   position: absolute;
   overflow: hidden;
+  width: 5px;
+  height: 5px;
   border-radius: 9999rem;
   left: 50%;
   bottom: 4px;
   margin-left: -2.5px;
-  width: 5px;
-  height: 5px;
   background-color: var(--color-text-primary);
 }
 @media (min-width: 600px) {

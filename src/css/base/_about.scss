@@ -7,12 +7,10 @@
 .about-hero__avatar {
   @include mar-right(2);
   @include border-radius($br-round);
-  width: 80px;
-  height: 80px;
+  @include square(80px);
 
   @include breakpoint($screen-small) {
-    width: 112px;
-    height: 112px;
+    @include square(112px);
   }
 }
 
@@ -44,8 +42,7 @@
   @include flex-fixed;
   @include mar-right(1);
   @include border-radius($br-4);
-  width: 48px;
-  height: 48px;
+  @include square(48px);
   background-color: $white;
 }
 

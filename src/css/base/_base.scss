@@ -119,3 +119,8 @@ h5 {
 h6 {
   @include head-xxsmall;
 }
+
+.icon {
+  @include square(24px);
+  fill: $black;
+}
