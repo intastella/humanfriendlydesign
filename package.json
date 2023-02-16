@@ -4,7 +4,6 @@
   "dependencies": {
     "breakpoint-sass": "^3.0.0",
     "chocolat": "^1.1.0",
-    "connect": "^3.7.0",
     "cssnano": "^5.1.14",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-standard": "^5.0.0",
@@ -21,11 +20,7 @@
     "postcss-focus": "^2.0.0",
     "postcss-reporter": "^7.0.5",
     "sass": "^1.57.1",
-    "serve-static": "^1.15.0",
     "webpack": "^5.75.0",
     "webpack-stream": "^7.0.0"
-  },
-  "scripts": {
-    "web-server": "npm start"
   }
 }
