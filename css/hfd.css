@@ -597,6 +597,9 @@ body.chocolat-open > .chocolat-image-wrapper {
 * {
   box-sizing: border-box;
 }
+*.theme-switch {
+  transition: none !important;
+}
 
 img,
 picture {
@@ -607,7 +610,6 @@ picture {
 .theme-dark img,
 .theme-dark picture {
   filter: brightness(0.85) contrast(1.1);
-  transition: filter 0.15s ease-in-out;
 }
 
 picture {
@@ -623,7 +625,6 @@ body {
   font-weight: 300;
   line-height: 1.4;
   color: var(--color-text-primary);
-  transition: all 0.15s ease-in-out;
 }
 
 body {
@@ -764,7 +765,6 @@ h6 {
   border-radius: 16px;
   background-color: var(--color-page-inner-bg);
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.15s ease-in-out;
 }
 @media (min-width: 600px) {
   .tmpl-inner {
@@ -789,7 +789,6 @@ h6 {
   order: 1;
   z-index: 1;
   overflow-y: scroll;
-  transition: all 0.15s ease-in-out;
 }
 @media (min-width: 600px) {
   .tmpl-nav {
@@ -913,7 +912,6 @@ h6 {
   justify-content: space-between;
   background-color: var(--color-page-inner-bg);
   z-index: 9;
-  transition: all 0.15s ease-in-out;
 }
 @media (min-width: 600px) {
   .tmpl-header {
@@ -947,6 +945,7 @@ h6 {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
 }
 .tmpl-header__theme-switch:hover, .tmpl-header__theme-switch:focus {
   color: var(--color-text-primary);
@@ -1199,6 +1198,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 .theme-dark .loading {
   border: 1px solid var(--color-border-light);
+  box-shadow: none;
 }
 
 .loading__inner {

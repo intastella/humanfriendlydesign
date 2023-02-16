@@ -29,7 +29,6 @@
   @include border-radius($br-16);
   background-color: var(--color-page-inner-bg);
   box-shadow: $shadow-large;
-  transition: all $transition-short;
 
   @include breakpoint($screen-small) {
     @include flex-horizontal;
@@ -54,7 +53,6 @@
   order: 1;
   z-index: 1;
   overflow-y: scroll;
-  transition: all $transition-short;
 
   @include breakpoint($screen-small) {
     @include flex-vertical;
@@ -167,7 +165,6 @@
   justify-content: space-between;
   background-color: var(--color-page-inner-bg);
   z-index: 9;
-  transition: all $transition-short;
 
   @include breakpoint($screen-small) {
     border-radius: 0 $br-16 0 0;
@@ -198,6 +195,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: background-color $transition-short;
 
   &:hover {
     color: var(--color-text-primary);

@@ -22,9 +22,12 @@
   --color-surface-dark: #{$color-surface-dark-theme-dark};
 }
 
-
 * {
   box-sizing: border-box;
+
+  &.theme-switch {
+    transition: none !important;
+  }
 }
 
 img, 
@@ -35,7 +38,7 @@ picture {
 
   .theme-dark & {
     filter: brightness(0.85) contrast(1.1);
-    transition: filter $transition-short;
+    // transition: filter $transition-short;
   }
 }
 
@@ -52,7 +55,7 @@ body {
   font-weight: $font-weight-default;
   line-height: $font-line-height-default;
   color: var(--color-text-primary);
-  transition: all $transition-short;
+  // transition: all $transition-short;
 }
 
 body {
