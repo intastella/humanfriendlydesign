@@ -233,3 +233,10 @@
   width: $size;
   height: $size;
 }
+
+@mixin round($size) {
+  @include overflow-hidden;
+  width: $size;
+  height: $size;
+  border-radius: $br-round;
+}
