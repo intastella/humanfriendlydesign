@@ -12,12 +12,17 @@
   @include flex-vertical;
   @include pad(2);
   text-align: center;
-  background-color: $white;
+  background-color: var(--color-page-inner-bg);
   box-shadow: $shadow-large;
+  
 
   @include breakpoint($screen-small) {
     @include pad(4);
     @include width-auto;
+  }
+
+  .theme-dark & {
+    border: 1px solid var(--color-border-light);
   }
 }
 
@@ -39,9 +44,7 @@
 .loading__logo {
   @include mar-bottom(2);
   @include square(56px);
-  background-image: url("#{$image-path}logo-mark.svg");
-  background-position: center center;
-  background-size: cover;
+  fill: var(--color-text-primary);
 
   @include breakpoint($screen-small) {
     @include square(72px);
@@ -69,7 +72,7 @@
   @include border-radius($br-round);
   @include height-full;
   width: 0%;
-  background-color: $black;
+  background-color: var(--color-text-primary);
   transition: width $transition-short;
 }
 
@@ -93,4 +96,18 @@
     @include relative;
     top: 4px;
   }
+}
+
+.extension-fill {
+  fill: var(--color-page-inner-bg);
+}
+
+.extension-stroke {
+  .theme-dark & {
+    fill: var(--color-border-light);
+  }
+}
+
+.extension-icon {
+  fill: var(--color-text-primary);
 }
