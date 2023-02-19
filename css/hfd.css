@@ -571,6 +571,7 @@ body.chocolat-open > .chocolat-image-wrapper {
 }
 */
 :root {
+  color-scheme: light dark;
   --color-page-bg: #F8F4EF;
   --color-page-inner-bg: #fff;
   --color-text-primary: #000;
