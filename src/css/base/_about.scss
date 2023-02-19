@@ -1,0 +1,90 @@
+.about-hero {
+  @include flex;
+  @include flex-horizontal;
+  @include flex-cross-center;
+}
+
+.about-hero__avatar {
+  @include mar-right(2);
+  @include border-radius($br-round);
+  @include square(80px);
+
+  @include breakpoint($screen-small) {
+    @include square(112px);
+  }
+}
+
+.about-roles {
+  @include grid;
+  grid-gap: $spacer-2;
+  grid-column-gap: $spacer-2;
+  grid-template-columns: auto;
+
+  @include breakpoint($screen-small) {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+.about-role-item {
+  @include flex;
+  @include flex-horizontal;
+  @include pad(1.5);
+  @include border;
+  @include border-radius($br-8);
+  transition: border $transition-short;
+
+  &:hover {
+    border: 1px solid var(--color-border-dark);
+  }
+}
+
+.about-role-item__image {
+  @include flex-fixed;
+  @include mar-right(1);
+  @include border-radius($br-4);
+  @include square(48px);
+  background-color: $white;
+}
+
+.about-role-item__details {
+  @include flex-fluid;
+}
+
+.about-role-item__heading {
+  @include head-xxsmall;
+  @include mar-bottom(0);
+}
+
+.about-role-item__industry {
+  @include footnote;
+}
+
+.about-role-item__role {
+  @include footnote-small;
+}
+
+.about-resume {
+  @include flex;
+}
+
+.about-resume__link {
+  @include flex;
+  @include flex-cross-center;
+  @include flex-fixed;
+  @include border;
+  @include pad(1.5);
+  @include border-radius($br-8);
+  @include head-xxsmall;
+  transition: border $transition-short;
+  color: var(--color-text-default);
+
+  &:hover {
+    border: 1px solid var(--color-border-dark);
+  }
+}
+
+.about-resume__link-icon {
+  @include mar-right(1);
+  fill: currentColor;
+  stroke: currentColor;
+}

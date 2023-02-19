@@ -1,0 +1,391 @@
+.tmpl-skip-to-main {
+  @include hidden;
+  @include fixed;
+  top: 0;
+  left: 0;
+  padding: $spacer-2;
+  background-color: $black;
+  color: $white;
+  transform: translateX(-100%);
+  transition: transform 0.25s ease-in-out;
+  z-index: 99999;
+  
+  &:focus {
+    transform: translateX(0);
+  }
+}
+
+.tmpl-inner {
+  @include flex;
+  @include flex-vertical;
+  @include width-full;
+  @include height-full;
+  @include border-radius($br-16);
+  background-color: var(--color-page-inner-bg);
+  box-shadow: $shadow-large;
+
+  @include breakpoint($screen-small) {
+    @include flex-horizontal;
+  }
+
+  .theme-dark & {
+    border: 1px solid var(--color-border-light);
+    box-shadow: none;
+  }
+}
+
+.tmpl-nav {
+  @include flex;
+  @include flex-horizontal;
+  @include width-full;
+  @include overflow-hidden;
+  @include flex-fixed;
+  height: 64px;
+  padding: $spacer-half;
+  box-shadow: $shadow-large;
+  border-radius: 0 0 $br-16 $br-16;
+  order: 1;
+  z-index: 1;
+  overflow-y: scroll;
+
+  @include breakpoint($screen-small) {
+    @include flex-vertical;
+    @include flex-fixed;
+    @include height-full;
+    @include border-radius(0);
+    width: 72px;
+    padding: 72px $spacer-half $spacer-half;
+    order: 0;
+    box-shadow: none;
+    border-right: 1px solid var(--color-border-light);
+  }
+}
+
+.tmpl-nav__link {
+  @include relative;
+  @include flex;
+  @include flex-grow;
+  @include flex-vertical;
+  @include flex-center-center;
+  @include mar-left(0.5);
+  @include footnote;
+  @include border-radius($br-8);
+  padding: $spacer-half 0;
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  transition: all $transition-short;
+
+  @include breakpoint($screen-small) {
+    @include flex-fixed;
+    @include mar-bottom(2);
+    @include mar-left(0);
+    @include pad(0);
+    height: 64px;
+  }
+
+  &:first-of-type {
+    @include mar-left(0);
+  }
+
+  &:hover {
+    background-color: var(--color-surface-light);
+    color: var(--color-text-primary);
+  }
+
+  &--active {
+    @include pad-bottom(1);
+    color: var(--color-text-primary);
+    font-weight: $font-medium;
+
+    @include breakpoint($screen-small) {
+      @include pad-bottom(0);
+    }
+  }
+}
+
+.tmpl-nav__link-hidden {
+  @include hidden;
+}
+
+.tmpl-nav__link-icon {
+  fill: currentColor;
+}
+
+.tmpl-nav__link-active-dot {
+  @include hidden;
+  @include absolute;
+  @include round(5px);
+  left: 50%;
+  bottom: 4px;
+  margin-left: -2.5px;
+  background-color: var(--color-text-primary);
+
+  @include breakpoint($screen-small) {
+    top: 50%;
+    left: auto;
+    right: 5px;
+    bottom: auto;
+    margin-top: -2.5px;
+  }
+
+  .tmpl-nav__link--active & {
+    display: block;
+  }
+}
+
+.tmpl-main {
+  @include relative;
+  @include pad(0);
+  @include flex-fluid;
+  @include overflow-hidden;
+  order: 0;
+
+  @include breakpoint($screen-small) {
+    order: 1;
+  }
+}
+
+.tmpl-header {
+  @include absolute;
+  @include pad(1);
+  @include flex;
+  @include flex-horizontal;
+  @include flex-cross-center;
+  @include width-full;
+  @include overflow-hidden;
+  border-radius: $br-16 $br-16 0 0;
+  justify-content: space-between;
+  background-color: var(--color-page-inner-bg);
+  z-index: 9;
+
+  @include breakpoint($screen-small) {
+    border-radius: 0 $br-16 0 0;
+  }
+}
+
+.tmpl-header__address {
+  @include border-radius($br-round);
+  padding: $spacer-half $spacer-2;
+  background-color: var(--color-surface-light);
+  font-size: $type-10;
+  transition: background-color $transition-short;
+
+  @include breakpoint($screen-small) {
+    font-size: $type-12;
+  }
+
+  &:hover {
+    background-color: var(--color-surface-dark);
+  }
+}
+
+.tmpl-header__theme-switch {
+  @include pad(0.5);
+  @include border-radius($br-4);
+  color: var(--color-text-secondary);
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color $transition-short;
+
+  &:hover {
+    color: var(--color-text-primary);
+    background-color: var(--color-surface-dark);
+  }
+}
+
+.tmpl-header__theme-switch-icon {
+  @include square(16px);
+  fill: currentColor;
+  stroke: currentColor;
+
+  @include breakpoint($screen-small) {
+    @include square(18px);
+  }
+
+  &--auto {
+    @include hidden;
+  }
+
+
+  &--dark {
+    @include hidden;
+
+    .theme-dark & {
+      @include block;
+    }
+  }
+
+  &--light {
+    @include block;
+
+    .theme-dark & {
+      @include hidden;
+    }
+  }
+}
+
+.tmpl-content {
+  @include width-full;
+  @include height-full;
+  overflow-y: scroll;
+}
+
+.tmpl-content__inner {
+  @include center;
+  @include width-full;
+  max-width: 784px; // 720px + 32px left and right padding;
+  padding: $spacer-6 $spacer-2 $spacer-4 $spacer-2;
+  
+  @include breakpoint($screen-small) {
+    padding: $spacer-8 $spacer-4 $spacer-4 $spacer-4;
+  }
+}
+
+.tmpl-page-heading-wrapper {
+  @include relative;
+}
+
+.tmpl-page-heading {
+  @include mar-bottom(2);
+}
+
+.tmpl-page-subsection {
+  @include mar-top(4);
+}
+
+.tmpl-heading-link {
+  @include flex;
+  @include flex-cross-center;
+  @include mar-bottom(1);
+}
+
+.tmpl-heading-link__heading {
+  @include head-med;
+  @include mar-bottom(0);
+}
+
+.tmpl-link-arrow {
+  @include mar-left(1);
+  @include pad(0.5);
+  @include border-radius($br-round);
+  line-height: 0;
+  background-color: var(--color-surface-light);
+  transition: background-color $transition-short;
+
+  a:hover &,
+  &:hover {
+    background-color: var(--color-surface-dark);
+  }
+
+  &--back {
+    @include absolute;
+    @include mar-left(0);
+    @include hidden;
+    top: 50%;
+    left: -45px;
+    margin-top: -18.5px;
+
+    @include breakpoint(946px) {
+      @include block;
+    }
+  }
+}
+
+.tmpl-link-arrow__icon {
+  @include square(17px);
+  fill: var(--color-text-secondary);
+  transition: fill $transition-short;
+
+  .tmpl-link-arrow--large & {
+    @include square(29px);
+  }
+
+  a:hover &,
+  &:hover {
+    fill: var(--color-text-primary);
+  }
+}
+
+.tmpl-project-row {
+  @include flex;
+  @include flex-vertical;
+  @include mar-top(4);
+
+  &:first-of-type {
+    @include mar-top(0);
+  }
+
+  @include breakpoint($screen-small) {
+    @include flex-horizontal;
+  }
+}
+
+.tmpl-project {
+  @include flex-fixed;
+  @include mar-top(4);
+  @include relative;
+
+  &:first-of-type {
+    @include mar-top(0);
+  }
+
+  @include breakpoint($screen-small) {
+    @include flex-fluid;
+    @include mar-left(4);
+    @include mar-top(0);
+
+    &:first-of-type {
+      @include mar-left(0);
+    }
+  }
+}
+
+.tmpl-project__thumbnail {
+  @include border;
+  @include border-radius($br-16);
+  @include block;
+  transition: border $transition-short;
+
+  .tmpl-project:hover & {
+    border: 1px solid var(--color-border-dark);
+  }
+}
+
+.tmpl-project-floating-label {
+  @include absolute;
+  @include flex;
+  @include flex-horizontal;
+  @include flex-cross-center;
+  @include border-radius($br-round);
+  @include footnote;
+  color: var(--color-text-primary);
+  bottom: $spacer;
+  left: $spacer;
+  background-color: var(--color-page-inner-bg);
+  padding: $spacer $spacer $spacer $spacer-2;
+  box-shadow: $shadow-large; 
+
+  @include breakpoint($screen-small) {
+    bottom: $spacer-2;
+    left: $spacer-2;
+  }
+}
+
+.tmpl-project__title {
+  @include mar-top(1);
+  @include head-xsmall;
+}
+
+.tmpl-project__tags {
+  @include footnote;
+}
+
+.tmpl-project__tag-item {
+  @include mar-left(1);
+
+  &:first-of-type {
+    @include mar-left(0);
+  }
+}

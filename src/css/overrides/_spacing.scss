@@ -1,0 +1,573 @@
+// =============================================
+//                    MARGINS
+// =============================================
+
+.center {
+  @include center;
+}
+
+.mar-top-quarter {
+  @include mar-top-quarter(!important);
+}
+
+.mar-top-half {
+  @include mar-top-half(!important);
+}
+
+.mar-top-1 {
+  @include mar-top(1, !important);
+}
+
+.mar-top-1plus {
+  @include mar-top-1plus(!important);
+}
+
+.mar-top-2 {
+  @include mar-top(2, !important);
+}
+
+.mar-top-3 {
+  @include mar-top(3, !important);
+}
+
+.mar-top-4 {
+  @include mar-top(4, !important);
+}
+
+.mar-top-5 {
+  @include mar-top(5, !important);
+}
+
+.mar-top-6 {
+  @include mar-top(6, !important);
+}
+
+.mar-top-7 {
+  @include mar-top(7, !important);
+}
+
+.mar-top-8 {
+  @include mar-top(8, !important);
+}
+
+.mar-top-9 {
+  @include mar-top(9, !important);
+}
+
+.mar-top-10 {
+  @include mar-top(10, !important);
+}
+
+.mar-bottom-quarter {
+  @include mar-bottom-quarter(!important);
+}
+
+.mar-bottom-half {
+  @include mar-bottom-half(!important);
+}
+
+.mar-bottom-1 {
+  @include mar-bottom(1, !important);
+}
+
+.mar-bottom-1plus {
+  @include mar-bottom-1plus(!important);
+}
+
+.mar-bottom-2 {
+  @include mar-bottom(2, !important);
+}
+
+.mar-bottom-3 {
+  @include mar-bottom(3, !important);
+}
+
+.mar-bottom-4 {
+  @include mar-bottom(4, !important);
+}
+
+.mar-bottom-5 {
+  @include mar-bottom(5, !important);
+}
+
+.mar-bottom-6 {
+  @include mar-bottom(6, !important);
+}
+
+.mar-bottom-7 {
+  @include mar-bottom(7, !important);
+}
+
+.mar-bottom-8 {
+  @include mar-bottom(8, !important);
+}
+
+.mar-bottom-9 {
+  @include mar-bottom(9, !important);
+}
+
+.mar-bottom-10 {
+  @include mar-bottom(10, !important);
+}
+
+.mar-left-quarter {
+  @include mar-left-quarter(!important);
+}
+
+.mar-left-half {
+  @include mar-left-half(!important);
+}
+
+.mar-left-1 {
+  @include mar-left(1, !important);
+}
+
+.mar-left-1plus {
+  @include mar-left-1plus(!important);
+}
+
+.mar-left-2 {
+  @include mar-left(2, !important);
+}
+
+.mar-left-3 {
+  @include mar-left(3, !important);
+}
+
+.mar-left-4 {
+  @include mar-left(4, !important);
+}
+
+.mar-left-5 {
+  @include mar-left(5, !important);
+}
+
+.mar-left-6 {
+  @include mar-left(6, !important);
+}
+
+.mar-left-7 {
+  @include mar-left(7, !important);
+}
+
+.mar-left-8 {
+  @include mar-left(8, !important);
+}
+
+.mar-left-9 {
+  @include mar-left(9, !important);
+}
+
+.mar-left-10 {
+  @include mar-left(10, !important);
+}
+
+.mar-right-quarter {
+  @include mar-right-quarter(!important);
+}
+
+.mar-right-half {
+  @include mar-right-half(!important);
+}
+
+.mar-right-1 {
+  @include mar-right(1, !important);
+}
+
+.mar-right-1plus {
+  @include mar-right-1plus(!important);
+}
+
+.mar-right-2 {
+  @include mar-right(2, !important);
+}
+
+.mar-right-3 {
+  @include mar-right(3, !important);
+}
+
+.mar-right-4 {
+  @include mar-right(4, !important);
+}
+
+.mar-right-5 {
+  @include mar-right(5, !important);
+}
+
+.mar-right-6 {
+  @include mar-right(6, !important);
+}
+
+.mar-right-7 {
+  @include mar-right(7, !important);
+}
+
+.mar-right-8 {
+  @include mar-right(8, !important);
+}
+
+.mar-right-9 {
+  @include mar-right(9, !important);
+}
+
+.mar-right-10{
+  @include mar-right(10, !important);
+}
+
+.mar-quarter {
+  @include mar-quarter(!important);
+}
+
+.mar-half {
+  @include mar-half(!important);
+}
+
+.mar-1 {
+  @include mar(1, !important);
+}
+
+.mar-1plus {
+  @include mar-1plus(!important);
+}
+
+.mar-2 {
+  @include mar(2, !important);
+}
+
+.mar-3 {
+  @include mar(3, !important);
+}
+
+.mar-4 {
+  @include mar(4, !important);
+}
+
+.mar-5 {
+  @include mar(5, !important);
+}
+
+.mar-6 {
+  @include mar(6, !important);
+}
+
+.mar-7 {
+  @include mar(7, !important);
+}
+
+.mar-8 {
+  @include mar(8, !important);
+}
+
+.mar-9 {
+  @include mar(9, !important);
+}
+
+.mar-10{
+  @include mar(10, !important);
+}
+
+// PLACED HERE TO OVERRIDE OTHER MARGINS
+.mar-top-0 {
+  @include mar-top(0, !important);
+}
+
+.mar-bottom-0 {
+  @include mar-bottom(0, !important);
+}
+
+.mar-left-0 {
+  @include mar-left(0, !important);
+}
+
+.mar-right-0 {
+  @include mar-right(0, !important);
+}
+
+.mar-0 {
+  @include mar(0, !important);
+}
+
+// =============================================
+//                  PADDING
+// =============================================
+
+.pad-top-quarter {
+  @include pad-top-quarter(!important);
+}
+
+.pad-top-half {
+  @include pad-top-half(!important);
+}
+
+.pad-top-1 {
+  @include pad-top(1, !important);
+}
+
+.pad-top-1plus {
+  @include pad-top-1plus(!important);
+}
+
+.pad-top-2 {
+  @include pad-top(2, !important);
+}
+
+.pad-top-3 {
+  @include pad-top(3, !important);
+}
+
+.pad-top-4 {
+  @include pad-top(4, !important);
+}
+
+.pad-top-5 {
+  @include pad-top(5, !important);
+}
+
+.pad-top-6 {
+  @include pad-top(6, !important);
+}
+
+.pad-top-7 {
+  @include pad-top(7, !important);
+}
+
+.pad-top-8 {
+  @include pad-top(8, !important);
+}
+
+.pad-top-9 {
+  @include pad-top(9, !important);
+}
+
+.pad-top-10 {
+  @include pad-top(10, !important);
+}
+
+.pad-bottom-quarter {
+  @include pad-bottom-quarter(!important);
+}
+
+.pad-bottom-half {
+  @include pad-bottom-half(!important);
+}
+
+.pad-bottom-1 {
+  @include pad-bottom(1, !important);
+}
+
+.pad-bottom-1plus {
+  @include pad-bottom-1plus(!important);
+}
+
+.pad-bottom-2 {
+  @include pad-bottom(2, !important);
+}
+
+.pad-bottom-3 {
+  @include pad-bottom(3, !important);
+}
+
+.pad-bottom-4 {
+  @include pad-bottom(4, !important);
+}
+
+.pad-bottom-5 {
+  @include pad-bottom(5, !important);
+}
+
+.pad-bottom-6 {
+  @include pad-bottom(6, !important);
+}
+
+.pad-bottom-7 {
+  @include pad-bottom(7, !important);
+}
+
+.pad-bottom-8 {
+  @include pad-bottom(8, !important);
+}
+
+.pad-bottom-9 {
+  @include pad-bottom(9, !important);
+}
+
+.pad-bottom-10 {
+  @include pad-bottom(10, !important);
+}
+
+.pad-left-quarter {
+  @include pad-left-quarter(!important);
+}
+
+.pad-left-half {
+  @include pad-left-half(!important);
+}
+
+.pad-left-1 {
+  @include pad-left(1, !important);
+}
+
+.pad-left-1plus {
+  @include pad-left-1plus(!important);
+}
+
+.pad-left-2 {
+  @include pad-left(2, !important);
+}
+
+.pad-left-3 {
+  @include pad-left(3, !important);
+}
+
+.pad-left-4 {
+  @include pad-left(4, !important);
+}
+
+.pad-left-5 {
+  @include pad-left(5, !important);
+}
+
+.pad-left-6 {
+  @include pad-left(6, !important);
+}
+
+.pad-left-7 {
+  @include pad-left(7, !important);
+}
+
+.pad-left-8 {
+  @include pad-left(8, !important);
+}
+
+.pad-left-9 {
+  @include pad-left(9, !important);
+}
+
+.pad-left-10 {
+  @include pad-left(10, !important);
+}
+
+.pad-right-quarter {
+  @include pad-right-quarter(!important);
+}
+
+.pad-right-half {
+  @include pad-right-half(!important);
+}
+
+.pad-right-1 {
+  @include pad-right(1, !important);
+}
+
+.pad-right-1plus {
+  @include pad-right-1plus(!important);
+}
+
+.pad-right-2 {
+  @include pad-right(2, !important);
+}
+
+.pad-right-3 {
+  @include pad-right(3, !important);
+}
+
+.pad-right-4 {
+  @include pad-right(4, !important);
+}
+
+.pad-right-5 {
+  @include pad-right(5, !important);
+}
+
+.pad-right-6 {
+  @include pad-right(6, !important);
+}
+
+.pad-right-7 {
+  @include pad-right(7, !important);
+}
+
+.pad-right-8 {
+  @include pad-right(8, !important);
+}
+
+.pad-right-9 {
+  @include pad-right(9, !important);
+}
+
+.pad-right-10 {
+  @include pad-right(10, !important);
+}
+
+.pad-quarter {
+  @include pad-quarter(!important);
+}
+
+.pad-half {
+  @include pad-half(!important);
+}
+
+.pad-1 {
+  @include pad(1, !important);
+}
+
+.pad-1plus {
+  @include pad-1plus(!important);
+}
+
+.pad-2 {
+  @include pad(2, !important);
+}
+
+.pad-3 {
+  @include pad(3, !important);
+}
+
+.pad-4 {
+  @include pad(4, !important);
+}
+
+.pad-5 {
+  @include pad(5, !important);
+}
+
+.pad-6 {
+  @include pad(6, !important);
+}
+
+.pad-7 {
+  @include pad(7, !important);
+}
+
+.pad-8 {
+  @include pad(8, !important);
+}
+
+.pad-9 {
+  @include pad(9, !important);
+}
+
+.pad-10 {
+  @include pad(10, !important);
+}
+
+// PLACED HERE TO OVERRIDE OTHER MARGINS
+.pad-top-0 {
+  @include pad-top(0, !important);
+}
+
+.pad-bottom-0 {
+  @include pad-bottom(0, !important);
+}
+
+.pad-left-0 {
+  @include pad-left(0, !important);
+}
+
+.pad-right-0 {
+  @include pad-right(0, !important);
+}
+
+.pad-0 {
+  @include pad(0, !important);
+}

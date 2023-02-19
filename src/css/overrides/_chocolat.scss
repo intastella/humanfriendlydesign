@@ -1,0 +1,25 @@
+.chocolat-wrapper {
+  .chocolat-overlay {
+    background-color: $black;;
+  }
+  
+  .chocolat-image-wrapper {
+    @include border-radius($br-16);
+  }
+  
+  .chocolat-close {
+    right: auto;
+    left: 0;
+  }
+  
+  .chocolat-description,
+  .chocolat-set-title,
+  .chocolat-fullscreen {
+    @include hidden;
+  }
+  
+  .chocolat-bottom {
+    @include flex-main-center;
+    background: none;
+  }
+}

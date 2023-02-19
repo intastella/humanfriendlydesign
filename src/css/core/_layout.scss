@@ -1,0 +1,242 @@
+// =============================================
+//                    DISPLAY
+// =============================================
+
+@mixin fixed {
+  position: fixed;
+}
+
+@mixin absolute {
+  position: absolute;
+}
+
+@mixin relative { 
+  position: relative; 
+}
+
+@mixin static { 
+  position: static; 
+}
+
+@mixin inline { 
+  display: inline;
+}
+@mixin inline-block { 
+  display: inline-block;
+}
+
+@mixin block { 
+  display: block; 
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin grid {
+  display: grid;
+}
+
+@mixin hidden { 
+  display: none; 
+}
+
+// =============================================
+//                    FLOATS
+// =============================================
+
+@mixin clear { 
+  clear: both;
+  
+  &::after { 
+    @include content-on;
+    @include block; 
+    height: 0; 
+    font-size: 0; 
+    clear: both; 
+    visibility: hidden; 
+  }
+}
+
+@mixin pull-right { 
+  float: right; 
+}
+
+@mixin pull-left { 
+  float: left; 
+}
+
+@mixin pull-none { 
+  float: none; 
+}
+
+// =============================================
+//              FLEXBOX CONTAINERS
+// =============================================
+
+@mixin flex-main-center {
+  justify-content: center;
+}
+
+@mixin flex-cross-center {
+  align-items: center;
+}
+
+@mixin flex-center-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-vertical {
+  flex-direction: column;
+}
+
+@mixin flex-horizontal {
+  flex-direction: row;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+@mixin flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+// =============================================
+//                FLEXBOX ITEMS
+// =============================================
+
+@mixin flex-grow {
+  flex: 1 0 auto;
+}
+
+@mixin flex-shrink {
+  flex: 0 1 auto;
+}
+
+@mixin flex-fluid {
+  flex: 1 1 auto;
+}
+
+@mixin flex-equal {
+  flex: 1;
+}
+
+@mixin flex-fixed($basis: null) {
+  @if $basis {
+    flex: 0 0 $basis;
+  } @else {
+    flex: 0 0 auto;
+  }
+}
+
+@mixin flex-none {
+  flex: none;
+}
+
+// =============================================
+//                  OVERFLOW
+// =============================================
+
+@mixin overflow-hidden {
+  overflow: hidden;
+}
+
+@mixin overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+@mixin overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+@mixin overflow-visible {
+  overflow: visible;
+}
+
+@mixin overflow-x-hidden-scroll-y {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin overflow-y-hidden-scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+// =============================================
+//                    CONTENT
+// =============================================
+
+@mixin content-on { 
+  content: " "; 
+}
+
+@mixin hide-if-empty {
+  &:empty {
+    @include hidden;
+  }
+}
+
+// =============================================
+//                    SIZES
+// =============================================
+
+@mixin width-full { 
+  width: $pct-full; 
+}
+
+@mixin width-one-half { 
+  width: $pct-one-half; 
+}
+
+@mixin width-one-quarter { 
+  width: $pct-one-quarter; 
+}
+
+@mixin width-three-quarter { 
+  width: $pct-three-quarter; 
+}
+
+@mixin width-one-third { 
+  width: $pct-one-third; 
+}
+
+@mixin width-two-third { 
+  width: $pct-two-third; 
+}
+
+@mixin width-one-fifth { 
+  width: $pct-one-fifth; 
+}
+
+@mixin width-four-fifth { 
+  width: $pct-four-fifth; 
+}
+
+@mixin width-auto { 
+  width: auto; 
+}
+
+@mixin height-full { 
+  height: $pct-full; 
+}
+
+@mixin height-auto { 
+  height: auto; 
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin round($size) {
+  @include overflow-hidden;
+  width: $size;
+  height: $size;
+  border-radius: $br-round;
+}

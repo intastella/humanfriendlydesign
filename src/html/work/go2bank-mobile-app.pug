@@ -1,0 +1,86 @@
+extends ../_tmpl
+
+block vars
+  - var title = "Work"
+  - var work_title = "GO2bank Mobile App"
+
+block content
+  .tmpl-page-heading-wrapper
+    h1.tmpl-page-heading #{work_title}
+    a(href="/work/").tmpl-link-arrow.tmpl-link-arrow--large.tmpl-link-arrow--back
+      svg.tmpl-link-arrow__icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+        path(fill-rule="evenodd", clip-rule="evenodd", d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z")
+  .work-tags
+    | Tags: 
+    span.tmpl-project__tag-item.work-tag__item #UX
+    span.tmpl-project__tag-item.work-tag__item #Design System  
+    span.tmpl-project__tag-item.work-tag__item #IA
+    span.tmpl-project__tag-item.work-tag__item #Research 
+
+  .work-links
+    | URL: 
+    a(href="http://www.go2bank.com" target="_blank") www.go2bank.com
+    
+  .tmpl-page-subsection
+    h2 Challenge
+    p
+      | In the spring of 2020 the Eureka project was started, an effort to turn the page on Green Dot's legacy brands and build a B2C banking app for the future. After much brand and market research, that project became GO2bank and the goal was to launch it in early 2021. While some work done on individual money movement flows were re-used, large parts of the app and all of the website had to be designed from scratch in a span of about 5 months. In addition to this, the goal was for this app to be a white label solution, capable of being re-skined under a diferent partner brand.
+  .tmpl-page-subsection
+    h2 Process
+    p
+      | The design team set out to come up with various concepts, get feedback internally and then user test them for qualitative and quantitative results. At the same time I was planning and testing the information architecture. Below is a one of my concepts that merged with another, that ended up becoming the final GO2bank look.
+    .work-samples.work-samples--2M-3D
+      a.work-sample-link(href="/img/Work/GO2bank-App-Level-Concept-Transactions.png")
+        img(src="/img/Work/GO2bank-App-Level-Concept-Transactions.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Level-Concept-Move Money.png")
+        img(src="/img/Work/GO2bank-App-Level-Concept-Move Money.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Level-Concept-Manage.png")
+        img(src="/img/Work/GO2bank-App-Level-Concept-Manage.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Level-Concept-Settings.png")
+        img(src="/img/Work/GO2bank-App-Level-Concept-Settings.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Level-Concept-Checking.png")
+        img(src="/img/Work/GO2bank-App-Level-Concept-Checking.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Level-Concept-Secure Card.png")
+        img(src="/img/Work/GO2bank-App-Level-Concept-Secure Card.png")
+    
+    .work-samples
+      a.work-sample-link(href="/img/Work/Eureka-IA.png")
+        img(src="/img/Work/Eureka-IA.png")
+  
+  .tmpl-page-subsection
+    h2 Process Continued
+    p
+      | Once a design had tested well and been approved, I set out to build the 
+      a(href="/work/eureka-design-system.html") Eureka Design System
+      | , an Atomic styled design system that would allow us to scale our designs quickly across the thousands of screens needed to implement the GO2bank app.
+    .work-samples
+      a.work-sample-link(href="/img/Work/EDS-GO2bank-UI-Examples.png")
+        img(src="/img/Work/EDS-GO2bank-UI-Examples.png")
+      a.work-sample-link(href="/img/Work/EDS-Typography.png")
+        img(src="/img/Work/EDS-Typography.png")
+      a.work-sample-link(href="/img/Work/EDS-Headers.png")
+        img(src="/img/Work/EDS-Headers.png")
+
+  .tmpl-page-subsection
+    h2 Solution
+    p 
+      | Several new features were scheduled to be included in the new product as well, such as the GO2bank Secured Credit Card, Savings account and overdraft protection. We made our deadlines, but many things were left on the cutting room floor, waiting to be prioritized by leadership. The resulting iOS and Android apps have app store ratings of 4.7 and 4.5 stars respectively and serve as the basis for all white label apps provided to partners.
+    .work-samples.work-samples--2M-3D
+      a.work-sample-link(href="/img/Work/GO2bank-App-Pre-Log-in.png")
+        img(src="/img/Work/GO2bank-App-Pre-Log-in.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Log-in.png")
+        img(src="/img/Work/GO2bank-App-Log-in.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Home.png")
+        img(src="/img/Work/GO2bank-App-Home.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Move-Money.png")
+        img(src="/img/Work/GO2bank-App-Move-Money.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Help-Center.png")
+        img(src="/img/Work/GO2bank-App-Help-Center.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Menu.png")
+        img(src="/img/Work/GO2bank-App-Menu.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Bank-Account.png")
+        img(src="/img/Work/GO2bank-App-Bank-Account.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Direct-Deposit.png")
+        img(src="/img/Work/GO2bank-App-Direct-Deposit.png")
+      a.work-sample-link(href="/img/Work/GO2bank-App-Savings-Account.png")
+        img(src="/img/Work/GO2bank-App-Savings-Account.png")

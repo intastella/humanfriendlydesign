@@ -1,0 +1,6 @@
+{
+  "ftp_host": "gdcqawebux201.nextestate.com",
+  "ftp_username": "my_username",
+  "ftp_file_dir": "/var/www/html/",
+  "debug": false
+}
