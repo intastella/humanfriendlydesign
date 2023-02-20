@@ -60,6 +60,7 @@ body {
 body {
   padding: $spacer;
 
+  // Target only iOS Safari for iPhone X style screen inset
   @supports #{'\(-webkit-touch-callout: none)'} {
     @include breakpoint($screen-landscape) {
       padding: $spacer env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);

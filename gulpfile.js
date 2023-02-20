@@ -98,6 +98,11 @@ gulp.task('assets-copy-compressed', function () {
     .pipe(gulp.dest('./img'));
 });
 
+gulp.task('assets-copy-fonts', function () {
+  return gulp.src('./src/fonts/*')
+    .pipe(gulp.dest('./fonts'));
+});
+
 gulp.task('assets-copy-downloads', function () {
   return gulp.src('./src/downloads/**/*')
     .pipe(gulp.dest('./downloads'));
@@ -145,7 +150,7 @@ gulp.task('js',
 
 gulp.task('assets',
   series(
-    parallel('assets-imagemin', 'assets-copy-compressed', 'assets-copy-downloads')
+    parallel('assets-imagemin', 'assets-copy-compressed', 'assets-copy-fonts', 'assets-copy-downloads')
   )
 );
 
