@@ -59,6 +59,19 @@ block content
         span.tmpl-project__tag-item #Whitelabel
 
   .tmpl-project-row
+    a.tmpl-project(href="/work/flex-web/")
+      picture.tmpl-project__thumbnail
+        source(media="(min-width: 600px)", srcset="/img/Thumbnails/Flex-Web-Large.png, /img/Thumbnails/Flex-Web-Large@2x.png 2x")
+        source(media="(min-width: 430px)", srcset="/img/Thumbnails/Flex-Web-Medium.png, /img/Thumbnails/Flex-Web-Medium@2x.png 2x")
+        source(srcset="/img/Thumbnails/Flex-Web-Small.png, /img/Thumbnails/Flex-Web-Small@2x.png 2x")
+        img(src="/img/Thumbnails/Flex-Web-Large.png" alt="Flex Web Design System Website")
+      .tmpl-project__title Flex Web Design System
+      .tmpl-project__tags
+        span.tmpl-project__tag-item #UX
+        span.tmpl-project__tag-item #Front End Development
+        span.tmpl-project__tag-item #Design System
+
+  .tmpl-project-row
     a.tmpl-project(href="/work/card-activation/")
       picture.tmpl-project__thumbnail
         source(media="(min-width: 600px)", srcset="/img/Thumbnails/Card_Activation_Large.png, /img/Thumbnails/Card_Activation_Large@2x.png 2x")
@@ -95,18 +108,7 @@ block content
         span.tmpl-project__tag-item #UX
         span.tmpl-project__tag-item #Wireframes
 
-  .tmpl-project-row
-    a.tmpl-project(href="/work/flex-web/")
-      picture.tmpl-project__thumbnail
-        source(media="(min-width: 600px)", srcset="/img/Thumbnails/Flex-Web-Large.png, /img/Thumbnails/Flex-Web-Large@2x.png 2x")
-        source(media="(min-width: 430px)", srcset="/img/Thumbnails/Flex-Web-Medium.png, /img/Thumbnails/Flex-Web-Medium@2x.png 2x")
-        source(srcset="/img/Thumbnails/Flex-Web-Small.png, /img/Thumbnails/Flex-Web-Small@2x.png 2x")
-        img(src="/img/Thumbnails/Flex-Web-Large.png" alt="Flex Web Design System Website")
-      .tmpl-project__title Flex Web Design System
-      .tmpl-project__tags
-        span.tmpl-project__tag-item #UX
-        span.tmpl-project__tag-item #Front End Development
-        span.tmpl-project__tag-item #Design System
+  
 
   //- .tmpl-project-row
   //-   .tmpl-project
