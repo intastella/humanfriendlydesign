@@ -17,10 +17,10 @@ block content
     span.tmpl-project__tag-item.work-tag__item #Front End Development
     span.tmpl-project__tag-item.work-tag__item #Design System
 
-  .tmpl-page-subsection
+  .tmpl-page-subsection.tmpl-page-subsection--first
     h2 Challenge
     p
-      | Green Dot design in 2015 was distributed amonst many UX and marketing teams, leading to much inconsistency in style and behavior of the company's apps and websites. We brought together the disparate designers into a single team and similarly identified an opportunity to unify our designs with a new design system. This design system would have to support iOS, Android, web apps and marketing efforts.
+      | In 2015 Green dot designers were distributed amongst several marketing and product teams, leading to much inconsistency in style and behavior of the company's apps and websites. We brought together the disparate designers into a single team and similarly identified an opportunity to unify our designs with a new design system. This design system would have to support our web apps, marketing sites and eventually native mobile apps. The system would have to also support multiple brand themes from day one, to support Green Dot's many in house and partner brands. We called this new design system Flex Web.
 
     .work-samples
       a.work-sample-link(href="/img/Work/Flex-Web-001.png")
@@ -29,42 +29,48 @@ block content
   .tmpl-page-subsection
     h2 Process
     p
-      | We identified additional personas that should be served by this new visualization product. Network security managers and CISOs (Chief Information Security Officer) were a particular target for this product, though the engineers remediating vulnerabilities would be able to utilize it as well to target their time. A wireframe document was put together to provide a vision for how this visualization would generally look, work and improve on the tedious task of identifying and remediating network vulnerabilities.
+      | The team identified the common elements needed across the many Green Dot sites and brands - buttons, inputs, radios, checkboxes, color palettes etc., that would be part of the basic UI kit. We also identified the need for partial page templates that could be re-used for marketing purposes on single pages or entire sites. Things like headers, footers, heroes, and text/image combinations that could be mixed and remixed together to enable quick production of pages and sites. We dubbed these "blocks".
 
     .work-samples
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-002.png")
-        img(src="/img/Work/Tenable-Lumin-Wireframe-002.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-004.png")
-        img(src="/img/Work/Tenable-Lumin-Wireframe-004.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-005.png")
-        img(src="/img/Work/Tenable-Lumin-Wireframe-005.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-006.png")
-        img(src="/img/Work/Tenable-Lumin-Wireframe-006.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-007.png")
-        img(src="/img/Work/Tenable-Lumin-Wireframe-007.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-008.png")
-        img(src="/img/Work/Tenable-Lumin-Wireframe-008.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-009.png")
-        img(src="/img/Work/Tenable-Lumin-Wireframe-009.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-Wireframe-011.png")
-        img(src="/img/Work/Tenable-Lumin-Wireframe-011.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-014.png")
-        img(src="/img/Work/Tenable-Lumin-014.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-015.png")
-        img(src="/img/Work/Tenable-Lumin-015.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-016.png")
-        img(src="/img/Work/Tenable-Lumin-016.png")
-    
+      a.work-sample-link(href="/img/Work/Flex-Web-018.png")
+        img(src="/img/Work/Flex-Web-018.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-014.png")
+        img(src="/img/Work/Flex-Web-014.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-015.png")
+        img(src="/img/Work/Flex-Web-015.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-016.png")
+        img(src="/img/Work/Flex-Web-016.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-017.png")
+        img(src="/img/Work/Flex-Web-017.png")
+      
   .tmpl-page-subsection
     h2 Solution
     p
-      | After many months of collaborating with product on wireframes our vision was complete, but after review with engineering, data science and leadership, it was determined that we should start smaller. While the fully navigable asset map we envisioned was our goal, engineering and data science would have months/years of work to be able to enable this. We scaled down the effort into a series of dashboards that could visualize the data we were able to generate from the new advanced data we were generating. The result was is a layer of information on top of the customer's existing vulnerability data, showing them how they are doing over time in remediating vulnerabilities and allowing them to focus on the highest priority issues.
+      | We created a collection of block designs that would serve the basis for many site redesigns and all web design moving forward. Single elements that would now commonly be referred to as components were called "modules". Pages would contain blocks, blocks could contain modules and modules were our smallest standalone element. This roughly followed the Atomic design pattern. All blocks and modules were coded in static HTML ready to be copy and pasted into a page, or integrated in to a SPA capable framework like Angular or .NET. Everything was styled via a single CSS file for each brand. These styles packaged up the colors, fonts, text styles, borders, spacing etc. for each brand. A site could be changed from Green Dot branded, to Gobank with the switch of a single file. Additionally, blocks and modules were given CSS modifier classes that could change certain styles automatically and they were enhanced with their own javascript to create custom behaviors and animations. The Flex Web documentation site was built to get designers, product managers, engineers and marketing up to speed quickly on the framework's capabilities. For designers or engineers building pages, a simple NPM install and duplicating the page-template.html was all you needed to get started.
 
     .work-samples
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-012.png")
-        img(src="/img/Work/Tenable-Lumin-012.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-006-Ind-Avg-<7-Hover.png")
-        img(src="/img/Work/Tenable-Lumin-006-Ind-Avg-<7-Hover.png")
-      a.work-sample-link(href="/img/Work/Tenable-Lumin-013.png")
-        img(src="/img/Work/Tenable-Lumin-013.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-007.png")
+        img(src="/img/Work/Flex-Web-007.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-008.png")
+        img(src="/img/Work/Flex-Web-008.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-009.png")
+        img(src="/img/Work/Flex-Web-009.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-010.png")
+        img(src="/img/Work/Flex-Web-010.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-011.png")
+        img(src="/img/Work/Flex-Web-011.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-010.png")
+        img(src="/img/Work/Flex-Web-010.png")
   
+  .tmpl-page-subsection
+    h2 Final Sites
+
+    .work-samples
+      a.work-sample-link(href="/img/Work/Flex-Web-022.png")
+        img(src="/img/Work/Flex-Web-022.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-021.png")
+        img(src="/img/Work/Flex-Web-021.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-019.png")
+        img(src="/img/Work/Flex-Web-019.png")
+      a.work-sample-link(href="/img/Work/Flex-Web-020.png")
+        img(src="/img/Work/Flex-Web-020.png")
