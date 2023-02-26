@@ -252,7 +252,11 @@
 }
 
 .tmpl-page-subsection {
-  @include mar-top(4);
+  @include mar-top(8);
+
+  &--first {
+    @include mar-top(4);
+  }
 }
 
 .tmpl-heading-link {

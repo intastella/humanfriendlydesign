@@ -1065,6 +1065,9 @@ h6 {
 }
 
 .tmpl-page-subsection {
+  margin-top: 64px;
+}
+.tmpl-page-subsection--first {
   margin-top: 32px;
 }
 
