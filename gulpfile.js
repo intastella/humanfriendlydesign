@@ -55,6 +55,16 @@ const cssMinPlugins = [
   reporter({ clearMessages: true })
 ];
 
+const imageminConfig = {
+  plugins: [
+    { removeUselessStrokeAndFill: true },
+    { removeUselessDefs: true },
+    { removeTitle: true },
+    { cleanupIDs: false },
+    { removeViewBox: false }
+  ]
+}
+
 gulp.task('html-pug', function () {
   return gulp.src('./src/html/**/[^_]*.pug')
     .pipe(pug(pugOptions))
@@ -114,15 +124,7 @@ gulp.task('assets-imagemin', function () {
       imagemin.gifsicle({ interlaced: true }),
       imagemin.mozjpeg({ progressive: true }),
       imagemin.optipng({ optimizationLevel: 1 }),
-      imagemin.svgo({
-        plugins: [
-          { removeUselessStrokeAndFill: true },
-          { removeUselessDefs: true },
-          { removeTitle: true },
-          { cleanupIDs: false },
-          { removeViewBox: false }
-        ]
-      })
+      imagemin.svgo(imageminConfig)
     ]))
     .pipe(gulp.dest('./img'));
 });
