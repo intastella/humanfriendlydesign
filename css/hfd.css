@@ -1467,10 +1467,15 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   border-radius: 16px;
   border: 1px solid var(--color-border-light);
   line-height: 0;
-  transition: border 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .work-sample-link:hover, .work-sample-link:focus {
+  transform: translate(-5px, -5px);
   border: 1px solid var(--color-border-dark);
+  box-shadow: 5px 5px 0 #000;
+}
+.theme-dark .work-sample-link:hover, .theme-dark .work-sample-link:focus {
+  box-shadow: 5px 5px 0 #fff;
 }
 
 .work-samples--2M-3D {
