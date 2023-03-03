@@ -9,8 +9,8 @@ $color-page-inner-bg: $white;
 $color-text-primary: $black;
 $color-text-secondary: $grey-7;
 $color-link: $color-text-primary;
-$color-border-light: $grey-3;
-$color-border-dark: $grey-6;
+$color-border-light: $grey-7;
+$color-border-dark: $black;
 $color-surface-light: $grey-1;
 $color-surface-dark: $grey-2;
 
@@ -18,14 +18,17 @@ $color-surface-dark: $grey-2;
 $color-page-bg-theme-dark: #33374D;
 $color-page-inner-bg-theme-dark: $grey-10;
 $color-text-primary-theme-dark: $white;
-$color-text-secondary-theme-dark: $white;
+$color-text-secondary-theme-dark: $grey-5;
 $color-link-theme-dark: $white;
-$color-border-light-theme-dark: $grey-8;
-$color-border-dark-theme-dark: $grey-5;
+$color-border-light-theme-dark: $white;
+$color-border-dark-theme-dark: $white;
 $color-surface-light-theme-dark: $grey-8;
 $color-surface-dark-theme-dark: $grey-7;
 
 // Shadows Theme
-$shadow-large: 0px 2px 20px rgba(0, 0, 0, 0.1);
-$shadow-medium: 0px 2px 10px rgba(0, 0, 0, 0.15);
-$shadow-small: 0px 1px 5px rgba(0, 0, 0, 0.15);
+$shadow-large: 5px 5px 0 rgba(0, 0, 0, 1);
+$shadow-medium: 3px 3px 0 rgba(0, 0, 0, 1);
+$shadow-small: 2px 2px 0 rgba(0, 0, 0, 1);
+$shadow-large-theme-dark: 5px 5px 0 rgba(255, 255, 255, 1);
+$shadow-medium-theme-dark: 3px 3px 0 rgba(255, 255, 255, 1);
+$shadow-small-theme-dark: 2px 2px 0 rgba(255, 255, 255, 1);
