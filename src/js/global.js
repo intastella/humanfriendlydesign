@@ -58,7 +58,10 @@ function initColorThemeSwitch() {
     }
   }
 
-  buttonColorThemeSwitch.addEventListener("click", toggleColorTheme);
+  if (buttonColorThemeSwitch !== null) {
+    buttonColorThemeSwitch.addEventListener("click", toggleColorTheme);
+  }
+  
   prefersDarkScheme.addEventListener("change", toggleColorTheme);
   toggleColorTheme("none");
 }
