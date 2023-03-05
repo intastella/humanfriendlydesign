@@ -5,6 +5,10 @@
   @include height-full;
 }
 
+.tmpl-main-loading__inner {
+  @include relative;
+}
+
 .loading {
   @include flex;
   @include border-radius($br-16);
@@ -79,8 +83,10 @@
 }
 
 .extensions-list {
-  @include mar-top(3);
+  @include absolute;
   line-height: 0;
+  bottom: -#{$spacer-9};
+  left: 0;
 }
 
 .extension {

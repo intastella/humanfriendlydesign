@@ -1269,6 +1269,10 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   height: 100%;
 }
 
+.tmpl-main-loading__inner {
+  position: relative;
+}
+
 .loading {
   display: flex;
   overflow: hidden;
@@ -1363,8 +1367,10 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 
 .extensions-list {
-  margin-top: 24px;
+  position: absolute;
   line-height: 0;
+  bottom: -72px;
+  left: 0;
 }
 
 .extension {
