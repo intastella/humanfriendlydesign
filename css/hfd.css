@@ -830,7 +830,7 @@ h6 {
   }
 }
 .theme-dark .tmpl-inner {
-  box-shadow: 5px 5px 0 #fff;
+  box-shadow: 5px 5px 0 #666666;
 }
 
 .tmpl-nav {
@@ -1197,7 +1197,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   box-shadow: 5px 5px 0 #000;
 }
 .theme-dark .tmpl-project:hover .tmpl-project__thumbnail, .theme-dark .tmpl-project:focus .tmpl-project__thumbnail {
-  box-shadow: 5px 5px 0 #fff;
+  box-shadow: 5px 5px 0 #666666;
 }
 
 .tmpl-project-floating-label {
@@ -1294,7 +1294,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   }
 }
 .theme-dark .loading {
-  box-shadow: 5px 5px 0 #fff;
+  box-shadow: 5px 5px 0 #666666;
 }
 
 .loading__inner {
@@ -1379,7 +1379,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   filter: drop-shadow(2px 2px 0 #000);
 }
 .theme-dark .extension {
-  filter: drop-shadow(2px 2px 0 #fff);
+  filter: drop-shadow(2px 2px 0 #666666);
 }
 
 .extension-fill {
@@ -1474,7 +1474,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   box-shadow: 5px 5px 0 #000;
 }
 .theme-dark .work-sample-link:hover, .theme-dark .work-sample-link:focus {
-  box-shadow: 5px 5px 0 #fff;
+  box-shadow: 5px 5px 0 #666666;
 }
 
 .work-samples--2M-3D {
