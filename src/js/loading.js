@@ -41,10 +41,10 @@ function animateLoadingScreen() {
 
   if (animationSeen == "true") {
     setTimeout(step2, 1);
-    setTimeout(step3, 200);
-    setTimeout(step4, 500);
-    setTimeout(step5, 850);
-    setTimeout(step6, 1000);
+    setTimeout(step3, 500);
+    setTimeout(step4, 1500);
+    setTimeout(step5, 2000);
+    setTimeout(step6, 2150);
   } 
 
   else {

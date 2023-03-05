@@ -55,6 +55,16 @@ const cssMinPlugins = [
   reporter({ clearMessages: true })
 ];
 
+const imageminConfig = {
+  plugins: [
+    { removeUselessStrokeAndFill: true },
+    { removeUselessDefs: true },
+    { removeTitle: true },
+    { cleanupIDs: false },
+    { removeViewBox: false }
+  ]
+}
+
 gulp.task('html-pug', function () {
   return gulp.src('./src/html/**/[^_]*.pug')
     .pipe(pug(pugOptions))
@@ -108,23 +118,35 @@ gulp.task('assets-copy-downloads', function () {
     .pipe(gulp.dest('./downloads'));
 });
 
-gulp.task('assets-imagemin', function () {
-  return gulp.src('./src/img/**/*.{png,jpg,gif,svg}')
+gulp.task('assets-imagemin-general', function () {
+  return gulp.src('./src/img/*.{png,jpg,gif,svg}')
     .pipe(imagemin([
       imagemin.gifsicle({ interlaced: true }),
       imagemin.mozjpeg({ progressive: true }),
       imagemin.optipng({ optimizationLevel: 1 }),
-      imagemin.svgo({
-        plugins: [
-          { removeUselessStrokeAndFill: true },
-          { removeUselessDefs: true },
-          { removeTitle: true },
-          { cleanupIDs: false },
-          { removeViewBox: false }
-        ]
-      })
+      imagemin.svgo(imageminConfig)
     ]))
     .pipe(gulp.dest('./img'));
+});
+
+gulp.task('assets-imagemin-thumbnails', function () {
+  return gulp.src('./src/img/Thumbnails/*.{png,jpg,gif}')
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 1 }),
+    ]))
+    .pipe(gulp.dest('./img/Thumbnails'));
+});
+
+gulp.task('assets-imagemin-work', function () {
+  return gulp.src('./src/img/Work/*.{png,jpg,gif}')
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 1 }),
+    ]))
+    .pipe(gulp.dest('./img/Work'));
 });
 
 gulp.task('html',
@@ -149,8 +171,13 @@ gulp.task('js',
 );
 
 gulp.task('assets',
-  series(
-    parallel('assets-imagemin', 'assets-copy-compressed', 'assets-copy-fonts', 'assets-copy-downloads')
+  parallel(
+    'assets-imagemin-general',
+    'assets-imagemin-thumbnails',
+    'assets-imagemin-work',
+    'assets-copy-compressed',
+    'assets-copy-fonts',
+    'assets-copy-downloads'
   )
 );
 
@@ -158,7 +185,9 @@ gulp.task('watch', function () {
   gulp.watch(['./src/html/**/*.pug'], gulp.series('html'));
   gulp.watch('./src/css/**/*.scss', gulp.series('css'));
   gulp.watch('./src/js/**/*.js', gulp.series('js'));
-  gulp.watch('./src/img/**/*', gulp.series('assets'));
+  gulp.watch('./src/img/*', gulp.series('assets-imagemin-general'));
+  gulp.watch('./src/img/Thumbnails/*', gulp.series('assets-imagemin-thumbnails'));
+  gulp.watch('./src/img/Work/*', gulp.series('assets-imagemin-work'));
 });
 
 gulp.task('default',

@@ -23,14 +23,14 @@
   @include border-radius($br-16);
   background-color: var(--color-page-inner-bg);
   box-shadow: $shadow-large;
+  border: 1px solid var(--color-border-dark);
 
   @include breakpoint($screen-small) {
     @include flex-horizontal;
   }
 
   .theme-dark & {
-    border: 1px solid var(--color-border-light);
-    box-shadow: none;
+    box-shadow: $shadow-large-theme-dark;
   }
 }
 
@@ -42,8 +42,8 @@
   @include flex-fixed;
   height: 64px;
   padding: $spacer-half;
-  box-shadow: $shadow-large;
   border-radius: 0 0 $br-16 $br-16;
+  border-top: 1px solid var(--color-border-light);
   order: 1;
   z-index: 1;
   overflow-y: scroll;
@@ -56,7 +56,7 @@
     width: 72px;
     padding: 72px $spacer-half $spacer-half;
     order: 0;
-    box-shadow: none;
+    border-top: none;
     border-right: 1px solid var(--color-border-light);
   }
 }
@@ -154,7 +154,6 @@
   @include width-full;
   @include overflow-hidden;
   border-radius: $br-16 $br-16 0 0;
-  justify-content: space-between;
   background-color: var(--color-page-inner-bg);
   z-index: 9;
 
@@ -165,8 +164,8 @@
 
 .tmpl-header__address {
   @include border-radius($br-round);
+  @include border;
   padding: $spacer-half $spacer-2;
-  background-color: var(--color-surface-light);
   font-size: $type-10;
   transition: background-color $transition-short;
 
@@ -176,6 +175,19 @@
 
   &:hover {
     background-color: var(--color-surface-dark);
+  }
+}
+
+.tmpl-header__fill {
+  @include flex-grow;
+  margin: 0 $spacer;
+  height: 22px;
+  background-image: url('#{$image-path}header-lines.svg');
+  background-position: center left;
+  background-repeat: repeat-x;
+
+  @include breakpoint($screen-small) {
+    height: 25px;
   }
 }
 
@@ -252,10 +264,18 @@
 }
 
 .tmpl-page-subsection {
-  @include mar-top(8);
+  @include mar-top(4);
+
+  @include breakpoint($screen-small) {
+    @include mar-top(8);
+  }
 
   &--first {
     @include mar-top(4);
+
+    @include breakpoint($screen-small) {
+      @include mar-top(4);
+    }
   }
 }
 
@@ -350,10 +370,16 @@
   @include border;
   @include border-radius($br-16);
   @include block;
-  transition: border $transition-short;
+  transition: all $transition-short;
 
   .tmpl-project:hover & {
+    transform: translate(-5px, -5px);
     border: 1px solid var(--color-border-dark);
+    box-shadow: $shadow-large;
+
+    .theme-dark & {
+      box-shadow: $shadow-large-theme-dark;
+    }
   }
 }
 
@@ -369,11 +395,15 @@
   left: $spacer;
   background-color: var(--color-page-inner-bg);
   padding: $spacer $spacer $spacer $spacer-2;
-  box-shadow: $shadow-large; 
+  border: 1px solid var(--color-border-light);
 
   @include breakpoint($screen-small) {
     bottom: $spacer-2;
     left: $spacer-2;
+  }
+
+  .theme-dark & {
+    border: none;
   }
 }
 

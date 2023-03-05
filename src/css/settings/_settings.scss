@@ -1,8 +1,15 @@
-@use "sass:math";
-
 // =============================================
 //                    CONFIG
 // =============================================
+
+@use "sass:math";
+$image-path: '../img/' !default;
+$font-path: '../fonts/' !default;
+
+// =============================================
+//                  SPACING
+// =============================================
+
 $spacer: 8px !default;
 $spacer-quarter: $spacer * 0.25 !default;
 $spacer-half: $spacer * 0.5 !default;
@@ -16,9 +23,6 @@ $spacer-7: $spacer * 7 !default;
 $spacer-8: $spacer * 8 !default;
 $spacer-9: $spacer * 9 !default;
 $spacer-10: $spacer * 10 !default;
-
-$image-path: '../img/' !default;
-$font-path: '../fonts/' !default;
 
 // =============================================
 //                DEFAULT COLORS
