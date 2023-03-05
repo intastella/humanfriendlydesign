@@ -1,5 +1,6 @@
 .tmpl-main-loading {
   @include flex;
+  @include flex-vertical;
   @include flex-center-center;
   @include height-full;
 }
@@ -13,6 +14,7 @@
   @include pad(2);
   text-align: center;
   background-color: var(--color-page-inner-bg);
+  border: 1px solid var(--color-border-dark);
   box-shadow: $shadow-large;
   
 
@@ -22,8 +24,7 @@
   }
 
   .theme-dark & {
-    border: 1px solid var(--color-border-light);
-    box-shadow: none;
+    box-shadow: $shadow-large-theme-dark;
   }
 }
 
@@ -78,24 +79,17 @@
 }
 
 .extensions-list {
-  @include absolute;
-  @include pad(1);
-  bottom: 0;
-  left: 0;
+  @include mar-top(3);
   line-height: 0;
-
-  @include breakpoint($screen-small) {
-    @include pad(2);
-  }
 }
 
 .extension {
-  @include mar-right(1);
+  @include mar-right(2);
   @include hidden;
+  filter: drop-shadow($shadow-small);
 
-  &--vertical {
-    @include relative;
-    top: 4px;
+  .theme-dark & {
+    filter: drop-shadow($shadow-small-theme-dark);
   }
 }
 
@@ -104,9 +98,7 @@
 }
 
 .extension-stroke {
-  .theme-dark & {
-    fill: var(--color-border-light);
-  }
+  fill: var(--color-border-light);
 }
 
 .extension-icon {
