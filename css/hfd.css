@@ -959,12 +959,12 @@ h6 {
 
 .tmpl-header {
   position: absolute;
-  padding: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   overflow: hidden;
+  padding: 4px 8px;
   border-radius: 16px 16px 0 0;
   background-color: var(--color-page-inner-bg);
   z-index: 9;
@@ -976,38 +976,27 @@ h6 {
 }
 
 .tmpl-header__address {
-  overflow: hidden;
-  border-radius: 9999rem;
-  border: 1px solid var(--color-border-light);
-  padding: 4px 16px;
-  font-size: 0.625rem;
-  transition: background-color 0.15s ease-in-out;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: var(--color-text-secondary);
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .tmpl-header__address {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
   }
-}
-.tmpl-header__address:hover, .tmpl-header__address:focus {
-  background-color: var(--color-surface-dark);
 }
 
 .tmpl-header__fill {
   flex: 1 0 auto;
   margin: 0 8px;
-  height: 22px;
+  height: 11px;
   background-image: url("../img/header-lines.svg");
   background-position: center left;
   background-repeat: repeat-x;
 }
-@media (min-width: 600px) {
-  .tmpl-header__fill {
-    height: 25px;
-  }
-}
 
 .tmpl-header__theme-switch {
-  padding: 4px;
+  padding: 2px;
   overflow: hidden;
   border-radius: 4px;
   color: var(--color-text-secondary);
