@@ -1,8 +1,8 @@
-<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line y1="4.5" x2="25" y2="4.5" stroke="#8C8C8C"/>
-<line y1="7.5" x2="25" y2="7.5" stroke="#8C8C8C"/>
-<line y1="10.5" x2="25" y2="10.5" stroke="#8C8C8C"/>
-<line y1="13.5" x2="25" y2="13.5" stroke="#8C8C8C"/>
-<line y1="16.5" x2="25" y2="16.5" stroke="#8C8C8C"/>
-<line y1="19.5" x2="25" y2="19.5" stroke="#8C8C8C"/>
+<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 1H0V0H11V1Z" fill="#8C8C8C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 3H0V2H11V3Z" fill="#8C8C8C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 5H0V4H11V5Z" fill="#8C8C8C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 7H0V6H11V7Z" fill="#8C8C8C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 9H0V8H11V9Z" fill="#8C8C8C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 11H0V10H11V11Z" fill="#8C8C8C"/>
 </svg>
