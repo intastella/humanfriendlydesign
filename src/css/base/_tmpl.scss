@@ -398,12 +398,16 @@
   @include head-xsmall;
 }
 
-.tmpl-project__tags {
-  @include footnote;
-}
+// .tmpl-project__tags {
+// }
 
 .tmpl-project__tag-item {
-  @include mar-left(1);
+  @include footnote-small;
+  @include mar-left(0.5);
+  @include border-radius($br-4);
+  color: var(--color-text-primary);
+  padding: $spacer-half;
+  background-color: var(--color-surface-light);
 
   &:first-of-type {
     @include mar-left(0);

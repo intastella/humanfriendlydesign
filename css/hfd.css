@@ -1232,19 +1232,21 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   }
 }
 
-.tmpl-project__tags {
-  font-size: 0.75rem;
+.tmpl-project__tag-item {
+  font-size: 0.625rem;
   font-weight: normal;
   color: var(--color-text-secondary);
+  margin-left: 4px;
+  overflow: hidden;
+  border-radius: 4px;
+  color: var(--color-text-primary);
+  padding: 4px;
+  background-color: var(--color-surface-light);
 }
 @media (min-width: 1024px) {
-  .tmpl-project__tags {
-    font-size: 0.8125rem;
+  .tmpl-project__tag-item {
+    font-size: 0.6875rem;
   }
-}
-
-.tmpl-project__tag-item {
-  margin-left: 8px;
 }
 .tmpl-project__tag-item:first-of-type {
   margin-left: 0;
@@ -1407,14 +1409,6 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   .work-tags {
     font-size: 0.8125rem;
   }
-}
-
-.work-tag__item {
-  overflow: hidden;
-  border-radius: 4px;
-  color: var(--color-text-primary);
-  padding: 4px 8px;
-  background-color: var(--color-surface-light);
 }
 
 .work-links {
