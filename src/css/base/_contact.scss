@@ -50,4 +50,8 @@
 
 .contact-list__link-arrow {
   fill: $grey-6;
+
+  .contact-list__link:hover & {
+    fill: var(--color-text-primary);
+  }
 }

@@ -1538,6 +1538,9 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 .contact-list__link-arrow {
   fill: #8c8c8c;
 }
+.contact-list__link:hover .contact-list__link-arrow, .contact-list__link:focus .contact-list__link-arrow {
+  fill: var(--color-text-primary);
+}
 
 .about-hero {
   display: flex;
@@ -1578,10 +1581,15 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   border: 1px solid var(--color-border-light);
   overflow: hidden;
   border-radius: 8px;
-  transition: border 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .about-role-item:hover, .about-role-item:focus {
   border: 1px solid var(--color-border-dark);
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 0 #000;
+}
+.theme-dark .about-role-item:hover, .theme-dark .about-role-item:focus {
+  box-shadow: 5px 5px 0 #666666;
 }
 
 .about-role-item__image {
@@ -1645,7 +1653,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   border-radius: 8px;
   font-size: 0.75rem;
   font-weight: 500;
-  transition: border 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   color: var(--color-text-default);
 }
 @media (min-width: 1024px) {
@@ -1655,6 +1663,11 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 .about-resume__link:hover, .about-resume__link:focus {
   border: 1px solid var(--color-border-dark);
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 0 #000;
+}
+.theme-dark .about-resume__link:hover, .theme-dark .about-resume__link:focus {
+  box-shadow: 5px 5px 0 #666666;
 }
 
 .about-resume__link-icon {

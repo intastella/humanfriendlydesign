@@ -31,10 +31,16 @@
   @include pad(1.5);
   @include border;
   @include border-radius($br-8);
-  transition: border $transition-short;
+  transition: all $transition-short;
 
   &:hover {
     border: 1px solid var(--color-border-dark);
+    transform: translate(-5px, -5px);
+    box-shadow: $shadow-large;
+
+    .theme-dark & {
+      box-shadow: $shadow-large-theme-dark;
+    }
   }
 }
 
@@ -75,11 +81,17 @@
   @include pad(1.5);
   @include border-radius($br-8);
   @include head-xxsmall;
-  transition: border $transition-short;
+  transition: all $transition-short;
   color: var(--color-text-default);
 
   &:hover {
     border: 1px solid var(--color-border-dark);
+    transform: translate(-5px, -5px);
+    box-shadow: $shadow-large;
+
+    .theme-dark & {
+      box-shadow: $shadow-large-theme-dark;
+    }
   }
 }
 
