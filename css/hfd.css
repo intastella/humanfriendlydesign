@@ -1188,6 +1188,12 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 .theme-dark .tmpl-project:hover .tmpl-project__thumbnail, .theme-dark .tmpl-project:focus .tmpl-project__thumbnail {
   box-shadow: 5px 5px 0 #666666;
 }
+@media (min-width: 1140px) {
+  .tmpl-project__thumbnail--xlarge {
+    width: 960px;
+    margin-left: -120px;
+  }
+}
 
 .tmpl-project-floating-label {
   position: absolute;

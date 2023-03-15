@@ -17,13 +17,17 @@ block content
     span.tmpl-project__tag-item.work-tag__item Whitelabel
 
   .tmpl-page-subsection.tmpl-page-subsection--first
+    picture.tmpl-project__thumbnail.tmpl-project__thumbnail--xlarge
+      source(media="(min-width: 1140px)", srcset="/img/Thumbnails/Twilio_XLarge.png, /img/Thumbnails/Twilio_XLarge@2x.png 2x")
+      source(media="(min-width: 600px)", srcset="/img/Thumbnails/Twilio_Large.png, /img/Thumbnails/Twilio_Large@2x.png 2x")
+      source(media="(min-width: 430px)", srcset="/img/Thumbnails/Twilio_Medium.png, /img/Thumbnails/Twilio_Medium@2x.png 2x")
+      source(srcset="/img/Thumbnails/Twilio_Small.png, /img/Thumbnails/Twilio_Small@2x.png 2x")
+      img(src="/img/Thumbnails/Twilio_Large.png" alt="Twilio Chat Widget UI")
+
+  .tmpl-page-subsection
     h2 Challenge
     p
       | Green Dot's existing help widget was rudimentary, provided canned answers, and ultimately did not provide customers with the help they needed. Instead of helping them with the issues they encountered in the apps or websites as they used them, it frustrated them and required them to call in to get help for many issues. Help that was meant to be provided in the moment and aleviate calls into customer support failed on both accounts.
-
-    .work-samples
-      a.work-sample-link(href="/img/Thumbnails/Twilio_Large@2x.png")
-        img(src="/img/Thumbnails/Twilio_Large@2x.png")
 
   .tmpl-page-subsection
     h2 Process

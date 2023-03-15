@@ -18,13 +18,17 @@ block content
     span.tmpl-project__tag-item.work-tag__item Design System
 
   .tmpl-page-subsection.tmpl-page-subsection--first
+    picture.tmpl-project__thumbnail.tmpl-project__thumbnail--xlarge
+      source(media="(min-width: 1140px)", srcset="/img/Thumbnails/Flex-Web-XLarge.png, /img/Thumbnails/Flex-Web-XLarge@2x.png 2x")
+      source(media="(min-width: 600px)", srcset="/img/Thumbnails/Flex-Web-Large.png, /img/Thumbnails/Flex-Web-Large@2x.png 2x")
+      source(media="(min-width: 430px)", srcset="/img/Thumbnails/Flex-Web-Medium.png, /img/Thumbnails/Flex-Web-Medium@2x.png 2x")
+      source(srcset="/img/Thumbnails/Flex-Web-Small.png, /img/Thumbnails/Flex-Web-Small@2x.png 2x")
+      img(src="/img/Thumbnails/Flex-Web-Large.png" alt="Flex Web Design System Website")
+
+  .tmpl-page-subsection
     h2 Challenge
     p
       | In 2015 Green dot designers were distributed amongst several marketing and product teams, leading to much inconsistency in style and behavior of the company's apps and websites. We brought together the disparate designers into a single team and similarly identified an opportunity to unify our designs with a new design system. This design system would have to support our web apps, marketing sites and eventually native mobile apps. The system would have to also support multiple brand themes from day one, to support Green Dot's many in house and partner brands. We called this new design system Flex Web.
-
-    .work-samples
-      a.work-sample-link(href="/img/Work/Flex-Web-001.png")
-        img(src="/img/Work/Flex-Web-001.png")
   
   .tmpl-page-subsection
     h2 Process
@@ -32,6 +36,8 @@ block content
       | The team identified the common elements needed across the many Green Dot sites and brands - buttons, inputs, radios, checkboxes, color palettes etc., that would be part of the basic UI kit. We also identified the need for partial page templates that could be re-used for marketing purposes on single pages or entire sites. Things like headers, footers, heroes, and text/image combinations that could be mixed and remixed together to enable quick production of pages and sites. We dubbed these "blocks".
 
     .work-samples
+      a.work-sample-link(href="/img/Work/Flex-Web-001.png")
+        img(src="/img/Work/Flex-Web-001.png")
       a.work-sample-link(href="/img/Work/Flex-Web-018.png")
         img(src="/img/Work/Flex-Web-018.png")
       a.work-sample-link(href="/img/Work/Flex-Web-014.png")
