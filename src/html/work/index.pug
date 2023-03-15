@@ -1,11 +1,10 @@
 extends ../_tmpl
 
 block vars
-  - var title = "Work"
+  - var page = "work"
+  - var page_title = "Work"
 
 block content
-  h1.tmpl-page-heading #{title}
-
   .tmpl-project-row
     a.tmpl-project(href="/work/go2bank-mobile-app/")
       picture.tmpl-project__thumbnail
