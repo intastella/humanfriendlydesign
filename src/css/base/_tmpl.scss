@@ -321,6 +321,7 @@
   @include flex-vertical;
   @include mar-top(4);
 
+  .tmpl-page-heading-wrapper + &,
   &:first-of-type {
     @include mar-top(0);
   }

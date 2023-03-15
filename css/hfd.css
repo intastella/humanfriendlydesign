@@ -1145,7 +1145,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   flex-direction: column;
   margin-top: 32px;
 }
-.tmpl-project-row:first-of-type {
+.tmpl-page-heading-wrapper + .tmpl-project-row, .tmpl-project-row:first-of-type {
   margin-top: 0;
 }
 @media (min-width: 600px) {
