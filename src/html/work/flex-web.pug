@@ -1,16 +1,10 @@
 extends ../_tmpl
 
 block vars
-  - var title = "Work"
-  - var work_title = "Flex Web Design System"
+  - var page = "work"
+  - var page_title = "Flex Web Design System"
 
 block content
-  .tmpl-page-heading-wrapper
-    h1.tmpl-page-heading #{work_title}
-    a(href="/work/").tmpl-link-arrow.tmpl-link-arrow--large.tmpl-link-arrow--back
-      svg.tmpl-link-arrow__icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
-        path(fill-rule="evenodd", clip-rule="evenodd", d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z")
-  
   .work-tags
     | Tags: 
     span.tmpl-project__tag-item.work-tag__item UX
@@ -18,13 +12,17 @@ block content
     span.tmpl-project__tag-item.work-tag__item Design System
 
   .tmpl-page-subsection.tmpl-page-subsection--first
+    picture.tmpl-project__thumbnail.tmpl-project__thumbnail--xlarge
+      source(media="(min-width: 1140px)", srcset="/img/Thumbnails/Flex-Web-XLarge.png, /img/Thumbnails/Flex-Web-XLarge@2x.png 2x")
+      source(media="(min-width: 600px)", srcset="/img/Thumbnails/Flex-Web-Large.png, /img/Thumbnails/Flex-Web-Large@2x.png 2x")
+      source(media="(min-width: 430px)", srcset="/img/Thumbnails/Flex-Web-Medium.png, /img/Thumbnails/Flex-Web-Medium@2x.png 2x")
+      source(srcset="/img/Thumbnails/Flex-Web-Small.png, /img/Thumbnails/Flex-Web-Small@2x.png 2x")
+      img(src="/img/Thumbnails/Flex-Web-Large.png" alt="Flex Web Design System Website")
+
+  .tmpl-page-subsection
     h2 Challenge
     p
       | In 2015 Green dot designers were distributed amongst several marketing and product teams, leading to much inconsistency in style and behavior of the company's apps and websites. We brought together the disparate designers into a single team and similarly identified an opportunity to unify our designs with a new design system. This design system would have to support our web apps, marketing sites and eventually native mobile apps. The system would have to also support multiple brand themes from day one, to support Green Dot's many in house and partner brands. We called this new design system Flex Web.
-
-    .work-samples
-      a.work-sample-link(href="/img/Work/Flex-Web-001.png")
-        img(src="/img/Work/Flex-Web-001.png")
   
   .tmpl-page-subsection
     h2 Process
@@ -32,6 +30,8 @@ block content
       | The team identified the common elements needed across the many Green Dot sites and brands - buttons, inputs, radios, checkboxes, color palettes etc., that would be part of the basic UI kit. We also identified the need for partial page templates that could be re-used for marketing purposes on single pages or entire sites. Things like headers, footers, heroes, and text/image combinations that could be mixed and remixed together to enable quick production of pages and sites. We dubbed these "blocks".
 
     .work-samples
+      a.work-sample-link(href="/img/Work/Flex-Web-001.png")
+        img(src="/img/Work/Flex-Web-001.png")
       a.work-sample-link(href="/img/Work/Flex-Web-018.png")
         img(src="/img/Work/Flex-Web-018.png")
       a.work-sample-link(href="/img/Work/Flex-Web-014.png")

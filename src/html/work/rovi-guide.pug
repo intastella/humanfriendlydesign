@@ -1,24 +1,26 @@
 extends ../_tmpl
 
 block vars
-  - var title = "Work"
-  - var work_title = "Rovi Guide"
+  - var page = "work"
+  - var page_title = "Rovi Guide"
 
-block content
-  .tmpl-page-heading-wrapper
-    h1.tmpl-page-heading #{work_title}
-    a(href="/work/").tmpl-link-arrow.tmpl-link-arrow--large.tmpl-link-arrow--back
-      svg.tmpl-link-arrow__icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
-        path(fill-rule="evenodd", clip-rule="evenodd", d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z")
-  
+block content  
   .work-tags
     | Tags: 
     span.tmpl-project__tag-item.work-tag__item UX
 
   .tmpl-page-subsection.tmpl-page-subsection--first
+    picture.tmpl-project__thumbnail.tmpl-project__thumbnail--xlarge
+      source(media="(min-width: 1140px)", srcset="/img/Thumbnails/Rovi-Guide-XLarge.png, /img/Thumbnails/Rovi-Guide-XLarge@2x.png 2x")
+      source(media="(min-width: 600px)", srcset="/img/Thumbnails/Rovi-Guide-Large.png, /img/Thumbnails/Rovi-Guide-Large@2x.png 2x")
+      source(media="(min-width: 430px)", srcset="/img/Thumbnails/Rovi-Guide-Medium.png, /img/Thumbnails/Rovi-Guide-Medium@2x.png 2x")
+      source(srcset="/img/Thumbnails/Rovi-Guide-Small.png, /img/Thumbnails/Rovi-Guide-Small@2x.png 2x")
+      img(src="/img/Thumbnails/Rovi-Guide-Large.png" alt="Rovi Guide TV UX")
+
+  .tmpl-page-subsection
     h2 Challenge
     p
-      | Rovi's business in 2014 was primarily based on providing TV guide data and IP to companies. Around this, Rovi had several TV guide products that were under active development - some web based, some set top box based. An effort was launched to combine these products into a single experience that would scale from an embedded web page widget up to a next generation 4k  set top box. The first application of unified TV guide would be a lower powered browser based set top box, one that was already in the market but could be modernized to use this new UX concept. This was primarily a European product so it would have to accommodate multiple languages and provide access to multiple country specific streaming services.
+      | Rovi's business in 2014 was primarily based on providing TV guide data and IP to companies. Around this, Rovi had several TV guide products that were under active development - some web based, some set top box based. An effort was launched to combine these products into a unified experience that would scale from an embedded web page widget up to a next generation 4k set top box. The first application of the unified TV guide design would be an overhaul of an existing low power browser based TV guide made by Rovi and used on Grundig televisions. This was a European product so it would have to accommodate multiple languages and provide access to multiple country specific streaming services out of the box.
 
     .work-samples
       a.work-sample-link(href="/img/Work/Rovi-Guide-Tilden-1-2-Connected-Mode-Default-screen.jpg")
@@ -42,7 +44,7 @@ block content
   .tmpl-page-subsection
     h2 Browsing Solution
     p
-      | The design was modified to allow for extensive remote (D pad style) navigation, highlighting anything that was selectable in the primary color while retaining context for location with a faded primary color when entering a subsection or menu. Badges on TV shows in the guide provide important information about whether an episode is new, is set to record a single episode or series, or has a reminder to watch set. Slide out and stacking panels (from the right of the screen) were used to keep context with the main underlying screens, allowing for more info and configuration changes to happen in place with out navigating away from the content. On screen contextual buttons (at the bottom of the screen) mapped to physical buttons on the remote to allow quick access to functions without having to navigate by arrow keys across many selectable areas on screen.
+      | Starting with the design concepts, I modified them to allow for extensive remote (D pad style) navigation, highlighting anything that was selectable in the primary color while retaining context for location with a faded primary color when entering a subsection or menu. Badges on TV shows in the guide provide important information about whether an episode is new, is set to record a single episode or series, or has a reminder to watch set. Slide out and stacking panels (from the right of the screen) were used to keep context with the main underlying screens, allowing for more info and configuration changes to happen in place with out navigating away from the content. On screen contextual buttons (at the bottom of the screen) mapped to physical buttons on the remote to allow quick access to functions without having to navigate by arrow keys across many selectable areas on screen.
 
     .work-samples
       a.work-sample-link(href="/img/Work/Rovi-Guide-005-Dashboard-Because-you-like.png")

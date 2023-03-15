@@ -1,11 +1,10 @@
 extends ../_tmpl
 
 block vars
-  - var title = "Work"
+  - var page = "work"
+  - var page_title = "Work"
 
 block content
-  h1.tmpl-page-heading #{title}
-
   .tmpl-project-row
     a.tmpl-project(href="/work/go2bank-mobile-app/")
       picture.tmpl-project__thumbnail
@@ -31,7 +30,7 @@ block content
       .tmpl-project__tags
         span.tmpl-project__tag-item UX
         span.tmpl-project__tag-item Design System  
-        span.tmpl-project__tag-item Accesibility
+        span.tmpl-project__tag-item Accessibility
 
   .tmpl-project-row
     a.tmpl-project(href="/work/aem-templates/")
