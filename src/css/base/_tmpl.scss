@@ -396,6 +396,10 @@
   box-shadow: $shadow-small;
   z-index: 1;
 
+  .theme-dark & {
+    box-shadow: $shadow-small-theme-dark;
+  }
+
   @include breakpoint($screen-small) {
     top: $spacer-2;
     left: -#{$spacer-3};

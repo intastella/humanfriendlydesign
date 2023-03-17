@@ -1223,6 +1223,9 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
     font-size: 0.875rem;
   }
 }
+.theme-dark .tmpl-project-floating-label {
+  box-shadow: 2px 2px 0 #666666;
+}
 @media (min-width: 600px) {
   .tmpl-project-floating-label {
     top: 16px;
