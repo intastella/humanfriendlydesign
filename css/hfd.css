@@ -1173,6 +1173,10 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   }
 }
 
+.tmpl-project__thumbnail-wrapper {
+  position: relative;
+}
+
 .tmpl-project__thumbnail {
   border: 1px solid var(--color-border-light);
   overflow: hidden;
@@ -1201,30 +1205,50 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   flex-direction: row;
   align-items: center;
   overflow: hidden;
-  border-radius: 9999rem;
+  border-radius: 8px;
   font-size: 0.75rem;
-  font-weight: normal;
-  color: var(--color-text-secondary);
+  font-weight: 500;
   color: var(--color-text-primary);
   bottom: 8px;
   left: 8px;
   background-color: var(--color-page-inner-bg);
-  padding: 8px 8px 8px 16px;
+  padding: 8px;
   border: 1px solid var(--color-border-light);
+  transition: all 0.15s ease-in-out;
+  box-shadow: 2px 2px 0 #000;
+  z-index: 1;
 }
 @media (min-width: 1024px) {
   .tmpl-project-floating-label {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 600px) {
   .tmpl-project-floating-label {
-    bottom: 16px;
-    left: 16px;
+    top: 16px;
+    left: -24px;
+    bottom: auto;
   }
 }
-.theme-dark .tmpl-project-floating-label {
-  border: none;
+.tmpl-project:hover .tmpl-project-floating-label, .tmpl-project:focus .tmpl-project-floating-label {
+  transform: translate(-5px, -5px);
+  box-shadow: 2px 2px 0 #000;
+}
+.theme-dark .tmpl-project:hover .tmpl-project-floating-label, .theme-dark .tmpl-project:focus .tmpl-project-floating-label {
+  box-shadow: 2px 2px 0 #666666;
+}
+
+.tmpl-project-floating-label-icon {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-text-primary);
+}
+@media (min-width: 600px) {
+  .tmpl-project-floating-label-icon {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .tmpl-project__title {

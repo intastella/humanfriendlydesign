@@ -351,6 +351,10 @@
   }
 }
 
+.tmpl-project__thumbnail-wrapper {
+  @include relative;
+}
+
 .tmpl-project__thumbnail {
   @include border;
   @include border-radius($br-16);
@@ -380,22 +384,42 @@
   @include flex;
   @include flex-horizontal;
   @include flex-cross-center;
-  @include border-radius($br-round);
-  @include footnote;
+  @include border-radius($br-8);
+  @include head-xxsmall;
   color: var(--color-text-primary);
   bottom: $spacer;
   left: $spacer;
   background-color: var(--color-page-inner-bg);
-  padding: $spacer $spacer $spacer $spacer-2;
+  padding: $spacer;
   border: 1px solid var(--color-border-light);
+  transition: all $transition-short;
+  box-shadow: $shadow-small;
+  z-index: 1;
 
   @include breakpoint($screen-small) {
-    bottom: $spacer-2;
-    left: $spacer-2;
+    top: $spacer-2;
+    left: -#{$spacer-3};
+    bottom: auto;
   }
 
-  .theme-dark & {
-    border: none;
+  .tmpl-project:hover & {
+    transform: translate(-5px, -5px);
+    box-shadow: $shadow-small;
+
+    .theme-dark & {
+      box-shadow: $shadow-small-theme-dark;
+    }
+  }
+}
+
+.tmpl-project-floating-label-icon {
+  @include mar-right(0.5);
+  @include square(16px);
+  // fill: yellow;
+  stroke: var(--color-text-primary);
+
+  @include breakpoint($screen-small) {
+    @include square(18px);
   }
 }
 
