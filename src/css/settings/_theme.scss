@@ -5,6 +5,11 @@ $font-medium: 500;
 
 // Light Theme
 $color-page-bg: #F8F4EF;
+$color-page-bg-blue: #EDF8FF;
+$color-page-bg-green: #ECFFE5;
+$color-page-bg-yellow: #FFFDD6;
+$color-page-bg-pink: #FFE8E8;
+$color-page-bg-purple: #F1E0FF;
 $color-page-inner-bg: $white;
 $color-text-primary: $black;
 $color-text-secondary: $grey-7;
@@ -18,7 +23,12 @@ $shadow-medium: 3px 3px 0 $black;
 $shadow-small: 2px 2px 0 $black;
 
 // Dark Theme
-$color-page-bg-theme-dark: #33374D;
+$color-page-bg-theme-dark: #3D425C;
+$color-page-bg-blue-theme-dark: #00314D;
+$color-page-bg-green-theme-dark: #1D3913;
+$color-page-bg-yellow-theme-dark: #4D4A19;
+$color-page-bg-pink-theme-dark: #391313;
+$color-page-bg-purple-theme-dark: #36194D;
 $color-page-inner-bg-theme-dark: $grey-10;
 $color-text-primary-theme-dark: $white;
 $color-text-secondary-theme-dark: $grey-5;

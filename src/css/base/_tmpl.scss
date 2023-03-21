@@ -151,7 +151,6 @@
   @include flex-horizontal;
   @include flex-cross-center;
   @include width-full;
-  @include overflow-hidden;
   padding: $spacer-half $spacer;
   border-radius: $br-16 $br-16 0 0;
   background-color: var(--color-page-inner-bg);
@@ -176,7 +175,16 @@
   background-repeat: repeat-x;
 }
 
-.tmpl-header__theme-switch {
+.tmpl-header__theme-menu {
+  @include relative;
+  @include square(20px);
+
+  @include breakpoint($screen-small) {
+    @include square(22px);
+  }
+}
+
+.tmpl-header__theme-menu-button {
   @include pad(0.25);
   @include border-radius($br-4);
   color: var(--color-text-secondary);
@@ -186,13 +194,14 @@
   cursor: pointer;
   transition: background-color $transition-short;
 
+  .tmpl-header__theme-menu--active &,
   &:hover {
     color: var(--color-text-primary);
     background-color: var(--color-surface-dark);
   }
 }
 
-.tmpl-header__theme-switch-icon {
+.tmpl-header__theme-menu-button-icon {
   @include square(16px);
   fill: currentColor;
   stroke: currentColor;
@@ -202,9 +211,8 @@
   }
 
   &--auto {
-    @include hidden;
+    @include block;
   }
-
 
   &--dark {
     @include hidden;
@@ -215,11 +223,138 @@
   }
 
   &--light {
-    @include block;
+    @include hidden;
 
     .theme-dark & {
       @include hidden;
     }
+  }
+}
+
+.tmpl-header__theme-menu-dropdown {
+  @include absolute;
+  @include pad(2);
+  top: $spacer-3;
+  right: 0;
+  width: calc(100vw - $spacer-4);
+  background-color: var(--color-page-inner-bg);
+  box-shadow: $shadow-small;
+  border: 1px solid var(--color-border-dark);
+  border-radius: $br-4;
+  opacity: 0;
+  transform: translateY(#{-$spacer-half});
+  transition: all $transition-short;
+  z-index: 9999;
+
+  @include breakpoint($screen-small) {
+    @include pad(1);
+    width: 136px;
+  }
+
+  .tmpl-header__theme-menu--active & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .theme-dark & {
+    box-shadow: $shadow-small-theme-dark;
+  }
+}
+
+.tmpl-header__theme-menu-heading {
+  @include mar-top(1);
+  @include mar-bottom(0.5);
+  @include footnote-small;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+
+  &:first-of-type {
+    @include mar-top(0);
+    @include mar-bottom(0);
+  }
+}
+
+.tmpl-header__theme-button {
+  @include flex;
+  @include flex-horizontal;
+  @include flex-cross-center;
+  @include width-full;
+  line-height: 1;
+  background-color: transparent;
+  padding: $spacer-half $spacer-quarter;
+  border: 1px solid transparent;
+  border-radius: $br-4;
+  cursor: pointer;
+  transition: background-color $transition-short;
+
+  &:hover {
+    background-color: var(--color-surface-dark);
+  }
+
+  &--active {
+    border: 1px solid var(--color-border-dark);
+  }
+}
+
+.tmpl-header__theme-button-icon {
+  @include square(24px);
+  @include mar-right(0.5);
+  fill: currentColor;
+  stroke: currentColor;
+
+  @include breakpoint($screen-small) {
+    @include square(16px);
+  }
+}
+
+.tmpl-header__theme-button-label {
+  @include footnote;
+}
+
+.tmpl-header__wallpaper-list {
+  @include flex;
+  @include flex-horizontal;
+}
+
+.tmpl-header__wallpaper-button {
+  @include square(24px);
+  @include mar-right(1);
+  border-radius: $br-round;
+  border: 1px solid var(--color-border-light);
+  cursor: pointer;
+
+  @include breakpoint($screen-small) {
+    @include square(16px);
+    @include mar-right(0.25);
+  }
+
+  &--active,
+  &:hover {
+    border: 1px solid var(--color-border-dark);
+  }
+
+  &--classic {
+    background-color: var(--color-page-bg);
+  }
+
+  &--blue {
+    background-color: var(--color-page-bg-blue);
+  }
+
+  &--green {
+    background-color: var(--color-page-bg-green);
+  }
+
+  &--yellow {
+    background-color: var(--color-page-bg-yellow);
+  }
+
+  &--pink {
+    background-color: var(--color-page-bg-pink);
+  }
+
+  &--purple {
+    background-color: var(--color-page-bg-purple);
   }
 }
 

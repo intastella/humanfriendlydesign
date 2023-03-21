@@ -1,6 +1,11 @@
 :root {
   color-scheme: light dark;
   --color-page-bg: #{$color-page-bg};
+  --color-page-bg-blue: #{$color-page-bg-blue};
+  --color-page-bg-green: #{$color-page-bg-green};
+  --color-page-bg-yellow: #{$color-page-bg-yellow};
+  --color-page-bg-pink: #{$color-page-bg-pink};
+  --color-page-bg-purple: #{$color-page-bg-purple};
   --color-page-inner-bg: #{$color-page-inner-bg};
   --color-text-primary: #{$color-text-primary};
   --color-text-secondary: #{$color-text-secondary};
@@ -13,6 +18,11 @@
 
 .theme-dark {
   --color-page-bg: #{$color-page-bg-theme-dark};
+  --color-page-bg-blue: #{$color-page-bg-blue-theme-dark};
+  --color-page-bg-green: #{$color-page-bg-green-theme-dark};
+  --color-page-bg-yellow: #{$color-page-bg-yellow-theme-dark};
+  --color-page-bg-pink: #{$color-page-bg-pink-theme-dark};
+  --color-page-bg-purple: #{$color-page-bg-purple-theme-dark};
   --color-page-inner-bg: #{$color-page-inner-bg-theme-dark};
   --color-text-primary: #{$color-text-primary-theme-dark};
   --color-text-secondary: #{$color-text-secondary-theme-dark};
