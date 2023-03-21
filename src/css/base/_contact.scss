@@ -27,8 +27,8 @@
 
 .contact-list__link-icon {
   @include mar-right(1);
-  fill: currentColor;
-  stroke: currentColor;
+  @include icon(24px);
+  color: var(--color-icon-primary);
 }
 
 .contact-list__link-info {
@@ -49,9 +49,10 @@
 }
 
 .contact-list__link-arrow {
-  fill: $grey-6;
+  @include icon(24px);
+  color: var(--color-icon-secondary);
 
   .contact-list__link:hover & {
-    fill: var(--color-text-primary);
+    color: var(--color-icon-primary);
   }
 }

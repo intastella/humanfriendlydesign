@@ -9,6 +9,8 @@
   --color-page-inner-bg: #{$color-page-inner-bg};
   --color-text-primary: #{$color-text-primary};
   --color-text-secondary: #{$color-text-secondary};
+  --color-icon-primary: #{$color-icon-primary};
+  --color-icon-secondary: #{$color-icon-secondary};
   --color-link: #{$color-link};
   --color-border-light: #{$color-border-light};
   --color-border-dark: #{$color-border-dark};
@@ -27,6 +29,8 @@
   --color-page-inner-bg: #{$color-page-inner-bg-theme-dark};
   --color-text-primary: #{$color-text-primary-theme-dark};
   --color-text-secondary: #{$color-text-secondary-theme-dark};
+  --color-icon-primary: #{$color-icon-primary-theme-dark};
+  --color-icon-secondary: #{$color-icon-secondary-theme-dark};
   --color-link: #{$color-link-theme-dark};
   --color-border-light: #{$color-border-light-theme-dark};
   --color-border-dark: #{$color-border-dark-theme-dark};
@@ -70,7 +74,7 @@ body {
 }
 
 body {
-  padding: $spacer;
+  padding: $spacer $spacer-plus $spacer-plus $spacer;
 
   // Target only iOS Safari for iPhone X style screen inset
   @supports #{'\(-webkit-touch-callout: none)'} {
@@ -79,7 +83,7 @@ body {
     }
 
     @include breakpoint($screen-portrait) {
-      padding: $spacer;
+      padding: $spacer $spacer-plus $spacer-plus $spacer;
     }
   }
 
@@ -132,9 +136,4 @@ h5 {
 
 h6 {
   @include head-xxsmall;
-}
-
-.icon {
-  @include square(24px);
-  fill: $black;
 }

@@ -1,0 +1,5 @@
+@mixin icon($size) {
+  @include square($size);
+  fill: currentColor;
+  stroke: currentColor;
+}

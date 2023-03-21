@@ -91,6 +91,5 @@
 
 .about-resume__link-icon {
   @include mar-right(1);
-  fill: currentColor;
-  stroke: currentColor;
+  @include icon(24px);
 }

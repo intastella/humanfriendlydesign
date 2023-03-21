@@ -104,7 +104,7 @@
 }
 
 .tmpl-nav__link-icon {
-  fill: currentColor;
+  @include icon(24px);
 }
 
 .tmpl-nav__link-active-dot {
@@ -198,9 +198,7 @@
 }
 
 .tmpl-header__theme-menu-button-icon {
-  @include square(16px);
-  fill: currentColor;
-  stroke: currentColor;
+  @include icon(16px);
 
   @include breakpoint($screen-small) {
     @include square(18px);
@@ -289,10 +287,8 @@
 }
 
 .tmpl-header__theme-button-icon {
-  @include square(24px);
+  @include icon(24px);
   @include mar-right(0.5);
-  fill: currentColor;
-  stroke: currentColor;
 
   @include breakpoint($screen-small) {
     @include square(16px);
@@ -430,8 +426,8 @@
 }
 
 .tmpl-link-arrow__icon {
-  @include square(17px);
-  fill: var(--color-text-secondary);
+  @include icon(17px);
+  color: var(--color-icon-secondary);
   transition: fill $transition-short;
 
   .tmpl-link-arrow--large & {
@@ -440,7 +436,7 @@
 
   a:hover &,
   &:hover {
-    fill: var(--color-text-primary);
+    color: var(--color-icon-primary);
   }
 }
 
@@ -534,9 +530,8 @@
 
 .tmpl-project-floating-label-icon {
   @include mar-right(0.5);
-  @include square(16px);
-  // fill: yellow;
-  stroke: var(--color-text-primary);
+  @include icon(16px);
+  color: var(--color-icon-primary);
 
   @include breakpoint($screen-small) {
     @include square(18px);
