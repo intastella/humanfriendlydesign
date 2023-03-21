@@ -63,10 +63,12 @@
 
 .about-role-item__industry {
   @include footnote;
+  color: var(--color-text-secondary);
 }
 
 .about-role-item__role {
   @include footnote-small;
+  color: var(--color-text-secondary);
 }
 
 .about-resume {

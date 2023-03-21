@@ -164,6 +164,7 @@
 
 .tmpl-header__address {
   @include footnote;
+  color: var(--color-text-secondary);
 }
 
 .tmpl-header__fill {
