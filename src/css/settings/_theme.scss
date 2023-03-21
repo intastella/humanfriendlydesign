@@ -18,9 +18,8 @@ $color-border-light: $grey-7;
 $color-border-dark: $black;
 $color-surface-light: $grey-1;
 $color-surface-dark: $grey-2;
-$shadow-large: 5px 5px 0 $black;
-$shadow-medium: 3px 3px 0 $black;
-$shadow-small: 2px 2px 0 $black;
+$color-shadow: $black;
+
 
 // Dark Theme
 $color-page-bg-theme-dark: #3D425C;
@@ -33,10 +32,13 @@ $color-page-inner-bg-theme-dark: $grey-10;
 $color-text-primary-theme-dark: $white;
 $color-text-secondary-theme-dark: $grey-5;
 $color-link-theme-dark: $white;
-$color-border-light-theme-dark: $white;
+$color-border-light-theme-dark: $grey-7;
 $color-border-dark-theme-dark: $white;
 $color-surface-light-theme-dark: $grey-8;
 $color-surface-dark-theme-dark: $grey-7;
-$shadow-large-theme-dark: 5px 5px 0 $grey-7;
-$shadow-medium-theme-dark: 3px 3px 0 $grey-7;
-$shadow-small-theme-dark: 2px 2px 0 $grey-7;
+$color-shadow-theme-dark: $black;
+$color-shadow-theme-dark: $grey-7;
+
+$shadow-large: 5px 5px 0 var(--color-shadow);
+$shadow-medium: 3px 3px 0 var(--color-shadow);
+$shadow-small: 2px 2px 0 var(--color-shadow);

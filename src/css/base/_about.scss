@@ -37,10 +37,6 @@
     border: 1px solid var(--color-border-dark);
     transform: translate(-5px, -5px);
     box-shadow: $shadow-large;
-
-    .theme-dark & {
-      box-shadow: $shadow-large-theme-dark;
-    }
   }
 }
 
@@ -90,10 +86,6 @@
     border: 1px solid var(--color-border-dark);
     transform: translate(-5px, -5px);
     box-shadow: $shadow-large;
-
-    .theme-dark & {
-      box-shadow: $shadow-large-theme-dark;
-    }
   }
 }
 

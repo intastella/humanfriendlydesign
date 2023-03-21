@@ -26,10 +26,6 @@
     @include pad(4);
     @include width-auto;
   }
-
-  .theme-dark & {
-    box-shadow: $shadow-large-theme-dark;
-  }
 }
 
 .loading__inner {
@@ -95,7 +91,7 @@
   filter: drop-shadow($shadow-small);
 
   .theme-dark & {
-    filter: drop-shadow($shadow-small-theme-dark);
+    filter: drop-shadow($shadow-small);
   }
 }
 
@@ -104,7 +100,7 @@
 }
 
 .extension-stroke {
-  fill: var(--color-border-light);
+  fill: var(--color-border-dark);
 }
 
 .extension-icon {

@@ -28,10 +28,6 @@
   @include breakpoint($screen-small) {
     @include flex-horizontal;
   }
-
-  .theme-dark & {
-    box-shadow: $shadow-large-theme-dark;
-  }
 }
 
 .tmpl-nav {
@@ -254,10 +250,6 @@
   .tmpl-header__theme-menu--active & {
     opacity: 1;
     transform: translateY(0);
-  }
-
-  .theme-dark & {
-    box-shadow: $shadow-small-theme-dark;
   }
 }
 
@@ -501,10 +493,6 @@
     transform: translate(-5px, -5px);
     border: 1px solid var(--color-border-dark);
     box-shadow: $shadow-large;
-
-    .theme-dark & {
-      box-shadow: $shadow-large-theme-dark;
-    }
   }
 
   &--xlarge {
@@ -532,10 +520,6 @@
   box-shadow: $shadow-small;
   z-index: 1;
 
-  .theme-dark & {
-    box-shadow: $shadow-small-theme-dark;
-  }
-
   @include breakpoint($screen-small) {
     top: $spacer-2;
     left: -#{$spacer-3};
@@ -545,10 +529,6 @@
   .tmpl-project:hover & {
     transform: translate(-5px, -5px);
     box-shadow: $shadow-small;
-
-    .theme-dark & {
-      box-shadow: $shadow-small-theme-dark;
-    }
   }
 }
 

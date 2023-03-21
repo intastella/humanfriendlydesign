@@ -14,6 +14,7 @@
   --color-border-dark: #{$color-border-dark};
   --color-surface-light: #{$color-surface-light};
   --color-surface-dark: #{$color-surface-dark};
+  --color-shadow: #{$color-shadow};
 }
 
 .theme-dark {
@@ -31,6 +32,7 @@
   --color-border-dark: #{$color-border-dark-theme-dark};
   --color-surface-light: #{$color-surface-light-theme-dark};
   --color-surface-dark: #{$color-surface-dark-theme-dark};
+  --color-shadow: #{$color-shadow-theme-dark};
 }
 
 * {
