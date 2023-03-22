@@ -234,6 +234,10 @@
     .theme-dark & {
       @include block;
     }
+
+    .theme-light & {
+      @include hidden;
+    }
   }
 
   &--light {
@@ -241,6 +245,10 @@
 
     .theme-dark & {
       @include hidden;
+    }
+
+    .theme-light & {
+      @include block;
     }
   }
 }
