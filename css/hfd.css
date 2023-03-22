@@ -1015,6 +1015,19 @@ h6 {
   }
 }
 
+.tmpl-header__theme-menu-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.tmpl-header__theme-menu--active .tmpl-header__theme-menu-overlay {
+  display: block;
+}
+
 .tmpl-header__theme-menu-button {
   padding: 2px;
   overflow: hidden;
@@ -1046,6 +1059,9 @@ h6 {
 .tmpl-header__theme-menu-button-icon--auto {
   display: block;
 }
+.theme-light .tmpl-header__theme-menu-button-icon--auto, .theme-dark .tmpl-header__theme-menu-button-icon--auto {
+  display: none;
+}
 .tmpl-header__theme-menu-button-icon--dark {
   display: none;
 }
@@ -1072,6 +1088,7 @@ h6 {
   opacity: 0;
   transform: translateY(-4px);
   transition: all 0.15s ease-in-out;
+  visibility: hidden;
   z-index: 9999;
 }
 @media (min-width: 600px) {
@@ -1081,6 +1098,7 @@ h6 {
   }
 }
 .tmpl-header__theme-menu--active .tmpl-header__theme-menu-dropdown {
+  visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
@@ -1115,6 +1133,7 @@ h6 {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.15s ease-in-out;
+  color: var(--color-text-primary);
 }
 .tmpl-header__theme-button:hover, .tmpl-header__theme-button:focus {
   background-color: var(--color-surface-dark);
@@ -1282,7 +1301,7 @@ a:hover .tmpl-link-arrow, .tmpl-link-arrow:hover, a:focus .tmpl-link-arrow, .tmp
   fill: currentColor;
   stroke: currentColor;
   color: var(--color-icon-secondary);
-  transition: fill 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
 }
 .tmpl-link-arrow--large .tmpl-link-arrow__icon {
   width: 29px;
@@ -1309,7 +1328,6 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 .tmpl-project {
   flex: 0 0 auto;
   margin-top: 32px;
-  position: relative;
 }
 .tmpl-project:first-of-type {
   margin-top: 0;
@@ -1381,22 +1399,24 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 .tmpl-project:hover .tmpl-project-floating-label, .tmpl-project:focus .tmpl-project-floating-label {
   transform: translate(-5px, -5px);
-  box-shadow: 2px 2px 0 var(--color-shadow);
 }
 
 .tmpl-project-floating-label-icon {
   margin-right: 4px;
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-  stroke: currentColor;
-  color: var(--color-icon-primary);
+  width: 15px;
+  height: 15px;
+  transition: color 0.15s ease-in-out;
+  fill: transparent;
+  stroke: var(--color-icon-primary);
 }
 @media (min-width: 600px) {
   .tmpl-project-floating-label-icon {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
   }
+}
+.tmpl-project:hover .tmpl-project-floating-label-icon, .tmpl-project:focus .tmpl-project-floating-label-icon {
+  fill: yellow;
 }
 
 .tmpl-project__title {

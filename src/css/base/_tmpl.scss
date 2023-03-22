@@ -8,7 +8,7 @@
   color: $white;
   transform: translateX(-100%);
   transition: transform 0.25s ease-in-out;
-  z-index: 99999;
+  z-index: $z-skip-to-main;
   
   &:focus {
     transform: translateX(0);
@@ -41,7 +41,7 @@
   border-radius: 0 0 $br-16 $br-16;
   border-top: 1px solid var(--color-border-light);
   order: 1;
-  z-index: 1;
+  z-index: $z-plus-one;
   overflow-y: scroll;
 
   @include breakpoint($screen-small) {
@@ -150,7 +150,7 @@
   padding: $spacer-half $spacer;
   border-radius: $br-16 $br-16 0 0;
   background-color: var(--color-page-inner-bg);
-  z-index: 9;
+  z-index: $z-tmpl-header;
 
   @include breakpoint($screen-small) {
     border-radius: 0 $br-16 0 0;
@@ -180,6 +180,21 @@
   }
 }
 
+.tmpl-header__theme-menu-overlay {
+  @include fixed;
+  @include width-full;
+  @include height-full;
+  @include hidden;
+  top: 0;
+  left: 0;
+  z-index: $z-theme-menu-overlay;
+  // background-color: rgba(0,0,0,0.5);
+
+  .tmpl-header__theme-menu--active & {
+    @include block;
+  }
+}
+
 .tmpl-header__theme-menu-button {
   @include pad(0.25);
   @include border-radius($br-4);
@@ -206,6 +221,11 @@
 
   &--auto {
     @include block;
+
+    .theme-light &,
+    .theme-dark & {
+      @include hidden;
+    }
   }
 
   &--dark {
@@ -230,7 +250,7 @@
   @include pad(2);
   top: $spacer-3;
   right: 0;
-  width: calc(100vw - $spacer-4);
+  width: calc(100vw - $spacer-5);
   background-color: var(--color-page-inner-bg);
   box-shadow: $shadow-small;
   border: 1px solid var(--color-border-dark);
@@ -238,7 +258,8 @@
   opacity: 0;
   transform: translateY(#{-$spacer-half});
   transition: all $transition-short;
-  z-index: 9999;
+  visibility: hidden;
+  z-index: $z-theme-menu-dropdown;
 
   @include breakpoint($screen-small) {
     @include pad(1);
@@ -246,6 +267,7 @@
   }
 
   .tmpl-header__theme-menu--active & {
+    visibility: visible;
     opacity: 1;
     transform: translateY(0);
   }
@@ -276,6 +298,7 @@
   border-radius: $br-4;
   cursor: pointer;
   transition: background-color $transition-short;
+  color: var(--color-text-primary);
 
   &:hover {
     background-color: var(--color-surface-dark);
@@ -428,7 +451,7 @@
 .tmpl-link-arrow__icon {
   @include icon(17px);
   color: var(--color-icon-secondary);
-  transition: fill $transition-short;
+  transition: color $transition-short;
 
   .tmpl-link-arrow--large & {
     @include square(29px);
@@ -458,7 +481,6 @@
 .tmpl-project {
   @include flex-fixed;
   @include mar-top(4);
-  @include relative;
 
   &:first-of-type {
     @include mar-top(0);
@@ -514,7 +536,7 @@
   border: 1px solid var(--color-border-light);
   transition: all $transition-short;
   box-shadow: $shadow-small;
-  z-index: 1;
+  z-index: $z-plus-one;
 
   @include breakpoint($screen-small) {
     top: $spacer-2;
@@ -524,17 +546,22 @@
 
   .tmpl-project:hover & {
     transform: translate(-5px, -5px);
-    box-shadow: $shadow-small;
   }
 }
 
 .tmpl-project-floating-label-icon {
   @include mar-right(0.5);
-  @include icon(16px);
-  color: var(--color-icon-primary);
+  @include square(15px);
+  transition: color $transition-short;
+  fill: transparent;
+  stroke: var(--color-icon-primary);
 
   @include breakpoint($screen-small) {
-    @include square(18px);
+    @include square(17px);
+  }
+
+  .tmpl-project:hover & {
+    fill: yellow;
   }
 }
 
@@ -542,9 +569,6 @@
   @include mar-top(1);
   @include head-xsmall;
 }
-
-// .tmpl-project__tags {
-// }
 
 .tmpl-project__tag-item {
   @include footnote-small;

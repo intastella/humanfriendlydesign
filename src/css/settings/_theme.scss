@@ -43,6 +43,14 @@ $color-surface-dark-theme-dark: $grey-7;
 $color-shadow-theme-dark: $black;
 $color-shadow-theme-dark: $grey-7;
 
+// Shadows
 $shadow-large: 5px 5px 0 var(--color-shadow);
 $shadow-medium: 3px 3px 0 var(--color-shadow);
 $shadow-small: 2px 2px 0 var(--color-shadow);
+
+// Z-Index
+$z-plus-one: 1;
+$z-tmpl-header: 9;
+$z-theme-menu-overlay: 10;
+$z-theme-menu-dropdown: 9999;
+$z-skip-to-main: 99999;
