@@ -1135,7 +1135,9 @@ h6 {
   line-height: 1;
   background-color: transparent;
   padding: 4px 2px;
-  border: 1px solid transparent;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.15s ease-in-out;
@@ -1144,8 +1146,17 @@ h6 {
 .tmpl-header__theme-button:hover, .tmpl-header__theme-button:focus {
   background-color: var(--color-surface-dark);
 }
-.tmpl-header__theme-button--active {
-  border: 1px solid var(--color-border-dark);
+.tmpl-header__theme-button--auto {
+  border-color: var(--color-border-dark);
+}
+.theme-light .tmpl-header__theme-button--auto, .theme-dark .tmpl-header__theme-button--auto {
+  border-color: transparent;
+}
+.theme-light .tmpl-header__theme-button--light {
+  border-color: var(--color-border-dark);
+}
+.theme-dark .tmpl-header__theme-button--dark {
+  border-color: var(--color-border-dark);
 }
 
 .tmpl-header__theme-button-icon {

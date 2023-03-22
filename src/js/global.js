@@ -2,40 +2,32 @@ function initColorThemeSwitch() {
   const ThemeMenu = document.querySelector(".js-theme-menu");
   const ThemeMenuOverlay = document.querySelector(".js-header-theme-menu-overlay");
   const buttonThemeMenuButton = document.querySelector(".js-theme-menu-button");
-  const buttonThemeAuto = document.querySelector(".js-theme-button-auto");
-  const buttonThemeLight = document.querySelector(".js-theme-button-light");
-  const buttonThemeDark = document.querySelector(".js-theme-button-dark");
+  const themeButtons = document.querySelectorAll(".js-theme-button");
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
   const savedTheme = localStorage.getItem("colorTheme");
   
-  function manualSetColorTheme(selectedTheme) {
+  function manualSetColorTheme(node) {
     console.log('manual set');
+    var selectedButton = node.target.closest('.js-theme-button');
+    var selectedTheme = selectedButton.dataset.theme;
+    console.log('theme='+selectedTheme);
+    // Array.prototype.forEach.call(themeButtons, function (el, i) {
+    //   themeButtons[i].classList.remove("tmpl-header__theme-button--active");
+    // });
+    // selectedButton.classList.add("tmpl-header__theme-button--active");
+    document.documentElement.className = "";
+
     if (selectedTheme == "dark") {
-      console.log('selectedTheme = dark');
-      document.documentElement.className = "";
       document.documentElement.classList.add("theme-dark");
-      buttonThemeAuto.classList.remove("tmpl-header__theme-button--active");
-      buttonThemeLight.classList.remove("tmpl-header__theme-button--active");
-      buttonThemeDark.classList.add("tmpl-header__theme-button--active");
       localStorage.setItem("colorTheme", "dark");
       toggleThemeMenu();
     } 
     if (selectedTheme == "light") {
-      console.log('selectedTheme = light');
-      document.documentElement.className = "";
       document.documentElement.classList.add("theme-light");
-      buttonThemeAuto.classList.remove("tmpl-header__theme-button--active");
-      buttonThemeLight.classList.add("tmpl-header__theme-button--active");
-      buttonThemeDark.classList.remove("tmpl-header__theme-button--active");
       localStorage.setItem("colorTheme", "light");
       toggleThemeMenu();
     }
     if (selectedTheme == "auto") {
-      console.log('selectedTheme = auto');
-      document.documentElement.className = "";
-      buttonThemeAuto.classList.add("tmpl-header__theme-button--active");
-      buttonThemeLight.classList.remove("tmpl-header__theme-button--active");
-      buttonThemeDark.classList.remove("tmpl-header__theme-button--active");
       localStorage.removeItem("colorTheme");
       toggleThemeMenu();
     }
@@ -43,25 +35,22 @@ function initColorThemeSwitch() {
 
   function autoSetColorTheme() {
     console.log('auto set');
+    document.documentElement.className = "";
     if (savedTheme == "dark") {
       console.log('auto applied saved dark');
-      document.documentElement.className = "";
       document.documentElement.classList.add("theme-dark");
     }
     if (savedTheme == "light") {
       console.log('auto applied saved light');
-      document.documentElement.className = "";
       document.documentElement.classList.add("theme-light");
     }
     if (savedTheme == null) {
       if (prefersDarkScheme.matches) {
         console.log('auto applied system dark');
-        document.documentElement.className = "";
         document.documentElement.classList.add("theme-dark");
       } 
       if (!prefersDarkScheme.matches) {
         console.log('auto applied system auto');
-        document.documentElement.className = "";
       }
     }
   }
@@ -77,14 +66,11 @@ function initColorThemeSwitch() {
   if (ThemeMenu !== null) {
     ThemeMenuOverlay.addEventListener("click", toggleThemeMenu);
     buttonThemeMenuButton.addEventListener("click", toggleThemeMenu);
-    buttonThemeAuto.addEventListener("click", function() {
-      manualSetColorTheme("auto");
-    });
-    buttonThemeLight.addEventListener("click", function() {
-      manualSetColorTheme("light");
-    });
-    buttonThemeDark.addEventListener("click", function() {
-      manualSetColorTheme("dark");
+
+    Array.prototype.forEach.call(themeButtons, function (el, i) {
+      themeButtons[i].addEventListener('click', function(el) {
+        manualSetColorTheme(el);
+      });
     });
   }
   

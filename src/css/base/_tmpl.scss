@@ -302,7 +302,9 @@
   line-height: 1;
   background-color: transparent;
   padding: $spacer-half $spacer-quarter;
-  border: 1px solid transparent;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
   border-radius: $br-4;
   cursor: pointer;
   transition: background-color $transition-short;
@@ -312,8 +314,25 @@
     background-color: var(--color-surface-dark);
   }
 
-  &--active {
-    border: 1px solid var(--color-border-dark);
+  &--auto {
+    border-color: var(--color-border-dark);
+
+    .theme-light &,
+    .theme-dark &, {
+      border-color: transparent;
+    }
+  }
+
+  &--light {
+    .theme-light & {
+      border-color: var(--color-border-dark);
+    }
+  }
+
+  &--dark {
+    .theme-dark & {
+      border-color: var(--color-border-dark);
+    }
   }
 }
 
