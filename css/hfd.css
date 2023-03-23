@@ -1180,6 +1180,9 @@ h6 {
 .theme-dark .tmpl-header__theme-button--dark {
   border-color: var(--color-border-dark);
 }
+.theme-auto.theme-dark .tmpl-header__theme-button--dark {
+  border-color: transparent;
+}
 
 .tmpl-header__theme-button-icon {
   width: 24px;
@@ -1211,6 +1214,7 @@ h6 {
 }
 
 .tmpl-header__wallpaper-button {
+  display: block;
   width: 24px;
   height: 24px;
   margin-right: 8px;

@@ -346,6 +346,10 @@
     .theme-dark & {
       border-color: var(--color-border-dark);
     }
+
+    .theme-auto.theme-dark & {
+      border-color: transparent;
+    }
   }
 }
 
@@ -368,6 +372,7 @@
 }
 
 .tmpl-header__wallpaper-button {
+  @include block;
   @include square(24px);
   @include mar-right(1);
   border-radius: $br-round;
