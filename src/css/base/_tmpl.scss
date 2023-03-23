@@ -372,8 +372,8 @@
 }
 
 .tmpl-header__wallpaper-button {
-  @include flex-fixed;
   @include square(24px);
+  @include pad(0); //Safari iOS override
   @include mar-right(1);
   border-radius: $br-round;
   border: 1px solid var(--color-border-light);
