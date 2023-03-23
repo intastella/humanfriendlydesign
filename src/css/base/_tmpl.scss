@@ -372,7 +372,11 @@
   }
 
   &--classic {
-    background-color: var(--color-page-bg);
+    background-color: $color-page-bg;
+
+    .theme-dark & {
+      background-color: $color-page-bg-theme-dark;
+    }
   }
 
   &--blue {

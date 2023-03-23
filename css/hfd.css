@@ -667,6 +667,26 @@ body.chocolat-open > .chocolat-image-wrapper {
   --color-shadow: #666666;
 }
 
+.wallpaper-blue {
+  --color-page-bg: var(--color-page-bg-blue);
+}
+
+.wallpaper-green {
+  --color-page-bg: var(--color-page-bg-green);
+}
+
+.wallpaper-yellow {
+  --color-page-bg: var(--color-page-bg-yellow);
+}
+
+.wallpaper-pink {
+  --color-page-bg: var(--color-page-bg-pink);
+}
+
+.wallpaper-purple {
+  --color-page-bg: var(--color-page-bg-purple);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1207,7 +1227,10 @@ h6 {
   border: 1px solid var(--color-border-dark);
 }
 .tmpl-header__wallpaper-button--classic {
-  background-color: var(--color-page-bg);
+  background-color: #F8F4EF;
+}
+.theme-dark .tmpl-header__wallpaper-button--classic {
+  background-color: #3D425C;
 }
 .tmpl-header__wallpaper-button--blue {
   background-color: var(--color-page-bg-blue);
