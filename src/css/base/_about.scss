@@ -37,10 +37,6 @@
     border: 1px solid var(--color-border-dark);
     transform: translate(-5px, -5px);
     box-shadow: $shadow-large;
-
-    .theme-dark & {
-      box-shadow: $shadow-large-theme-dark;
-    }
   }
 }
 
@@ -63,10 +59,12 @@
 
 .about-role-item__industry {
   @include footnote;
+  color: var(--color-text-secondary);
 }
 
 .about-role-item__role {
   @include footnote-small;
+  color: var(--color-text-secondary);
 }
 
 .about-resume {
@@ -88,15 +86,10 @@
     border: 1px solid var(--color-border-dark);
     transform: translate(-5px, -5px);
     box-shadow: $shadow-large;
-
-    .theme-dark & {
-      box-shadow: $shadow-large-theme-dark;
-    }
   }
 }
 
 .about-resume__link-icon {
   @include mar-right(1);
-  fill: currentColor;
-  stroke: currentColor;
+  @include icon(24px);
 }

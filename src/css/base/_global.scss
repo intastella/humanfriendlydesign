@@ -1,34 +1,66 @@
 :root {
   color-scheme: light dark;
   --color-page-bg: #{$color-page-bg};
+  --color-page-bg-blue: #{$color-page-bg-blue};
+  --color-page-bg-green: #{$color-page-bg-green};
+  --color-page-bg-yellow: #{$color-page-bg-yellow};
+  --color-page-bg-pink: #{$color-page-bg-pink};
+  --color-page-bg-purple: #{$color-page-bg-purple};
   --color-page-inner-bg: #{$color-page-inner-bg};
   --color-text-primary: #{$color-text-primary};
   --color-text-secondary: #{$color-text-secondary};
+  --color-icon-primary: #{$color-icon-primary};
+  --color-icon-secondary: #{$color-icon-secondary};
   --color-link: #{$color-link};
   --color-border-light: #{$color-border-light};
   --color-border-dark: #{$color-border-dark};
   --color-surface-light: #{$color-surface-light};
   --color-surface-dark: #{$color-surface-dark};
+  --color-shadow: #{$color-shadow};
 }
 
 .theme-dark {
   --color-page-bg: #{$color-page-bg-theme-dark};
+  --color-page-bg-blue: #{$color-page-bg-blue-theme-dark};
+  --color-page-bg-green: #{$color-page-bg-green-theme-dark};
+  --color-page-bg-yellow: #{$color-page-bg-yellow-theme-dark};
+  --color-page-bg-pink: #{$color-page-bg-pink-theme-dark};
+  --color-page-bg-purple: #{$color-page-bg-purple-theme-dark};
   --color-page-inner-bg: #{$color-page-inner-bg-theme-dark};
   --color-text-primary: #{$color-text-primary-theme-dark};
   --color-text-secondary: #{$color-text-secondary-theme-dark};
+  --color-icon-primary: #{$color-icon-primary-theme-dark};
+  --color-icon-secondary: #{$color-icon-secondary-theme-dark};
   --color-link: #{$color-link-theme-dark};
   --color-border-light: #{$color-border-light-theme-dark};
   --color-border-dark: #{$color-border-dark-theme-dark};
   --color-surface-light: #{$color-surface-light-theme-dark};
   --color-surface-dark: #{$color-surface-dark-theme-dark};
+  --color-shadow: #{$color-shadow-theme-dark};
+}
+
+.wallpaper-blue {
+  --color-page-bg: var(--color-page-bg-blue);
+}
+
+.wallpaper-green {
+  --color-page-bg: var(--color-page-bg-green);
+}
+
+.wallpaper-yellow {
+  --color-page-bg: var(--color-page-bg-yellow);
+}
+
+.wallpaper-pink {
+  --color-page-bg: var(--color-page-bg-pink);
+}
+
+.wallpaper-purple {
+  --color-page-bg: var(--color-page-bg-purple);
 }
 
 * {
   box-sizing: border-box;
-
-  &.theme-switch {
-    transition: none !important;
-  }
 }
 
 img, 
@@ -58,7 +90,7 @@ body {
 }
 
 body {
-  padding: $spacer;
+  padding: $spacer $spacer-plus $spacer-plus $spacer;
 
   // Target only iOS Safari for iPhone X style screen inset
   @supports #{'\(-webkit-touch-callout: none)'} {
@@ -67,7 +99,7 @@ body {
     }
 
     @include breakpoint($screen-portrait) {
-      padding: $spacer;
+      padding: $spacer $spacer-plus $spacer-plus $spacer;
     }
   }
 
@@ -94,7 +126,12 @@ p {
   @include body-med;
 
   a {
+    transition: all $transition-short;
     text-decoration: underline;
+
+    &:hover {
+      background-color: var(--color-page-bg);
+    }
   }
 }
 
@@ -120,9 +157,4 @@ h5 {
 
 h6 {
   @include head-xxsmall;
-}
-
-.icon {
-  @include square(24px);
-  fill: $black;
 }

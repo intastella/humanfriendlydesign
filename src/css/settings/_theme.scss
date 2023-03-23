@@ -5,28 +5,52 @@ $font-medium: 500;
 
 // Light Theme
 $color-page-bg: #F8F4EF;
+$color-page-bg-blue: #EDF8FF;
+$color-page-bg-green: #ECFFE5;
+$color-page-bg-yellow: #FFFDD6;
+$color-page-bg-pink: #FFE8E8;
+$color-page-bg-purple: #F1E0FF;
 $color-page-inner-bg: $white;
 $color-text-primary: $black;
 $color-text-secondary: $grey-7;
+$color-icon-primary: $black;
+$color-icon-secondary: $grey-6;
 $color-link: $color-text-primary;
 $color-border-light: $grey-7;
 $color-border-dark: $black;
 $color-surface-light: $grey-1;
 $color-surface-dark: $grey-2;
-$shadow-large: 5px 5px 0 $black;
-$shadow-medium: 3px 3px 0 $black;
-$shadow-small: 2px 2px 0 $black;
+$color-shadow: $black;
+
 
 // Dark Theme
-$color-page-bg-theme-dark: #33374D;
+$color-page-bg-theme-dark: #3D425C;
+$color-page-bg-blue-theme-dark: #00314D;
+$color-page-bg-green-theme-dark: #1D3913;
+$color-page-bg-yellow-theme-dark: #4D4A19;
+$color-page-bg-pink-theme-dark: #391313;
+$color-page-bg-purple-theme-dark: #36194D;
 $color-page-inner-bg-theme-dark: $grey-10;
 $color-text-primary-theme-dark: $white;
 $color-text-secondary-theme-dark: $grey-5;
+$color-icon-primary-theme-dark: $white;
+$color-icon-secondary-theme-dark: $grey-6;
 $color-link-theme-dark: $white;
-$color-border-light-theme-dark: $white;
+$color-border-light-theme-dark: $grey-7;
 $color-border-dark-theme-dark: $white;
 $color-surface-light-theme-dark: $grey-8;
 $color-surface-dark-theme-dark: $grey-7;
-$shadow-large-theme-dark: 5px 5px 0 $grey-7;
-$shadow-medium-theme-dark: 3px 3px 0 $grey-7;
-$shadow-small-theme-dark: 2px 2px 0 $grey-7;
+$color-shadow-theme-dark: $black;
+$color-shadow-theme-dark: $grey-7;
+
+// Shadows
+$shadow-large: 5px 5px 0 var(--color-shadow);
+$shadow-medium: 3px 3px 0 var(--color-shadow);
+$shadow-small: 2px 2px 0 var(--color-shadow);
+
+// Z-Index
+$z-plus-one: 1;
+$z-tmpl-header: 9;
+$z-theme-menu-overlay: 10;
+$z-theme-menu-dropdown: 9999;
+$z-skip-to-main: 99999;
