@@ -366,12 +366,12 @@
   @include footnote;
 }
 
-.tmpl-header__wallpaper-list {
+.tmpl-header__accent-list {
   @include flex;
   @include flex-horizontal;
 }
 
-.tmpl-header__wallpaper-button {
+.tmpl-header__accent-button {
   @include square(24px);
   @include pad(0); //Safari iOS override
   @include mar-right(1);

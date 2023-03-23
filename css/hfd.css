@@ -667,23 +667,23 @@ body.chocolat-open > .chocolat-image-wrapper {
   --color-shadow: #666666;
 }
 
-.wallpaper-blue {
+.accent-blue {
   --color-page-bg: var(--color-page-bg-blue);
 }
 
-.wallpaper-green {
+.accent-green {
   --color-page-bg: var(--color-page-bg-green);
 }
 
-.wallpaper-yellow {
+.accent-yellow {
   --color-page-bg: var(--color-page-bg-yellow);
 }
 
-.wallpaper-pink {
+.accent-pink {
   --color-page-bg: var(--color-page-bg-pink);
 }
 
-.wallpaper-purple {
+.accent-purple {
   --color-page-bg: var(--color-page-bg-purple);
 }
 
@@ -1208,12 +1208,12 @@ h6 {
   }
 }
 
-.tmpl-header__wallpaper-list {
+.tmpl-header__accent-list {
   display: flex;
   flex-direction: row;
 }
 
-.tmpl-header__wallpaper-button {
+.tmpl-header__accent-button {
   width: 24px;
   height: 24px;
   padding: 0;
@@ -1223,34 +1223,34 @@ h6 {
   cursor: pointer;
 }
 @media (min-width: 600px) {
-  .tmpl-header__wallpaper-button {
+  .tmpl-header__accent-button {
     width: 16px;
     height: 16px;
     margin-right: 2px;
   }
 }
-.tmpl-header__wallpaper-button--active, .tmpl-header__wallpaper-button:hover, .tmpl-header__wallpaper-button:focus {
+.tmpl-header__accent-button--active, .tmpl-header__accent-button:hover, .tmpl-header__accent-button:focus {
   border: 1px solid var(--color-border-dark);
 }
-.tmpl-header__wallpaper-button--classic {
+.tmpl-header__accent-button--classic {
   background-color: #F8F4EF;
 }
-.theme-dark .tmpl-header__wallpaper-button--classic {
+.theme-dark .tmpl-header__accent-button--classic {
   background-color: #3D425C;
 }
-.tmpl-header__wallpaper-button--blue {
+.tmpl-header__accent-button--blue {
   background-color: var(--color-page-bg-blue);
 }
-.tmpl-header__wallpaper-button--green {
+.tmpl-header__accent-button--green {
   background-color: var(--color-page-bg-green);
 }
-.tmpl-header__wallpaper-button--yellow {
+.tmpl-header__accent-button--yellow {
   background-color: var(--color-page-bg-yellow);
 }
-.tmpl-header__wallpaper-button--pink {
+.tmpl-header__accent-button--pink {
   background-color: var(--color-page-bg-pink);
 }
-.tmpl-header__wallpaper-button--purple {
+.tmpl-header__accent-button--purple {
   background-color: var(--color-page-bg-purple);
 }
 
@@ -1731,7 +1731,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   display: flex;
   align-items: center;
   padding: 12px 12px 12px 16px;
-  text-decoration: none;
+  transition: all 0.15s ease-in-out;
 }
 .contact-list__link:hover, .contact-list__link:focus {
   background-color: var(--color-surface-light);

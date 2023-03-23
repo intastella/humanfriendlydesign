@@ -3,7 +3,7 @@ function initColorThemeSwitch() {
   const themeMenuOverlay = document.querySelector(".js-header-theme-menu-overlay");
   const buttonThemeMenuButton = document.querySelector(".js-theme-menu-button");
   const themeButtons = document.querySelectorAll(".js-theme-button");
-  const wallpaperButtons = document.querySelectorAll(".js-wallpaper-button");
+  const accentButtons = document.querySelectorAll(".js-accent-button");
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
   
   // https://thegermancoder.com/2018/10/04/how-to-remove-classes-by-prefix-in-vanilla-javascript/
@@ -52,28 +52,28 @@ function initColorThemeSwitch() {
     }
   }
 
-  function manualSetWallpaperColor(el) {
-    // console.log('manual set wallpaper');
+  function manualSetAccentColor(el) {
+    // console.log('manual set accent');
     var selectedButton = el.target;
     var selectedColor = selectedButton.dataset.color;
     // console.log('color='+selectedColor);
 
     if (selectedColor !== "classic") {
-      removeClassByPrefix(document.documentElement, 'wallpaper-');
-      document.documentElement.classList.add("wallpaper-"+selectedColor);
-      localStorage.setItem("wallpaperColor", selectedColor);
+      removeClassByPrefix(document.documentElement, 'accent-');
+      document.documentElement.classList.add("accent-"+selectedColor);
+      localStorage.setItem("accentColor", selectedColor);
       toggleThemeMenu();
     }
     else {
-      removeClassByPrefix(document.documentElement, 'wallpaper-');
-      localStorage.removeItem("wallpaperColor");
+      removeClassByPrefix(document.documentElement, 'accent-');
+      localStorage.removeItem("accentColor");
       toggleThemeMenu();
     }
   }
 
-  function autoSetWallpaperColor() {
-    const savedWallpaperColor = localStorage.getItem("wallpaperColor");
-    document.documentElement.classList.add("wallpaper-"+savedWallpaperColor);
+  function autoSetAccentColor() {
+    const savedaccentColor = localStorage.getItem("accentColor");
+    document.documentElement.classList.add("accent-"+savedaccentColor);
   }
 
   function toggleThemeMenu() {
@@ -94,16 +94,16 @@ function initColorThemeSwitch() {
       });
     });
 
-    Array.prototype.forEach.call(wallpaperButtons, function (el, i) {
-      wallpaperButtons[i].addEventListener('click', function(el) {
-        manualSetWallpaperColor(el);
+    Array.prototype.forEach.call(accentButtons, function (el, i) {
+      accentButtons[i].addEventListener('click', function(el) {
+        manualSetAccentColor(el);
       });
     });
   }
   
   prefersDarkScheme.addEventListener("change", autoSetColorTheme);
   autoSetColorTheme();
-  autoSetWallpaperColor();
+  autoSetAccentColor();
 }
 
 document.addEventListener("DOMContentLoaded", function() {
