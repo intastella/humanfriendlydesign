@@ -372,7 +372,7 @@
 }
 
 .tmpl-header__wallpaper-button {
-  @include block;
+  @include flex-fixed;
   @include square(24px);
   @include mar-right(1);
   border-radius: $br-round;

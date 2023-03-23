@@ -1214,7 +1214,7 @@ h6 {
 }
 
 .tmpl-header__wallpaper-button {
-  display: block;
+  flex: 0 0 auto;
   width: 24px;
   height: 24px;
   margin-right: 8px;
