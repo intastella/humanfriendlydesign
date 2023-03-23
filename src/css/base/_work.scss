@@ -1,22 +1,10 @@
 .work-tags {
-  // @include mar-top(1);
   @include footnote;
 }
-
-// .work-tag__item {
-//   @include border-radius($br-4);
-//   color: var(--color-text-primary);
-//   padding: $spacer-half $spacer;
-//   background-color: var(--color-surface-light);
-// }
 
 .work-links {
   @include mar-top(1.5);
   @include footnote;
-
-  a {
-    text-decoration: underline;
-  }
 }
 
 .work-samples {

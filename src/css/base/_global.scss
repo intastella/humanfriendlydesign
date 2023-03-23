@@ -61,10 +61,6 @@
 
 * {
   box-sizing: border-box;
-
-  &.theme-switch {
-    transition: none !important;
-  }
 }
 
 img, 
@@ -130,7 +126,12 @@ p {
   @include body-med;
 
   a {
+    transition: all $transition-short;
     text-decoration: underline;
+
+    &:hover {
+      background-color: var(--color-page-bg);
+    }
   }
 }
 
