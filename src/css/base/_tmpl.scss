@@ -214,41 +214,42 @@
 
 .tmpl-header__theme-menu-button-icon {
   @include icon(16px);
+  @include hidden;
 
   @include breakpoint($screen-small) {
     @include square(18px);
   }
 
   &--auto {
-    @include block;
-
     .theme-light &,
     .theme-dark & {
       @include hidden;
     }
+
+    .theme-auto & {
+      @include block;
+    }
   }
 
   &--dark {
-    @include hidden;
-
     .theme-dark & {
       @include block;
     }
 
+    .theme-auto &, 
     .theme-light & {
       @include hidden;
     }
   }
 
   &--light {
-    @include hidden;
-
-    .theme-dark & {
-      @include hidden;
-    }
-
     .theme-light & {
       @include block;
+    }
+
+    .theme-auto &, 
+    .theme-dark & {
+      @include hidden;
     }
   }
 }
@@ -315,21 +316,33 @@
   }
 
   &--auto {
-    border-color: var(--color-border-dark);
-
     .theme-light &,
-    .theme-dark &, {
+    .theme-dark & {
       border-color: transparent;
+    }
+
+    .theme-auto & {
+      border-color: var(--color-border-dark);
     }
   }
 
   &--light {
+    .theme-dark &,
+    .theme-auto & {
+      border-color: transparent;
+    }
+
     .theme-light & {
       border-color: var(--color-border-dark);
     }
   }
 
   &--dark {
+    .theme-light &,
+    .theme-auto & {
+      border-color: transparent;
+    }
+
     .theme-dark & {
       border-color: var(--color-border-dark);
     }
