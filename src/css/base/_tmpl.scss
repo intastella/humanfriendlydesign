@@ -376,7 +376,9 @@
   @include pad(0); //Safari iOS override
   @include mar-right(1);
   border-radius: $br-round;
-  border: 1px solid var(--color-border-light);
+  border-width: 1px;
+  border-style: solid;
+  border-color: $grey-6;
   cursor: pointer;
 
   @include breakpoint($screen-small) {
@@ -384,37 +386,69 @@
     @include mar-right(0.25);
   }
 
-  &--active,
   &:hover {
-    border: 1px solid var(--color-border-dark);
+    border-color: var(--color-border-dark);
   }
 
   &--classic {
+    border-color: var(--color-border-dark);
     background-color: $color-page-bg;
 
     .theme-dark & {
       background-color: $color-page-bg-theme-dark;
     }
+
+    .accent-blue &,
+    .accent-green &,
+    .accent-yellow &,
+    .accent-pink &,
+    .accent-purple & {
+      border-color: $grey-6;
+
+      &:hover {
+        border-color: var(--color-border-dark);
+      }
+    }
   }
 
   &--blue {
     background-color: var(--color-page-bg-blue);
+
+    .accent-blue & {
+      border-color: var(--color-border-dark);
+    }
   }
 
   &--green {
     background-color: var(--color-page-bg-green);
+
+    .accent-green & {
+      border-color: var(--color-border-dark);
+    }
   }
 
   &--yellow {
     background-color: var(--color-page-bg-yellow);
+
+    .accent-yellow & {
+      border-color: var(--color-border-dark);
+    }
   }
 
   &--pink {
     background-color: var(--color-page-bg-pink);
+
+    .accent-pink & {
+      border: 1px solid var(--color-border-dark);
+    }
   }
 
   &--purple {
     background-color: var(--color-page-bg-purple);
+    
+    .accent-purple & {
+      border-color: var(--color-border-dark);
+    }
   }
 }
 

@@ -1236,7 +1236,9 @@ h6 {
   padding: 0;
   margin-right: 8px;
   border-radius: 9999rem;
-  border: 1px solid var(--color-border-light);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #8c8c8c;
   cursor: pointer;
 }
 @media (min-width: 600px) {
@@ -1246,29 +1248,51 @@ h6 {
     margin-right: 2px;
   }
 }
-.tmpl-header__accent-button--active, .tmpl-header__accent-button:hover, .tmpl-header__accent-button:focus {
-  border: 1px solid var(--color-border-dark);
+.tmpl-header__accent-button:hover, .tmpl-header__accent-button:focus {
+  border-color: var(--color-border-dark);
 }
 .tmpl-header__accent-button--classic {
+  border-color: var(--color-border-dark);
   background-color: #F8F4EF;
 }
 .theme-dark .tmpl-header__accent-button--classic {
   background-color: #3D425C;
 }
+.accent-blue .tmpl-header__accent-button--classic, .accent-green .tmpl-header__accent-button--classic, .accent-yellow .tmpl-header__accent-button--classic, .accent-pink .tmpl-header__accent-button--classic, .accent-purple .tmpl-header__accent-button--classic {
+  border-color: #8c8c8c;
+}
+.accent-blue .tmpl-header__accent-button--classic:hover, .accent-green .tmpl-header__accent-button--classic:hover, .accent-yellow .tmpl-header__accent-button--classic:hover, .accent-pink .tmpl-header__accent-button--classic:hover, .accent-purple .tmpl-header__accent-button--classic:hover, .accent-blue .tmpl-header__accent-button--classic:focus, .accent-green .tmpl-header__accent-button--classic:focus, .accent-yellow .tmpl-header__accent-button--classic:focus, .accent-pink .tmpl-header__accent-button--classic:focus, .accent-purple .tmpl-header__accent-button--classic:focus {
+  border-color: var(--color-border-dark);
+}
 .tmpl-header__accent-button--blue {
   background-color: var(--color-page-bg-blue);
+}
+.accent-blue .tmpl-header__accent-button--blue {
+  border-color: var(--color-border-dark);
 }
 .tmpl-header__accent-button--green {
   background-color: var(--color-page-bg-green);
 }
+.accent-green .tmpl-header__accent-button--green {
+  border-color: var(--color-border-dark);
+}
 .tmpl-header__accent-button--yellow {
   background-color: var(--color-page-bg-yellow);
+}
+.accent-yellow .tmpl-header__accent-button--yellow {
+  border-color: var(--color-border-dark);
 }
 .tmpl-header__accent-button--pink {
   background-color: var(--color-page-bg-pink);
 }
+.accent-pink .tmpl-header__accent-button--pink {
+  border: 1px solid var(--color-border-dark);
+}
 .tmpl-header__accent-button--purple {
   background-color: var(--color-page-bg-purple);
+}
+.accent-purple .tmpl-header__accent-button--purple {
+  border-color: var(--color-border-dark);
 }
 
 .tmpl-content {
