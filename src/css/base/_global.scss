@@ -16,6 +16,12 @@
   --color-border-dark: #{$color-border-dark};
   --color-surface-light: #{$color-surface-light};
   --color-surface-dark: #{$color-surface-dark};
+  --color-accent: #{$color-accent};
+  --color-accent-blue: #{$color-accent-blue};
+  --color-accent-green: #{$color-accent-green};
+  --color-accent-yellow: #{$color-accent-yellow};
+  --color-accent-pink: #{$color-accent-pink};
+  --color-accent-purple: #{$color-accent-purple};
   --color-shadow: #{$color-shadow};
 }
 
@@ -36,27 +42,38 @@
   --color-border-dark: #{$color-border-dark-theme-dark};
   --color-surface-light: #{$color-surface-light-theme-dark};
   --color-surface-dark: #{$color-surface-dark-theme-dark};
+  --color-accent: #{$color-accent-theme-dark};
+  --color-accent-blue: #{$color-accent-blue-theme-dark};
+  --color-accent-green: #{$color-accent-green-theme-dark};
+  --color-accent-yellow: #{$color-accent-yellow-theme-dark};
+  --color-accent-pink: #{$color-accent-pink-theme-dark};
+  --color-accent-purple: #{$color-accent-purple-theme-dark};
   --color-shadow: #{$color-shadow-theme-dark};
 }
 
-.wallpaper-blue {
+.accent-blue {
   --color-page-bg: var(--color-page-bg-blue);
+  --color-accent: var(--color-accent-blue);
 }
 
-.wallpaper-green {
+.accent-green {
   --color-page-bg: var(--color-page-bg-green);
+  --color-accent: var(--color-accent-green);
 }
 
-.wallpaper-yellow {
+.accent-yellow {
   --color-page-bg: var(--color-page-bg-yellow);
+  --color-accent: var(--color-accent-yellow);
 }
 
-.wallpaper-pink {
+.accent-pink {
   --color-page-bg: var(--color-page-bg-pink);
+  --color-accent: var(--color-accent-pink);
 }
 
-.wallpaper-purple {
+.accent-purple {
   --color-page-bg: var(--color-page-bg-purple);
+  --color-accent: var(--color-accent-purple);
 }
 
 * {
@@ -130,7 +147,7 @@ p {
     text-decoration: underline;
 
     &:hover {
-      background-color: var(--color-page-bg);
+      background-color: var(--color-accent);
     }
   }
 }

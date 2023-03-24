@@ -18,10 +18,10 @@
   @include flex;
   @include flex-cross-center;
   padding: $spacer-plus $spacer-plus $spacer-plus $spacer-2;
-  text-decoration: none;
+  transition: all $transition-short;
 
   &:hover {
-    background-color: var(--color-surface-light);
+    background-color: var(--color-accent);
   } 
 }
 
