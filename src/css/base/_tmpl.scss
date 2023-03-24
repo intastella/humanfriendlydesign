@@ -84,7 +84,7 @@
   }
 
   &:hover {
-    background-color: var(--color-surface-light);
+    background-color: var(--color-accent);
     color: var(--color-text-primary);
   }
 
@@ -208,7 +208,7 @@
   .tmpl-header__theme-menu--active &,
   &:hover {
     color: var(--color-text-primary);
-    background-color: var(--color-surface-dark);
+    background-color: var(--color-accent);
   }
 }
 
@@ -312,7 +312,7 @@
   color: var(--color-text-primary);
 
   &:hover {
-    background-color: var(--color-surface-dark);
+    background-color: var(--color-accent);
   }
 
   &--auto {
@@ -610,7 +610,12 @@
   }
 
   .tmpl-project:hover & {
-    fill: yellow;
+    fill: #ff0;
+
+    .theme-dark & {
+      fill: #DEDE01;
+      stroke: #DEDE01;
+    }
   }
 }
 
