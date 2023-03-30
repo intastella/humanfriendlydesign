@@ -11,71 +11,129 @@
 
 .loading {
   @include flex;
-  @include border-radius($br-16);
-  @include width-full;
   @include flex-center-center;
   @include flex-vertical;
-  @include pad(2);
+  padding: 4px 4px 8px 4px;
   text-align: center;
   background-color: var(--color-page-inner-bg);
   border: 1px solid var(--color-border-dark);
   box-shadow: $shadow-large;
-  
+  border-radius: $br-4 $br-4 $br-1 $br-1;
+  transition: all $transition-xxlong;
 
-  @include breakpoint($screen-small) {
-    @include pad(4);
-    @include width-auto;
+  &--expanded {
+    @include pad(2);
+    @include width-full;
+    @include border-radius($br-16);
+
+    @include breakpoint($screen-small) {
+      @include pad(4);
+      @include width-auto;
+    }
   }
 }
 
 .loading__inner {
-  @include border-radius($br-16);
-  @include mar-bottom(2);
+  @include border-radius($br-4);
+  @include mar-bottom(1);
   @include width-full;
   @include flex;
   @include flex-vertical;
-  padding: $spacer-8 $spacer-4;
+  width: 42px;
+  padding: 10px $spacer-plus;
   background-color: var(--color-surface-light);
   align-items: center;
+  transition: all $transition-xxlong;
 
-  @include breakpoint($screen-small) {
-    @include pad(8);
+  .loading--expanded & {
+    @include mar-bottom(2);
+    @include border-radius($br-16);
+    width: 368px;
+    padding: $spacer-8 $spacer-4;
+
+    @include breakpoint($screen-small) {
+      @include pad(8);
+    }
   }
 }
 
 .loading__logo {
-  @include mar-bottom(2);
-  @include square(56px);
+  @include square(18px);
   fill: var(--color-text-primary);
+  transition: all $transition-xxlong;
 
-  @include breakpoint($screen-small) {
-    @include square(72px);
+  .loading--expanded & {
+    @include square(56px);
+    @include mar-bottom(2);
+
+    @include breakpoint($screen-small) {
+      @include square(72px);
+    }
   }
 }
 
 .loading__header {
+  @include hidden;
   @include head-large;
+  transform: scaleY(#{-$spacer});
+  opacity: 0;
+  transition: all $transition-default;
+
+  .loading--expanded & {
+    opacity: 0;
+    transform: scaleY(0);
+  }
 }
 
 .loading__message {
+  @include hidden;
   @include mar-bottom(1);
   @include head-xxsmall;
+
+  .loading--expanded & {
+    // @include block;
+  }
 }
 
 .loading__progress {
+  @include relative;
   @include border-radius($br-round);
   @include width-full;
-  max-width: 320px;
-  height: $spacer;
-  background-color: var(--color-surface-light);
+  width: 42px;
+  height: $spacer-quarter;
+  background-color: transparent;
+  transition: all $transition-xxlong;
+
+  .loading--expanded & {
+    @include block;
+    width: 320px;
+    height: $spacer;
+    background-color: var(--color-surface-light);
+  }
+}
+
+.loading__progress-fill,
+.loading__progress-disk {
+  @include border-radius($br-round);
+  @include height-full;
+  @include absolute;
+  top: 0;
+  background-color: var(--color-text-primary);
+  transition: all $transition-xxlong;
+
+  .loading--expanded & {
+    width: 0%;
+  }
 }
 
 .loading__progress-fill {
-  @include border-radius($br-round);
-  @include height-full;
-  width: 0%;
-  background-color: var(--color-text-primary);
-  transition: width $transition-short;
+  left: 0;
+  width: 4px;
+}
+
+.loading__progress-disk {
+  right: 0;
+  width: 24px;
 }
 
 .extensions-list {

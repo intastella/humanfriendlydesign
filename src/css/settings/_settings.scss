@@ -137,6 +137,7 @@ $border-8: $border * 8 !default;
 
 $br: 1px !default;
 $br-0: 0 !default;
+$br-1: $br !default;
 $br-2: $br * 2 !default;
 $br-4: $br * 4 !default;
 $br-8: $br * 8 !default;
@@ -166,8 +167,15 @@ $duration-xshort: 0.1s;
 $duration-short: 0.15s;
 $duration-medium: 0.25s;
 $duration-long: 0.5s;
+$duration-xlong: 0.75s;
+$duration-xxlong: 1s;
 $duration-default: $duration-medium;
 $timing-curves-default: ease-in-out;
 
 $transition-default: $duration-default $timing-curves-default;
+$transition-xshort: $duration-xshort $timing-curves-default;
 $transition-short: $duration-short $timing-curves-default;
+$transition-medium: $duration-medium $timing-curves-default;
+$transition-long: $duration-long $timing-curves-default;
+$transition-xlong: $duration-xlong $timing-curves-default;
+$transition-xxlong: $duration-xxlong $timing-curves-default;

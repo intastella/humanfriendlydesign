@@ -7,7 +7,7 @@ function animateLoadingScreen() {
   const extensionFour = document.querySelector(".js-extension-4");
 
   function gotoHome() {
-    window.open("/home/","_self");
+    // window.open("/home/","_self");
   }
 
   function step1() {
@@ -40,20 +40,20 @@ function animateLoadingScreen() {
   }
 
   if (animationSeen == "true") {
-    setTimeout(step2, 1);
-    setTimeout(step3, 500);
-    setTimeout(step4, 1500);
-    setTimeout(step5, 2000);
-    setTimeout(step6, 2150);
+    // setTimeout(step2, 1);
+    // setTimeout(step3, 500);
+    // setTimeout(step4, 1500);
+    // setTimeout(step5, 2000);
+    // setTimeout(step6, 2150);
   } 
 
   else {
-    setTimeout(step1, 1);
-    setTimeout(step2, 500);
-    setTimeout(step3, 1000);
-    setTimeout(step4, 2500);
-    setTimeout(step5, 3000);
-    setTimeout(step6, 3150);
+    // setTimeout(step1, 1);
+    // setTimeout(step2, 500);
+    // setTimeout(step3, 1000);
+    // setTimeout(step4, 2500);
+    // setTimeout(step5, 3000);
+    // setTimeout(step6, 3150);
   }
 }
 
