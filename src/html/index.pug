@@ -6,19 +6,23 @@ block vars
 
 block content
   .tmpl-main-loading__inner
-    .loading
-      .loading__inner
-        svg.loading__logo(width="128", height="129", viewBox="0 0 128 129", fill="none", xmlns="http://www.w3.org/2000/svg")
-          rect(x="12.7112", y="0.5", width="12.7092", height="50.8369", rx="6.35461")
-          rect(x="102.583", y="0.5", width="12.7092", height="50.8369", rx="6.35461")
-          path(fill-rule="evenodd", clip-rule="evenodd", d="M19.0638 71.3085C22.5734 71.3085 25.4184 74.1536 25.4184 77.6631C25.4184 98.6598 42.631 115.791 64 115.791C85.369 115.791 102.582 98.6598 102.582 77.6631C102.582 74.1536 105.427 71.3085 108.936 71.3085C112.446 71.3085 115.291 74.1536 115.291 77.6631C115.291 105.8 92.2661 128.5 64 128.5C35.7339 128.5 12.7092 105.8 12.7092 77.6631C12.7092 74.1536 15.5543 71.3085 19.0638 71.3085Z")
-        h1.loading__header
-          | Human Friendly Design
-      
-      h2.loading__message
-        | Starting up...
-      .loading__progress
-        .loading__progress-fill.js-loading-progress-fill
+    .loading.js-loading
+      .loading__case-top
+        .loading__screen
+          svg.loading__logo(width="128", height="129", viewBox="0 0 128 129", fill="none", xmlns="http://www.w3.org/2000/svg")
+            rect(x="12.7112", y="0.5", width="12.7092", height="50.8369", rx="6.35461")
+            rect(x="102.583", y="0.5", width="12.7092", height="50.8369", rx="6.35461")
+            path(fill-rule="evenodd", clip-rule="evenodd", d="M19.0638 71.3085C22.5734 71.3085 25.4184 74.1536 25.4184 77.6631C25.4184 98.6598 42.631 115.791 64 115.791C85.369 115.791 102.582 98.6598 102.582 77.6631C102.582 74.1536 105.427 71.3085 108.936 71.3085C112.446 71.3085 115.291 74.1536 115.291 77.6631C115.291 105.8 92.2661 128.5 64 128.5C35.7339 128.5 12.7092 105.8 12.7092 77.6631C12.7092 74.1536 15.5543 71.3085 19.0638 71.3085Z")
+          h1.loading__header
+            | Human Friendly Design
+        
+        h2.loading__message
+          | Starting up...
+        .loading__progress
+          .loading__progress-fill.js-loading-progress-fill
+          .loading__progress-disk
+
+      .loading__case-bottom
 
     .extensions-list
       svg.extension.js-extension-1(width="44", height="48", viewBox="0 0 44 48", fill="none", xmlns="http://www.w3.org/2000/svg")

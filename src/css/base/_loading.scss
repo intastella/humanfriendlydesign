@@ -10,72 +10,201 @@
 }
 
 .loading {
+  @include relative;
+}
+
+.loading__case-top {
+  @include relative;
   @include flex;
-  @include border-radius($br-16);
-  @include width-full;
   @include flex-center-center;
   @include flex-vertical;
-  @include pad(2);
+  padding: 4px 4px 8px 4px;
   text-align: center;
   background-color: var(--color-page-inner-bg);
   border: 1px solid var(--color-border-dark);
-  box-shadow: $shadow-large;
-  
+  border-radius: $br-4 $br-4 $br-2 $br-2;
+  transition: all $transition-xxlong;
+  box-shadow: 2px 0 0 var(--color-shadow);
+  z-index: $z-plus-one;
 
-  @include breakpoint($screen-small) {
-    @include pad(4);
-    @include width-auto;
+  .loading--expanded & {
+    @include width-full;
+    @include border-radius($br-16);
+    padding: $spacer-2 $spacer-2 $spacer-3;
+    box-shadow: $shadow-large;
+
+    @include breakpoint($screen-large) {
+      @include pad(4);
+      @include width-auto;
+    }
   }
 }
 
-.loading__inner {
-  @include border-radius($br-16);
-  @include mar-bottom(2);
-  @include width-full;
+.loading__case-bottom {
+  @include absolute;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -24px;
+  width: 48px;
+  height: 9px;
+  background: var(--color-page-inner-bg);
+  border-radius: 0 0 $br-2 $br-2;
+  background-color: var(--color-page-inner-bg);
+  border: 1px solid var(--color-border-dark);
+  background-image: url('#{$image-path}loading-case-bottom-fill-light.svg');
+  background-position: top left;
+  background-repeat: repeat-x;
+  opacity: 1;
+  transition: all $transition-short;
+  box-shadow: $shadow-small;
+  z-index: $z-zero;
+
+  .theme-dark & {
+    background-image: url('#{$image-path}loading-case-bottom-fill-dark.svg');
+  }
+
+  .loading--expanded & {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.loading__screen {
+  @include relative;
+  @include border-radius($br-4);
+  @include mar-bottom(1);
   @include flex;
   @include flex-vertical;
-  padding: $spacer-8 $spacer-4;
+  width: 42px;
+  padding: 10px $spacer-plus;
   background-color: var(--color-surface-light);
   align-items: center;
+  transition: all $transition-xxlong;
 
-  @include breakpoint($screen-small) {
-    @include pad(8);
+  .loading--expanded & {
+    @include mar-bottom(5);
+    @include border-radius($br-16);
+    width: calc(100vw-#{$spacer-7});
+    padding: $spacer-8 $spacer-8 ($spacer * 12);
+
+    @include breakpoint($screen-xsmall) {
+      width: 320px; 
+    }
+
+    @include breakpoint($screen-small) {
+      width: 400px;
+    }
+
+    @include breakpoint($screen-large) {
+      padding: $spacer-8 $spacer-8 ($spacer * 14);
+    }
   }
 }
 
 .loading__logo {
-  @include mar-bottom(2);
-  @include square(56px);
+  @include square(18px);
   fill: var(--color-text-primary);
+  transition: all $transition-xxlong;
 
-  @include breakpoint($screen-small) {
-    @include square(72px);
+  .loading--expanded & {
+    @include square(56px);
+    // @include mar-bottom(2);
+
+    @include breakpoint($screen-large) {
+      @include square(72px);
+    }
   }
 }
 
 .loading__header {
+  @include absolute;
+  @include width-full;
   @include head-large;
+  left: 0;
+  bottom: $spacer-7;
+  opacity: 0;
+  transition: all $duration-medium $timing-curves-default $duration-xlong;
+  
+  @include breakpoint($screen-large) {
+    bottom: $spacer-8;
+  }
+
+  .loading--expanded & {
+    bottom: $spacer-6;
+    opacity: 1;
+
+    @include breakpoint($screen-large) {
+      bottom: $spacer-7;
+    }
+  }
 }
 
 .loading__message {
+  @include absolute;
+  @include width-full;
   @include mar-bottom(1);
   @include head-xxsmall;
+  left: 0;
+  bottom: $spacer-4;
+  opacity: 0;
+  transition: all $duration-medium $timing-curves-default $duration-xxlong;
+
+  .loading--expanded & {
+    bottom: $spacer-4;
+    opacity: 1;
+
+    @include breakpoint($screen-large) {
+      bottom: $spacer-5;
+    }
+  }
 }
 
 .loading__progress {
+  @include relative;
   @include border-radius($br-round);
-  @include width-full;
-  max-width: 320px;
-  height: $spacer;
-  background-color: var(--color-surface-light);
+  width: 42px;
+  height: $spacer-quarter;
+  background-color: transparent;
+  transition: all $transition-xxlong;
+
+  .loading--expanded & {
+    @include block;
+    @include width-full;
+    height: $spacer;
+    background-color: var(--color-surface-light);
+
+    @include breakpoint($screen-xsmall) {
+      width: 320px;
+    }
+  }
+}
+
+.loading__progress-fill,
+.loading__progress-disk {
+  @include border-radius($br-round);
+  @include height-full;
+  @include absolute;
+  top: 0;
+  background-color: var(--color-text-primary);
+  transition: all $transition-xxlong;
+
+  .loading--expanded & {
+    width: 0%;
+  }
+
+  &--transition-short {
+    transition: width $transition-short;
+  }
 }
 
 .loading__progress-fill {
-  @include border-radius($br-round);
-  @include height-full;
-  width: 0%;
-  background-color: var(--color-text-primary);
-  transition: width $transition-short;
+  left: 0;
+  width: 4px;
+}
+
+.loading__progress-disk {
+  right: 0;
+  width: 24px;
 }
 
 .extensions-list {
