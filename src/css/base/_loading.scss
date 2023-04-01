@@ -10,6 +10,11 @@
 }
 
 .loading {
+  @include relative;
+}
+
+.loading__case-top {
+  @include relative;
   @include flex;
   @include flex-center-center;
   @include flex-vertical;
@@ -17,26 +22,57 @@
   text-align: center;
   background-color: var(--color-page-inner-bg);
   border: 1px solid var(--color-border-dark);
-  box-shadow: $shadow-large;
-  border-radius: $br-4 $br-4 $br-1 $br-1;
+  border-radius: $br-4 $br-4 $br-2 $br-2;
   transition: all $transition-xxlong;
+  box-shadow: 2px 0 0 var(--color-shadow);
+  z-index: $z-plus-one;
 
-  &--expanded {
-    @include pad(2);
+  .loading--expanded & {
     @include width-full;
     @include border-radius($br-16);
+    padding: $spacer-2 $spacer-2 $spacer-3;
+    box-shadow: $shadow-large;
 
-    @include breakpoint($screen-small) {
+    @include breakpoint($screen-large) {
       @include pad(4);
       @include width-auto;
     }
   }
 }
 
-.loading__inner {
+.loading__case-bottom {
+  @include absolute;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -24px;
+  width: 48px;
+  height: 9px;
+  background: var(--color-page-inner-bg);
+  border-radius: 0 0 $br-2 $br-2;
+  background-color: var(--color-page-inner-bg);
+  border: 1px solid var(--color-border-dark);
+  background-image: url('#{$image-path}loading-case-bottom-fill-light.svg');
+  background-position: top left;
+  background-repeat: repeat-x;
+  opacity: 1;
+  transition: all $transition-short;
+  box-shadow: $shadow-small;
+  z-index: $z-zero;
+
+  .theme-dark & {
+    background-image: url('#{$image-path}loading-case-bottom-fill-dark.svg');
+  }
+
+  .loading--expanded & {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.loading__screen {
+  @include relative;
   @include border-radius($br-4);
   @include mar-bottom(1);
-  @include width-full;
   @include flex;
   @include flex-vertical;
   width: 42px;
@@ -46,13 +82,21 @@
   transition: all $transition-xxlong;
 
   .loading--expanded & {
-    @include mar-bottom(2);
+    @include mar-bottom(5);
     @include border-radius($br-16);
-    width: 368px;
-    padding: $spacer-8 $spacer-4;
+    width: calc(100vw-#{$spacer-7});
+    padding: $spacer-8 $spacer-8 ($spacer * 12);
+
+    @include breakpoint($screen-xsmall) {
+      width: 320px; 
+    }
 
     @include breakpoint($screen-small) {
-      @include pad(8);
+      width: 400px;
+    }
+
+    @include breakpoint($screen-large) {
+      padding: $spacer-8 $spacer-8 ($spacer * 14);
     }
   }
 }
@@ -64,41 +108,60 @@
 
   .loading--expanded & {
     @include square(56px);
-    @include mar-bottom(2);
+    // @include mar-bottom(2);
 
-    @include breakpoint($screen-small) {
+    @include breakpoint($screen-large) {
       @include square(72px);
     }
   }
 }
 
 .loading__header {
-  @include hidden;
+  @include absolute;
+  @include width-full;
   @include head-large;
-  transform: scaleY(#{-$spacer});
+  left: 0;
+  bottom: $spacer-7;
   opacity: 0;
-  transition: all $transition-default;
+  transition: all $duration-medium $timing-curves-default $duration-xlong;
+  
+  @include breakpoint($screen-large) {
+    bottom: $spacer-8;
+  }
 
   .loading--expanded & {
-    opacity: 0;
-    transform: scaleY(0);
+    bottom: $spacer-6;
+    opacity: 1;
+
+    @include breakpoint($screen-large) {
+      bottom: $spacer-7;
+    }
   }
 }
 
 .loading__message {
-  @include hidden;
+  @include absolute;
+  @include width-full;
   @include mar-bottom(1);
   @include head-xxsmall;
+  left: 0;
+  bottom: $spacer-4;
+  opacity: 0;
+  transition: all $duration-medium $timing-curves-default $duration-xxlong;
 
   .loading--expanded & {
-    // @include block;
+    bottom: $spacer-4;
+    opacity: 1;
+
+    @include breakpoint($screen-large) {
+      bottom: $spacer-5;
+    }
   }
 }
 
 .loading__progress {
   @include relative;
   @include border-radius($br-round);
-  @include width-full;
   width: 42px;
   height: $spacer-quarter;
   background-color: transparent;
@@ -106,9 +169,13 @@
 
   .loading--expanded & {
     @include block;
-    width: 320px;
+    @include width-full;
     height: $spacer;
     background-color: var(--color-surface-light);
+
+    @include breakpoint($screen-xsmall) {
+      width: 320px;
+    }
   }
 }
 
@@ -123,6 +190,10 @@
 
   .loading--expanded & {
     width: 0%;
+  }
+
+  &--transition-short {
+    transition: width $transition-short;
   }
 }
 

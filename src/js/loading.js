@@ -1,5 +1,6 @@
 function animateLoadingScreen() {
-  const animationSeen = localStorage.getItem("animationLoaded");
+  // const animationSeen = localStorage.getItem("animationLoaded");
+  const loadingContainer = document.querySelector(".js-loading");
   const loadingProgressBar = document.querySelector(".js-loading-progress-fill");
   const extensionOne = document.querySelector(".js-extension-1");
   const extensionTwo = document.querySelector(".js-extension-2");
@@ -7,54 +8,50 @@ function animateLoadingScreen() {
   const extensionFour = document.querySelector(".js-extension-4");
 
   function gotoHome() {
-    // window.open("/home/","_self");
+    window.open("/home/","_self");
   }
 
   function step1() {
-    loadingProgressBar.style.width = "10%";
+    loadingContainer.classList.add('loading--expanded');
   }
 
   function step2() {
+    loadingProgressBar.style.width = "10%";
+    loadingProgressBar.classList.add('loading__progress-fill--transition-short');
+  }
+
+  function step3() {
     loadingProgressBar.style.width = "20%";
     extensionOne.style.display = "inline-block";
   }
 
-  function step3() {
+  function step4() {
     loadingProgressBar.style.width = "60%";
     extensionTwo.style.display = "inline-block";
   }
 
-  function step4() {
+  function step5() {
     loadingProgressBar.style.width = "80%";
     extensionThree.style.display = "inline-block";
   }
 
-  function step5() {
+  function step6() {
     loadingProgressBar.style.width = "100%";
     extensionFour.style.display = "inline-block";
   }
 
-  function step6() {
+  function step7() {
     localStorage.setItem("animationLoaded", true);
     gotoHome();
   }
 
-  if (animationSeen == "true") {
-    // setTimeout(step2, 1);
-    // setTimeout(step3, 500);
-    // setTimeout(step4, 1500);
-    // setTimeout(step5, 2000);
-    // setTimeout(step6, 2150);
-  } 
-
-  else {
-    // setTimeout(step1, 1);
-    // setTimeout(step2, 500);
-    // setTimeout(step3, 1000);
-    // setTimeout(step4, 2500);
-    // setTimeout(step5, 3000);
-    // setTimeout(step6, 3150);
-  }
+  setTimeout(step1, 1000);
+  setTimeout(step2, 2000);
+  setTimeout(step3, 3500);
+  setTimeout(step4, 4000);
+  setTimeout(step5, 5500);
+  setTimeout(step6, 6000);
+  setTimeout(step7, 6150);
 }
 
 document.addEventListener("DOMContentLoaded", function() { 
