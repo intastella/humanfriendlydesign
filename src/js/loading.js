@@ -17,7 +17,6 @@ function animateLoadingScreen() {
 
   function step2() {
     loadingProgressBar.style.width = "10%";
-    loadingProgressBar.classList.add('loading__progress-fill--transition-short');
   }
 
   function step3() {
@@ -49,9 +48,9 @@ function animateLoadingScreen() {
   setTimeout(step2, 2000);
   setTimeout(step3, 3500);
   setTimeout(step4, 4000);
-  setTimeout(step5, 5500);
-  setTimeout(step6, 6000);
-  setTimeout(step7, 6150);
+  setTimeout(step5, 4500);
+  setTimeout(step6, 5500);
+  setTimeout(step7, 5750);
 }
 
 document.addEventListener("DOMContentLoaded", function() { 

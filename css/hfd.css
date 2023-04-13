@@ -1750,15 +1750,11 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   position: absolute;
   top: 0;
   background-color: var(--color-text-primary);
-  transition: all 1s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .loading--expanded .loading__progress-fill,
 .loading--expanded .loading__progress-disk {
   width: 0%;
-}
-.loading__progress-fill--transition-short,
-.loading__progress-disk--transition-short {
-  transition: width 0.15s ease-in-out;
 }
 
 .loading__progress-fill {

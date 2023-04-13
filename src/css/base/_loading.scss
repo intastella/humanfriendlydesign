@@ -186,14 +186,10 @@
   @include absolute;
   top: 0;
   background-color: var(--color-text-primary);
-  transition: all $transition-xxlong;
+  transition: all $transition-short;
 
   .loading--expanded & {
     width: 0%;
-  }
-
-  &--transition-short {
-    transition: width $transition-short;
   }
 }
 
