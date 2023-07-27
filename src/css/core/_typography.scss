@@ -1,17 +1,23 @@
 @mixin head-2xl {
+  font-family: $font-family-heading;
   font-size: $type-48;
   font-weight: $font-bold;
+  text-transform: uppercase;
+  line-height: 1;
 
-  @include breakpoint($screen-large) {
-    font-size: $type-64;
+  @include breakpoint($screen-medium) {
+    font-size: $type-96;
   }
 }
 
 @mixin head-xlarge {
+  font-family: $font-family-heading;
   font-size: $type-32;
   font-weight: $font-bold;
+  text-transform: uppercase;
+  line-height: 1;
 
-  @include breakpoint($screen-large) {
+  @include breakpoint($screen-medium) {
     font-size: $type-48;
   }
 }
@@ -20,7 +26,7 @@
   font-size: $type-24;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-large) {
+  @include breakpoint($screen-medium) {
     font-size: $type-32;
   }
 }
@@ -30,8 +36,8 @@
   font-size: $type-18;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-large) {
-    font-size: $type-24;
+  @include breakpoint($screen-medium) {
+    font-size: $type-22;
   }
 }
 
@@ -39,7 +45,7 @@
   font-size: $type-16;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-large) {
+  @include breakpoint($screen-medium) {
     font-size: $type-18;
   }
 }
@@ -48,7 +54,7 @@
   font-size: $type-14;
   font-weight: $font-medium;
 
-  @include breakpoint($screen-large) {
+  @include breakpoint($screen-medium) {
     font-size: $type-16;
   }
 }
@@ -57,33 +63,41 @@
   font-size: $type-12;
   font-weight: $font-medium;
 
-  @include breakpoint($screen-large) {
+  @include breakpoint($screen-medium) {
     font-size: $type-14;
   }
 }
 
-@mixin body-med {
+@mixin body-large {
   font-size: $type-16;
 
-  @include breakpoint($screen-large) {
+  @include breakpoint($screen-medium) {
     font-size: $type-18;
   }
 }
 
-@mixin footnote {
-  font-size: $type-12;
-  font-weight: $font-regular;
+@mixin body-med {
+  font-size: $type-14;
 
-  @include breakpoint($screen-large) {
-    font-size: $type-13;
+  @include breakpoint($screen-medium) {
+    font-size: $type-16;
   }
 }
 
-@mixin footnote-small {
+@mixin body-small {
+  font-size: $type-13;
+
+  @include breakpoint($screen-medium) {
+    font-size: $type-14;
+  }
+}
+
+@mixin footnote {
+  font-family: $font-family-monospace;
   font-size: $type-10;
   font-weight: $font-regular;
 
-  @include breakpoint($screen-large) {
+  @include breakpoint($screen-medium) {
     font-size: $type-11;
   }
 }

@@ -1,10 +1,12 @@
-$font-family-default: 'Sofia Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$font-weight-default: $font-light;
+$font-family-default: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-family-heading: 'Unbounded', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-family-monospace: 'Space Mono', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-weight-default: $font-regular;
 $font-weight-heading: $font-bold;
-$font-medium: 500;
+
 
 // Light Theme
-$color-page-bg: #F8F4EF;
+$color-page-bg: linear-gradient(180deg, #E3FF75 0%, #75DEFF 100%);
 $color-page-bg-blue: #EDF8FF;
 $color-page-bg-green: #ECFFE5;
 $color-page-bg-yellow: #FFFDD6;
@@ -16,17 +18,17 @@ $color-text-secondary: $grey-7;
 $color-icon-primary: $black;
 $color-icon-secondary: $grey-6;
 $color-link: $color-text-primary;
-$color-border-light: $grey-7;
-$color-border-dark: $black;
-$color-surface-light: $grey-1;
-$color-surface-dark: $grey-2;
+$color-border-light: rgba(0, 0, 0, 0.20);
+$color-border-dark: rgba(0, 0, 0, 0.40);
+$color-surface-light: rgba(255, 255, 255, 0.50);
+$color-surface-dark: rgba(255, 255, 255, 0.75);
 $color-accent: $grey-1;
 $color-accent-blue: #F1F6F9;
 $color-accent-green: #F3F9F1;
 $color-accent-yellow: #FEFDEC;
 $color-accent-pink: #FAF4F4;
 $color-accent-purple: #F8F4FB;
-$color-shadow: $black;
+$color-shadow: rgba(0,0,0,.1);
 
 
 // Dark Theme
@@ -55,9 +57,9 @@ $color-accent-purple-theme-dark: #4B3B59;
 $color-shadow-theme-dark: $grey-7;
 
 // Shadows
-$shadow-large: 5px 5px 0 var(--color-shadow);
-$shadow-medium: 3px 3px 0 var(--color-shadow);
-$shadow-small: 2px 2px 0 var(--color-shadow);
+$shadow-large: 0 5px 10px var(--color-shadow);
+$shadow-medium: 0 3px 10px var(--color-shadow);
+$shadow-small: 2px 2px 0px 0px var(--color-shadow);
 
 // Z-Index
 $z-zero: 0;
@@ -66,3 +68,13 @@ $z-tmpl-header: 9;
 $z-theme-menu-overlay: 10;
 $z-theme-menu-dropdown: 9999;
 $z-skip-to-main: 99999;
+
+// Transitions
+$timing-curves-default: cubic-bezier(0.075, 0.82, 0.165, 1);
+$transition-default: $duration-default $timing-curves-default;
+$transition-xshort: $duration-xshort $timing-curves-default;
+$transition-short: $duration-short $timing-curves-default;
+$transition-medium: $duration-medium $timing-curves-default;
+$transition-long: $duration-long $timing-curves-default;
+$transition-xlong: $duration-xlong $timing-curves-default;
+$transition-xxlong: $duration-xxlong $timing-curves-default;

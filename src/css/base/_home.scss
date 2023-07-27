@@ -1,12 +1,3 @@
 .home-heading {
-  margin-bottom: $spacer;
-  font-size: $type-32;
-
-  @include breakpoint($screen-small) {
-    font-size: $type-48;
-  }
-
-  @include breakpoint($screen-large) {
-    font-size: $type-64;
-  }
+  @include head-2xl;
 }

@@ -32,7 +32,7 @@
   transition: all $transition-short;
 
   &:hover {
-    transform: translate(-5px, -5px);
+    transform: translate(0, -2px);
     border: 1px solid var(--color-border-dark);
     box-shadow: $shadow-large;
   }

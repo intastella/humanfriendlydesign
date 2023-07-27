@@ -102,6 +102,7 @@ $pct-four-fifth: 80%;
 //                  TYPE SIZES
 // =============================================
 
+$type-96: 6rem !default;   //88px
 $type-88: 5.5rem !default;   //88px
 $type-72: 4.5rem !default;   //72px
 $type-64: 4rem !default;     //64px
@@ -163,19 +164,19 @@ $icon-64: 4rem;
 //                TRANSITIONS
 // =============================================
 
-$duration-xshort: 0.1s;
-$duration-short: 0.15s;
-$duration-medium: 0.25s;
-$duration-long: 0.5s;
-$duration-xlong: 0.75s;
-$duration-xxlong: 1s;
+$duration-xshort: 0.1s !default;
+$duration-short: 0.15s !default;
+$duration-medium: 0.25s !default;
+$duration-long: 0.5s !default;
+$duration-xlong: 0.75s !default;
+$duration-xxlong: 1s !default;
 $duration-default: $duration-medium;
 $timing-curves-default: ease-in-out;
 
-$transition-default: $duration-default $timing-curves-default;
-$transition-xshort: $duration-xshort $timing-curves-default;
-$transition-short: $duration-short $timing-curves-default;
-$transition-medium: $duration-medium $timing-curves-default;
-$transition-long: $duration-long $timing-curves-default;
-$transition-xlong: $duration-xlong $timing-curves-default;
-$transition-xxlong: $duration-xxlong $timing-curves-default;
+$transition-default: $duration-default $timing-curves-default !default;
+$transition-xshort: $duration-xshort $timing-curves-default !default;
+$transition-short: $duration-short $timing-curves-default !default;
+$transition-medium: $duration-medium $timing-curves-default !default;
+$transition-long: $duration-long $timing-curves-default !default;
+$transition-xlong: $duration-xlong $timing-curves-default !default;
+$transition-xxlong: $duration-xxlong $timing-curves-default !default;
