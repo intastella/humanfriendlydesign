@@ -15,7 +15,7 @@
   \************************/
 /***/ (() => {
 
-eval("function setWelcomeMessage() {\n  const welcomeMessageElement = document.querySelector(\".js-welcome-message\");\n  const currentDate = new Date();\n  const currentTime = currentDate.getHours();\n  var welcomeMessage;\n\n  if (welcomeMessageElement !== null) {\n    if (currentTime >= 0 && currentTime <= 11) {\n      welcomeMessage = \"Good morning!\";\n    }\n    if (currentTime >= 12 && currentTime <= 17) {\n      welcomeMessage = \"Good afternoon!\";\n    }\n    if (currentTime >= 18 && currentTime <= 23) {\n      welcomeMessage = \"Good evening!\";\n    }\n\n    welcomeMessageElement.textContent=welcomeMessage;\n  }\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", function() { \n  setWelcomeMessage();\n})\n\n//# sourceURL=webpack://humanfriendlydesign/./src/js/home.js?");
+eval("// function pageAnimations() {\n//   const logoElement = document.querySelector(\".js-tmpl-logo\");\n//   const navElement = document.querySelector(\".js-tmpl-nav\");\n//   const mainElement = document.querySelector(\".js-tmpl-main\");\n\n//   setTimeout(function() {\n//     logoElement.classList.add('tmpl-logo--on');\n//   }, 250);\n\n//   setTimeout(function() {\n//     mainElement.classList.add('tmpl-main--on');\n//   }, 500);\n\n//   setTimeout(function() {\n//     navElement.classList.add('tmpl-nav--on');\n//   }, 1000);\n// }\n\n// document.addEventListener(\"DOMContentLoaded\", function() { \n//   pageAnimations();\n// })\n\n//# sourceURL=webpack://humanfriendlydesign/./src/js/home.js?");
 
 /***/ })
 
