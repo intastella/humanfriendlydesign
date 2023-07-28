@@ -2,14 +2,21 @@ extends _tmpl
 
 block vars
   - var page = "home"
-  - var page_title = "Welcome Human 👋"
-  - var page_heading_classes = "home-heading js-welcome-message"
+  - var page_title = "Home"
 
 block content
-  section.tmpl-page-subsection
-    h1.tmpl-page-heading(class=page_heading_classes) #{page_title}
-    h2
-      | I’m Don, a product designer focused on design systems and building products in a human friendly way.
+  section.tmpl-page-subsection.home-welcome-message-section
+    .home-welcome-message
+      h1.tmpl-page-heading.home-heading(class=page_heading_classes)
+        | Welcome
+        br
+        | Human 👋
+      h2.home-subheading
+        | I’m Don, a product designer focused on design systems and building products in a human friendly way.
+
+    img#spline-desktop-static(src="/img/spline-desktop-static.png")
+    spline-viewer#spline-desktop-embed(loading-anim, url="https://prod.spline.design/fPQx3Bt-1fiGNaHE/scene.splinecode")
+
 
   section.tmpl-page-subsection
     .tmpl-page-subsection__header

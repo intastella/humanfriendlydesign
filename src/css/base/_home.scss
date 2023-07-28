@@ -1,3 +1,62 @@
+.home-welcome-message-section {
+  @include flex;
+  @include flex-cross-center;
+  flex-wrap: wrap;
+
+  @include breakpoint($screen-medium) {
+    min-height: 360px;
+  }
+
+  @include breakpoint($screen-large) {
+    min-height: 480px;
+  }
+}
+
+.home-welcome-message {
+  text-align: center;
+  z-index: $z-plus-one;
+
+  @include breakpoint($screen-medium) {
+    width: 60%;
+    text-align: left;
+  }
+}
+
 .home-heading {
   @include head-2xl;
+}
+
+.home-subheading {
+  @include breakpoint($screen-medium) {
+    width: 90%;
+  }
+}
+
+#spline-desktop-static {
+  @include center;
+  max-width: 480px;
+
+  @include breakpoint($screen-medium) {
+    @include hidden;
+  }
+}
+
+#spline-desktop-embed {
+  @include hidden;
+  @include center;
+  width: 560px;
+  height: 360px;
+
+  @include breakpoint($screen-medium) {
+    @include absolute;
+    @include block;
+    top: 0;
+    right: -32px;
+    margin: 0;
+  }
+
+  @include breakpoint($screen-large) {
+    top: 60px;
+    right: -48px;
+  }
 }

@@ -13,13 +13,16 @@
     <script src="/js/global.min.js"></script>
     <script src="/js/work.min.js"></script>
   </head>
-  <body><a class="tmpl-skip-to-main" href="#tmpl-content">Skip to main content</a><a class="tmpl-logo" href="/">
-      <svg class="tmpl-logo__smile" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <body>
+    <div id="granim-canvas-wrapper">
+      <canvas id="granim-canvas"></canvas>
+    </div><a class="tmpl-skip-to-main" href="#tmpl-content">Skip to main content</a><a class="tmpl-logo" href="/">
+      <svg class="tmpl-logo__smile" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 2V9" stroke-width="2" stroke-linecap="round"></path>
         <path d="M20 2V9" stroke-width="2" stroke-linecap="round"></path>
         <path d="M4 14.5C4 17.1667 5.6 22.5 12 22.5C18.4 22.5 20 17.1667 20 14.5" stroke-width="2" stroke-linecap="round" fill="none"></path>
       </svg>
-      <svg class="tmpl-logo__text" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="tmpl-logo__text" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M72.1876 45.4861H75.4038V42.5087H72.1876V40.5947H80V42.5087H76.9396V45.4861H80V47.4001H72.1876V45.4861Z"></path>
         <path d="M73.5492 50.968L77.9976 52.3745L77.4268 54.2004L72.9679 52.7905C72.0867 52.5119 71.4403 52.7886 71.17 53.6535C70.8996 54.5184 71.2657 55.1387 72.1469 55.4173L76.6058 56.8272L76.0351 58.6531L71.5868 57.2465C69.5272 56.5953 68.9619 54.8209 69.5026 53.0911C70.0466 51.3506 71.4896 50.3168 73.5492 50.968Z"></path>
         <path d="M66.0466 58.6497L72.4316 63.1772L71.1363 65.0252L65.4526 63.6928L68.6226 68.6112L67.3337 70.45L60.9486 65.9224L62.0452 64.3581L65.8744 67.0733L63.0519 62.9218L63.9368 61.6594L68.7883 62.9357L64.95 60.214L66.0466 58.6497Z"></path>
@@ -58,35 +61,37 @@
         </svg>
         <div class="tmpl-nav__link-label">Contact</div></a><a class="tmpl-nav__link-hidden" href="https://techhub.social/@intastella" rel="me"></a></nav>
     <main class="tmpl-main" role="main">
-      <div class="tmpl-page-heading-wrapper">
-        <h1 class="tmpl-page-heading">Lumin Cyber Exposure</h1><a class="tmpl-link-arrow tmpl-link-arrow--large tmpl-link-arrow--back" href="/work/" title="Back">
-          <svg class="tmpl-link-arrow__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z" stroke="none"></path>
-          </svg></a>
+      <div class="tmpl-content">
+        <div class="tmpl-page-heading-wrapper">
+          <h1 class="tmpl-page-heading">Lumin Cyber Exposure</h1><a class="tmpl-link-arrow tmpl-link-arrow--large tmpl-link-arrow--back" href="/work/" title="Back">
+            <svg class="tmpl-link-arrow__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z" stroke="none"></path>
+            </svg></a>
+        </div>
         <h1 class="tmpl-page-heading">Lumin Cyber Exposure</h1>
-      </div>
-      <div class="work-tags">Tags: <span class="tmpl-project__tag-item work-tag__item">UX</span><span class="tmpl-project__tag-item work-tag__item">Visualizations</span><span class="tmpl-project__tag-item work-tag__item">Wireframes</span></div>
-      <div class="tmpl-page-subsection tmpl-page-subsection--first">
-        <picture class="tmpl-project__thumbnail tmpl-project__thumbnail--xlarge">
-          <source media="(min-width: 1140px)" srcset="/img/Thumbnails/Tenable-Lumin-XLarge.png, /img/Thumbnails/Tenable-Lumin-XLarge@2x.png 2x">
-          <source media="(min-width: 600px)" srcset="/img/Thumbnails/Tenable-Lumin-Large.png, /img/Thumbnails/Tenable-Lumin-Large@2x.png 2x">
-          <source media="(min-width: 430px)" srcset="/img/Thumbnails/Tenable-Lumin-Medium.png, /img/Thumbnails/Tenable-Lumin-Medium@2x.png 2x">
-          <source srcset="/img/Thumbnails/Tenable-Lumin-Small.png, /img/Thumbnails/Tenable-Lumin-Small@2x.png 2x"><img src="/img/Thumbnails/Tenable-Lumin-Large.png" alt="Lumin Cyber Exposure Dashboard">
-        </picture>
-      </div>
-      <div class="tmpl-page-subsection">
-        <h2>Challenge</h2>
-        <p>Tenable was in a unique position of providing an extreme amount of data about cyber security vulnerabilities within a customer's network, but much of it was hidden behind esoteric tables and filters. As such, our current vulnerability management product was only suited to a highly technical and engaged customer. Product and design set out to provide a ten thousand foot view of your cyber exposure, visualizing it so that our customers could hone in on the areas that needed the most investment of time and resources.</p>
-      </div>
-      <div class="tmpl-page-subsection">
-        <h2>Process</h2>
-        <p>We identified additional personas that should be served by this new visualization product. Network security managers and CISOs (Chief Information Security Officer) were a particular target for this product, though the engineers remediating vulnerabilities would be able to utilize it as well to target their time. A wireframe document was put together to provide a vision for how this visualization would generally look, work and improve on the tedious task of identifying and remediating network vulnerabilities.</p>
-        <div class="work-samples"><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-002.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-002.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-004.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-004.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-005.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-005.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-006.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-006.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-007.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-007.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-008.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-008.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-009.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-009.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-011.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-011.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-014.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-014.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-015.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-015.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-016.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-016.png"></a></div>
-      </div>
-      <div class="tmpl-page-subsection">
-        <h2>Solution</h2>
-        <p>After many months of collaborating with product on wireframes our vision was complete, but after review with engineering, data science and leadership, it was determined that we should start smaller. While the fully navigable asset map we envisioned was our goal, engineering and data science would have months/years of work to be able to enable this. We scaled down the effort into a series of dashboards that could visualize the data we were able to generate from the new advanced data we were generating. The result was is a layer of information on top of the customer's existing vulnerability data, showing them how they are doing over time in remediating vulnerabilities and allowing them to focus on the highest priority issues.</p>
-        <div class="work-samples"><a class="work-sample-link" href="/img/Work/Tenable-Lumin-012.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-012.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-013.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-013.png"></a></div>
+        <div class="work-tags">Tags: <span class="tmpl-project__tag-item work-tag__item">UX</span><span class="tmpl-project__tag-item work-tag__item">Visualizations</span><span class="tmpl-project__tag-item work-tag__item">Wireframes</span></div>
+        <div class="tmpl-page-subsection tmpl-page-subsection--first">
+          <picture class="tmpl-project__thumbnail tmpl-project__thumbnail--xlarge">
+            <source media="(min-width: 1140px)" srcset="/img/Thumbnails/Tenable-Lumin-XLarge.png, /img/Thumbnails/Tenable-Lumin-XLarge@2x.png 2x">
+            <source media="(min-width: 600px)" srcset="/img/Thumbnails/Tenable-Lumin-Large.png, /img/Thumbnails/Tenable-Lumin-Large@2x.png 2x">
+            <source media="(min-width: 430px)" srcset="/img/Thumbnails/Tenable-Lumin-Medium.png, /img/Thumbnails/Tenable-Lumin-Medium@2x.png 2x">
+            <source srcset="/img/Thumbnails/Tenable-Lumin-Small.png, /img/Thumbnails/Tenable-Lumin-Small@2x.png 2x"><img src="/img/Thumbnails/Tenable-Lumin-Large.png" alt="Lumin Cyber Exposure Dashboard">
+          </picture>
+        </div>
+        <div class="tmpl-page-subsection">
+          <h2>Challenge</h2>
+          <p>Tenable was in a unique position of providing an extreme amount of data about cyber security vulnerabilities within a customer's network, but much of it was hidden behind esoteric tables and filters. As such, our current vulnerability management product was only suited to a highly technical and engaged customer. Product and design set out to provide a ten thousand foot view of your cyber exposure, visualizing it so that our customers could hone in on the areas that needed the most investment of time and resources.</p>
+        </div>
+        <div class="tmpl-page-subsection">
+          <h2>Process</h2>
+          <p>We identified additional personas that should be served by this new visualization product. Network security managers and CISOs (Chief Information Security Officer) were a particular target for this product, though the engineers remediating vulnerabilities would be able to utilize it as well to target their time. A wireframe document was put together to provide a vision for how this visualization would generally look, work and improve on the tedious task of identifying and remediating network vulnerabilities.</p>
+          <div class="work-samples"><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-002.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-002.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-004.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-004.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-005.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-005.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-006.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-006.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-007.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-007.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-008.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-008.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-009.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-009.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-Wireframe-011.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-Wireframe-011.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-014.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-014.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-015.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-015.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-016.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-016.png"></a></div>
+        </div>
+        <div class="tmpl-page-subsection">
+          <h2>Solution</h2>
+          <p>After many months of collaborating with product on wireframes our vision was complete, but after review with engineering, data science and leadership, it was determined that we should start smaller. While the fully navigable asset map we envisioned was our goal, engineering and data science would have months/years of work to be able to enable this. We scaled down the effort into a series of dashboards that could visualize the data we were able to generate from the new advanced data we were generating. The result was is a layer of information on top of the customer's existing vulnerability data, showing them how they are doing over time in remediating vulnerabilities and allowing them to focus on the highest priority issues.</p>
+          <div class="work-samples"><a class="work-sample-link" href="/img/Work/Tenable-Lumin-012.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-012.png"></a><a class="work-sample-link" href="/img/Work/Tenable-Lumin-013.png"><img loading="lazy" src="/img/Work/Tenable-Lumin-013.png"></a></div>
+        </div>
       </div>
     </main>
   </body>

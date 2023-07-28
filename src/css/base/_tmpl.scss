@@ -1,3 +1,21 @@
+#granim-canvas-wrapper {
+  @include absolute;
+  @include square(100%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#granim-canvas {
+  @include absolute;
+  @include square(100%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .tmpl-skip-to-main {
   @include hidden;
   @include fixed;
@@ -17,13 +35,14 @@
 
 .tmpl-logo {
   @include fixed;
-  @include hidden;
   top: $spacer-3;
-  left: $spacer-4;
-  width: 80px;
-  height: 80px;
+  left: 50%;
+  margin-left: -32px;
+  width: 64px;
+  height: 64px;
   color: var(--color-border-dark);
   transition: all $transition-xlong;
+  z-index: $z-tmpl-header;
 
   &:hover {
     color: var(--color-text-primary);
@@ -31,19 +50,33 @@
   }
 
   @include breakpoint($screen-medium) {
-    @include block;
+    top: $spacer-4;
+    left: $spacer-4;
+    margin-left: 0;
+  }
+
+  @include breakpoint($screen-large) {
+    top: $spacer-3;
+    width: 80px;
+    height: 80px;
   }
 }
 
 .tmpl-logo__smile {
   @include absolute;
-  @include icon(24px);
-  top: 28px;
-  left: 28px;
+  @include icon(18px);
+  top: 24px;
+  left: 24px;
   transition: all $transition-xlong;
 
   .tmpl-logo:hover & {
     transform: scale(0.9);
+  }
+
+  @include breakpoint($screen-large) {
+    @include icon(24px);
+    top: 28px;
+    left: 28px;
   }
 }
 
@@ -66,13 +99,14 @@
   background: var(--color-surface-light);
   box-shadow: $shadow-small;
   backdrop-filter: blur(8px);
-  z-index: $z-theme-menu-dropdown;
+  z-index: $z-tmpl-header;
   transition: all $transition-long;
 
   @include breakpoint($screen-medium) {
     top: 32px;
-    left: 33%;
-    width: 33%;
+    left: 50%;
+    width: 376px;
+    margin-left: -188px;;
   }
 
   &:hover {
@@ -129,13 +163,22 @@
 }
 
 .tmpl-main {
+  @include relative;
+  @include square(100%);
+  @include overflow-x-hidden-scroll-y;
+}
+
+.tmpl-content {
   @include center;
-  @include width-full;
-  max-width: 1024px; // 960px + 32px left and right padding;
-  padding: $spacer-3 $spacer-3 $spacer-3 $spacer-3;
-  
+  max-width: $screen-large;
+  padding: 112px $spacer-3 $spacer-3 $spacer-3;
+
   @include breakpoint($screen-medium) {
-    padding: 216px $spacer-4 $spacer-4 $spacer-4;
+    padding: 128px $spacer-4 $spacer-4 $spacer-4;
+  }
+  
+  @include breakpoint($screen-large) {
+    padding: 144px $spacer-4 $spacer-4 $spacer-4;
   }
 }
 
@@ -148,9 +191,10 @@
 }
 
 .tmpl-page-subsection {
+  @include relative;
   @include mar-top(4);
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-medium) {
     @include mar-top(15);
   }
 

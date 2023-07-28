@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Welcome Human 👋 | Human Friendly Design</title>
+    <title>Home | Human Friendly Design</title>
     <meta name="description" content="UX Design by Don Osborne">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="apple-mobile-web-app-title" content="HFD">
@@ -11,14 +11,18 @@
     <link rel="apple-touch-icon" href="/img/apple-touch.png">
     <link rel="stylesheet" href="/css/hfd.min.css">
     <script src="/js/global.min.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.391/build/spline-viewer.js"></script>
   </head>
-  <body><a class="tmpl-skip-to-main" href="#tmpl-content">Skip to main content</a><a class="tmpl-logo" href="/">
-      <svg class="tmpl-logo__smile" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <body>
+    <div id="granim-canvas-wrapper">
+      <canvas id="granim-canvas"></canvas>
+    </div><a class="tmpl-skip-to-main" href="#tmpl-content">Skip to main content</a><a class="tmpl-logo" href="/">
+      <svg class="tmpl-logo__smile" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 2V9" stroke-width="2" stroke-linecap="round"></path>
         <path d="M20 2V9" stroke-width="2" stroke-linecap="round"></path>
         <path d="M4 14.5C4 17.1667 5.6 22.5 12 22.5C18.4 22.5 20 17.1667 20 14.5" stroke-width="2" stroke-linecap="round" fill="none"></path>
       </svg>
-      <svg class="tmpl-logo__text" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="tmpl-logo__text" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M72.1876 45.4861H75.4038V42.5087H72.1876V40.5947H80V42.5087H76.9396V45.4861H80V47.4001H72.1876V45.4861Z"></path>
         <path d="M73.5492 50.968L77.9976 52.3745L77.4268 54.2004L72.9679 52.7905C72.0867 52.5119 71.4403 52.7886 71.17 53.6535C70.8996 54.5184 71.2657 55.1387 72.1469 55.4173L76.6058 56.8272L76.0351 58.6531L71.5868 57.2465C69.5272 56.5953 68.9619 54.8209 69.5026 53.0911C70.0466 51.3506 71.4896 50.3168 73.5492 50.968Z"></path>
         <path d="M66.0466 58.6497L72.4316 63.1772L71.1363 65.0252L65.4526 63.6928L68.6226 68.6112L67.3337 70.45L60.9486 65.9224L62.0452 64.3581L65.8744 67.0733L63.0519 62.9218L63.9368 61.6594L68.7883 62.9357L64.95 60.214L66.0466 58.6497Z"></path>
@@ -57,48 +61,51 @@
         </svg>
         <div class="tmpl-nav__link-label">Contact</div></a><a class="tmpl-nav__link-hidden" href="https://techhub.social/@intastella" rel="me"></a></nav>
     <main class="tmpl-main" role="main">
-      <div class="tmpl-page-heading-wrapper">
+      <div class="tmpl-content">
+        <section class="tmpl-page-subsection home-welcome-message-section">
+          <div class="home-welcome-message">
+            <h1 class="tmpl-page-heading home-heading">Welcome<br>Human 👋</h1>
+            <h2 class="home-subheading">I’m Don, a product designer focused on design systems and building products in a human friendly way.</h2>
+          </div><img id="spline-desktop-static" src="/img/spline-desktop-static.png">
+          <spline-viewer id="spline-desktop-embed" loading-anim url="https://prod.spline.design/fPQx3Bt-1fiGNaHE/scene.splinecode"></spline-viewer>
+        </section>
+        <section class="tmpl-page-subsection">
+          <div class="tmpl-page-subsection__header">
+            <h3 class="tmpl-page-subsection__header-title">Recent work</h3><a class="tmpl-page-subsection__header-link" href="/work/">View all
+              <svg class="tmpl-page-subsection__header-link-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66967 4.2497C9.96256 3.95681 10.4374 3.95681 10.7303 4.2497L15.5303 9.0497C15.8232 9.34259 15.8232 9.81747 15.5303 10.1104L10.7303 14.9104C10.4374 15.2033 9.96256 15.2033 9.66967 14.9104C9.37678 14.6175 9.37678 14.1426 9.66967 13.8497L13.1893 10.33H3C2.58579 10.33 2.25 9.99424 2.25 9.58003C2.25 9.16582 2.58579 8.83003 3 8.83003H13.1893L9.66967 5.31036C9.37678 5.01747 9.37678 4.54259 9.66967 4.2497Z" stroke="none"></path>
+              </svg></a>
+          </div>
+          <div class="tmpl-project-row"><a class="tmpl-project" href="/work/eureka-design-system/">
+              <picture class="tmpl-project__thumbnail tmpl-project__thumbnail--small">
+                <source media="(min-width: 600px)" srcset="/img/Thumbnails/GO2bank_App_Large.png, /img/Thumbnails/GO2bank_App_Large@2x.png 2x">
+                <source media="(min-width: 430px)" srcset="/img/Thumbnails/GO2bank_App_Medium.png, /img/Thumbnails/GO2bank_App_Medium@2x.png 2x">
+                <source srcset="/img/Thumbnails/GO2bank_App_Small.png, /img/Thumbnails/GO2bank_App_Small@2x.png 2x"><img src="/img/Thumbnails/GO2bank_App_Large.png" alt="GO2bank Small App Screens">
+              </picture>
+              <div class="tmpl-project__details">
+                <div class="tmpl-project__title">GO2bank Mobile App</div>
+                <div class="tmpl-project__desc">4.8 stars on the iOS App Store</div>
+              </div></a><a class="tmpl-project" href="/work/eureka-design-system/">
+              <picture class="tmpl-project__thumbnail tmpl-project__thumbnail--small">
+                <source media="(min-width: 600px)" srcset="/img/Thumbnails/EDS_Large.png, /img/Thumbnails/EDS_Large@2x.png 2x">
+                <source media="(min-width: 430px)" srcset="/img/Thumbnails/EDS_Medium.png, /img/Thumbnails/EDS_Medium@2x.png 2x">
+                <source srcset="/img/Thumbnails/EDS_Small.png, /img/Thumbnails/EDS_Small@2x.png 2x"><img loading="lazy" src="/img/Thumbnails/EDS_Large.png" alt="Eureka Design System Screens">
+              </picture>
+              <div class="tmpl-project__details">
+                <div class="tmpl-project__title">Eureka Design System</div>
+                <div class="tmpl-project__desc">Powering 10+ Green Dot brands</div>
+              </div></a><a class="tmpl-project" href="/work/flex-web/">
+              <picture class="tmpl-project__thumbnail tmpl-project__thumbnail--small">
+                <source media="(min-width: 600px)" srcset="/img/Thumbnails/Flex-Web-Large.png, /img/Thumbnails/Flex-Web-Large@2x.png 2x">
+                <source media="(min-width: 430px)" srcset="/img/Thumbnails/Flex-Web-Medium.png, /img/Thumbnails/Flex-Web-Medium@2x.png 2x">
+                <source srcset="/img/Thumbnails/Flex-Web-Small.png, /img/Thumbnails/Flex-Web-Small@2x.png 2x"><img loading="lazy" src="/img/Thumbnails/Flex-Web-Large.png" alt="Flex Web Design System Screens">
+              </picture>
+              <div class="tmpl-project__details">
+                <div class="tmpl-project__title">Flex Web Design System</div>
+                <div class="tmpl-project__desc">Front end Web Framework</div>
+              </div></a></div>
+        </section>
       </div>
-      <section class="tmpl-page-subsection">
-        <h1 class="tmpl-page-heading home-heading js-welcome-message">Welcome Human 👋</h1>
-        <h2>I’m Don, a product designer focused on design systems and building products in a human friendly way.</h2>
-      </section>
-      <section class="tmpl-page-subsection">
-        <div class="tmpl-page-subsection__header">
-          <h3 class="tmpl-page-subsection__header-title">Recent work</h3><a class="tmpl-page-subsection__header-link" href="/work/">View all
-            <svg class="tmpl-page-subsection__header-link-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66967 4.2497C9.96256 3.95681 10.4374 3.95681 10.7303 4.2497L15.5303 9.0497C15.8232 9.34259 15.8232 9.81747 15.5303 10.1104L10.7303 14.9104C10.4374 15.2033 9.96256 15.2033 9.66967 14.9104C9.37678 14.6175 9.37678 14.1426 9.66967 13.8497L13.1893 10.33H3C2.58579 10.33 2.25 9.99424 2.25 9.58003C2.25 9.16582 2.58579 8.83003 3 8.83003H13.1893L9.66967 5.31036C9.37678 5.01747 9.37678 4.54259 9.66967 4.2497Z" stroke="none"></path>
-            </svg></a>
-        </div>
-        <div class="tmpl-project-row"><a class="tmpl-project" href="/work/eureka-design-system/">
-            <picture class="tmpl-project__thumbnail tmpl-project__thumbnail--small">
-              <source media="(min-width: 600px)" srcset="/img/Thumbnails/GO2bank_App_Large.png, /img/Thumbnails/GO2bank_App_Large@2x.png 2x">
-              <source media="(min-width: 430px)" srcset="/img/Thumbnails/GO2bank_App_Medium.png, /img/Thumbnails/GO2bank_App_Medium@2x.png 2x">
-              <source srcset="/img/Thumbnails/GO2bank_App_Small.png, /img/Thumbnails/GO2bank_App_Small@2x.png 2x"><img src="/img/Thumbnails/GO2bank_App_Large.png" alt="GO2bank Small App Screens">
-            </picture>
-            <div class="tmpl-project__details">
-              <div class="tmpl-project__title">GO2bank Mobile App</div>
-              <div class="tmpl-project__desc">4.8 stars on the iOS App Store</div>
-            </div></a><a class="tmpl-project" href="/work/eureka-design-system/">
-            <picture class="tmpl-project__thumbnail tmpl-project__thumbnail--small">
-              <source media="(min-width: 600px)" srcset="/img/Thumbnails/EDS_Large.png, /img/Thumbnails/EDS_Large@2x.png 2x">
-              <source media="(min-width: 430px)" srcset="/img/Thumbnails/EDS_Medium.png, /img/Thumbnails/EDS_Medium@2x.png 2x">
-              <source srcset="/img/Thumbnails/EDS_Small.png, /img/Thumbnails/EDS_Small@2x.png 2x"><img loading="lazy" src="/img/Thumbnails/EDS_Large.png" alt="Eureka Design System Screens">
-            </picture>
-            <div class="tmpl-project__details">
-              <div class="tmpl-project__title">Eureka Design System</div>
-              <div class="tmpl-project__desc">Powering 10+ Green Dot brands</div>
-            </div></a><a class="tmpl-project" href="/work/flex-web/">
-            <picture class="tmpl-project__thumbnail tmpl-project__thumbnail--small">
-              <source media="(min-width: 600px)" srcset="/img/Thumbnails/Flex-Web-Large.png, /img/Thumbnails/Flex-Web-Large@2x.png 2x">
-              <source media="(min-width: 430px)" srcset="/img/Thumbnails/Flex-Web-Medium.png, /img/Thumbnails/Flex-Web-Medium@2x.png 2x">
-              <source srcset="/img/Thumbnails/Flex-Web-Small.png, /img/Thumbnails/Flex-Web-Small@2x.png 2x"><img loading="lazy" src="/img/Thumbnails/Flex-Web-Large.png" alt="Flex Web Design System Screens">
-            </picture>
-            <div class="tmpl-project__details">
-              <div class="tmpl-project__title">Flex Web Design System</div>
-              <div class="tmpl-project__desc">Front end Web Framework</div>
-            </div></a></div>
-      </section>
     </main>
   </body>
 </html>

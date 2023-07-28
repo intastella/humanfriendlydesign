@@ -30,24 +30,26 @@ html(lang='en')
     script(src='/js/global'+ asset_min +'.js')
     if page === "loading"
       script(src='/js/loading'+ asset_min +'.js')
-    //- if page === "home"
+    if page === "home"
+      script(type="module", src="https://unpkg.com/@splinetool/viewer@0.9.391/build/spline-viewer.js")
     //-   script(src='/js/home'+ asset_min +'.js')
     if page === "work"
       script(src='/js/work'+ asset_min +'.js')
 
   body
+    #granim-canvas-wrapper
+      canvas#granim-canvas
     a.tmpl-skip-to-main(href="#tmpl-content") Skip to main content
-
     if page === "loading"
       main.tmpl-main-loading(role='main')
         block content
     else
       a.tmpl-logo(href="/")
-        svg.tmpl-logo__smile(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+        svg.tmpl-logo__smile(viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
           path(d="M4 2V9", stroke-width="2", stroke-linecap="round")
           path(d="M20 2V9", stroke-width="2", stroke-linecap="round")
           path(d="M4 14.5C4 17.1667 5.6 22.5 12 22.5C18.4 22.5 20 17.1667 20 14.5", stroke-width="2", stroke-linecap="round" fill="none")
-        svg.tmpl-logo__text(width="80", height="80", viewBox="0 0 80 80", fill="none", xmlns="http://www.w3.org/2000/svg")
+        svg.tmpl-logo__text(viewBox="0 0 80 80", fill="none", xmlns="http://www.w3.org/2000/svg")
           path(d="M72.1876 45.4861H75.4038V42.5087H72.1876V40.5947H80V42.5087H76.9396V45.4861H80V47.4001H72.1876V45.4861Z")
           path(d="M73.5492 50.968L77.9976 52.3745L77.4268 54.2004L72.9679 52.7905C72.0867 52.5119 71.4403 52.7886 71.17 53.6535C70.8996 54.5184 71.2657 55.1387 72.1469 55.4173L76.6058 56.8272L76.0351 58.6531L71.5868 57.2465C69.5272 56.5953 68.9619 54.8209 69.5026 53.0911C70.0466 51.3506 71.4896 50.3168 73.5492 50.968Z")
           path(d="M66.0466 58.6497L72.4316 63.1772L71.1363 65.0252L65.4526 63.6928L68.6226 68.6112L67.3337 70.45L60.9486 65.9224L62.0452 64.3581L65.8744 67.0733L63.0519 62.9218L63.9368 61.6594L68.7883 62.9357L64.95 60.214L66.0466 58.6497Z")
@@ -86,14 +88,15 @@ html(lang='en')
           .tmpl-nav__link-label Contact
         a.tmpl-nav__link-hidden(href="https://techhub.social/@intastella", rel="me")
       main.tmpl-main(role='main')
-        .tmpl-page-heading-wrapper
+        .tmpl-content
           if page === "work" && page_title !== "Work"
-            h1.tmpl-page-heading(class=page_heading_classes) #{page_title}
-            a(href="/work/" title="Back").tmpl-link-arrow.tmpl-link-arrow--large.tmpl-link-arrow--back
-              svg.tmpl-link-arrow__icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
-                path(fill-rule="evenodd", clip-rule="evenodd", d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z", stroke="none")
+            .tmpl-page-heading-wrapper
+              h1.tmpl-page-heading(class=page_heading_classes) #{page_title}
+              a(href="/work/" title="Back").tmpl-link-arrow.tmpl-link-arrow--large.tmpl-link-arrow--back
+                svg.tmpl-link-arrow__icon(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+                  path(fill-rule="evenodd", clip-rule="evenodd", d="M10.9303 5.06977C11.2232 5.36266 11.2232 5.83753 10.9303 6.13043L5.81066 11.2501H20C20.4142 11.2501 20.75 11.5859 20.75 12.0001C20.75 12.4143 20.4142 12.7501 20 12.7501H5.81066L10.9303 17.8698C11.2232 18.1627 11.2232 18.6375 10.9303 18.9304C10.6374 19.2233 10.1626 19.2233 9.86967 18.9304L3.46967 12.5304C3.17678 12.2375 3.17678 11.7627 3.46967 11.4698L9.86967 5.06977C10.1626 4.77687 10.6374 4.77687 10.9303 5.06977Z", stroke="none")
 
           if page !== "home"
             h1.tmpl-page-heading(class=page_heading_classes) #{page_title}
-          
-        block content
+            
+          block content

@@ -5,8 +5,8 @@
   text-transform: uppercase;
   line-height: 1;
 
-  @include breakpoint($screen-medium) {
-    font-size: $type-96;
+  @include breakpoint($screen-large) {
+    font-size: 5rem;
   }
 }
 
@@ -17,7 +17,7 @@
   text-transform: uppercase;
   line-height: 1;
 
-  @include breakpoint($screen-medium) {
+  @include breakpoint($screen-large) {
     font-size: $type-48;
   }
 }
@@ -26,8 +26,8 @@
   font-size: $type-24;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-medium) {
-    font-size: $type-32;
+  @include breakpoint($screen-large) {
+    font-size: $type-30;
   }
 }
 
@@ -36,7 +36,7 @@
   font-size: $type-18;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-medium) {
+  @include breakpoint($screen-large) {
     font-size: $type-22;
   }
 }
@@ -45,7 +45,7 @@
   font-size: $type-16;
   font-weight: $font-bold;
 
-  @include breakpoint($screen-medium) {
+  @include breakpoint($screen-large) {
     font-size: $type-18;
   }
 }
@@ -54,7 +54,7 @@
   font-size: $type-14;
   font-weight: $font-medium;
 
-  @include breakpoint($screen-medium) {
+  @include breakpoint($screen-large) {
     font-size: $type-16;
   }
 }
@@ -63,7 +63,7 @@
   font-size: $type-12;
   font-weight: $font-medium;
 
-  @include breakpoint($screen-medium) {
+  @include breakpoint($screen-large) {
     font-size: $type-14;
   }
 }
@@ -71,7 +71,7 @@
 @mixin body-large {
   font-size: $type-16;
 
-  @include breakpoint($screen-medium) {
+  @include breakpoint($screen-large) {
     font-size: $type-18;
   }
 }
@@ -79,7 +79,7 @@
 @mixin body-med {
   font-size: $type-14;
 
-  @include breakpoint($screen-medium) {
+  @include breakpoint($screen-large) {
     font-size: $type-16;
   }
 }
@@ -87,7 +87,7 @@
 @mixin body-small {
   font-size: $type-13;
 
-  @include breakpoint($screen-medium) {
+  @include breakpoint($screen-large) {
     font-size: $type-14;
   }
 }
@@ -97,7 +97,7 @@
   font-size: $type-10;
   font-weight: $font-regular;
 
-  @include breakpoint($screen-medium) {
+  @include breakpoint($screen-large) {
     font-size: $type-11;
   }
 }
