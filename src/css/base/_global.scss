@@ -98,6 +98,7 @@ picture {
 html,
 body {
   @include flex;
+  @include flex-vertical;
   @include square(100%);
   background: var(--color-page-bg);
   font-family: $font-family-default;

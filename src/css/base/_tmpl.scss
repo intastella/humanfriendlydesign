@@ -181,6 +181,7 @@
 }
 
 .tmpl-main {
+  @include flex-fluid;
   @include relative;
   @include square(100%);
   @include overflow-x-hidden-scroll-y;
@@ -399,4 +400,33 @@
   &:first-of-type {
     @include mar-left(0);
   }
+}
+
+.tmpl-footer {
+  @include width-full;
+  @include center;
+  @include flex;
+  @include flex-cross-center;
+  @include pad-top(1);
+  @include pad-bottom(1);
+  @include footnote;
+  z-index: $z-plus-one;
+  line-height: 1;;
+  justify-content: space-between;
+  max-width: 1024px;
+  border-top: 1px solid rgba(0,0,0,0.2)
+}
+
+.tmpl-footer__git {
+  @include flex;
+  @include flex-cross-center;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.tmpl-footer__git-icon {
+  @include icon(16px);
+  @include mar-right(0.5);
 }

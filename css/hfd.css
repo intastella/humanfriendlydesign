@@ -718,6 +718,7 @@ picture {
 html,
 body {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   background: var(--color-page-bg);
@@ -1032,6 +1033,7 @@ h6 {
 }
 
 .tmpl-main {
+  flex: 1 1 auto;
   position: relative;
   width: 100%;
   height: 100%;
@@ -1282,6 +1284,45 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 .tmpl-project__tag-item:first-of-type {
   margin-left: 0;
+}
+
+.tmpl-footer {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-family: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 0.625rem;
+  font-weight: normal;
+  z-index: 1;
+  line-height: 1;
+  justify-content: space-between;
+  max-width: 1024px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 1024px) {
+  .tmpl-footer {
+    font-size: 0.6875rem;
+  }
+}
+
+.tmpl-footer__git {
+  display: flex;
+  align-items: center;
+}
+.tmpl-footer__git:hover, .tmpl-footer__git:focus {
+  text-decoration: underline;
+}
+
+.tmpl-footer__git-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  stroke: currentColor;
+  margin-right: 4px;
 }
 
 .tmpl-main-loading {

@@ -138,12 +138,12 @@ function pageAnimations() {
   }, 250);
 
   setTimeout(function() {
-    mainElement.classList.add('tmpl-main--on');
+    navElement.classList.add('tmpl-nav--on');
   }, 500);
 
   setTimeout(function() {
-    navElement.classList.add('tmpl-nav--on');
-  }, 1000);
+    mainElement.classList.add('tmpl-main--on');
+  }, 750);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
