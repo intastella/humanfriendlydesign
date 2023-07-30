@@ -48,7 +48,7 @@
   }
 }
 
-#spline-desktop-static {
+.spline-desktop-static {
   @include center;
   max-width: 480px;
 
@@ -57,18 +57,31 @@
   }
 }
 
-#spline-desktop-embed {
+.spline-desktop-embed {
   @include hidden;
   @include center;
   width: 560px;
   height: 360px;
+  transition: all $transition-xlong;
+  transform: scale(0.75);
 
   @include breakpoint($screen-medium) {
     @include absolute;
-    @include block;
     top: 0;
     right: -32px;
     margin: 0;
+    opacity: 0;
+  }
+
+  &--on {
+    @include breakpoint($screen-medium) {
+      @include block;
+    }
+  }
+
+  &--visible {
+    opacity: 1;
+    transform: scale(1);
   }
 
   @include breakpoint($screen-large) {
@@ -80,6 +93,7 @@
 .home-intro-stats {
   @include flex;
   @include flex-vertical;
+  flex-wrap: wrap;
   gap: $spacer-2;
 
   @include breakpoint($screen-medium) {

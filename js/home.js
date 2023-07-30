@@ -15,7 +15,7 @@
   \************************/
 /***/ (() => {
 
-eval("// function pageAnimations() {\n//   const logoElement = document.querySelector(\".js-tmpl-logo\");\n//   const navElement = document.querySelector(\".js-tmpl-nav\");\n//   const mainElement = document.querySelector(\".js-tmpl-main\");\n\n//   setTimeout(function() {\n//     logoElement.classList.add('tmpl-logo--on');\n//   }, 250);\n\n//   setTimeout(function() {\n//     mainElement.classList.add('tmpl-main--on');\n//   }, 500);\n\n//   setTimeout(function() {\n//     navElement.classList.add('tmpl-nav--on');\n//   }, 1000);\n// }\n\n// document.addEventListener(\"DOMContentLoaded\", function() { \n//   pageAnimations();\n// })\n\n//# sourceURL=webpack://humanfriendlydesign/./src/js/home.js?");
+eval("function homePageAnimations() {\n  const splineEmbed = document.querySelector(\".spline-desktop-embed\");\n\n  setTimeout(function() {\n    splineEmbed.classList.add('spline-desktop-embed--on');\n  }, 1);\n\n  setTimeout(function() {\n    splineEmbed.classList.add('spline-desktop-embed--visible');\n  }, 750);\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", function() { \n  homePageAnimations();\n})\n\n//# sourceURL=webpack://humanfriendlydesign/./src/js/home.js?");
 
 /***/ })
 
