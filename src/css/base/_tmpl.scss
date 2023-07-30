@@ -230,6 +230,14 @@
       @include mar-top(0);
     }
   }
+
+  &--first {
+    @include mar-top(3);
+
+    @include breakpoint($screen-small) {
+      @include mar-top(5);
+    }
+  }
 }
 
 .tmpl-page-subsection__header {
@@ -286,7 +294,7 @@
     left: -45px;
     margin-top: -18.5px;
 
-    @include breakpoint(946px) {
+    @include breakpoint(1200px) {
       @include block;
     }
   }
@@ -357,6 +365,7 @@
 
 .tmpl-project__thumbnail {
   @include block;
+  @include border-radius(24px);
   transition: all $transition-xlong;
   
   &--small {
