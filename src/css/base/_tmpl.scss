@@ -1,5 +1,5 @@
 #granim-canvas-wrapper {
-  @include absolute;
+  @include fixed;
   @include square(100%);
   top: 0;
   right: 0;
@@ -97,7 +97,7 @@
   @include flex;
   @include flex-cross-center;
   @include border-radius($br-round);
-  bottom: -64px;
+  bottom: -72px;
   left: $spacer-2;
   width: calc(100vw - $spacer-4);
   height: 64px;
@@ -110,7 +110,7 @@
   transition: all $transition-long;
 
   @include breakpoint($screen-medium) {
-    top: -64px;
+    top: -72px;
     bottom: auto;
     left: 50%;
     width: 376px;
@@ -181,10 +181,8 @@
 }
 
 .tmpl-main {
-  @include flex-fluid;
+  @include flex-grow;
   @include relative;
-  @include square(100%);
-  @include overflow-x-hidden-scroll-y;
   opacity: 0;
   transition: all $transition-xlong;
 
