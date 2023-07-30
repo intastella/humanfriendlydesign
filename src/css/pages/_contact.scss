@@ -1,27 +1,60 @@
+.contact-wrapper {
+  @include flex;
+  @include flex-vertical;
+  @include mar-top(4);
+  gap: $spacer-2;
+
+  @include breakpoint($screen-large) {
+    @include flex-horizontal;
+    @include flex-cross-center;
+    @include mar-top(8);
+    gap: $spacer-8;
+  }
+}
+
+.contact-hero {
+  @include flex-fluid;
+  @include type-align-center;
+
+  @include breakpoint($screen-large) {
+    @include flex-equal;
+    @include type-align-left;
+  }
+}
+
+.contact-hero__heading {
+  font-size: $type-30;
+
+  @include breakpoint($screen-large) {
+    font-size: $type-36;
+  }
+}
+
 .contact-list {
-  @include zero;
-  @include border-radius($br-8);
+  @include mar(0);
+  @include pad(0);
+  @include flex-fluid;
+  @include glass-box;
   list-style: none;
-  border: 1px solid var(--color-border-light);
+
+  @include breakpoint($screen-large) {
+    @include mar(0);
+    @include flex-fixed(42%);
+  }
 }
 
 .contact-list__item {
-  border-top: 1px solid var(--color-border-light);
   text-decoration: none;
-
-  &:first-of-type {
-    border-top: 0;
-  }
 }
 
 .contact-list__link {
   @include flex;
   @include flex-cross-center;
-  padding: $spacer-plus $spacer-plus $spacer-plus $spacer-2;
+  padding: $spacer-3 $spacer-4;
   transition: all $transition-short;
 
   &:hover {
-    background-color: var(--color-accent);
+    background-color: var(--color-trans-white-light);
   } 
 }
 

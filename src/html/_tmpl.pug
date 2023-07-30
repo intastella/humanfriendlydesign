@@ -89,7 +89,7 @@ html(lang='en')
         a.tmpl-nav__link-hidden(href="https://techhub.social/@intastella", rel="me")
       main.tmpl-main.js-tmpl-main(role='main')
         .tmpl-content
-          if page !== "home"
+          if page !== "home" && page !== "contact"
             h1.tmpl-page-heading(class=page_heading_classes) #{page_title}
             
           block content

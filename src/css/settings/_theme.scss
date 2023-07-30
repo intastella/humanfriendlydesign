@@ -22,8 +22,10 @@ $color-accent: $grey-1;
 $color-shadow: rgba(0,0,0,.1);
 $color-trans-white-medium: rgba(255, 255, 255, 0.50); //TODO: reconcile surface color with this
 $color-trans-white-light: rgba(255, 255, 255, 0.30);
+$color-trans-white-xlight: rgba(255, 255, 255, 0.10);
 $color-trans-black-medium: rgba(0, 0, 0, 0.40);
 $color-trans-black-light: rgba(0, 0, 0, 0.20);
+$color-trans-black-xlight: rgba(0, 0, 0, 0.10);
 
 // Shadows
 $shadow-xl: 0 2px 20px 0 var(--color-shadow);

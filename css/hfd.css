@@ -635,8 +635,10 @@ body.chocolat-open > .chocolat-image-wrapper {
   --color-shadow: rgba(0, 0, 0, 0.1);
   --color-trans-white-medium: rgba(255, 255, 255, 0.5);
   --color-trans-white-light: rgba(255, 255, 255, 0.3);
+  --color-trans-white-xlight: rgba(255, 255, 255, 0.1);
   --color-trans-black-medium: rgba(0, 0, 0, 0.4);
   --color-trans-black-light: rgba(0, 0, 0, 0.2);
+  --color-trans-black-xlight: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -1802,31 +1804,76 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   }
 }
 
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 16px;
+}
+@media (min-width: 1024px) {
+  .contact-wrapper {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 64px;
+    gap: 64px;
+  }
+}
+
+.contact-hero {
+  flex: 1 1 auto;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .contact-hero {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+.contact-hero__heading {
+  font-size: 1.875rem;
+}
+@media (min-width: 1024px) {
+  .contact-hero__heading {
+    font-size: 2.25rem;
+  }
+}
+
 .contact-list {
   margin: 0;
   padding: 0;
+  flex: 1 1 auto;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 24px;
+  border-top: 1px solid var(--color-trans-white-medium);
+  background: linear-gradient(180deg, transparent 0%, var(--color-trans-white-light) 100%);
+  box-shadow: 0 2px 20px 0 var(--color-shadow);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   list-style: none;
-  border: 1px solid var(--color-border-light);
+}
+.contact-list:hover, .contact-list:focus {
+  background: linear-gradient(180deg, transparent 0%, var(--color-trans-white-medium) 100%);
+  transform: scale(1.025);
+}
+@media (min-width: 1024px) {
+  .contact-list {
+    margin: 0;
+    flex: 0 0 42%;
+  }
 }
 
 .contact-list__item {
-  border-top: 1px solid var(--color-border-light);
   text-decoration: none;
-}
-.contact-list__item:first-of-type {
-  border-top: 0;
 }
 
 .contact-list__link {
   display: flex;
   align-items: center;
-  padding: 12px 12px 12px 16px;
+  padding: 24px 32px;
   transition: all 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .contact-list__link:hover, .contact-list__link:focus {
-  background-color: var(--color-accent);
+  background-color: var(--color-trans-white-light);
 }
 
 .contact-list__link-icon {
