@@ -201,7 +201,7 @@
   }
   
   @include breakpoint($screen-large) {
-    padding: 144px $spacer-4 $spacer-18 $spacer-4;
+    padding-top: 144px;
   }
 }
 
@@ -423,6 +423,8 @@
   border-top: 1px solid rgba(0,0,0,0.2);
 
   @include breakpoint($screen-medium) {
+    @include mar-left(4);
+    @include mar-right(4);
     @include type-align-left;
     @include pad-bottom(1);
   }

@@ -996,7 +996,7 @@ h6 {
 }
 @media (min-width: 1024px) {
   .tmpl-content {
-    padding: 144px 32px 144px 32px;
+    padding-top: 144px;
   }
 }
 
@@ -1244,6 +1244,8 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 @media (min-width: 768px) {
   .tmpl-footer {
+    margin-left: 32px;
+    margin-right: 32px;
     text-align: left;
     padding-bottom: 8px;
   }
