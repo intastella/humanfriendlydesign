@@ -327,6 +327,8 @@
   @include mar-top(4);
   @include border-radius(24px);
   transition: all $transition-xlong;
+  border-top: 1px solid var(--color-trans-white-medium);
+  box-shadow: $shadow-xl;
 
   &:first-of-type {
     @include mar-top(0);
@@ -375,7 +377,6 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(180deg, transparent 0%, $white 100%);
   padding: $spacer-8 $spacer-2 $spacer-plus $spacer-2;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;

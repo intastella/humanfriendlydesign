@@ -1,11 +1,6 @@
 :root {
   color-scheme: light dark;
   --color-page-bg: #{$color-page-bg};
-  --color-page-bg-blue: #{$color-page-bg-blue};
-  --color-page-bg-green: #{$color-page-bg-green};
-  --color-page-bg-yellow: #{$color-page-bg-yellow};
-  --color-page-bg-pink: #{$color-page-bg-pink};
-  --color-page-bg-purple: #{$color-page-bg-purple};
   --color-page-inner-bg: #{$color-page-inner-bg};
   --color-text-primary: #{$color-text-primary};
   --color-text-secondary: #{$color-text-secondary};
@@ -17,63 +12,11 @@
   --color-surface-light: #{$color-surface-light};
   --color-surface-dark: #{$color-surface-dark};
   --color-accent: #{$color-accent};
-  --color-accent-blue: #{$color-accent-blue};
-  --color-accent-green: #{$color-accent-green};
-  --color-accent-yellow: #{$color-accent-yellow};
-  --color-accent-pink: #{$color-accent-pink};
-  --color-accent-purple: #{$color-accent-purple};
   --color-shadow: #{$color-shadow};
-}
-
-.theme-dark {
-  --color-page-bg: #{$color-page-bg-theme-dark};
-  --color-page-bg-blue: #{$color-page-bg-blue-theme-dark};
-  --color-page-bg-green: #{$color-page-bg-green-theme-dark};
-  --color-page-bg-yellow: #{$color-page-bg-yellow-theme-dark};
-  --color-page-bg-pink: #{$color-page-bg-pink-theme-dark};
-  --color-page-bg-purple: #{$color-page-bg-purple-theme-dark};
-  --color-page-inner-bg: #{$color-page-inner-bg-theme-dark};
-  --color-text-primary: #{$color-text-primary-theme-dark};
-  --color-text-secondary: #{$color-text-secondary-theme-dark};
-  --color-icon-primary: #{$color-icon-primary-theme-dark};
-  --color-icon-secondary: #{$color-icon-secondary-theme-dark};
-  --color-link: #{$color-link-theme-dark};
-  --color-border-light: #{$color-border-light-theme-dark};
-  --color-border-dark: #{$color-border-dark-theme-dark};
-  --color-surface-light: #{$color-surface-light-theme-dark};
-  --color-surface-dark: #{$color-surface-dark-theme-dark};
-  --color-accent: #{$color-accent-theme-dark};
-  --color-accent-blue: #{$color-accent-blue-theme-dark};
-  --color-accent-green: #{$color-accent-green-theme-dark};
-  --color-accent-yellow: #{$color-accent-yellow-theme-dark};
-  --color-accent-pink: #{$color-accent-pink-theme-dark};
-  --color-accent-purple: #{$color-accent-purple-theme-dark};
-  --color-shadow: #{$color-shadow-theme-dark};
-}
-
-.accent-blue {
-  --color-page-bg: var(--color-page-bg-blue);
-  --color-accent: var(--color-accent-blue);
-}
-
-.accent-green {
-  --color-page-bg: var(--color-page-bg-green);
-  --color-accent: var(--color-accent-green);
-}
-
-.accent-yellow {
-  --color-page-bg: var(--color-page-bg-yellow);
-  --color-accent: var(--color-accent-yellow);
-}
-
-.accent-pink {
-  --color-page-bg: var(--color-page-bg-pink);
-  --color-accent: var(--color-accent-pink);
-}
-
-.accent-purple {
-  --color-page-bg: var(--color-page-bg-purple);
-  --color-accent: var(--color-accent-purple);
+  --color-trans-white-medium: #{$color-trans-white-medium};
+  --color-trans-white-light: #{$color-trans-white-light};
+  --color-trans-black-medium: #{$color-trans-black-medium};
+  --color-trans-black-light: #{$color-trans-black-light};
 }
 
 * {

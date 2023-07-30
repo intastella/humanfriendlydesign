@@ -14,7 +14,7 @@ function initGranim() {
                 ['#E3FF75', '#FF75A7'],
                 ['#E3FF75', '#75FF9C']
             ],
-            transitionSpeed: 5000
+            transitionSpeed: 8000
         }
     }
  });
