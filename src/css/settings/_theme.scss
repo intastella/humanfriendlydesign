@@ -20,7 +20,7 @@ $color-surface-light: rgba(255, 255, 255, 0.50);
 $color-surface-dark: rgba(255, 255, 255, 0.75);
 $color-accent: $grey-1;
 $color-shadow: rgba(0,0,0,.1);
-$color-trans-white-medium: rgba(255, 255, 255, 0.50);
+$color-trans-white-medium: rgba(255, 255, 255, 0.50); //TODO: reconcile surface color with this
 $color-trans-white-light: rgba(255, 255, 255, 0.30);
 $color-trans-black-medium: rgba(0, 0, 0, 0.40);
 $color-trans-black-light: rgba(0, 0, 0, 0.20);
@@ -29,7 +29,7 @@ $color-trans-black-light: rgba(0, 0, 0, 0.20);
 $shadow-xl: 0 2px 20px 0 var(--color-shadow);
 $shadow-large: 0 5px 10px var(--color-shadow);
 $shadow-medium: 0 3px 10px var(--color-shadow);
-$shadow-small: 2px 2px 0px 0px var(--color-shadow);
+$shadow-small: 2px 2px 0px var(--color-shadow);
 
 // Z-Index
 $z-zero: 0;
