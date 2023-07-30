@@ -702,9 +702,6 @@ p a {
   transition: all 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
   text-decoration: underline;
 }
-p a:hover, p a:focus {
-  background-color: var(--color-accent);
-}
 
 h1 {
   font-family: "Unbounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -1152,7 +1149,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   }
 }
 .tmpl-project--small:hover, .tmpl-project--small:focus {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .tmpl-project__thumbnail-wrapper {
@@ -1166,7 +1163,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .tmpl-project__thumbnail--small {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .tmpl-project:hover .tmpl-project__thumbnail--small, .tmpl-project:focus .tmpl-project__thumbnail--small {
   transform: scale(1);
@@ -1210,7 +1207,6 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   overflow: hidden;
   border-radius: 4px;
   color: var(--color-text-primary);
-  text-decoration: underline;
 }
 @media (min-width: 1024px) {
   .tmpl-project__tag-item {
@@ -1746,7 +1742,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 
 .work-links {
-  margin-top: 12px;
+  margin-top: 8px;
   font-family: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 0.625rem;
   font-weight: normal;

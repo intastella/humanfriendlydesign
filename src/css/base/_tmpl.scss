@@ -344,7 +344,7 @@
 
   &--small {
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
 }
@@ -359,7 +359,7 @@
   transition: all $transition-xlong;
   
   &--small {
-    transform: scale(1.1);
+    transform: scale(1.05);
 
     .tmpl-project:hover & {
       transform: scale(1);
@@ -399,7 +399,6 @@
   @include mar-left(1);
   @include border-radius($br-4);
   color: var(--color-text-primary);
-  text-decoration: underline;
 
   &:first-of-type {
     @include mar-left(0);

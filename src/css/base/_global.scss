@@ -92,10 +92,6 @@ p {
   a {
     transition: all $transition-short;
     text-decoration: underline;
-
-    &:hover {
-      background-color: var(--color-accent);
-    }
   }
 }
 
