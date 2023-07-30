@@ -210,23 +210,15 @@
 }
 
 .tmpl-page-heading {
-  @include mar-bottom(2);
+  @include mar-bottom(3);
 }
 
 .tmpl-page-subsection {
   @include relative;
-  @include mar-top(11);
+  @include mar-top(6);
 
   @include breakpoint($screen-medium) {
-    @include mar-top(15);
-  }
-
-  &:first-of-type {
-    @include mar-top(0);
-
-    @include breakpoint($screen-small) {
-      @include mar-top(0);
-    }
+    @include mar-top(8);
   }
 
   &--first {
