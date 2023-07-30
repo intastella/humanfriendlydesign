@@ -1860,16 +1860,17 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   color: var(--color-icon-primary);
 }
 
-.about-hero {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .about-hero__avatar {
-  margin-right: 16px;
-  width: 208px;
-  height: 256.5px;
+  margin-bottom: 16px;
+  width: 156px;
+  height: 192px;
+  transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@media (min-width: 768px) {
+  .about-hero__avatar {
+    width: 208px;
+    height: 256px;
+  }
 }
 
 .about-roles {

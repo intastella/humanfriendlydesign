@@ -1,16 +1,12 @@
-.about-hero {
-  @include flex;
-  @include flex-horizontal;
-  @include flex-cross-center;
-}
-
 .about-hero__avatar {
-  @include mar-right(2);
-  @include border-radius($br-round);
-  @include square(80px);
+  @include mar-bottom(2);
+  width: 156px;
+  height: 192px;
+  transition: all $transition-xlong;
 
-  @include breakpoint($screen-small) {
-    @include square(112px);
+  @include breakpoint($screen-medium) {
+    width: 208px;
+    height: 256px;
   }
 }
 
@@ -28,24 +24,25 @@
 .about-role-item {
   @include flex;
   @include flex-horizontal;
-  @include pad(1.5);
-  @include border;
-  @include border-radius($br-8);
-  transition: all $transition-short;
-
-  &:hover {
-    border: 1px solid var(--color-border-dark);
-    transform: translate(0, -2px);
-    box-shadow: $shadow-large;
-  }
+  @include flex-cross-center;
+  @include pad(2);
+  @include glass-box;
 }
 
 .about-role-item__image {
   @include flex-fixed;
   @include mar-right(1);
   @include border-radius($br-4);
-  @include square(48px);
+  @include square(64px);
+  @include pad(1);
+  @include border-radius($br-round);
   background-color: $white;
+  transition: all $transition-xxlong;
+  transform: scale(1.075);
+
+  .about-role-item:hover & {
+    transform: scale(1);
+  }
 }
 
 .about-role-item__details {
@@ -75,21 +72,17 @@
   @include flex;
   @include flex-cross-center;
   @include flex-fixed;
-  @include border;
-  @include pad(1.5);
-  @include border-radius($br-8);
-  @include head-xxsmall;
-  transition: all $transition-short;
-  color: var(--color-text-default);
-
-  &:hover {
-    border: 1px solid var(--color-border-dark);
-    transform: translate(0, -2px);
-    box-shadow: $shadow-large;
-  }
+  @include pad(2);
+  @include glass-box;
 }
 
 .about-resume__link-icon {
   @include mar-right(1);
-  @include icon(24px);
+  @include icon(32px);
+  transform: scale(1.075);
+  transition: all $transition-xxlong;
+  
+  .about-resume__link:hover & {
+    transform: scale(1);
+  }
 }
