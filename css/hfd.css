@@ -625,7 +625,7 @@ body.chocolat-open > .chocolat-image-wrapper {
   --color-text-primary: #000;
   --color-text-secondary: #666666;
   --color-icon-primary: #000;
-  --color-icon-secondary: #8c8c8c;
+  --color-icon-secondary: rgba(0, 0, 0, 0.4);
   --color-link: #000;
   --color-border-light: rgba(0, 0, 0, 0.2);
   --color-border-dark: rgba(0, 0, 0, 0.4);
@@ -1869,11 +1869,12 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 .contact-list__link {
   display: flex;
   align-items: center;
-  padding: 24px 32px;
-  transition: all 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding: 20px 32px;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .contact-list__link:hover, .contact-list__link:focus {
   background-color: var(--color-trans-white-light);
+  transform: scale(1.025);
 }
 
 .contact-list__link-icon {
@@ -1915,9 +1916,11 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   fill: currentColor;
   stroke: currentColor;
   color: var(--color-icon-secondary);
+  transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .contact-list__link:hover .contact-list__link-arrow, .contact-list__link:focus .contact-list__link-arrow {
   color: var(--color-icon-primary);
+  transform: translateX(8px);
 }
 
 .about-hero__avatar {

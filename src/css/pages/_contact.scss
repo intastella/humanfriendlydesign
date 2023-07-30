@@ -50,11 +50,12 @@
 .contact-list__link {
   @include flex;
   @include flex-cross-center;
-  padding: $spacer-3 $spacer-4;
-  transition: all $transition-short;
+  padding: 20px $spacer-4;
+  transition: all $transition-long;
 
   &:hover {
     background-color: var(--color-trans-white-light);
+    transform: scale(1.025);
   } 
 }
 
@@ -84,8 +85,10 @@
 .contact-list__link-arrow {
   @include icon(24px);
   color: var(--color-icon-secondary);
+  transition: all $transition-xlong;
 
   .contact-list__link:hover & {
     color: var(--color-icon-primary);
+    transform: translateX($spacer);
   }
 }
