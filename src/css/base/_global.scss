@@ -38,22 +38,21 @@ picture {
   @include block;
 }
 
-html,
+html {
+  @include height-full;
+}
+
 body {
   @include flex;
   @include flex-vertical;
-  @include square(100%);
+  @include height-full;
   background: var(--color-page-bg);
   font-family: $font-family-default;
   font-size: $font-size-default;
   font-weight: $font-weight-default;
   line-height: $font-line-height-default;
   color: var(--color-text-primary);
-}
-
-body {
   // padding: $spacer $spacer-plus $spacer-plus $spacer;
-  @include overflow-hidden;
 
   // Target only iOS Safari for iPhone X style screen inset
   // @supports #{'\(-webkit-touch-callout: none)'} {
