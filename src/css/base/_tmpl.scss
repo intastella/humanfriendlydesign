@@ -114,7 +114,7 @@
     bottom: auto;
     left: 50%;
     width: 376px;
-    margin-left: -188px;;
+    margin-left: -188px;
   }
 
   &--on {
@@ -420,26 +420,49 @@
   @include mar-left(3);
   @include mar-right(3);
   @include pad-top(1);
-  @include pad-bottom(1);
+  @include pad-bottom(12);
   @include footnote;
+  @include type-align-center;
+  flex-wrap: wrap;
   z-index: $z-plus-one;
-  line-height: 1;;
+  line-height: 1;
   justify-content: space-between;
   max-width: 1024px;
   border-top: 1px solid rgba(0,0,0,0.2);
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-medium) {
+    @include type-align-left;
+    @include pad-bottom(1);
+  }
+
+  @include breakpoint($screen-large) {
     @include width-full;
     @include center;
   }
 }
 
+.tmpl-footer__copy {
+  @include flex-fixed(100%);
+
+  @include breakpoint($screen-small) {
+    @include flex-fixed;
+  }
+}
+
 .tmpl-footer__git {
   @include flex;
+  @include flex-main-center;
   @include flex-cross-center;
+  @include mar-top(1);
+  @include flex-fixed(100%);
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @include breakpoint($screen-small) {
+    @include mar-top(0);
+    @include flex-fixed;
   }
 }
 

@@ -1,3 +1,15 @@
+@mixin type-align-right { 
+  text-align: right; 
+}
+
+@mixin type-align-left { 
+  text-align: left; 
+}
+
+@mixin type-align-center { 
+  text-align: center; 
+}
+
 @mixin head-2xl {
   font-family: $font-family-heading;
   font-size: $type-48;
