@@ -344,9 +344,10 @@
     }
   }
 
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: $shadow-large;
+  &--small {
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -357,17 +358,20 @@
 .tmpl-project__thumbnail {
   @include block;
   transition: all $transition-xlong;
-  transform: scale(1.1);
+  
+  &--small {
+    transform: scale(1.1);
 
-  &--xlarge {
-    @include breakpoint(1140px) {
-      width: 960px;
-      margin-left: -120px;
+    .tmpl-project:hover & {
+      transform: scale(1);
     }
   }
 
-  .tmpl-project:hover & {
-    transform: scale(1);
+  &--xlarge {
+    @include breakpoint(1140px) {
+      // width: 960px;
+      // margin-left: -120px;
+    }
   }
 }
 
@@ -404,10 +408,10 @@
 }
 
 .tmpl-footer {
-  @include width-full;
-  @include center;
   @include flex;
   @include flex-cross-center;
+  @include mar-left(3);
+  @include mar-right(3);
   @include pad-top(1);
   @include pad-bottom(1);
   @include footnote;
@@ -415,7 +419,12 @@
   line-height: 1;;
   justify-content: space-between;
   max-width: 1024px;
-  border-top: 1px solid rgba(0,0,0,0.2)
+  border-top: 1px solid rgba(0,0,0,0.2);
+
+  @include breakpoint($screen-small) {
+    @include width-full;
+    @include center;
+  }
 }
 
 .tmpl-footer__git {

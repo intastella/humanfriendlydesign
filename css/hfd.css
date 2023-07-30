@@ -1156,9 +1156,8 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
     margin-left: 0;
   }
 }
-.tmpl-project:hover, .tmpl-project:focus {
+.tmpl-project--small:hover, .tmpl-project--small:focus {
   transform: scale(1.1);
-  box-shadow: 0 5px 10px var(--color-shadow);
 }
 
 .tmpl-project__thumbnail-wrapper {
@@ -1168,18 +1167,13 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 .tmpl-project__thumbnail {
   display: block;
   transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.tmpl-project__thumbnail--small {
   transform: scale(1.1);
 }
-@media (min-width: 1140px) {
-  .tmpl-project__thumbnail--xlarge {
-    width: 960px;
-    margin-left: -120px;
-  }
-}
-.tmpl-project:hover .tmpl-project__thumbnail, .tmpl-project:focus .tmpl-project__thumbnail {
+.tmpl-project:hover .tmpl-project__thumbnail--small, .tmpl-project:focus .tmpl-project__thumbnail--small {
   transform: scale(1);
 }
-
 .tmpl-project__details {
   position: absolute;
   overflow: hidden;
@@ -1231,11 +1225,10 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 
 .tmpl-footer {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
   display: flex;
   align-items: center;
+  margin-left: 24px;
+  margin-right: 24px;
   padding-top: 8px;
   padding-bottom: 8px;
   font-family: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -1250,6 +1243,13 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 @media (min-width: 1024px) {
   .tmpl-footer {
     font-size: 0.6875rem;
+  }
+}
+@media (min-width: 600px) {
+  .tmpl-footer {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
