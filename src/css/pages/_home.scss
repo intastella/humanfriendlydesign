@@ -92,21 +92,20 @@
 
 .home-intro-stats {
   @include flex;
-  @include flex-vertical;
   flex-wrap: wrap;
   gap: $spacer-2;
-
-  @include breakpoint($screen-medium) {
-    @include flex-horizontal;
-  }
 }
 
 .home-intro-stats__unit {
   @include flex;
   @include flex-vertical;
-  @include flex-equal;
+  @include flex-fixed(48%);
   @include pad(2);
   @include glass-box;
+
+  @include breakpoint($screen-medium) {
+    @include flex-equal;
+  }
 }
 
 .home-intro-stats__unit-icon {
