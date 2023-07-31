@@ -124,7 +124,7 @@
   left: 0;
   bottom: $spacer-7;
   opacity: 0;
-  transition: all $duration-medium $timing-curves-default $duration-xlong;
+  transition: all $duration-medium $timing-curves-default $duration-long;
   
   @include breakpoint($screen-large) {
     bottom: $spacer-8;
