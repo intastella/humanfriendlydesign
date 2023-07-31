@@ -1,5 +1,4 @@
 function animateLoadingScreen() {
-  // const animationSeen = localStorage.getItem("animationLoaded");
   const loadingContainer = document.querySelector(".js-loading");
   const loadingProgressBar = document.querySelector(".js-loading-progress-fill");
   const extensionOne = document.querySelector(".js-extension-1");
@@ -40,7 +39,6 @@ function animateLoadingScreen() {
   }
 
   function step7() {
-    localStorage.setItem("animationLoaded", true);
     gotoHome();
   }
 
