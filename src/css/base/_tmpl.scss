@@ -308,38 +308,37 @@
 .tmpl-project-row {
   @include flex;
   @include flex-vertical;
-
-  .tmpl-page-heading-wrapper + &,
-  &:first-of-type {
-    @include mar-top(0);
-  }
+  @include mar-top(3);
+  gap: $spacer-3;
+  flex-wrap: wrap;
 
   @include breakpoint($screen-small) {
+    flex-wrap: nowrap;
+  }
+
+  @include breakpoint($screen-medium) {
     @include flex-horizontal;
+  }
+
+  &--first {
+    @include mar-top(0);
   }
 }
 
 .tmpl-project {
   @include relative;
-  @include flex-fixed;
-  @include mar-top(4);
+  @include flex-fluid;
   @include border-radius(24px);
   transition: all $transition-xlong;
   border-top: 1px solid var(--color-trans-white-medium);
   box-shadow: $shadow-xl;
 
-  &:first-of-type {
-    @include mar-top(0);
+  @include breakpoint($screen-small) {
+    flex: 0 0 47%;
   }
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-medium) {
     @include flex-fluid;
-    @include mar-left(4);
-    @include mar-top(0);
-
-    &:first-of-type {
-      @include mar-left(0);
-    }
   }
 
   &--small {
@@ -367,10 +366,8 @@
   }
 
   &--xlarge {
-    @include breakpoint(1140px) {
-      // width: 960px;
-      // margin-left: -120px;
-    }
+    border-top: 1px solid var(--color-trans-white-medium);
+    box-shadow: $shadow-xl;
   }
 }
 
