@@ -99,7 +99,7 @@
 .home-intro-stats__unit {
   @include flex;
   @include flex-vertical;
-  @include flex-fixed(48%);
+  @include flex-fixed(47%);
   @include pad(2);
   @include glass-box;
 

@@ -1668,7 +1668,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 .home-intro-stats__unit {
   display: flex;
   flex-direction: column;
-  flex: 0 0 48%;
+  flex: 0 0 47%;
   padding: 16px;
   overflow: hidden;
   border-radius: 24px;
