@@ -1,5 +1,4 @@
 function animateLoadingScreen() {
-  // const animationSeen = localStorage.getItem("animationLoaded");
   const loadingContainer = document.querySelector(".js-loading");
   const loadingProgressBar = document.querySelector(".js-loading-progress-fill");
   const extensionOne = document.querySelector(".js-extension-1");
@@ -40,17 +39,16 @@ function animateLoadingScreen() {
   }
 
   function step7() {
-    localStorage.setItem("animationLoaded", true);
     gotoHome();
   }
 
   setTimeout(step1, 1000);
-  setTimeout(step2, 2000);
-  setTimeout(step3, 3500);
-  setTimeout(step4, 4000);
-  setTimeout(step5, 4500);
-  setTimeout(step6, 5500);
-  setTimeout(step7, 5750);
+  setTimeout(step2, 1500);
+  setTimeout(step3, 2000);
+  setTimeout(step4, 2500);
+  setTimeout(step5, 3000);
+  setTimeout(step6, 3500);
+  setTimeout(step7, 4000);
 }
 
 document.addEventListener("DOMContentLoaded", function() { 

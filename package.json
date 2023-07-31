@@ -7,6 +7,7 @@
     "cssnano": "^5.1.14",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-standard": "^5.0.0",
+    "granim": "^2.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-eslint": "^6.0.0",

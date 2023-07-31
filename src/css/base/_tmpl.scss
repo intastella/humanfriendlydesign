@@ -1,3 +1,21 @@
+#granim-canvas-wrapper {
+  @include fixed;
+  @include square(100%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#granim-canvas {
+  @include absolute;
+  @include square(100%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .tmpl-skip-to-main {
   @include hidden;
   @include fixed;
@@ -15,44 +33,102 @@
   }
 }
 
-.tmpl-inner {
-  @include flex;
-  @include flex-vertical;
-  @include width-full;
-  @include height-full;
-  @include border-radius($br-16);
-  background-color: var(--color-page-inner-bg);
-  box-shadow: $shadow-large;
-  border: 1px solid var(--color-border-dark);
+.tmpl-logo {
+  @include fixed;
+  top: $spacer-3;
+  left: 50%;
+  margin-left: -32px;
+  width: 64px;
+  height: 64px;
+  color: var(--color-border-dark);
+  transition: all $transition-xlong;
+  z-index: $z-tmpl-header;
+  opacity: 0;
+  transform: scale(0);
 
-  @include breakpoint($screen-small) {
-    @include flex-horizontal;
+  &--on {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &:hover {
+    color: var(--color-text-primary);
+    transform: scale(1.1);
+  }
+
+  @include breakpoint($screen-medium) {
+    top: $spacer-4;
+    left: $spacer-4;
+    margin-left: 0;
+  }
+
+  @include breakpoint($screen-large) {
+    top: $spacer-3;
+    width: 80px;
+    height: 80px;
   }
 }
 
+.tmpl-logo__smile {
+  @include absolute;
+  @include icon(18px);
+  top: 24px;
+  left: 24px;
+  transition: all $transition-xlong;
+
+  .tmpl-logo:hover & {
+    transform: scale(0.9);
+  }
+
+  @include breakpoint($screen-large) {
+    @include icon(24px);
+    top: 28px;
+    left: 28px;
+  }
+}
+
+.tmpl-logo__text {
+  fill: currentColor;
+  animation: spin 20s infinite linear $duration-xshort;
+}
+
 .tmpl-nav {
+  @include fixed;
   @include flex;
-  @include flex-horizontal;
-  @include width-full;
-  @include overflow-hidden;
-  @include flex-fixed;
+  @include flex-cross-center;
+  @include border-radius($br-round);
+  bottom: -72px;
+  left: $spacer-2;
+  width: calc(100vw - $spacer-4);
   height: 64px;
   padding: $spacer-half;
-  border-radius: 0 0 $br-16 $br-16;
-  border-top: 1px solid var(--color-border-light);
-  order: 1;
-  z-index: $z-plus-one;
+  border: 1px solid var(--color-border-light);
+  background: var(--color-surface-light);
+  box-shadow: $shadow-small;
+  backdrop-filter: blur(8px);
+  z-index: $z-tmpl-header;
+  transition: all $transition-long;
 
-  @include breakpoint($screen-small) {
-    @include flex-vertical;
-    @include flex-fixed;
-    @include height-full;
-    @include border-radius(0);
-    width: 72px;
-    padding: 72px $spacer-half $spacer-half;
-    order: 0;
-    border-top: none;
-    border-right: 1px solid var(--color-border-light);
+  @include breakpoint($screen-medium) {
+    top: -72px;
+    bottom: auto;
+    left: 50%;
+    width: 376px;
+    margin-left: -188px;
+  }
+
+  &--on {
+    opacity: 1;
+    bottom: $spacer-2;
+
+    @include breakpoint($screen-medium) {
+      top: 32px;
+      bottom: auto;
+    }
+  }
+
+  &:hover {
+    border: 1px solid var(--color-border-dark);
   }
 }
 
@@ -62,39 +138,30 @@
   @include flex-grow;
   @include flex-vertical;
   @include flex-center-center;
-  @include mar-left(0.5);
   @include footnote;
-  @include border-radius($br-8);
-  padding: $spacer-half 0;
+  @include overflow-hidden;
+  padding: $spacer-2 0;
   text-decoration: none;
   color: var(--color-text-secondary);
-  transition: all $transition-short;
+  transition: all $transition-long;
+  opacity: 0.4;
 
-  @include breakpoint($screen-small) {
-    @include flex-fixed;
-    @include mar-bottom(2);
-    @include mar-left(0);
-    @include pad(0);
-    height: 64px;
-  }
-
-  &:first-of-type {
-    @include mar-left(0);
-  }
-
+  &--active,
   &:hover {
-    background-color: var(--color-accent);
     color: var(--color-text-primary);
+    opacity: 1;
   }
+}
 
-  &--active {
-    @include pad-bottom(1);
-    color: var(--color-text-primary);
-    font-weight: $font-medium;
+.tmpl-nav__link-label {
+  @include absolute;
+  bottom: -8px;
+  opacity: 0;
+  transition: all $transition-long;
 
-    @include breakpoint($screen-small) {
-      @include pad-bottom(0);
-    }
+  .tmpl-nav__link:hover & {
+    bottom: 4px;
+    opacity: 1;
   }
 }
 
@@ -103,368 +170,38 @@
 }
 
 .tmpl-nav__link-icon {
+  @include relative;
   @include icon(24px);
-}
+  top: 0;
+  transition: top $transition-long;
 
-.tmpl-nav__link-active-dot {
-  @include hidden;
-  @include absolute;
-  @include round(5px);
-  left: 50%;
-  bottom: 4px;
-  margin-left: -2.5px;
-  background-color: var(--color-text-primary);
-
-  @include breakpoint($screen-small) {
-    top: 50%;
-    left: auto;
-    right: 5px;
-    bottom: auto;
-    margin-top: -2.5px;
-  }
-
-  .tmpl-nav__link--active & {
-    display: block;
+  .tmpl-nav__link:hover & {
+    top: -4px;
   }
 }
 
 .tmpl-main {
-  @include relative;
-  @include pad(0);
-  @include flex-fluid;
-  @include overflow-hidden;
-  order: 0;
-
-  @include breakpoint($screen-small) {
-    order: 1;
-  }
-}
-
-.tmpl-header {
-  @include absolute;
-  @include flex;
-  @include flex-horizontal;
-  @include flex-cross-center;
-  @include width-full;
-  padding: $spacer-half $spacer;
-  border-radius: $br-16 $br-16 0 0;
-  background-color: var(--color-page-inner-bg);
-  z-index: $z-tmpl-header;
-
-  @include breakpoint($screen-small) {
-    border-radius: 0 $br-16 0 0;
-  }
-}
-
-.tmpl-header__address {
-  @include footnote;
-  color: var(--color-text-secondary);
-}
-
-.tmpl-header__fill {
   @include flex-grow;
-  margin: 0 $spacer;
-  height: 11px;
-  background-image: url('#{$image-path}header-lines.svg');
-  background-position: center left;
-  background-repeat: repeat-x;
-}
-
-.tmpl-header__theme-menu {
   @include relative;
-  @include square(20px);
-
-  @include breakpoint($screen-small) {
-    @include square(22px);
-  }
-}
-
-.tmpl-header__theme-menu-overlay {
-  @include fixed;
-  @include width-full;
-  @include height-full;
-  @include hidden;
-  top: 0;
-  left: 0;
-  z-index: $z-theme-menu-overlay;
-  // background-color: rgba(0,0,0,0.5);
-
-  .tmpl-header__theme-menu--active & {
-    @include block;
-  }
-}
-
-.tmpl-header__theme-menu-button {
-  @include pad(0.25);
-  @include border-radius($br-4);
-  color: var(--color-text-secondary);
-  line-height: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: background-color $transition-short;
-
-  .tmpl-header__theme-menu--active &,
-  &:hover {
-    color: var(--color-text-primary);
-    background-color: var(--color-accent);
-  }
-}
-
-.tmpl-header__theme-menu-button-icon {
-  @include icon(16px);
-  @include hidden;
-
-  @include breakpoint($screen-small) {
-    @include square(18px);
-  }
-
-  &--auto {
-    .theme-light &,
-    .theme-dark & {
-      @include hidden;
-    }
-
-    .theme-auto & {
-      @include block;
-    }
-  }
-
-  &--dark {
-    .theme-dark & {
-      @include block;
-    }
-
-    .theme-auto &, 
-    .theme-light & {
-      @include hidden;
-    }
-  }
-
-  &--light {
-    .theme-light & {
-      @include block;
-    }
-
-    .theme-auto &, 
-    .theme-dark & {
-      @include hidden;
-    }
-  }
-}
-
-.tmpl-header__theme-menu-dropdown {
-  @include absolute;
-  @include pad(2);
-  top: $spacer-3;
-  right: 0;
-  width: calc(100vw - $spacer-5);
-  background-color: var(--color-page-inner-bg);
-  box-shadow: $shadow-small;
-  border: 1px solid var(--color-border-dark);
-  border-radius: $br-4;
   opacity: 0;
-  transform: translateY(#{-$spacer-half});
-  transition: all $transition-short;
-  visibility: hidden;
-  z-index: $z-theme-menu-dropdown;
+  transition: all $transition-xlong;
 
-  @include breakpoint($screen-small) {
-    @include pad(1);
-    width: 136px;
-  }
-
-  .tmpl-header__theme-menu--active & {
-    visibility: visible;
+  &--on {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.tmpl-header__theme-menu-heading {
-  @include mar-top(1);
-  @include mar-bottom(0.5);
-  @include footnote-small;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-
-  &:first-of-type {
-    @include mar-top(0);
-    @include mar-bottom(0);
-  }
-}
-
-.tmpl-header__theme-button {
-  @include flex;
-  @include flex-horizontal;
-  @include flex-cross-center;
-  @include width-full;
-  line-height: 1;
-  background-color: transparent;
-  padding: $spacer-half $spacer-quarter;
-  border-color: transparent;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: $br-4;
-  cursor: pointer;
-  transition: background-color $transition-short;
-  color: var(--color-text-primary);
-
-  &:hover {
-    background-color: var(--color-accent);
-  }
-
-  &--auto {
-    .theme-light &,
-    .theme-dark & {
-      border-color: transparent;
-    }
-
-    .theme-auto & {
-      border-color: var(--color-border-dark);
-    }
-  }
-
-  &--light {
-    .theme-dark &,
-    .theme-auto & {
-      border-color: transparent;
-    }
-
-    .theme-light & {
-      border-color: var(--color-border-dark);
-    }
-  }
-
-  &--dark {
-    .theme-light &,
-    .theme-auto & {
-      border-color: transparent;
-    }
-
-    .theme-dark & {
-      border-color: var(--color-border-dark);
-    }
-
-    .theme-auto.theme-dark & {
-      border-color: transparent;
-    }
-  }
-}
-
-.tmpl-header__theme-button-icon {
-  @include icon(24px);
-  @include mar-right(0.5);
-
-  @include breakpoint($screen-small) {
-    @include square(16px);
-  }
-}
-
-.tmpl-header__theme-button-label {
-  @include footnote;
-}
-
-.tmpl-header__accent-list {
-  @include flex;
-  @include flex-horizontal;
-}
-
-.tmpl-header__accent-button {
-  @include square(24px);
-  @include pad(0); //Safari iOS override
-  @include mar-right(1);
-  border-radius: $br-round;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $grey-6;
-  cursor: pointer;
-
-  @include breakpoint($screen-small) {
-    @include square(16px);
-    @include mar-right(0.25);
-  }
-
-  &:hover {
-    border-color: var(--color-border-dark);
-  }
-
-  &--classic {
-    border-color: var(--color-border-dark);
-    background-color: $color-page-bg;
-
-    .theme-dark & {
-      background-color: $color-page-bg-theme-dark;
-    }
-
-    .accent-blue &,
-    .accent-green &,
-    .accent-yellow &,
-    .accent-pink &,
-    .accent-purple & {
-      border-color: $grey-6;
-
-      &:hover {
-        border-color: var(--color-border-dark);
-      }
-    }
-  }
-
-  &--blue {
-    background-color: var(--color-page-bg-blue);
-
-    .accent-blue & {
-      border-color: var(--color-border-dark);
-    }
-  }
-
-  &--green {
-    background-color: var(--color-page-bg-green);
-
-    .accent-green & {
-      border-color: var(--color-border-dark);
-    }
-  }
-
-  &--yellow {
-    background-color: var(--color-page-bg-yellow);
-
-    .accent-yellow & {
-      border-color: var(--color-border-dark);
-    }
-  }
-
-  &--pink {
-    background-color: var(--color-page-bg-pink);
-
-    .accent-pink & {
-      border: 1px solid var(--color-border-dark);
-    }
-  }
-
-  &--purple {
-    background-color: var(--color-page-bg-purple);
-    
-    .accent-purple & {
-      border-color: var(--color-border-dark);
-    }
   }
 }
 
 .tmpl-content {
-  @include width-full;
-  @include height-full;
-  overflow-y: scroll;
-}
-
-.tmpl-content__inner {
   @include center;
-  @include width-full;
-  max-width: 784px; // 720px + 32px left and right padding;
-  padding: $spacer-6 $spacer-2 $spacer-4 $spacer-2;
+  max-width: 1088px; //1024 + 32px left and right
+  padding: 112px $spacer-3 $spacer-12 $spacer-3;
+
+  @include breakpoint($screen-medium) {
+    padding: 128px $spacer-4 $spacer-18 $spacer-4;
+  }
   
-  @include breakpoint($screen-small) {
-    padding: $spacer-8 $spacer-4 $spacer-4 $spacer-4;
+  @include breakpoint($screen-large) {
+    padding-top: 144px;
   }
 }
 
@@ -473,34 +210,57 @@
 }
 
 .tmpl-page-heading {
-  @include mar-bottom(2);
+  @include mar-bottom(3);
 }
 
 .tmpl-page-subsection {
-  @include mar-top(4);
+  @include relative;
+  @include mar-top(6);
 
-  @include breakpoint($screen-small) {
+  @include breakpoint($screen-medium) {
     @include mar-top(8);
   }
 
   &--first {
-    @include mar-top(4);
+    @include mar-top(3);
 
     @include breakpoint($screen-small) {
-      @include mar-top(4);
+      @include mar-top(5);
     }
   }
 }
 
-.tmpl-heading-link {
+.tmpl-page-subsection__header {
   @include flex;
   @include flex-cross-center;
-  @include mar-bottom(1);
+  @include mar-bottom(3);
+  justify-content: space-between;
 }
 
-.tmpl-heading-link__heading {
-  @include head-med;
+.tmpl-page-subsection__header-title {
+  @include head-large;
   @include mar-bottom(0);
+}
+
+.tmpl-page-subsection__header-link {
+  @include flex;
+  @include flex-cross-center;
+  @include body-small;
+  line-height: 1;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.tmpl-page-subsection__header-link-arrow {
+  @include icon(18px);
+  @include mar-left(0.25);
+  transition: all $transition-long;
+
+  .tmpl-page-subsection__header-link:hover & {
+    transform: translate(4px, 0);
+  }
 }
 
 .tmpl-link-arrow {
@@ -524,7 +284,7 @@
     left: -45px;
     margin-top: -18.5px;
 
-    @include breakpoint(946px) {
+    @include breakpoint(1200px) {
       @include block;
     }
   }
@@ -548,33 +308,42 @@
 .tmpl-project-row {
   @include flex;
   @include flex-vertical;
-  @include mar-top(4);
-
-  .tmpl-page-heading-wrapper + &,
-  &:first-of-type {
-    @include mar-top(0);
-  }
+  @include mar-top(3);
+  gap: $spacer-3;
+  flex-wrap: wrap;
 
   @include breakpoint($screen-small) {
+    flex-wrap: nowrap;
+  }
+
+  @include breakpoint($screen-medium) {
     @include flex-horizontal;
+  }
+
+  &--first {
+    @include mar-top(0);
   }
 }
 
 .tmpl-project {
-  @include flex-fixed;
-  @include mar-top(4);
-
-  &:first-of-type {
-    @include mar-top(0);
-  }
+  @include relative;
+  @include flex-fluid;
+  @include border-radius(24px);
+  transition: all $transition-xlong;
+  border-top: 1px solid var(--color-trans-white-medium);
+  box-shadow: $shadow-xl;
 
   @include breakpoint($screen-small) {
-    @include flex-fluid;
-    @include mar-left(4);
-    @include mar-top(0);
+    flex: 0 0 47%;
+  }
 
-    &:first-of-type {
-      @include mar-left(0);
+  @include breakpoint($screen-medium) {
+    @include flex-fluid;
+  }
+
+  &--small {
+    &:hover {
+      transform: scale(1.05);
     }
   }
 }
@@ -584,72 +353,33 @@
 }
 
 .tmpl-project__thumbnail {
-  @include border;
-  @include border-radius($br-16);
   @include block;
-  transition: all $transition-short;
+  @include border-radius(24px);
+  transition: all $transition-xlong;
+  
+  &--small {
+    transform: scale(1.05);
 
-  .tmpl-project:hover & {
-    transform: translate(-5px, -5px);
-    border: 1px solid var(--color-border-dark);
-    box-shadow: $shadow-large;
+    .tmpl-project:hover & {
+      transform: scale(1);
+    }
   }
 
   &--xlarge {
-    @include breakpoint(1140px) {
-      width: 960px;
-      margin-left: -120px;
-    }
+    border-top: 1px solid var(--color-trans-white-medium);
+    box-shadow: $shadow-xl;
   }
 }
 
-.tmpl-project-floating-label {
+.tmpl-project__details {
   @include absolute;
-  @include flex;
-  @include flex-horizontal;
-  @include flex-cross-center;
-  @include border-radius($br-8);
-  @include head-xxsmall;
-  color: var(--color-text-primary);
-  bottom: $spacer;
-  left: $spacer;
-  background-color: var(--color-page-inner-bg);
-  padding: $spacer;
-  border: 1px solid var(--color-border-light);
-  transition: all $transition-short;
-  box-shadow: $shadow-small;
-  z-index: $z-plus-one;
-
-  @include breakpoint($screen-small) {
-    top: $spacer-2;
-    left: -#{$spacer-3};
-    bottom: auto;
-  }
-
-  .tmpl-project:hover & {
-    transform: translate(-5px, -5px);
-  }
-}
-
-.tmpl-project-floating-label-icon {
-  @include mar-right(0.5);
-  @include square(15px);
-  transition: color $transition-short;
-  fill: transparent;
-  stroke: var(--color-icon-primary);
-
-  @include breakpoint($screen-small) {
-    @include square(17px);
-  }
-
-  .tmpl-project:hover & {
-    fill: #ff0;
-
-    .theme-dark & {
-      fill: #DEDE01;
-      stroke: #DEDE01;
-    }
-  }
+  @include overflow-hidden;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: $spacer-8 $spacer-2 $spacer-plus $spacer-2;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
 }
 
 .tmpl-project__title {
@@ -657,15 +387,76 @@
   @include head-xsmall;
 }
 
+.tmpl-project__desc {
+  @include body-small;
+}
+
 .tmpl-project__tag-item {
-  @include footnote-small;
-  @include mar-left(0.5);
+  @include footnote;
+  @include mar-left(1);
   @include border-radius($br-4);
   color: var(--color-text-primary);
-  padding: $spacer-half;
-  background-color: var(--color-surface-light);
 
   &:first-of-type {
     @include mar-left(0);
   }
+}
+
+.tmpl-footer {
+  @include flex;
+  @include flex-cross-center;
+  @include mar-left(3);
+  @include mar-right(3);
+  @include pad-top(1);
+  @include pad-bottom(12);
+  @include footnote;
+  @include type-align-center;
+  flex-wrap: wrap;
+  z-index: $z-plus-one;
+  line-height: 1;
+  justify-content: space-between;
+  max-width: 1024px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+
+  @include breakpoint($screen-medium) {
+    @include mar-left(4);
+    @include mar-right(4);
+    @include type-align-left;
+    @include pad-bottom(1);
+  }
+
+  @include breakpoint($screen-large) {
+    @include width-full;
+    @include center;
+  }
+}
+
+.tmpl-footer__copy {
+  @include flex-fixed(100%);
+
+  @include breakpoint($screen-small) {
+    @include flex-fixed;
+  }
+}
+
+.tmpl-footer__git {
+  @include flex;
+  @include flex-main-center;
+  @include flex-cross-center;
+  @include mar-top(1);
+  @include flex-fixed(100%);
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include breakpoint($screen-small) {
+    @include mar-top(0);
+    @include flex-fixed;
+  }
+}
+
+.tmpl-footer__git-icon {
+  @include icon(16px);
+  @include mar-right(0.5);
 }

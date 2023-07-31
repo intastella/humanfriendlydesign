@@ -1,0 +1,144 @@
+.home-welcome-message-section {
+  @include flex;
+  @include flex-cross-center;
+  flex-wrap: wrap;
+
+  @include breakpoint($screen-medium) {
+    min-height: 360px;
+  }
+
+  @include breakpoint($screen-large) {
+    min-height: 480px;
+  }
+}
+
+.home-subsection {
+  @include mar-top(11);
+
+  @include breakpoint($screen-medium) {
+    @include mar-top(15);
+  }
+
+  &:first-of-type {
+    @include mar-top(0);
+
+    @include breakpoint($screen-medium) {
+      @include mar-top(0);
+    }
+  }
+}
+
+.home-welcome-message {
+  text-align: center;
+  z-index: $z-plus-one;
+
+  @include breakpoint($screen-medium) {
+    width: 60%;
+    text-align: left;
+  }
+}
+
+.home-heading {
+  @include head-2xl;
+}
+
+.home-subheading {
+  @include breakpoint($screen-medium) {
+    width: 90%;
+  }
+}
+
+.spline-desktop-static {
+  @include center;
+  max-width: 480px;
+
+  @include breakpoint($screen-medium) {
+    @include hidden;
+  }
+}
+
+.spline-desktop-embed {
+  @include hidden;
+  @include center;
+  width: 560px;
+  height: 360px;
+  transition: all $transition-xlong;
+  transform: scale(0.75);
+
+  @include breakpoint($screen-medium) {
+    @include absolute;
+    top: 0;
+    right: -32px;
+    margin: 0;
+    opacity: 0;
+  }
+
+  &--on {
+    @include breakpoint($screen-medium) {
+      @include block;
+    }
+  }
+
+  &--visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  @include breakpoint($screen-large) {
+    top: 60px;
+    right: -48px;
+  }
+}
+
+.home-intro-stats {
+  @include flex;
+  flex-wrap: wrap;
+  gap: $spacer-2;
+}
+
+.home-intro-stats__unit {
+  @include flex;
+  @include flex-vertical;
+  @include flex-fixed(48%);
+  @include pad(2);
+  @include glass-box;
+
+  @include breakpoint($screen-medium) {
+    @include flex-equal;
+  }
+}
+
+.home-intro-stats__unit-icon {
+  @include icon(48px);
+  @include mar-bottom(1);
+}
+
+.home-intro-stats__unit-heading {
+  @include head-small;
+  @include mar-bottom(0.5);
+}
+
+.home-intro-stats__unit-desc {
+  @include body-small;
+}
+
+.home-intro-bio {
+  @include flex;
+  @include flex-vertical;
+  @include mar-top(5);
+  gap: $spacer-2;
+
+  @include breakpoint($screen-medium) {
+    @include flex-horizontal;
+  }
+}
+
+.home-intro-bio__photo {
+  @include center;
+  width: 208px;
+  height: 256.5px;
+
+  @include breakpoint($screen-medium) {
+    @include mar(0);
+  }
+}

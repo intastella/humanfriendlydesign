@@ -3,7 +3,7 @@
 }
 
 .work-links {
-  @include mar-top(1.5);
+  @include mar-top(1);
   @include footnote;
 }
 
@@ -26,15 +26,13 @@
 }
 
 .work-sample-link {
-  @include border-radius($br-16);
-  @include border;
+  @include border-radius(24px);
   line-height: 0;
-  transition: all $transition-short;
+  transition: all $transition-xlong;
+  box-shadow: $shadow-xl;
 
   &:hover {
-    transform: translate(-5px, -5px);
-    border: 1px solid var(--color-border-dark);
-    box-shadow: $shadow-large;
+    transform: translate(0, -5px);
   }
 }
 

@@ -15,7 +15,7 @@
   \************************/
 /***/ (() => {
 
-eval("function setWelcomeMessage() {\n  const welcomeMessageElement = document.querySelector(\".js-welcome-message\");\n  const currentDate = new Date();\n  const currentTime = currentDate.getHours();\n  var welcomeMessage;\n\n  if (welcomeMessageElement !== null) {\n    if (currentTime >= 0 && currentTime <= 11) {\n      welcomeMessage = \"Good morning!\";\n    }\n    if (currentTime >= 12 && currentTime <= 17) {\n      welcomeMessage = \"Good afternoon!\";\n    }\n    if (currentTime >= 18 && currentTime <= 23) {\n      welcomeMessage = \"Good evening!\";\n    }\n\n    welcomeMessageElement.textContent=welcomeMessage;\n  }\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", function() { \n  setWelcomeMessage();\n})\n\n//# sourceURL=webpack://humanfriendlydesign/./src/js/home.js?");
+eval("function homePageAnimations() {\n  const splineEmbed = document.querySelector(\".spline-desktop-embed\");\n\n  setTimeout(function() {\n    splineEmbed.classList.add('spline-desktop-embed--on');\n  }, 1);\n\n  setTimeout(function() {\n    splineEmbed.classList.add('spline-desktop-embed--visible');\n  }, 750);\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", function() { \n  homePageAnimations();\n})\n\n//# sourceURL=webpack://humanfriendlydesign/./src/js/home.js?");
 
 /***/ })
 

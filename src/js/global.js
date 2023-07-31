@@ -1,111 +1,50 @@
-function initColorThemeSwitch() {
-  const themeMenu = document.querySelector(".js-theme-menu");
-  const themeMenuOverlay = document.querySelector(".js-header-theme-menu-overlay");
-  const buttonThemeMenuButton = document.querySelector(".js-theme-menu-button");
-  const themeButtons = document.querySelectorAll(".js-theme-button");
-  const accentButtons = document.querySelectorAll(".js-accent-button");
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-  
-  // https://thegermancoder.com/2018/10/04/how-to-remove-classes-by-prefix-in-vanilla-javascript/
-  function removeClassByPrefix(node, prefix) {
-    var regx = new RegExp('\\b' + prefix + '[^ ]*[ ]?\\b', 'g');
-    node.className = node.className.replace(regx, '');
-    return node;
-  }
-  
-  function manualSetColorTheme(el) {
-    // console.log('manual set theme');
-    var selectedButton = el.target.closest('.js-theme-button');
-    var selectedTheme = selectedButton.dataset.theme;
-    // console.log('theme='+selectedTheme);
-    removeClassByPrefix(document.documentElement, 'theme-');
-    document.documentElement.classList.add("theme-"+selectedTheme);
+import Granim from 'granim';
 
-    if (selectedTheme == "auto") {
-      localStorage.removeItem("colorTheme");
-      toggleThemeMenu();
-      autoSetColorTheme();
-    } else {
-      localStorage.setItem("colorTheme", selectedTheme);
-      toggleThemeMenu();
+function initGranim() {
+  new Granim({
+    element: '#granim-canvas',
+    name: 'granim',
+    direction: 'top-bottom',
+    states : {
+        "default-state": {
+            gradients: [
+                ['#E3FF75', '#75DEFF'],
+                ['#E3FF75', '#428EFF'],
+                ['#E3FF75', '#757BFF'],
+                ['#E3FF75', '#FF75A7'],
+                ['#E3FF75', '#75FF9C']
+            ],
+            transitionSpeed: 8000
+        }
     }
-  }
+ });
+}
 
-  function autoSetColorTheme() {
-    const savedTheme = localStorage.getItem("colorTheme");
-    // console.log('auto set theme');
-    removeClassByPrefix(document.documentElement, 'theme-');
-    
-    if (savedTheme == null) {
-      if (prefersDarkScheme.matches) {
-        // console.log('auto applied system dark');
-        document.documentElement.classList.add("theme-auto");
-        document.documentElement.classList.add("theme-dark");
-      } 
-      if (!prefersDarkScheme.matches) {
-        document.documentElement.classList.add("theme-auto");
-        // console.log('auto applied system auto');
-      }
-    } else {
-      // console.log('auto applied saved '+savedTheme);
-      document.documentElement.classList.add("theme-"+savedTheme);
+function globalPageAnimations() {
+  const logoElement = document.querySelector(".js-tmpl-logo");
+  const navElement = document.querySelector(".js-tmpl-nav");
+  const mainElement = document.querySelector(".js-tmpl-main");
+
+  setTimeout(function() {
+    if (logoElement !== null) {
+      logoElement.classList.add('tmpl-logo--on');
     }
-  }
+  }, 250);
 
-  function manualSetAccentColor(el) {
-    // console.log('manual set accent');
-    var selectedButton = el.target;
-    var selectedColor = selectedButton.dataset.color;
-    // console.log('color='+selectedColor);
-
-    if (selectedColor !== "classic") {
-      removeClassByPrefix(document.documentElement, 'accent-');
-      document.documentElement.classList.add("accent-"+selectedColor);
-      localStorage.setItem("accentColor", selectedColor);
-      toggleThemeMenu();
+  setTimeout(function() {
+    if (navElement !== null) {
+      navElement.classList.add('tmpl-nav--on');
     }
-    else {
-      removeClassByPrefix(document.documentElement, 'accent-');
-      localStorage.removeItem("accentColor");
-      toggleThemeMenu();
+  }, 500);
+
+  setTimeout(function() {
+    if (mainElement !== null) {
+      mainElement.classList.add('tmpl-main--on');
     }
-  }
-
-  function autoSetAccentColor() {
-    const savedaccentColor = localStorage.getItem("accentColor");
-    document.documentElement.classList.add("accent-"+savedaccentColor);
-  }
-
-  function toggleThemeMenu() {
-    if (themeMenu.classList.contains('tmpl-header__theme-menu--active')) {
-      themeMenu.classList.remove('tmpl-header__theme-menu--active');
-    } else {
-      themeMenu.classList.add('tmpl-header__theme-menu--active');
-    }
-  }
-
-  if (themeMenu !== null) {
-    themeMenuOverlay.addEventListener("click", toggleThemeMenu);
-    buttonThemeMenuButton.addEventListener("click", toggleThemeMenu);
-
-    Array.prototype.forEach.call(themeButtons, function (el, i) {
-      themeButtons[i].addEventListener('click', function(el) {
-        manualSetColorTheme(el);
-      });
-    });
-
-    Array.prototype.forEach.call(accentButtons, function (el, i) {
-      accentButtons[i].addEventListener('click', function(el) {
-        manualSetAccentColor(el);
-      });
-    });
-  }
-  
-  prefersDarkScheme.addEventListener("change", autoSetColorTheme);
-  autoSetColorTheme();
-  autoSetAccentColor();
+  }, 750);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  initColorThemeSwitch();
+  initGranim();
+  globalPageAnimations();
 })

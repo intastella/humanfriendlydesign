@@ -1,18 +1,36 @@
+@mixin type-align-right { 
+  text-align: right; 
+}
+
+@mixin type-align-left { 
+  text-align: left; 
+}
+
+@mixin type-align-center { 
+  text-align: center; 
+}
+
 @mixin head-2xl {
+  font-family: $font-family-heading;
   font-size: $type-48;
   font-weight: $font-bold;
+  text-transform: uppercase;
+  line-height: 1;
 
   @include breakpoint($screen-large) {
-    font-size: $type-64;
+    font-size: 5rem;
   }
 }
 
 @mixin head-xlarge {
-  font-size: $type-32;
+  font-family: $font-family-heading;
+  font-size: $type-48;
   font-weight: $font-bold;
+  text-transform: uppercase;
+  line-height: 1;
 
   @include breakpoint($screen-large) {
-    font-size: $type-48;
+    font-size: $type-52;
   }
 }
 
@@ -21,7 +39,7 @@
   font-weight: $font-bold;
 
   @include breakpoint($screen-large) {
-    font-size: $type-32;
+    font-size: $type-30;
   }
 }
 
@@ -31,7 +49,7 @@
   font-weight: $font-bold;
 
   @include breakpoint($screen-large) {
-    font-size: $type-24;
+    font-size: $type-22;
   }
 }
 
@@ -62,7 +80,7 @@
   }
 }
 
-@mixin body-med {
+@mixin body-large {
   font-size: $type-16;
 
   @include breakpoint($screen-large) {
@@ -70,16 +88,24 @@
   }
 }
 
-@mixin footnote {
-  font-size: $type-12;
-  font-weight: $font-regular;
+@mixin body-med {
+  font-size: $type-14;
 
   @include breakpoint($screen-large) {
-    font-size: $type-13;
+    font-size: $type-16;
   }
 }
 
-@mixin footnote-small {
+@mixin body-small {
+  font-size: $type-13;
+
+  @include breakpoint($screen-large) {
+    font-size: $type-14;
+  }
+}
+
+@mixin footnote {
+  font-family: $font-family-monospace;
   font-size: $type-10;
   font-weight: $font-regular;
 
