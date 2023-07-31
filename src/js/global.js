@@ -26,15 +26,21 @@ function globalPageAnimations() {
   const mainElement = document.querySelector(".js-tmpl-main");
 
   setTimeout(function() {
-    logoElement.classList.add('tmpl-logo--on');
+    if (logoElement !== null) {
+      logoElement.classList.add('tmpl-logo--on');
+    }
   }, 250);
 
   setTimeout(function() {
-    navElement.classList.add('tmpl-nav--on');
+    if (navElement !== null) {
+      navElement.classList.add('tmpl-nav--on');
+    }
   }, 500);
 
   setTimeout(function() {
-    mainElement.classList.add('tmpl-main--on');
+    if (mainElement !== null) {
+      mainElement.classList.add('tmpl-main--on');
+    }
   }, 750);
 }
 
