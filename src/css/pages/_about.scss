@@ -1,13 +1,12 @@
 .about-hero__avatar {
-  @include mar-bottom(2);
-  width: 156px;
-  height: 192px;
-  transition: all $transition-xlong;
-
-  @include breakpoint($screen-medium) {
-    width: 208px;
-    height: 256px;
-  }
+  @include mar-bottom(6);
+  @include border-radius(24px);
+  width: 180px;
+  height: 238px;
+  transform: scale(1.05) rotate(-8deg);
+  transform-origin: right;
+  border-top: 1px solid var(--color-trans-white-medium);
+  box-shadow: $shadow-xl;
 }
 
 .about-roles {
@@ -31,9 +30,9 @@
 
 .about-role-item__image {
   @include flex-fixed;
-  @include mar-right(1);
+  @include mar-right(1.5);
   @include border-radius($br-4);
-  @include square(64px);
+  @include square(56px);
   @include pad(1);
   @include border-radius($br-round);
   background-color: $white;
@@ -78,7 +77,7 @@
 
 .about-resume__link-icon {
   @include mar-right(1);
-  @include icon(32px);
+  @include icon(24px);
   transform: scale(1.075);
   transition: all $transition-xxlong;
   
