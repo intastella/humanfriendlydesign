@@ -1656,10 +1656,10 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 @media (min-width: 768px) {
   .spline-desktop-embed {
     position: absolute;
+    display: block;
     top: 0;
     right: -32px;
     margin: 0;
-    opacity: 0;
   }
 }
 @media (min-width: 768px) {
@@ -1668,7 +1668,6 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   }
 }
 .spline-desktop-embed--visible {
-  opacity: 1;
   transform: scale(1);
 }
 @media (min-width: 1024px) {

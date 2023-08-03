@@ -84,10 +84,11 @@
 
   @include breakpoint($screen-medium) {
     @include absolute;
+    @include block;
     top: 0;
     right: -32px;
     margin: 0;
-    opacity: 0;
+    // opacity: 0;
   }
 
   &--on {
@@ -97,7 +98,7 @@
   }
 
   &--visible {
-    opacity: 1;
+    // opacity: 1;
     transform: scale(1);
   }
 
