@@ -115,6 +115,7 @@
     left: 50%;
     width: 376px;
     margin-left: -188px;
+    transform: scale(0.95);
   }
 
   &--on {
@@ -128,6 +129,7 @@
   }
 
   &:hover {
+    transform: scale(1);
     background: linear-gradient(180deg, transparent 0%, var(--color-trans-white-medium) 100%);
   }
 }
