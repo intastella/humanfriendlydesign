@@ -44,6 +44,7 @@
 
 .home-heading-emoji {
   @include relative;
+  transform-origin: bottom;
 
   @include breakpoint($screen-medium) {
     @include absolute;
