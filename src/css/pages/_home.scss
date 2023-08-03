@@ -42,6 +42,22 @@
   @include head-2xl;
 }
 
+.home-heading-emoji {
+  @include relative;
+
+  @include breakpoint($screen-medium) {
+    @include absolute;
+    @include mar-left(2);
+  }
+
+  .home-welcome-message-section:hover & {
+    animation-name: wave;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+}
+
 .home-subheading {
   @include breakpoint($screen-medium) {
     width: 90%;
@@ -126,19 +142,41 @@
   @include flex;
   @include flex-vertical;
   @include mar-top(5);
-  gap: $spacer-2;
+  gap: $spacer-5;
 
   @include breakpoint($screen-medium) {
     @include flex-horizontal;
   }
 }
 
-.home-intro-bio__photo {
+.home-intro-bio__photo-wrapper {
   @include center;
-  width: 208px;
-  height: 256.5px;
+  @include flex-fixed;
+  @include border-radius(24px);
+  width: 180px;
+  height: 238px;
+  transform: scale(1.05) rotate(-8deg);
+  transform-origin: right;
+  border-top: 1px solid var(--color-trans-white-medium);
+  box-shadow: $shadow-xl;
+  transition: all $transition-xxlong;
+
+  .home-intro-bio:hover & {
+    transform: scale(1.0) rotate(-5deg);
+  }
 
   @include breakpoint($screen-medium) {
     @include mar(0);
+  }
+}
+
+.home-intro-bio__photo {
+  width: 180px;
+  height: 238px;
+  transform: scale(1.1);
+  transition: all $transition-xxlong;
+
+  .home-intro-bio:hover & {
+    transform: scale(1.025);
   }
 }

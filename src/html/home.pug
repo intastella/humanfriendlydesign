@@ -5,12 +5,13 @@ block vars
   - var page_title = "Home"
 
 block content
-  section.tmpl-page-subsection.home-welcome-message-section
+  section.tmpl-page-subsection.tmpl-page-subsection--first.home-welcome-message-section
     .home-welcome-message
-      h1.tmpl-page-heading.home-heading(class=page_heading_classes)
+      h1.tmpl-page-heading.home-heading
         | Welcome
         br
-        | Human 👋
+        | Human 
+        span.home-heading-emoji 👋
       h2.home-subheading
         | I’m Don, a product designer focused on design systems and building products in a human friendly way.
 
@@ -47,7 +48,8 @@ block content
         h4.home-intro-stats__unit-heading 4 design systems
         p.home-intro-stats__unit-desc Plus many more employed in designs over last 8 years.
     .home-intro-bio
-      img(src="/img/don-osborne.png").home-intro-bio__photo
+      .home-intro-bio__photo-wrapper
+        img(src="/img/don-osborne.png").home-intro-bio__photo
       .home-intro-bio__text
         p 
         | #[b Hi, I’m Don Osborne, a designer based in Los Angeles, California.]
