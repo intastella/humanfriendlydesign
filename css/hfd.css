@@ -633,6 +633,7 @@ body.chocolat-open > .chocolat-image-wrapper {
   --color-surface-dark: rgba(255, 255, 255, 0.75);
   --color-accent: #f7f7f7;
   --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-trans-white-strong: rgba(255, 255, 255, 0.75);
   --color-trans-white-medium: rgba(255, 255, 255, 0.5);
   --color-trans-white-light: rgba(255, 255, 255, 0.3);
   --color-trans-white-xlight: rgba(255, 255, 255, 0.1);
@@ -774,6 +775,17 @@ h6 {
     transform: rotate(359deg);
   }
 }
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 #granim-canvas-wrapper {
   position: fixed;
   width: 100%;
@@ -886,13 +898,13 @@ h6 {
   width: calc(100vw - 32px);
   height: 64px;
   padding: 4px;
-  border: 1px solid var(--color-border-light);
-  background: var(--color-surface-light);
-  box-shadow: 2px 2px 0px var(--color-shadow);
+  border-top: 1px solid var(--color-trans-white-strong);
+  background: linear-gradient(180deg, transparent 0%, var(--color-trans-white-light) 100%);
+  box-shadow: 0 2px 20px 0 var(--color-shadow);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   z-index: 9;
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 @media (min-width: 768px) {
   .tmpl-nav {
@@ -914,7 +926,7 @@ h6 {
   }
 }
 .tmpl-nav:hover, .tmpl-nav:focus {
-  border: 1px solid var(--color-border-dark);
+  background: linear-gradient(180deg, transparent 0%, var(--color-trans-white-medium) 100%);
 }
 
 .tmpl-nav__link {
@@ -930,9 +942,9 @@ h6 {
   overflow: hidden;
   padding: 16px 0;
   text-decoration: none;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  opacity: 0.4;
+  opacity: 0.3;
 }
 @media (min-width: 1024px) {
   .tmpl-nav__link {
@@ -940,7 +952,6 @@ h6 {
   }
 }
 .tmpl-nav__link--active, .tmpl-nav__link:hover, .tmpl-nav__link:focus {
-  color: var(--color-text-primary);
   opacity: 1;
 }
 
@@ -1113,20 +1124,16 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 
 .tmpl-project-row {
-  display: flex;
-  flex-direction: column;
   margin-top: 24px;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-@media (min-width: 600px) {
-  .tmpl-project-row {
-    flex-wrap: nowrap;
-  }
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 24px;
+  grid-column-gap: 24px;
+  grid-template-columns: auto auto;
 }
 @media (min-width: 768px) {
   .tmpl-project-row {
-    flex-direction: row;
+    grid-template-columns: auto auto auto;
   }
 }
 .tmpl-project-row--first {
@@ -1135,22 +1142,11 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 
 .tmpl-project {
   position: relative;
-  flex: 1 1 auto;
   overflow: hidden;
   border-radius: 24px;
   transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
   border-top: 1px solid var(--color-trans-white-medium);
   box-shadow: 0 2px 20px 0 var(--color-shadow);
-}
-@media (min-width: 600px) {
-  .tmpl-project {
-    flex: 0 0 47%;
-  }
-}
-@media (min-width: 768px) {
-  .tmpl-project {
-    flex: 1 1 auto;
-  }
 }
 .tmpl-project--small:hover, .tmpl-project--small:focus {
   transform: scale(1.05);
@@ -1608,6 +1604,22 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   }
 }
 
+.home-heading-emoji {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .home-heading-emoji {
+    position: absolute;
+    margin-left: 16px;
+  }
+}
+.home-welcome-message-section:hover .home-heading-emoji, .home-welcome-message-section:focus .home-heading-emoji {
+  animation-name: wave;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
 @media (min-width: 768px) {
   .home-subheading {
     width: 90%;
@@ -1719,7 +1731,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  gap: 16px;
+  gap: 40px;
 }
 @media (min-width: 768px) {
   .home-intro-bio {
@@ -1727,16 +1739,37 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   }
 }
 
-.home-intro-bio__photo {
+.home-intro-bio__photo-wrapper {
   margin-right: auto;
   margin-left: auto;
-  width: 208px;
-  height: 256.5px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 24px;
+  width: 180px;
+  height: 238px;
+  transform: scale(1.05) rotate(-8deg);
+  transform-origin: right;
+  border-top: 1px solid var(--color-trans-white-medium);
+  box-shadow: 0 2px 20px 0 var(--color-shadow);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.home-intro-bio:hover .home-intro-bio__photo-wrapper, .home-intro-bio:focus .home-intro-bio__photo-wrapper {
+  transform: scale(1) rotate(-5deg);
 }
 @media (min-width: 768px) {
-  .home-intro-bio__photo {
+  .home-intro-bio__photo-wrapper {
     margin: 0;
   }
+}
+
+.home-intro-bio__photo {
+  width: 180px;
+  height: 238px;
+  transform: scale(1.1);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.home-intro-bio:hover .home-intro-bio__photo, .home-intro-bio:focus .home-intro-bio__photo {
+  transform: scale(1.025);
 }
 
 .work-tags {
@@ -1929,16 +1962,15 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 
 .about-hero__avatar {
-  margin-bottom: 16px;
-  width: 156px;
-  height: 192px;
-  transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-@media (min-width: 768px) {
-  .about-hero__avatar {
-    width: 208px;
-    height: 256px;
-  }
+  margin-bottom: 48px;
+  overflow: hidden;
+  border-radius: 24px;
+  width: 180px;
+  height: 238px;
+  transform: scale(1.05) rotate(-8deg);
+  transform-origin: right;
+  border-top: 1px solid var(--color-trans-white-medium);
+  box-shadow: 0 2px 20px 0 var(--color-shadow);
 }
 
 .about-roles {
@@ -1972,11 +2004,11 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 
 .about-role-item__image {
   flex: 0 0 auto;
-  margin-right: 8px;
+  margin-right: 12px;
   overflow: hidden;
   border-radius: 4px;
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   padding: 8px;
   overflow: hidden;
   border-radius: 9999rem;
@@ -2050,8 +2082,8 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 
 .about-resume__link-icon {
   margin-right: 8px;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   fill: currentColor;
   stroke: currentColor;
   transform: scale(1.075);

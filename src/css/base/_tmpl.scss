@@ -102,12 +102,12 @@
   width: calc(100vw - $spacer-4);
   height: 64px;
   padding: $spacer-half;
-  border: 1px solid var(--color-border-light);
-  background: var(--color-surface-light);
-  box-shadow: $shadow-small;
+  border-top: 1px solid var(--color-trans-white-strong);
+  background: linear-gradient(180deg, transparent 0%, var(--color-trans-white-light) 100%);
+  box-shadow: $shadow-xl;
   backdrop-filter: blur(8px);
   z-index: $z-tmpl-header;
-  transition: all $transition-long;
+  transition: all $transition-xxlong;
 
   @include breakpoint($screen-medium) {
     top: -72px;
@@ -128,7 +128,7 @@
   }
 
   &:hover {
-    border: 1px solid var(--color-border-dark);
+    background: linear-gradient(180deg, transparent 0%, var(--color-trans-white-medium) 100%);
   }
 }
 
@@ -142,13 +142,12 @@
   @include overflow-hidden;
   padding: $spacer-2 0;
   text-decoration: none;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   transition: all $transition-long;
-  opacity: 0.4;
+  opacity: 0.3;
 
   &--active,
   &:hover {
-    color: var(--color-text-primary);
     opacity: 1;
   }
 }
@@ -306,18 +305,15 @@
 }
 
 .tmpl-project-row {
-  @include flex;
-  @include flex-vertical;
   @include mar-top(3);
-  gap: $spacer-3;
-  flex-wrap: wrap;
-
-  @include breakpoint($screen-small) {
-    flex-wrap: nowrap;
-  }
+  @include grid;
+  grid-template-columns: auto;
+  grid-gap: $spacer-3;
+  grid-column-gap: $spacer-3;
+  grid-template-columns: auto auto;
 
   @include breakpoint($screen-medium) {
-    @include flex-horizontal;
+    grid-template-columns: auto auto auto;
   }
 
   &--first {
@@ -327,19 +323,10 @@
 
 .tmpl-project {
   @include relative;
-  @include flex-fluid;
   @include border-radius(24px);
   transition: all $transition-xlong;
   border-top: 1px solid var(--color-trans-white-medium);
   box-shadow: $shadow-xl;
-
-  @include breakpoint($screen-small) {
-    flex: 0 0 47%;
-  }
-
-  @include breakpoint($screen-medium) {
-    @include flex-fluid;
-  }
 
   &--small {
     &:hover {
