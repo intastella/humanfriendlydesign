@@ -3,7 +3,7 @@ function homePageAnimations() {
 
   setTimeout(function() {
     splineEmbed.classList.add('spline-desktop-embed--on');
-  }, 1);
+  }, 250);
 
   setTimeout(function() {
     splineEmbed.classList.add('spline-desktop-embed--visible');

@@ -15,7 +15,7 @@
   \************************/
 /***/ (() => {
 
-eval("function homePageAnimations() {\n  const splineEmbed = document.querySelector(\".spline-desktop-embed\");\n\n  setTimeout(function() {\n    splineEmbed.classList.add('spline-desktop-embed--on');\n  }, 1);\n\n  setTimeout(function() {\n    splineEmbed.classList.add('spline-desktop-embed--visible');\n  }, 750);\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", function() { \n  homePageAnimations();\n})\n\n//# sourceURL=webpack://humanfriendlydesign/./src/js/home.js?");
+eval("function homePageAnimations() {\n  const splineEmbed = document.querySelector(\".spline-desktop-embed\");\n\n  setTimeout(function() {\n    splineEmbed.classList.add('spline-desktop-embed--on');\n  }, 250);\n\n  setTimeout(function() {\n    splineEmbed.classList.add('spline-desktop-embed--visible');\n  }, 750);\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", function() { \n  homePageAnimations();\n})\n\n//# sourceURL=webpack://humanfriendlydesign/./src/js/home.js?");
 
 /***/ })
 
