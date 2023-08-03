@@ -80,7 +80,7 @@
   width: 560px;
   height: 360px;
   transition: all $transition-xlong;
-  transform: scale(0.75);
+  // transform: scale(0.75);
 
   @include breakpoint($screen-medium) {
     @include absolute;
@@ -91,16 +91,16 @@
     // opacity: 0;
   }
 
-  &--on {
-    @include breakpoint($screen-medium) {
-      @include block;
-    }
-  }
+  // &--on {
+  //   @include breakpoint($screen-medium) {
+  //     @include block;
+  //   }
+  // }
 
-  &--visible {
-    // opacity: 1;
-    transform: scale(1);
-  }
+  // &--visible {
+  //   opacity: 1;
+  //   transform: scale(1);
+  // }
 
   @include breakpoint($screen-large) {
     top: 60px;

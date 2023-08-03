@@ -1651,7 +1651,6 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   width: 560px;
   height: 360px;
   transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transform: scale(0.75);
 }
 @media (min-width: 768px) {
   .spline-desktop-embed {
@@ -1661,14 +1660,6 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
     right: -32px;
     margin: 0;
   }
-}
-@media (min-width: 768px) {
-  .spline-desktop-embed--on {
-    display: block;
-  }
-}
-.spline-desktop-embed--visible {
-  transform: scale(1);
 }
 @media (min-width: 1024px) {
   .spline-desktop-embed {
