@@ -1,13 +1,11 @@
 .contact-wrapper {
   @include flex;
   @include flex-vertical;
-  @include mar-top(4);
   gap: $spacer-2;
 
   @include breakpoint($screen-large) {
     @include flex-horizontal;
     @include flex-cross-center;
-    @include mar-top(8);
     gap: $spacer-8;
   }
 }
