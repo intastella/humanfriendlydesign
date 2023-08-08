@@ -109,21 +109,22 @@
 }
 
 .home-intro-stats {
-  @include flex;
-  flex-wrap: wrap;
-  gap: $spacer-2;
+  @include grid;
+  grid-template-columns: auto;
+  grid-gap: $spacer-2;
+  grid-column-gap: $spacer-2;
+  grid-template-columns: auto auto;
+
+  @include breakpoint($screen-medium) {
+    grid-template-columns: auto auto auto auto;
+  }
 }
 
 .home-intro-stats__unit {
   @include flex;
   @include flex-vertical;
-  @include flex-fixed(47%);
   @include pad(2);
   @include glass-box;
-
-  @include breakpoint($screen-medium) {
-    @include flex-equal;
-  }
 }
 
 .home-intro-stats__unit-icon {
