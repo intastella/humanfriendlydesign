@@ -67,6 +67,13 @@
     width: 80px;
     height: 80px;
   }
+
+  // Target only iOS Safari for iPhone X style screen inset
+  @supports #{'\(-webkit-touch-callout: none)'} {
+    @include breakpoint($screen-landscape) {
+      left: env(safe-area-inset-left);
+    }
+  }
 }
 
 .tmpl-logo__smile {
@@ -203,6 +210,15 @@
   
   @include breakpoint($screen-large) {
     padding-top: 144px;
+  }
+
+  // Target only iOS Safari for iPhone X style screen inset
+  @supports #{'\(-webkit-touch-callout: none)'} {
+    @include breakpoint($screen-landscape) {
+      padding-right: env(safe-area-inset-right);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+    }
   }
 }
 

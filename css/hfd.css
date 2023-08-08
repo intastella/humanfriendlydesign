@@ -863,6 +863,13 @@ h6 {
     height: 80px;
   }
 }
+@supports (-webkit-touch-callout: none) {
+  @media (orientation: landscape) {
+    .tmpl-logo {
+      left: env(safe-area-inset-left);
+    }
+  }
+}
 
 .tmpl-logo__smile {
   position: absolute;
@@ -1015,6 +1022,15 @@ h6 {
 @media (min-width: 1024px) {
   .tmpl-content {
     padding-top: 144px;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  @media (orientation: landscape) {
+    .tmpl-content {
+      padding-right: env(safe-area-inset-right);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+    }
   }
 }
 
@@ -1845,14 +1861,12 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
   gap: 16px;
 }
 @media (min-width: 1024px) {
   .contact-wrapper {
     flex-direction: row;
     align-items: center;
-    margin-top: 64px;
     gap: 64px;
   }
 }

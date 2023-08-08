@@ -55,22 +55,6 @@ body {
   font-weight: $font-weight-default;
   line-height: $font-line-height-default;
   color: var(--color-text-primary);
-  // padding: $spacer $spacer-plus $spacer-plus $spacer;
-
-  // Target only iOS Safari for iPhone X style screen inset
-  // @supports #{'\(-webkit-touch-callout: none)'} {
-  //   @include breakpoint($screen-landscape) {
-  //     padding: $spacer env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-  //   }
-
-  //   @include breakpoint($screen-portrait) {
-  //     padding: $spacer $spacer-plus $spacer-plus $spacer;
-  //   }
-  // }
-
-  // @include breakpoint($screen-large) {
-  //   padding: $spacer-2;
-  // }
 }
 
 a {
