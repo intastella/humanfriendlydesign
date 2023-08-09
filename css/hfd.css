@@ -1153,9 +1153,14 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   grid-template-columns: auto;
   grid-gap: 24px;
   grid-column-gap: 24px;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 390px) {
+  .tmpl-project-row {
+    grid-template-columns: auto auto;
+  }
+}
+@media (min-width: 600px) {
   .tmpl-project-row {
     grid-template-columns: auto auto auto;
   }
@@ -1172,7 +1177,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   border-top: 1px solid var(--color-trans-white-medium);
   box-shadow: 0 2px 20px 0 var(--color-shadow);
 }
-.tmpl-project--small:hover, .tmpl-project--small:focus {
+.tmpl-project:hover, .tmpl-project:focus {
   transform: scale(1.05);
 }
 
@@ -1185,16 +1190,10 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   overflow: hidden;
   border-radius: 24px;
   transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.tmpl-project__thumbnail--small {
   transform: scale(1.05);
 }
-.tmpl-project:hover .tmpl-project__thumbnail--small, .tmpl-project:focus .tmpl-project__thumbnail--small {
+.tmpl-project:hover .tmpl-project__thumbnail, .tmpl-project:focus .tmpl-project__thumbnail {
   transform: scale(1);
-}
-.tmpl-project__thumbnail--xlarge {
-  border-top: 1px solid var(--color-trans-white-medium);
-  box-shadow: 0 2px 20px 0 var(--color-shadow);
 }
 
 .tmpl-project__details {
@@ -1408,7 +1407,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   width: calc(100vw-56px);
   padding: 64px 64px 96px;
 }
-@media (min-width: 375px) {
+@media (min-width: 390px) {
   .loading--expanded .loading__screen {
     width: 320px;
   }
@@ -1512,7 +1511,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   height: 8px;
   background-color: var(--color-trans-white-medium);
 }
-@media (min-width: 375px) {
+@media (min-width: 390px) {
   .loading--expanded .loading__progress {
     width: 320px;
   }

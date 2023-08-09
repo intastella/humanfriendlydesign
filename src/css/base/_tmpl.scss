@@ -328,9 +328,13 @@
   grid-template-columns: auto;
   grid-gap: $spacer-3;
   grid-column-gap: $spacer-3;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
 
-  @include breakpoint($screen-medium) {
+  @include breakpoint($screen-xsmall) {
+    grid-template-columns: auto auto;
+  }
+
+  @include breakpoint($screen-small) {
     grid-template-columns: auto auto auto;
   }
 
@@ -346,10 +350,8 @@
   border-top: 1px solid var(--color-trans-white-medium);
   box-shadow: $shadow-xl;
 
-  &--small {
-    &:hover {
-      transform: scale(1.05);
-    }
+  &:hover {
+    transform: scale(1.05);
   }
 }
 
@@ -361,18 +363,10 @@
   @include block;
   @include border-radius(24px);
   transition: all $transition-xlong;
-  
-  &--small {
-    transform: scale(1.05);
+  transform: scale(1.05);
 
-    .tmpl-project:hover & {
-      transform: scale(1);
-    }
-  }
-
-  &--xlarge {
-    border-top: 1px solid var(--color-trans-white-medium);
-    box-shadow: $shadow-xl;
+  .tmpl-project:hover & {
+    transform: scale(1);
   }
 }
 
