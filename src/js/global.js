@@ -44,7 +44,30 @@ function globalPageAnimations() {
   }, 750);
 }
 
+function initScrollViews() {
+  const scrollViews = document.querySelectorAll('.js-scroll-view');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setTimeout(function() {
+            entry.target.classList.add('tmpl-scroll-view--active');
+          }, 250);
+        }
+      })
+  }, 
+  { 
+    threshold: 0.25
+  });
+
+  for (let i = 0; i < scrollViews.length; i++) {
+    const elements = scrollViews[i];
+    observer.observe(elements);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   initGranim();
   globalPageAnimations();
+  initScrollViews();
 })
