@@ -2,6 +2,8 @@
   @include flex;
   @include flex-cross-center;
   flex-wrap: wrap;
+  opacity: 1;
+  transition: none;
 
   @include breakpoint($screen-medium) {
     min-height: 360px;
@@ -80,7 +82,7 @@
   width: 560px;
   height: 360px;
   transition: all $transition-xlong;
-  // transform: scale(0.75);
+  transform: scale(0.75);
 
   @include breakpoint($screen-medium) {
     @include absolute;
@@ -88,19 +90,13 @@
     top: 0;
     right: -32px;
     margin: 0;
-    // opacity: 0;
+    opacity: 0;
   }
 
-  // &--on {
-  //   @include breakpoint($screen-medium) {
-  //     @include block;
-  //   }
-  // }
-
-  // &--visible {
-  //   opacity: 1;
-  //   transform: scale(1);
-  // }
+  &--on {
+    opacity: 1;
+    transform: scale(1);
+  }
 
   @include breakpoint($screen-large) {
     top: 60px;
