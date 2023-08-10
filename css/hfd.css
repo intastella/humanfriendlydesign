@@ -792,6 +792,52 @@ h6 {
     transform: rotate(0deg);
   }
 }
+@keyframes drum {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes arm {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 #granim-canvas-wrapper {
   position: fixed;
   width: 100%;
@@ -1578,7 +1624,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   fill: var(--color-icon-primary);
 }
 
-.home-welcome-message-section {
+.home-welcome-section {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -1586,12 +1632,12 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   transition: none;
 }
 @media (min-width: 768px) {
-  .home-welcome-message-section {
+  .home-welcome-section {
     min-height: 360px;
   }
 }
 @media (min-width: 1024px) {
-  .home-welcome-message-section {
+  .home-welcome-section {
     min-height: 480px;
   }
 }
@@ -1639,7 +1685,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 
 .home-heading-emoji {
   position: relative;
-  transform-origin: bottom;
+  transform-origin: bottom right;
 }
 @media (min-width: 768px) {
   .home-heading-emoji {
@@ -1647,7 +1693,7 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
     margin-left: 16px;
   }
 }
-.home-welcome-message-section:hover .home-heading-emoji, .home-welcome-message-section:focus .home-heading-emoji {
+.home-welcome-section:hover .home-heading-emoji, .home-welcome-section:focus .home-heading-emoji {
   animation-name: wave;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
@@ -1699,6 +1745,18 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
     top: 60px;
     right: -48px;
   }
+}
+
+.home-intro-emoji {
+  position: absolute;
+  margin-left: 8px;
+  transform-origin: center;
+}
+.home-intro-section:hover .home-intro-emoji, .home-intro-section:focus .home-intro-emoji {
+  animation-name: drum;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }
 
 .home-intro-stats {
@@ -1801,6 +1859,18 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
 }
 .home-intro-bio:hover .home-intro-bio__photo, .home-intro-bio:focus .home-intro-bio__photo {
   transform: scale(1.025);
+}
+
+.home-recent-emoji {
+  position: absolute;
+  margin-left: 8px;
+  transform-origin: bottom right;
+}
+.home-recent-section:hover .home-recent-emoji, .home-recent-section:focus .home-recent-emoji {
+  animation-name: arm;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }
 
 .work-tags {

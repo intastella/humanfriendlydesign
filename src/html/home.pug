@@ -5,7 +5,7 @@ block vars
   - var page_title = "Home"
 
 block content
-  section.tmpl-page-subsection.tmpl-page-subsection--first.home-welcome-message-section.tmpl-scroll-view.js-scroll-view
+  section.tmpl-page-subsection.tmpl-page-subsection--first.home-welcome-section.tmpl-scroll-view.js-scroll-view
     .home-welcome-message
       h1.tmpl-page-heading.home-heading
         | Welcome
@@ -19,9 +19,11 @@ block content
     spline-viewer.spline-desktop-embed.js-spline-viewer(loading-anim, url="https://prod.spline.design/fPQx3Bt-1fiGNaHE/scene.splinecode")
 
 
-  section.tmpl-page-subsection.home-subsection.tmpl-scroll-view.js-scroll-view
+  section.tmpl-page-subsection.home-subsection.home-intro-section.tmpl-scroll-view.js-scroll-view
     .tmpl-page-subsection__header
-      h3.tmpl-page-subsection__header-title Introducing 🥁
+      h3.tmpl-page-subsection__header-title 
+        | Introducing 
+        span.home-intro-emoji 🥁
       a.tmpl-page-subsection__header-link(href="/about/")
         | More info
         svg.tmpl-page-subsection__header-link-arrow(width="18", height="18", viewBox="0 0 18 18", fill="none", xmlns="http://www.w3.org/2000/svg")
@@ -60,9 +62,11 @@ block content
         br
         | I'm skilled in #[b team leadership], #[b design systems] and building products that people love using. I am customer obsessed, with a passion for solving hard problems. I utilize #[em design thinking], #[em competitive analysis], #[b user research] and #[b usability testing] to ensure that solutions are tailored to solving customer and business problems alike.
   
-  section.tmpl-page-subsection.home-subsection.tmpl-scroll-view.js-scroll-view
+  section.tmpl-page-subsection.home-subsection.home-recent-section.tmpl-scroll-view.js-scroll-view
     .tmpl-page-subsection__header
-      h3.tmpl-page-subsection__header-title Recent work 💪
+      h3.tmpl-page-subsection__header-title 
+        | Recent work 
+        span.home-recent-emoji 💪
       a.tmpl-page-subsection__header-link(href="/work/")
         | View all
         svg.tmpl-page-subsection__header-link-arrow(width="18", height="18", viewBox="0 0 18 18", fill="none", xmlns="http://www.w3.org/2000/svg")

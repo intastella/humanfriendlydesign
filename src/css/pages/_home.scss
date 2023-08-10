@@ -1,4 +1,4 @@
-.home-welcome-message-section {
+.home-welcome-section {
   @include flex;
   @include flex-cross-center;
   flex-wrap: wrap;
@@ -46,14 +46,14 @@
 
 .home-heading-emoji {
   @include relative;
-  transform-origin: bottom;
+  transform-origin: bottom right;
 
   @include breakpoint($screen-medium) {
     @include absolute;
     @include mar-left(2);
   }
 
-  .home-welcome-message-section:hover & {
+  .home-welcome-section:hover & {
     animation-name: wave;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
@@ -101,6 +101,19 @@
   @include breakpoint($screen-large) {
     top: 60px;
     right: -48px;
+  }
+}
+
+.home-intro-emoji {
+  @include absolute;
+  @include mar-left(1);
+  transform-origin: center;
+
+  .home-intro-section:hover & {
+    animation-name: drum;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
   }
 }
 
@@ -177,5 +190,18 @@
 
   .home-intro-bio:hover & {
     transform: scale(1.025);
+  }
+}
+
+.home-recent-emoji {
+  @include absolute;
+  @include mar-left(1);
+  transform-origin: bottom right;
+
+  .home-recent-section:hover & {
+    animation-name: arm;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
   }
 }
