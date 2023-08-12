@@ -71,8 +71,8 @@
   @include flex;
   @include flex-cross-center;
   @include flex-fixed;
-  @include pad(2);
-  @include glass-box;
+  @include glass-box($br-round);
+  padding: $spacer-2 $spacer-4;
 }
 
 .about-resume__link-icon {

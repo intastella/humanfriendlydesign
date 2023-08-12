@@ -623,7 +623,7 @@ body.chocolat-open > .chocolat-image-wrapper {
   --color-page-bg: #E3FF75;
   --color-page-inner-bg: #fff;
   --color-text-primary: #000;
-  --color-text-secondary: #666666;
+  --color-text-secondary: rgba(0, 0, 0, 0.6);
   --color-icon-primary: #000;
   --color-icon-secondary: rgba(0, 0, 0, 0.4);
   --color-link: #000;
@@ -633,10 +633,11 @@ body.chocolat-open > .chocolat-image-wrapper {
   --color-surface-dark: rgba(255, 255, 255, 0.75);
   --color-accent: #f7f7f7;
   --color-shadow: rgba(0, 0, 0, 0.1);
-  --color-trans-white-strong: rgba(255, 255, 255, 0.75);
+  --color-trans-white-dark: rgba(255, 255, 255, 0.75);
   --color-trans-white-medium: rgba(255, 255, 255, 0.5);
   --color-trans-white-light: rgba(255, 255, 255, 0.3);
   --color-trans-white-xlight: rgba(255, 255, 255, 0.1);
+  --color-trans-black-dark: rgba(0, 0, 0, 0.6);
   --color-trans-black-medium: rgba(0, 0, 0, 0.4);
   --color-trans-black-light: rgba(0, 0, 0, 0.2);
   --color-trans-black-xlight: rgba(0, 0, 0, 0.1);
@@ -971,7 +972,7 @@ h6 {
   width: calc(100vw - 32px);
   height: 64px;
   padding: 4px;
-  border-top: 1px solid var(--color-trans-white-strong);
+  border-top: 1px solid var(--color-trans-white-dark);
   background: linear-gradient(180deg, transparent 0%, var(--color-trans-white-light) 100%);
   box-shadow: 0 2px 20px 0 var(--color-shadow);
   -webkit-backdrop-filter: blur(8px);
@@ -2180,13 +2181,13 @@ a:hover .tmpl-link-arrow__icon, .tmpl-link-arrow__icon:hover, a:focus .tmpl-link
   display: flex;
   align-items: center;
   flex: 0 0 auto;
-  padding: 16px;
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: 9999rem;
   border-top: 1px solid var(--color-trans-white-medium);
   background: linear-gradient(180deg, transparent 0%, var(--color-trans-white-light) 100%);
   box-shadow: 0 2px 20px 0 var(--color-shadow);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding: 16px 32px;
 }
 .about-resume__link:hover, .about-resume__link:focus {
   background: linear-gradient(180deg, transparent 0%, var(--color-trans-white-medium) 100%);
