@@ -10,7 +10,7 @@ $color-page-bg: #E3FF75;
 
 $color-page-inner-bg: $white;
 $color-text-primary: $black;
-$color-text-secondary: $grey-7;
+$color-text-secondary: rgba(0, 0, 0, 0.60);
 $color-icon-primary: $black;
 $color-icon-secondary: rgba(0, 0, 0, 0.40);
 $color-link: $color-text-primary;
@@ -19,11 +19,12 @@ $color-border-dark: rgba(0, 0, 0, 0.40);
 $color-surface-light: rgba(255, 255, 255, 0.50);
 $color-surface-dark: rgba(255, 255, 255, 0.75);
 $color-accent: $grey-1;
-$color-shadow: rgba(0,0,0,.1);
-$color-trans-white-strong: rgba(255, 255, 255, 0.75);
+$color-shadow: rgba(0, 0, 0, 0.1);
+$color-trans-white-dark: rgba(255, 255, 255, 0.75);
 $color-trans-white-medium: rgba(255, 255, 255, 0.50); //TODO: reconcile surface color with this
 $color-trans-white-light: rgba(255, 255, 255, 0.30);
 $color-trans-white-xlight: rgba(255, 255, 255, 0.10);
+$color-trans-black-dark: rgba(0, 0, 0, 0.60);
 $color-trans-black-medium: rgba(0, 0, 0, 0.40);
 $color-trans-black-light: rgba(0, 0, 0, 0.20);
 $color-trans-black-xlight: rgba(0, 0, 0, 0.10);
